@@ -1,0 +1,407 @@
+{
+  "version": 1,
+  "modoPrueba": true,
+  "titulo": "Examen diagnstico",
+  "descripcion": "Banco de reactivos del examen diagnstico de Contenidos y Estructuras de Datos.",
+  "configuracion": {
+    "mostrarResultado": true,
+    "cantidadPreguntas": 12,
+    "mezclarPreguntas": true,
+    "mezclarOpciones": false,
+    "endpointEnvio": ""
+  },
+  "preguntas": [
+    {
+      "id": "diagnostico-01",
+      "numero": 1,
+      "tipo": "opcion-multiple",
+      "enunciado": "Un estudiante necesita describir, paso a paso y sin utilizar todava un lenguaje de programacin, cmo calcular el promedio de una lista de calificaciones. Qu recurso es el ms adecuado para representar ese procedimiento?",
+      "obligatoria": true,
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Un pseudocdigo"
+        },
+        {
+          "id": "b",
+          "texto": "Una tabla hash"
+        },
+        {
+          "id": "c",
+          "texto": "Un rbol binario"
+        },
+        {
+          "id": "d",
+          "texto": "Una matriz de adyacencia"
+        }
+      ],
+      "respuestaCorrecta": "a"
+    },
+    {
+      "id": "diagnostico-02",
+      "numero": 2,
+      "tipo": "opcion-multiple",
+      "enunciado": "Si el tiempo de ejecucin de un algoritmo crece aproximadamente de forma proporcional al nmero de datos de entrada n, qu orden de organizaci?n describe mejor su comportamiento?",
+      "obligatoria": true,
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "O(1)"
+        },
+        {
+          "id": "b",
+          "texto": "O(log n)"
+        },
+        {
+          "id": "c",
+          "texto": "O(n)"
+        },
+        {
+          "id": "d",
+          "texto": "O(n)"
+        }
+      ],
+      "respuestaCorrecta": "c"
+    },
+    {
+      "id": "diagnostico-03",
+      "numero": 3,
+      "tipo": "opcion-multiple",
+      "enunciado": "Se tiene una lista de nmeros completamente desordenada y se desea ordenarla comparando pares de elementos adyacentes e intercambindolos cuando estn en el orden incorrecto. Qu algoritmo se est describiendo?",
+      "obligatoria": true,
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Organizaci?n de informaci?n por burbuja"
+        },
+        {
+          "id": "b",
+          "texto": "Bsqueda binaria"
+        },
+        {
+          "id": "c",
+          "texto": "Organizaci?n de informaci?n por mezcla"
+        },
+        {
+          "id": "d",
+          "texto": "Bsqueda indexada"
+        }
+      ],
+      "respuestaCorrecta": "a"
+    },
+    {
+      "id": "diagnostico-04",
+      "numero": 4,
+      "tipo": "opcion-multiple",
+      "enunciado": "Andrea debe localizar un nmero dentro de un arreglo que ya est ordenado. En cada paso compara con el elemento central y descarta la mitad donde sabe que el dato no puede encontrarse. Qu tcnica est utilizando?",
+      "obligatoria": true,
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Bsqueda secuencial"
+        },
+        {
+          "id": "b",
+          "texto": "Bsqueda binaria"
+        },
+        {
+          "id": "c",
+          "texto": "Exploracin exhaustiva"
+        },
+        {
+          "id": "d",
+          "texto": "Organizaci?n de informaci?n por seleccin"
+        }
+      ],
+      "respuestaCorrecta": "b"
+    },
+    {
+      "id": "diagnostico-05",
+      "numero": 5,
+      "tipo": "opcion-multiple",
+      "enunciado": "Para resolver un rompecabezas, un programa prueba una alternativa, avanza mientras sea vlida y, cuando llega a una decisin imposible, regresa a una decisin anterior para intentar otra opcin. Qu estrategia describe este comportamiento?",
+      "obligatoria": true,
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Programacin por vuelta atrs (backtracking)"
+        },
+        {
+          "id": "b",
+          "texto": "Bsqueda binaria"
+        },
+        {
+          "id": "c",
+          "texto": "Tabla hash"
+        },
+        {
+          "id": "d",
+          "texto": "Organizaci?n de informaci?n por insercin"
+        }
+      ],
+      "respuestaCorrecta": "a"
+    },
+    {
+      "id": "diagnostico-06",
+      "numero": 6,
+      "tipo": "opcion-multiple",
+      "enunciado": "Una aplicacin permite deshacer las acciones realizadas por el usuario, empezando siempre por la ltima accin ejecutada. Qu estructura de datos corresponde mejor a este comportamiento?",
+      "obligatoria": true,
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Tema provisional"
+        },
+        {
+          "id": "b",
+          "texto": "Tema provisional"
+        },
+        {
+          "id": "c",
+          "texto": "Grafo"
+        },
+        {
+          "id": "d",
+          "texto": "rbol B+"
+        }
+      ],
+      "respuestaCorrecta": "a"
+    },
+    {
+      "id": "diagnostico-07",
+      "numero": 7,
+      "tipo": "opcion-multiple",
+      "enunciado": "En una impresora, los documentos deben imprimirse en el mismo orden en que fueron enviados. Qu estructura de datos representa mejor esta situacin?",
+      "obligatoria": true,
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Tema provisional"
+        },
+        {
+          "id": "b",
+          "texto": "Tema provisional"
+        },
+        {
+          "id": "c",
+          "texto": "rbol binario de bsqueda"
+        },
+        {
+          "id": "d",
+          "texto": "Montculo de mximos"
+        }
+      ],
+      "respuestaCorrecta": "a"
+    },
+    {
+      "id": "diagnostico-08",
+      "numero": 8,
+      "tipo": "opcion-multiple",
+      "enunciado": "Un programa necesita almacenar una coleccin cuyo tamao cambia constantemente y donde insertar o eliminar elementos sin desplazar todos los dems sea una operacin frecuente. Qu estructura puede resultar especialmente apropiada?",
+      "obligatoria": true,
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Lista enlazada"
+        },
+        {
+          "id": "b",
+          "texto": "Arreglo de tamao fijo"
+        },
+        {
+          "id": "c",
+          "texto": "Matriz de adyacencia"
+        },
+        {
+          "id": "d",
+          "texto": "Pseudocdigo"
+        }
+      ],
+      "respuestaCorrecta": "a"
+    },
+    {
+      "id": "diagnostico-09",
+      "numero": 9,
+      "tipo": "opcion-multiple",
+      "enunciado": "Una tienda desea encontrar rpidamente un producto a partir de una clave nica, como su cdigo SKU. Qu estructura est diseada para asociar una clave con una posicin mediante una funcin?",
+      "obligatoria": true,
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Tabla hash"
+        },
+        {
+          "id": "b",
+          "texto": "Tema provisional circular"
+        },
+        {
+          "id": "c",
+          "texto": "Tema provisional dinmica"
+        },
+        {
+          "id": "d",
+          "texto": "rbol N-ario"
+        }
+      ],
+      "respuestaCorrecta": "a"
+    },
+    {
+      "id": "diagnostico-10",
+      "numero": 10,
+      "tipo": "opcion-multiple",
+      "enunciado": "En un rbol binario de bsqueda, dnde se colocan normalmente los valores menores que el valor almacenado en un nodo?",
+      "obligatoria": true,
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "En el subrbol izquierdo"
+        },
+        {
+          "id": "b",
+          "texto": "En el subrbol derecho"
+        },
+        {
+          "id": "c",
+          "texto": "Siempre en la raz"
+        },
+        {
+          "id": "d",
+          "texto": "En cualquier posicin disponible"
+        }
+      ],
+      "respuestaCorrecta": "a"
+    },
+    {
+      "id": "diagnostico-11",
+      "numero": 11,
+      "tipo": "opcion-multiple",
+      "enunciado": "Un sistema operativo debe atender primero el proceso con mayor prioridad, independientemente del orden exacto en que llegaron los procesos. Qu estructura de la Unidad 3 puede utilizarse para implementar eficientemente esta idea?",
+      "obligatoria": true,
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Un montculo (heap)"
+        },
+        {
+          "id": "b",
+          "texto": "Una lista simplemente enlazada sin ordenar"
+        },
+        {
+          "id": "c",
+          "texto": "Una pila"
+        },
+        {
+          "id": "d",
+          "texto": "Una bsqueda secuencial"
+        }
+      ],
+      "respuestaCorrecta": "a"
+    },
+    {
+      "id": "diagnostico-12",
+      "numero": 12,
+      "tipo": "opcion-multiple",
+      "enunciado": "Una red de computadoras se modela con dispositivos conectados entre s mediante enlaces. Qu estructura de datos representa naturalmente este tipo de relaciones?",
+      "obligatoria": true,
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Grafo"
+        },
+        {
+          "id": "b",
+          "texto": "Tema provisional"
+        },
+        {
+          "id": "c",
+          "texto": "Arreglo ordenado"
+        },
+        {
+          "id": "d",
+          "texto": "Tabla de verdad"
+        }
+      ],
+      "respuestaCorrecta": "a"
+    },
+    {
+      "id": "diagnostico-13",
+      "numero": 13,
+      "tipo": "opcion-multiple",
+      "enunciado": "En un recorrido de grafo se exploran primero todos los vrtices vecinos del nodo inicial antes de avanzar al siguiente nivel. Qu algoritmo se est utilizando?",
+      "obligatoria": true,
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Bsqueda en amplitud (BFS/BEA)"
+        },
+        {
+          "id": "b",
+          "texto": "Bsqueda en profundidad (DFS/BEP)"
+        },
+        {
+          "id": "c",
+          "texto": "Organizaci?n de informaci?n por mezcla"
+        },
+        {
+          "id": "d",
+          "texto": "Bsqueda binaria"
+        }
+      ],
+      "respuestaCorrecta": "a"
+    },
+    {
+      "id": "diagnostico-14",
+      "numero": 14,
+      "tipo": "opcion-multiple",
+      "enunciado": "En un recorrido de grafo se sigue una ruta tan profundamente como sea posible antes de retroceder para explorar otras alternativas. Qu algoritmo corresponde a esta estrategia?",
+      "obligatoria": true,
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Bsqueda en profundidad (DFS/BEP)"
+        },
+        {
+          "id": "b",
+          "texto": "Bsqueda en amplitud (BFS/BEA)"
+        },
+        {
+          "id": "c",
+          "texto": "Organizaci?n de informaci?n por seleccin"
+        },
+        {
+          "id": "d",
+          "texto": "Tabla hash abierta"
+        }
+      ],
+      "respuestaCorrecta": "a"
+    },
+    {
+      "id": "diagnostico-15",
+      "numero": 15,
+      "tipo": "opcion-multiple",
+      "enunciado": "Una aplicacin de mapas conoce varias rutas entre ciudades y el costo o distancia de cada carretera. Si se necesita encontrar el camino de menor costo desde una ciudad origen hacia las dems, qu algoritmo es una opcin clsica para resolver el problema cuando los pesos no son negativos?",
+      "obligatoria": true,
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Algoritmo de Dijkstra"
+        },
+        {
+          "id": "b",
+          "texto": "Organizaci?n de informaci?n de burbuja"
+        },
+        {
+          "id": "c",
+          "texto": "Bsqueda secuencial"
+        },
+        {
+          "id": "d",
+          "texto": "Recorrido Inorden"
+        }
+      ],
+      "respuestaCorrecta": "a"
+    }
+  ]
+}
+
+

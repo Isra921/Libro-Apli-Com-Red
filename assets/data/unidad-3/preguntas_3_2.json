@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "type": "opcion_multiple",
+    "question": "Qu estructura de datos es idnea para almacenar los vrtices que faltan por procesar en una Bsqueda en Amplitud (BEA)?",
+    "options": ["Una cola", "Una pila", "Una lista doblemente enlazada"],
+    "answer": "Una cola"
+  },
+  {
+    "id": 2,
+    "type": "opcion_multiple",
+    "question": "Cul es la organizaci?n temporal y espacial de la Bsqueda en Profundidad (DFS) implementada con una lista de adyacencia?",
+    "options": ["O(V + E)", "O(V^2)", "O(n^2)"],
+    "answer": "O(V + E)"
+  },
+  {
+    "id": 3,
+    "type": "opcion_multiple",
+    "question": "Qu estructura de datos es idnea para almacenar los vrtices en espera dado que se va regresando por los niveles del grafo en la Bsqueda en Profundidad (BEP)?",
+    "options": ["Una pila", "Una cola", "Un arreglo bidimensional"],
+    "answer": "Una pila"
+  },
+  {
+    "id": 4,
+    "type": "opcion_multiple",
+    "question": "En un grafo ponderado representado con matriz de adyacencia, qu valor se asigna por convencin si no existe adyacencia entre dos vrtices?",
+    "options": [
+      "Un valor muy grande",
+      "El nmero cero",
+      "Un valor infinito negativo"
+    ],
+    "answer": "Un valor muy grande"
+  },
+  {
+    "id": 5,
+    "type": "opcion_multiple",
+    "question": "En qu concepto matemtico se fundamenta el algoritmo de Dijkstra para calcular rutas ptimas?",
+    "options": [
+      "El principio de optimalidad",
+      "La heurstica A estrella (A*)",
+      "La organizaci?n espacial dispersa"
+    ],
+    "answer": "El principio de optimalidad"
+  },
+  {
+    "id": 6,
+    "type": "opcion_multiple",
+    "question": "Qu propiedad obligatoria presenta la matriz de adyacencia que representa a un grafo no dirigido?",
+    "options": [
+      "Es una matriz simtrica",
+      "Es una matriz asimtrica",
+      "Es un vector unidimensional bidireccional"
+    ],
+    "answer": "Es una matriz simtrica"
+  },
+  {
+    "id": 7,
+    "type": "opcion_multiple",
+    "question": "Para un grafo que presenta una estructura escasa (con pocos arcos en comparacin con sus vrtices), qu organizaci?n temporal tiene la implementacin simple del algoritmo de Dijkstra con matrices de adyacencia?",
+    "options": ["O(n^2)", "O(V + E)", "O(log n)"],
+    "answer": "O(n^2)"
+  },
+  {
+    "id": 8,
+    "type": "completar_oracion",
+    "question": "Un grafo es _____ cuando existe un camino entre un par de vrtices, y no lo es si no existe ese camino.",
+    "wordBank": ["conexo", "acclico", "dirigido"],
+    "answer": ["conexo"]
+  },
+  {
+    "id": 9,
+    "type": "completar_oracion",
+    "question": "Si las aristas de un grafo tienen un costo o un peso asociado, entonces el grafo se denomina _____.",
+    "wordBank": ["ponderado", "simtrico", "binario"],
+    "answer": ["ponderado"]
+  },
+  {
+    "id": 10,
+    "type": "completar_oracion",
+    "question": "Para representar un grafo simple en una matriz de adyacencia, se dice que la matriz es _____, donde el uno representa conexin y el cero que no hay arista.",
+    "wordBank": ["binaria", "escasa", "dinmica"],
+    "answer": ["binaria"]
+  },
+  {
+    "id": 11,
+    "type": "completar_oracion",
+    "question": "El algoritmo de _____ permite hallar el camino de costo mnimo desde un nodo inicial a todos los otros nodos del grafo.",
+    "wordBank": ["Dijkstra", "Floyd-Warshall", "A estrella"],
+    "answer": ["Dijkstra"]
+  },
+  {
+    "id": 12,
+    "type": "completar_oracion",
+    "question": "En un grafo de tipo _____, no existe ningn ciclo entre los vrtices.",
+    "wordBank": ["acclico", "ponderado", "conexo"],
+    "answer": ["acclico"]
+  },
+  {
+    "id": 13,
+    "type": "completar_oracion",
+    "question": "La _____ de adyacencia es ms eficiente en memoria y tiempo para representar grafos dispersos porque solo reserva memoria para aristas existentes.",
+    "wordBank": ["lista", "matriz", "cola"],
+    "answer": ["lista"]
+  },
+  {
+    "id": 14,
+    "type": "completar_oracion",
+    "question": "En la Bsqueda en _____, se explora el primer vrtice adjunto que se presente en cada nivel, dejando los restantes pendientes para exploracin futura.",
+    "wordBank": ["profundidad", "amplitud", "anchura"],
+    "answer": ["profundidad"]
+  },
+  {
+    "id": 15,
+    "type": "verdadero_falso",
+    "statement": "Una matriz de adyacencia es ms eficiente para grafos densos y cuando se necesita verificar rpidamente la existencia de aristas.",
+    "answer": true
+  },
+  {
+    "id": 16,
+    "type": "verdadero_falso",
+    "statement": "La organizaci?n espacial de la Bsqueda en Amplitud implementada mediante una matriz de adyacencia es O(V+E).",
+    "answer": false
+  },
+  {
+    "id": 17,
+    "type": "verdadero_falso",
+    "statement": "El algoritmo de Dijkstra muestra una alta eficiencia y optimizacin de rendimiento cuando el grafo presenta una estructura escasa con pocos arcos.",
+    "answer": true
+  },
+  {
+    "id": 18,
+    "type": "verdadero_falso",
+    "statement": "En redes P2P donde los nodos tienen la misma importancia y la conexin es bidireccional, es idneo modelarlas utilizando un grafo no dirigido.",
+    "answer": true
+  },
+  {
+    "id": 19,
+    "type": "verdadero_falso",
+    "statement": "Una desventaja de la representacin por listas de adyacencia es que el nmero de vrtices del grafo no puede cambiar en tiempo de ejecucin.",
+    "answer": false
+  },
+  {
+    "id": 20,
+    "type": "verdadero_falso",
+    "statement": "La longitud de un camino en un grafo ponderado est determinada por el conteo total de vrtices que lo componen, ignorando sus pesos.",
+    "answer": false
+  },
+  {
+    "id": 21,
+    "type": "verdadero_falso",
+    "statement": "El recorrido DFS (Bsqueda en Profundidad) y el BFS (Bsqueda en Amplitud) comparten exactamente la misma organizaci?n temporal y espacial en sus respectivas representaciones.",
+    "answer": true
+  },
+  {
+    "id": 22,
+    "type": "ordenar_oracion",
+    "segments": [
+      "y un conjunto de aristas",
+      "que est representada por",
+      "Un grafo es una estructura de datos no lineal",
+      "que conectan los vrtices.",
+      "un conjunto de vrtices o nodos"
+    ],
+    "answer": [
+      "Un grafo es una estructura de datos no lineal",
+      "que est representada por",
+      "un conjunto de vrtices o nodos",
+      "y un conjunto de aristas",
+      "que conectan los vrtices."
+    ]
+  },
+  {
+    "id": 23,
+    "type": "ordenar_oracion",
+    "segments": [
+      "cuando se utiliza para modelar",
+      "grafos con estructura dispersa.",
+      "una lista de adyacencia es ms eficiente",
+      "La representacin del grafo mediante",
+      "en memoria y tiempo"
+    ],
+    "answer": [
+      "La representacin del grafo mediante",
+      "una lista de adyacencia es ms eficiente",
+      "en memoria y tiempo",
+      "cuando se utiliza para modelar",
+      "grafos con estructura dispersa."
+    ]
+  },
+  {
+    "id": 24,
+    "type": "ordenar_oracion",
+    "segments": [
+      "se recorre en un solo sentido.",
+      "de un nodo a otro",
+      "En un grafo dirigido,",
+      "lo que significa que un camino",
+      "las aristas tienen una direccin,"
+    ],
+    "answer": [
+      "En un grafo dirigido,",
+      "las aristas tienen una direccin,",
+      "lo que significa que un camino",
+      "de un nodo a otro",
+      "se recorre en un solo sentido."
+    ]
+  },
+  {
+    "id": 25,
+    "type": "ordenar_oracion",
+    "segments": [
+      "El algoritmo de Dijkstra halla",
+      "basndose en el principio de optimalidad.",
+      "el camino de costo mnimo",
+      "a todos los otros nodos",
+      "desde un nodo inicial"
+    ],
+    "answer": [
+      "El algoritmo de Dijkstra halla",
+      "el camino de costo mnimo",
+      "desde un nodo inicial",
+      "a todos los otros nodos",
+      "basndose en el principio de optimalidad."
+    ]
+  },
+  {
+    "id": 26,
+    "type": "ordenar_oracion",
+    "segments": [
+      "es cuadrtica en funcin de los vrtices.",
+      "La organizaci?n temporal y espacial",
+      "una matriz de adyacencia",
+      "cuando se implementa utilizando",
+      "de la Bsqueda en Profundidad"
+    ],
+    "answer": [
+      "La organizaci?n temporal y espacial",
+      "de la Bsqueda en Profundidad",
+      "cuando se implementa utilizando",
+      "una matriz de adyacencia",
+      "es cuadrtica en funcin de los vrtices."
+    ]
+  },
+  {
+    "id": 27,
+    "type": "ordenar_oracion",
+    "segments": [
+      "La Bsqueda en Amplitud",
+      "utilizando una cola para almacenar",
+      "por procesar en el grafo.",
+      "los vrtices que an faltan",
+      "explora todas las aristas adyacentes"
+    ],
+    "answer": [
+      "La Bsqueda en Amplitud",
+      "explora todas las aristas adyacentes",
+      "utilizando una cola para almacenar",
+      "los vrtices que an faltan",
+      "por procesar en el grafo."
+    ]
+  },
+  {
+    "id": 28,
+    "type": "ordenar_oracion",
+    "segments": [
+      "aseguran que dicha matriz",
+      "que representa a un grafo no dirigido,",
+      "En la matriz de adyacencia",
+      "cuente con la propiedad de ser simtrica.",
+      "las conexiones bidireccionales"
+    ],
+    "answer": [
+      "En la matriz de adyacencia",
+      "que representa a un grafo no dirigido,",
+      "las conexiones bidireccionales",
+      "aseguran que dicha matriz",
+      "cuente con la propiedad de ser simtrica."
+    ]
+  }
+]
+
+

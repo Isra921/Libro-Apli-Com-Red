@@ -1,0 +1,284 @@
+[
+  {
+    "id": 1,
+    "type": "opcion_multiple",
+    "question": "Qu tipo de recorrido de un rbol binario visita el nodo raz antes de dirigirse al subrbol izquierdo y luego al derecho?",
+    "options": ["Preorden", "Inorden", "Postorden"],
+    "answer": "Preorden"
+  },
+  {
+    "id": 2,
+    "type": "opcion_multiple",
+    "question": "Cul es la organizaci?n algortmica para el peor de los casos en la operacin de bsqueda de un rbol binario de bsqueda no balanceado?",
+    "options": ["O(n)", "O(log n)", "O(n log n)"],
+    "answer": "O(n)"
+  },
+  {
+    "id": 3,
+    "type": "opcion_multiple",
+    "question": "En la estructura de un montculo, cul es la frmula matemtica para obtener el ndice del nodo padre dado el ndice 'i' de un nodo hijo?",
+    "options": ["(i - 1) / 2", "2 * i + 1", "2 * i + 2"],
+    "answer": "(i - 1) / 2"
+  },
+  {
+    "id": 4,
+    "type": "opcion_multiple",
+    "question": "Qu propiedad estructural es indispensable para que un rbol sea considerado un rbol rojo-negro vlido?",
+    "options": [
+      "Todo camino de la raz a cualquier hoja pasa por el mismo nmero de nodos negros.",
+      "La raz del rbol debe ser obligatoriamente de color rojo.",
+      "Todo nodo de color negro debe tener exclusivamente dos hijos de color rojo."
+    ],
+    "answer": "Todo camino de la raz a cualquier hoja pasa por el mismo nmero de nodos negros."
+  },
+  {
+    "id": 5,
+    "type": "opcion_multiple",
+    "question": "Cul es una de las principales diferencias operativas entre un rbol B y un rbol B+?",
+    "options": [
+      "En el rbol B+ solo las hojas albergan los valores de los datos reales y estn conectadas secuencialmente.",
+      "En el rbol B los nodos internos almacenan datos reales pero las hojas no guardan ninguna clave.",
+      "El rbol B+ permite insertar un nmero infinito de hijos en cada nodo sin realizar procesos de balanceo."
+    ],
+    "answer": "En el rbol B+ solo las hojas albergan los valores de los datos reales y estn conectadas secuencialmente."
+  },
+  {
+    "id": 6,
+    "type": "opcion_multiple",
+    "question": "En un rbol N-ario, si N = 3, qu restriccin estructural aplica directamente sobre sus nodos?",
+    "options": [
+      "Cada nodo puede tener como mximo tres hijos o descendientes.",
+      "El rbol en su totalidad solo puede alcanzar una profundidad mxima de tres niveles.",
+      "Cada nodo interno est obligado a almacenar exactamente tres claves de bsqueda."
+    ],
+    "answer": "Cada nodo puede tener como mximo tres hijos o descendientes."
+  },
+  {
+    "id": 7,
+    "type": "opcion_multiple",
+    "question": "Qu estado de desequilibrio en un rbol requiere una reestructuracin basada en rotaciones de dos etapas (primero llevar a estado LL o RR y luego rotar como caso 1)?",
+    "options": [
+      "Desequilibrio izquierda-derecha (LR) o derecha-izquierda (RL)",
+      "Desequilibrio izquierda-izquierda (LL)",
+      "Desequilibrio derecha-derecha (RR)"
+    ],
+    "answer": "Desequilibrio izquierda-derecha (LR) o derecha-izquierda (RL)"
+  },
+  {
+    "id": 8,
+    "type": "completar_oracion",
+    "question": "Un _____ es una estructura de datos no lineal que se utiliza para organizar jerrquicamente la informacin mediante un conjunto de nodos y vrtices.",
+    "wordBank": ["rbol", "grafo", "montculo"],
+    "answer": ["rbol"]
+  },
+  {
+    "id": 9,
+    "type": "completar_oracion",
+    "question": "La longitud de un _____ se calcula obteniendo el nmero de nodos transcurridos menos uno al viajar de un vrtice a otro.",
+    "wordBank": ["camino", "grado", "nivel"],
+    "answer": ["camino"]
+  },
+  {
+    "id": 10,
+    "type": "completar_oracion",
+    "question": "Un _____ es un rbol binario que se llena por niveles estrictamente de arriba hacia abajo y de izquierda a derecha.",
+    "wordBank": ["montculo", "bosque", "subrbol"],
+    "answer": ["montculo"]
+  },
+  {
+    "id": 11,
+    "type": "completar_oracion",
+    "question": "Los vrtices que se encuentran ubicados en los niveles intermedios de una estructura jerrquica se denominan nodos _____.",
+    "wordBank": ["internos", "hojas", "raz"],
+    "answer": ["internos"]
+  },
+  {
+    "id": 12,
+    "type": "completar_oracion",
+    "question": "En una cola de _____, el orden lgico de los elementos atiende o extrae los nodos con mayor jerarqua en vez de seguir un estricto orden de llegada.",
+    "wordBank": ["prioridad", "bsqueda", "recorrido"],
+    "answer": ["prioridad"]
+  },
+  {
+    "id": 13,
+    "type": "completar_oracion",
+    "question": "Al eliminar el nodo raz de un rbol general se obtiene una estructura fragmentada compuesta de varios rboles que se conoce como _____.",
+    "wordBank": ["bosque", "camino", "grafo"],
+    "answer": ["bosque"]
+  },
+  {
+    "id": 14,
+    "type": "completar_oracion",
+    "question": "Para recuperar el estado de balanceo tras realizar inserciones o eliminaciones, el rbol rojo-negro aplica procedimientos de transformacin llamados _____.",
+    "wordBank": ["rotaciones", "fusiones", "extracciones"],
+    "answer": ["rotaciones"]
+  },
+  {
+    "id": 15,
+    "type": "verdadero_falso",
+    "statement": "El recorrido Inorden aplicado a un rbol Binario de Bsqueda permite extraer los datos de forma secuencial y ordenada ascendentemente sin usar contenidos de organizaci?n de informaci?n adicionales.",
+    "answer": true
+  },
+  {
+    "id": 16,
+    "type": "verdadero_falso",
+    "statement": "El rbol rojo-negro puede llegar a tener una organizaci?n lineal de bsqueda O(n) si los elementos son insertados de manera totalmente ordenada.",
+    "answer": false
+  },
+  {
+    "id": 17,
+    "type": "verdadero_falso",
+    "statement": "En la estructura de un rbol B de grado m, sus respectivos nodos hoja tienen como lmite la capacidad de almacenar hasta un mximo de m-1 claves.",
+    "answer": true
+  },
+  {
+    "id": 18,
+    "type": "verdadero_falso",
+    "statement": "Una ventaja del rbol B+ es que sus nodos internos no almacenan datos reales duplicados, funcionando exclusivamente como claves de gua para agilizar la bsqueda.",
+    "answer": true
+  },
+  {
+    "id": 19,
+    "type": "verdadero_falso",
+    "statement": "Debido a su necesidad de descender hasta los nodos terminales, el recorrido algortmico de un rbol se construye comnmente de manera recursiva en lugar de iterativa.",
+    "answer": true
+  },
+  {
+    "id": 20,
+    "type": "verdadero_falso",
+    "statement": "En un montculo organizado como 'Max Heap' (orden creciente de mximos), el valor de cualquier nodo siempre ser menor o igual que los valores de sus nodos hijos.",
+    "answer": false
+  },
+  {
+    "id": 21,
+    "type": "verdadero_falso",
+    "statement": "Dentro de la jerarqua de un rbol binario, el nodo considerado como la raz de toda la estructura se localiza invariablemente en el nivel cero.",
+    "answer": true
+  },
+  {
+    "id": 22,
+    "type": "ordenar_oracion",
+    "segments": [
+      "una estructura donde los nodos",
+      "con valores menores van al subrbol izquierdo",
+      "y los valores mayores al subrbol derecho.",
+      "El rbol Binario de Bsqueda es"
+    ],
+    "answer": [
+      "El rbol Binario de Bsqueda es",
+      "una estructura donde los nodos",
+      "con valores menores van al subrbol izquierdo",
+      "y los valores mayores al subrbol derecho."
+    ]
+  },
+  {
+    "id": 23,
+    "type": "ordenar_oracion",
+    "segments": [
+      "manteniendo el mismo nmero de nodos negros",
+      "Un rbol rojo-negro asegura",
+      "en todo camino desde la raz",
+      "hasta cualquier nodo hoja.",
+      "el equilibrio de su estructura"
+    ],
+    "answer": [
+      "Un rbol rojo-negro asegura",
+      "el equilibrio de su estructura",
+      "manteniendo el mismo nmero de nodos negros",
+      "en todo camino desde la raz",
+      "hasta cualquier nodo hoja."
+    ]
+  },
+  {
+    "id": 24,
+    "type": "ordenar_oracion",
+    "segments": [
+      "es el primero en salir.",
+      "implementada sobre un montculo,",
+      "el elemento que posee",
+      "En una Tema provisional de Prioridad",
+      "la prioridad ms alta"
+    ],
+    "answer": [
+      "En una Tema provisional de Prioridad",
+      "implementada sobre un montculo,",
+      "el elemento que posee",
+      "la prioridad ms alta",
+      "es el primero en salir."
+    ]
+  },
+  {
+    "id": 25,
+    "type": "ordenar_oracion",
+    "segments": [
+      "del hijo izquierdo en un montculo,",
+      "Para calcular el ndice",
+      "y sumarle un uno.",
+      "se debe multiplicar el ndice",
+      "del nodo padre por dos"
+    ],
+    "answer": [
+      "Para calcular el ndice",
+      "del hijo izquierdo en un montculo,",
+      "se debe multiplicar el ndice",
+      "del nodo padre por dos",
+      "y sumarle un uno."
+    ]
+  },
+  {
+    "id": 26,
+    "type": "ordenar_oracion",
+    "segments": [
+      "y se enlazan de forma secuencial",
+      "En la estructura del rbol B+,",
+      "para optimizar y facilitar",
+      "las hojas almacenan los datos reales",
+      "el recorrido rpido de la informacin."
+    ],
+    "answer": [
+      "En la estructura del rbol B+,",
+      "las hojas almacenan los datos reales",
+      "y se enlazan de forma secuencial",
+      "para optimizar y facilitar",
+      "el recorrido rpido de la informacin."
+    ]
+  },
+  {
+    "id": 27,
+    "type": "ordenar_oracion",
+    "segments": [
+      "el contenido del nodo raz.",
+      "y extraer los datos de ambos subrboles",
+      "antes de subir y procesar",
+      "consiste en descender para evaluar",
+      "El recorrido Postorden en un rbol"
+    ],
+    "answer": [
+      "El recorrido Postorden en un rbol",
+      "consiste en descender para evaluar",
+      "y extraer los datos de ambos subrboles",
+      "antes de subir y procesar",
+      "el contenido del nodo raz."
+    ]
+  },
+  {
+    "id": 28,
+    "type": "ordenar_oracion",
+    "segments": [
+      "permitiendo que cada nodo padre",
+      "porque organiza la informacin",
+      "La estructura del rbol N-ario",
+      "proporciona gran flexibilidad",
+      "tenga hasta N hijos descendientes."
+    ],
+    "answer": [
+      "La estructura del rbol N-ario",
+      "proporciona gran flexibilidad",
+      "porque organiza la informacin",
+      "permitiendo que cada nodo padre",
+      "tenga hasta N hijos descendientes."
+    ]
+  }
+]
+
+

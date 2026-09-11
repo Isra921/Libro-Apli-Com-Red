@@ -1,0 +1,271 @@
+[
+  {
+    "id": 1,
+    "type": "opcion_multiple",
+    "question": "Cul es el propsito principal de una tabla hash como estructura de datos?",
+    "options": [
+      "Almacenar y recuperar informacin de forma muy rpida",
+      "Mantener los elementos siempre ordenados alfabticamente",
+      "Evitar por completo el uso de memoria dinmica"
+    ],
+    "answer": "Almacenar y recuperar informacin de forma muy rpida"
+  },
+  {
+    "id": 2,
+    "type": "opcion_multiple",
+    "question": "Qu operacin se aplica a una clave para transformarla en una posicin dentro del arreglo de una tabla hash?",
+    "options": [
+      "Funcin hash",
+      "Funcin de organizaci?n de informaci?n",
+      "Recorrido secuencial"
+    ],
+    "answer": "Funcin hash"
+  },
+  {
+    "id": 3,
+    "type": "opcion_multiple",
+    "question": "Segn su especificacin genrica, cmo organiza la informacin una tabla hash?",
+    "options": [
+      "En pares (clave, valor)",
+      "En una sola lista de valores sin claves",
+      "En una matriz bidimensional de datos"
+    ],
+    "answer": "En pares (clave, valor)"
+  },
+  {
+    "id": 4,
+    "type": "opcion_multiple",
+    "question": "Cmo se le llama al problema que ocurre cuando dos claves diferentes generan el mismo ndice en la tabla hash?",
+    "options": [
+      "Colisin",
+      "Desbordamiento",
+      "Subdesbordamiento"
+    ],
+    "answer": "Colisin"
+  },
+  {
+    "id": 5,
+    "type": "opcion_multiple",
+    "question": "Qu tcnicas principales se usan para resolver colisiones en una tabla hash?",
+    "options": [
+      "Encadenamiento y direccionamiento abierto",
+      "Organizaci?n de informaci?n y bsqueda binaria",
+      "Recursividad y backtracking"
+    ],
+    "answer": "Encadenamiento y direccionamiento abierto"
+  },
+  {
+    "id": 6,
+    "type": "opcion_multiple",
+    "question": "En qu tcnica de resolucin de colisiones cada posicin de la tabla contiene una estructura adicional, como una lista enlazada?",
+    "options": [
+      "Encadenamiento",
+      "Direccionamiento abierto",
+      "Sondeo cuadrtico"
+    ],
+    "answer": "Encadenamiento"
+  },
+  {
+    "id": 7,
+    "type": "opcion_multiple",
+    "question": "En qu variante de tabla hash los elementos se almacenan directamente dentro del arreglo principal, sin estructuras auxiliares?",
+    "options": [
+      "Tablas hash cerradas (direccionamiento abierto)",
+      "Tablas hash abiertas",
+      "Tablas hash distribuidas"
+    ],
+    "answer": "Tablas hash cerradas (direccionamiento abierto)"
+  },
+  {
+    "id": 8,
+    "type": "opcion_multiple",
+    "question": "Cules son los mtodos de exploracin ms comunes en las tablas hash cerradas?",
+    "options": [
+      "Sondeo lineal, sondeo cuadrtico y doble dispersin",
+      "Recorrido en profundidad y en anchura",
+      "Organizaci?n de informaci?n por mezcla y por burbuja"
+    ],
+    "answer": "Sondeo lineal, sondeo cuadrtico y doble dispersin"
+  },
+  {
+    "id": 9,
+    "type": "opcion_multiple",
+    "question": "En condiciones ideales, cul es la organizaci?n de bsqueda, insercin y eliminacin en una tabla hash?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(n)"
+    ],
+    "answer": "O(1)"
+  },
+  {
+    "id": 10,
+    "type": "verdadero_falso",
+    "statement": "Una mala funcin hash o un factor de carga elevado incrementan la probabilidad de colisiones.",
+    "answer": true
+  },
+  {
+    "id": 11,
+    "type": "verdadero_falso",
+    "statement": "Las tablas hash mantienen siempre un orden secuencial natural de sus elementos almacenados.",
+    "answer": false
+  },
+  {
+    "id": 12,
+    "type": "verdadero_falso",
+    "statement": "Si ocurren muchas colisiones sin control, las operaciones de una tabla hash pueden degradarse a O(n).",
+    "answer": true
+  },
+  {
+    "id": 13,
+    "type": "verdadero_falso",
+    "statement": "Las funciones hash tienen una aplicacin fundamental en el almacenamiento seguro de contraseas.",
+    "answer": true
+  },
+  {
+    "id": 14,
+    "type": "verdadero_falso",
+    "statement": "El hashing con encadenamiento nunca requiere memoria adicional respecto a una tabla hash cerrada.",
+    "answer": false
+  },
+  {
+    "id": 15,
+    "type": "opcion_multiple",
+    "question": "Qu elemento es crucial para que una tabla hash distribuya uniformemente las claves y evite concentraciones?",
+    "options": [
+      "Una funcin hash adecuada",
+      "Un arreglo ordenado previamente",
+      "Un lmite fijo de colisiones permitidas"
+    ],
+    "answer": "Una funcin hash adecuada"
+  },
+  {
+    "id": 16,
+    "type": "completar_oracion",
+    "question": "Una tabla hash organiza su informacin en pares (_____, _____), y usa una funcin hash para ubicarlos en el arreglo.",
+    "wordBank": [
+      "clave",
+      "valor",
+      "ndice",
+      "nodo",
+      "puntero"
+    ],
+    "answer": [
+      "clave",
+      "valor"
+    ]
+  },
+  {
+    "id": 17,
+    "type": "completar_oracion",
+    "question": "Cuando dos claves generan el mismo ndice en la tabla, ocurre una _____, que puede resolverse mediante _____.",
+    "wordBank": [
+      "colisin",
+      "encadenamiento",
+      "funcin hash",
+      "recursividad"
+    ],
+    "answer": [
+      "colisin",
+      "encadenamiento"
+    ]
+  },
+  {
+    "id": 18,
+    "type": "completar_oracion",
+    "question": "En condiciones ideales, las operaciones de una tabla hash tienen organizaci?n _____, pero pueden degradarse a _____ si hay demasiadas colisiones.",
+    "wordBank": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n)"
+    ],
+    "answer": [
+      "O(1)",
+      "O(n)"
+    ]
+  },
+  {
+    "id": 19,
+    "type": "completar_oracion",
+    "question": "Las tablas hash _____ almacenan los elementos directamente en el arreglo, mientras que las tablas hash _____ usan una lista enlazada por posicin.",
+    "wordBank": [
+      "cerradas",
+      "abiertas",
+      "circulares",
+      "dinmicas"
+    ],
+    "answer": [
+      "cerradas",
+      "abiertas"
+    ]
+  },
+  {
+    "id": 20,
+    "type": "completar_oracion",
+    "question": "Los mtodos de exploracin ms comunes en tablas hash cerradas son el sondeo _____ y el sondeo _____.",
+    "wordBank": [
+      "lineal",
+      "cuadrtico",
+      "binario",
+      "recursivo",
+      "ordenado"
+    ],
+    "answer": [
+      "lineal",
+      "cuadrtico"
+    ]
+  },
+  {
+    "id": 21,
+    "type": "ordenar_oracion",
+    "question": "",
+    "segments": [
+      "Una tabla hash",
+      "utiliza una funcin hash",
+      "para transformar una clave",
+      "en una posicin del arreglo."
+    ],
+    "answer": [
+      "Una tabla hash",
+      "utiliza una funcin hash",
+      "para transformar una clave",
+      "en una posicin del arreglo."
+    ]
+  },
+  {
+    "id": 22,
+    "type": "ordenar_oracion",
+    "question": "",
+    "segments": [
+      "Cuando dos claves",
+      "generan el mismo ndice,",
+      "se produce una colisin",
+      "que debe resolverse."
+    ],
+    "answer": [
+      "Cuando dos claves",
+      "generan el mismo ndice,",
+      "se produce una colisin",
+      "que debe resolverse."
+    ]
+  },
+  {
+    "id": 23,
+    "type": "ordenar_oracion",
+    "question": "",
+    "segments": [
+      "En condiciones ideales,",
+      "buscar, insertar y eliminar",
+      "en una tabla hash",
+      "tiene organizaci?n O(1)."
+    ],
+    "answer": [
+      "En condiciones ideales,",
+      "buscar, insertar y eliminar",
+      "en una tabla hash",
+      "tiene organizaci?n O(1)."
+    ]
+  }
+]
+

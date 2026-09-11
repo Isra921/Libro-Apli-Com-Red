@@ -1,0 +1,32 @@
+:root {
+  --bg-main: #103B5C;
+  --bg-section: #174A70;
+  --bg-hero: #0A2E47;
+  --surface: #1E5B84;
+  --surface-hover: #276D99;
+  --primary: #38A3D1;
+  --accent: #1FC1B2;
+  --text-light: #F4FAFD;
+  --text-muted-light: #C8DCE8;
+  --border-color: rgba(255, 255, 255, 0.12);
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.18);
+  --success: #41B883;
+  --warning: #D9A441;
+  --danger: #D96464;
+
+  /* Aliases retained for the existing modal and content rules. */
+  --bg: var(--bg-main);
+  --text: var(--text-light);
+  --text-muted: var(--text-muted-light);
+  --primary-hover: var(--surface-hover);
+  --secondary: var(--primary);
+  --primary-soft: rgba(56, 163, 209, 0.14);
+  --accent-soft: rgba(31, 193, 178, 0.14);
+  --info: var(--primary);
+  --card-bg: var(--surface);
+  --border: var(--border-color);
+  --text-muted-light: #C8DCE8;
+  --shadow-card: var(--shadow-soft);
+  --radius-md: 12px;
+  --radius-lg: 18px;
+}

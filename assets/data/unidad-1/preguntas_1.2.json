@@ -1,0 +1,353 @@
+[
+  {
+    "pregunta": "¿Por qué es importante el organizaci?n de informaci?n según el documento?",
+    "opciones": [
+      "Ayuda a desarrollar un pensamiento lógico más estructurado para resolver problemas de forma óptima.",
+      "Permite que la computadora use menos electricidad al procesar datos.",
+      "Es el único requisito para que un programa sea considerado Inteligencia Artificial.",
+      "Sirve para eliminar todos los datos duplicados automáticamente sin reglas."
+    ],
+    "respuesta_correcta": "Ayuda a desarrollar un pensamiento lógico más estructurado para resolver problemas de forma óptima."
+  },
+  {
+    "pregunta": "¿Qué se requiere cuando los datos se encuentran desordenados en un proceso esencial?",
+    "opciones": [
+      "Ordenarlos de tal manera que se estructuren según un criterio específico.",
+      "Borrar la lista y empezar de nuevo.",
+      "Ignorar el desorden si la cantidad de datos es pequeña.",
+      "Cambiar el hardware de la computadora."
+    ],
+    "respuesta_correcta": "Ordenarlos de tal manera que se estructuren según un criterio específico."
+  },
+  {
+    "pregunta": "¿Qué beneficio ofrece el uso de un identificador interno en cada dato durante el organizaci?n de informaci?n?",
+    "opciones": [
+      "Permite mayor identificación, ayuda a distinguirlo, compararlo y evita la duplicidad.",
+      "Hace que el dato ocupe menos espacio en el disco duro.",
+      "Permite que el usuario cambie el color del dato en la pantalla.",
+      "Oculta la información para que otros programas no la vean."
+    ],
+    "respuesta_correcta": "Permite mayor identificación, ayuda a distinguirlo, compararlo y evita la duplicidad."
+  },
+  {
+    "pregunta": "¿Qué se necesita para que los datos sean ordenados en forma ascendente o descendente?",
+    "opciones": [
+      "Tener reglas de asignación de acuerdo con su secuencia de instrucciones.",
+      "Tener una conexión a internet de alta velocidad.",
+      "Que el usuario adivine el orden correcto.",
+      "Usar un generador de números aleatorios."
+    ],
+    "respuesta_correcta": "Tener reglas de asignación de acuerdo con su secuencia de instrucciones."
+  },
+  {
+    "pregunta": "¿Cuál es el punto de referencia inicial en el algoritmo de organizaci?n de informaci?n por inserción?",
+    "opciones": [
+      "El primer elemento del arreglo.",
+      "El último elemento del arreglo.",
+      "El elemento central del arreglo.",
+      "Un número aleatorio elegido por el sistema."
+    ],
+    "respuesta_correcta": "El primer elemento del arreglo."
+  },
+  {
+    "pregunta": "En el organizaci?n de informaci?n por inserción, ¿cómo se mueven los elementos?",
+    "opciones": [
+      "Se desplazan hacia la posición que les corresponda para intercambiarse hasta llegar a su lugar.",
+      "Se eliminan y se vuelven a escribir al final de la lista.",
+      "Se multiplican por dos antes de cambiar de lugar.",
+      "Solo se mueven si son números negativos."
+    ],
+    "respuesta_correcta": "Se desplazan hacia la posición que les corresponda para intercambiarse hasta llegar a su lugar."
+  },
+  {
+    "pregunta": "¿Qué ejemplo de la vida cotidiana se usa para explicar el organizaci?n de informaci?n por inserción?",
+    "opciones": [
+      "El orden de cartas en la mano.",
+      "Organizar personas por estatura en una fila.",
+      "Llenar un vaso con agua.",
+      "Repartir volantes en la calle."
+    ],
+    "respuesta_correcta": "El orden de cartas en la mano."
+  },
+  {
+    "pregunta": "¿Bajo qué premisa se estructura el algoritmo de organizaci?n de informaci?n por selección?",
+    "opciones": [
+      "Bajo la premisa de buscar los elementos más pequeños o grandes para colocarlos en la posición correcta.",
+      "Bajo la premisa de dividir la lista en dos partes iguales siempre.",
+      "Bajo la premisa de comparar solo el primer y el último dato.",
+      "Bajo la premisa de mover los datos como si fueran burbujas."
+    ],
+    "respuesta_correcta": "Bajo la premisa de buscar los elementos más pequeños o grandes para colocarlos en la posición correcta."
+  },
+  {
+    "pregunta": "¿En qué rango de posiciones trabaja el organizaci?n de informaci?n por selección?",
+    "opciones": [
+      "Entre los valores de 0 al tamaño -1.",
+      "Solo en las posiciones pares.",
+      "Desde la mitad de la lista hasta el final.",
+      "nicamente en la posición 0."
+    ],
+    "respuesta_correcta": "Entre los valores de 0 al tamaño -1."
+  },
+  {
+    "pregunta": "¿Cuándo termina el procedimiento del algoritmo de selección?",
+    "opciones": [
+      "Cuando todos los datos han sido ordenados dentro del arreglo.",
+      "Después de realizar exactamente tres intercambios.",
+      "Cuando se encuentra el número cero.",
+      "Cuando el usuario detiene el programa manualmente."
+    ],
+    "respuesta_correcta": "Cuando todos los datos han sido ordenados dentro del arreglo."
+  },
+  {
+    "pregunta": "¿De qué se encarga el algoritmo de organizaci?n de informaci?n por burbuja?",
+    "opciones": [
+      "De realizar la comparación entre pares de elementos consecutivos e intercambiarlos si están incorrectos.",
+      "De seleccionar el número más grande y borrarlo.",
+      "De dividir la lista en grupos de tres elementos.",
+      "De buscar un dato usando un índice auxiliar."
+    ],
+    "respuesta_correcta": "De realizar la comparación entre pares de elementos consecutivos e intercambiarlos si están incorrectos."
+  },
+  {
+    "pregunta": "¿Por qué se le reconoce como 'burbuja' a este algoritmo?",
+    "opciones": [
+      "Porque los valores más grandes suben poco a poco hacia el final de la lista.",
+      "Porque el código desaparece al terminar como una burbuja.",
+      "Porque solo funciona con datos de tipo flotante.",
+      "Porque fue inventado en un laboratorio de química."
+    ],
+    "respuesta_correcta": "Porque los valores más grandes suben poco a poco hacia el final de la lista."
+  },
+  {
+    "pregunta": "¿Qué sucede en cada recorrido del organizaci?n de informaci?n de burbuja según la descripción?",
+    "opciones": [
+      "El número más grande se mueve hacia el final de la lista.",
+      "Todos los números se multiplican por el anterior.",
+      "La lista se hace más pequeña.",
+      "Se solicita una nueva entrada de datos."
+    ],
+    "respuesta_correcta": "El número más grande se mueve hacia el final de la lista."
+  },
+  {
+    "pregunta": "¿Cuándo termina oficialmente el algoritmo de burbuja?",
+    "opciones": [
+      "Cuando ya no es necesario hacer intercambios y la lista queda ordenada.",
+      "Después del primer recorrido completo.",
+      "Cuando se comparan los primeros dos elementos.",
+      "Cuando el tiempo de ejecución llega a un segundo."
+    ],
+    "respuesta_correcta": "Cuando ya no es necesario hacer intercambios y la lista queda ordenada."
+  },
+  {
+    "pregunta": "¿Cómo funciona el algoritmo Merge Sort (Organizaci?n de informaci?n por mezcla)?",
+    "opciones": [
+      "Dividiendo la lista en partes pequeñas, ordenándolas por separado y luego uniéndolas.",
+      "Comparando solo los extremos de la lista.",
+      "Tomando decisiones al azar para mover los números.",
+      "Usando una estructura de tipo pila únicamente."
+    ],
+    "respuesta_correcta": "Dividiendo la lista en partes pequeñas, ordenándolas por separado y luego uniéndolas."
+  },
+  {
+    "pregunta": "¿Qué idea fundamental sigue el método de Merge Sort?",
+    "opciones": [
+      "Dividir para ordenar y después mezclar.",
+      "Sumar para luego restar.",
+      "Buscar para luego borrar.",
+      "Copiar para luego pegar."
+    ],
+    "respuesta_correcta": "Dividir para ordenar y después mezclar."
+  },
+  {
+    "pregunta": "¿Hasta qué punto se divide la lista en el algoritmo de mezcla?",
+    "opciones": [
+      "Hasta que cada parte tenga un solo elemento.",
+      "Hasta que queden solo dos grupos de diez elementos.",
+      "Hasta que la computadora se quede sin memoria.",
+      "No se divide, solo se desordena más."
+    ],
+    "respuesta_correcta": "Hasta que cada parte tenga un solo elemento."
+  },
+  {
+    "pregunta": "¿Qué se hace después de dividir la lista en el Merge Sort?",
+    "opciones": [
+      "Se empiezan a unir las partes comparando los valores de cada grupo y colocándolos en orden.",
+      "Se seleccionan los elementos pares para eliminarlos.",
+      "Se detiene el proceso y se muestra la lista dividida.",
+      "Se multiplican las partes entre sí."
+    ],
+    "respuesta_correcta": "Se empiezan a unir las partes comparando los valores de cada grupo y colocándolos en orden."
+  },
+  {
+    "pregunta": "¿Por qué se llama 'organizaci?n de informaci?n por mezcla'?",
+    "opciones": [
+      "Porque divide la lista y luego la vuelve a unir en orden.",
+      "Porque mezcla números con letras aleatoriamente.",
+      "Porque usa diferentes lenguajes de programación al mismo tiempo.",
+      "Porque los datos se mezclan con ruido visual."
+    ],
+    "respuesta_correcta": "Porque divide la lista y luego la vuelve a unir en orden."
+  },
+  {
+    "pregunta": "¿Qué es la comparación de órdenes de organizaci?n en organizaci?n de informaci?n?",
+    "opciones": [
+      "Análisis para determinar qué tan eficiente es un algoritmo frente a otro en tiempo y recursos.",
+      "Una competencia para ver qué programador escribe más rápido.",
+      "Comparar el tamaño físico de los manuales de cada algoritmo.",
+      "Ver qué algoritmo tiene el nombre más corto."
+    ],
+    "respuesta_correcta": "Análisis para determinar qué tan eficiente es un algoritmo frente a otro en tiempo y recursos."
+  },
+  {
+    "pregunta": "¿Qué indica la notación Big-O en el crecimiento del problema?",
+    "opciones": [
+      "Cómo crece el tiempo de ejecución conforme crece el tamaño de los datos.",
+      "Cuántas veces se ha guardado el archivo en el disco.",
+      "El número de veces que el usuario ha reiniciado la computadora.",
+      "La cantidad de comentarios que tiene el código."
+    ],
+    "respuesta_correcta": "Cómo crece el tiempo de ejecución conforme crece el tamaño de los datos."
+  },
+  {
+    "pregunta": "¿Qué organizaci?n es más eficiente cuando la cantidad de datos es grande según el ejemplo del texto?",
+    "opciones": [
+      "O(n) es más eficiente que O(n²).",
+      "O(n²) es más eficiente que O(n).",
+      "O(2ⁿ) es la más eficiente de todas.",
+      "Todas las organizaci?nes son iguales si el procesador es rápido."
+    ],
+    "respuesta_correcta": "O(n) es más eficiente que O(n²)."
+  },
+  {
+    "pregunta": "¿Por qué un algoritmo O(n) es preferible a uno O(n²) en listas grandes?",
+    "opciones": [
+      "Porque su tiempo de ejecución crece más lentamente.",
+      "Porque usa menos colores en la interfaz gráfica.",
+      "Porque fue escrito por Knuth en 1998.",
+      "Porque no requiere el uso de variables."
+    ],
+    "respuesta_correcta": "Porque su tiempo de ejecución crece más lentamente."
+  },
+  {
+    "pregunta": "Según la Figura 10, ¿qué curva representa el 'peor rendimiento'?",
+    "opciones": [
+      "La curva más alta.",
+      "La curva más baja.",
+      "La línea recta horizontal.",
+      "La que tiene color verde."
+    ],
+    "respuesta_correcta": "La curva más alta."
+  },
+  {
+    "pregunta": "¿Qué algoritmo se menciona en el código de la Figura 6?",
+    "opciones": [
+      "Organizaci?n de informaci?n por inserción.",
+      "Organizaci?n de informaci?n de burbuja.",
+      "Merge Sort.",
+      "Búsqueda binaria."
+    ],
+    "respuesta_correcta": "Organizaci?n de informaci?n por inserción."
+  },
+  {
+    "pregunta": "En el código de la Figura 7, ¿para qué sirve la variable 'indice_mayor' o 'indice_menor'?",
+    "opciones": [
+      "Para suponer que el menor está en la posición actual y buscarlo en el resto de la lista.",
+      "Para contar cuántos números hay en total.",
+      "Para guardar el resultado de una suma.",
+      "Para salir del ciclo for prematuramente."
+    ],
+    "respuesta_correcta": "Para suponer que el menor está en la posición actual y buscarlo en el resto de la lista."
+  },
+  {
+    "pregunta": "En la Figura 8 (Burbuja), ¿qué sucede con el número 8 en el Paso 1?",
+    "opciones": [
+      "Se compara con sus vecinos y se mueve hacia la derecha por ser mayor.",
+      "Se elimina por ser un número par.",
+      "Se queda estático en la primera posición.",
+      "Se divide entre dos."
+    ],
+    "respuesta_correcta": "Se compara con sus vecinos y se mueve hacia la derecha por ser mayor."
+  },
+  {
+    "pregunta": "En el Merge Sort (Figura 9), ¿qué se observa en la parte superior de la imagen?",
+    "opciones": [
+      "Una lista de números desordenados.",
+      "Una lista ya ordenada de menor a mayor.",
+      "Un solo número gigante.",
+      "Un gráfico de barras."
+    ],
+    "respuesta_correcta": "Una lista de números desordenados."
+  },
+  {
+    "pregunta": "¿Qué autor se cita al hablar de la importancia del identificador único en los datos?",
+    "opciones": [
+      "Knuth (1998).",
+      "Weiss (2014).",
+      "Salas (s.f.).",
+      "Aho (2006)."
+    ],
+    "respuesta_correcta": "Knuth (1998)."
+  },
+  {
+    "pregunta": "¿Qué ocurre si los datos ya están ordenados y aplicamos el algoritmo de burbuja?",
+    "opciones": [
+      "El algoritmo termina cuando detecta que ya no es necesario hacer intercambios.",
+      "El algoritmo desordena la lista y vuelve a empezar.",
+      "La computadora se bloquea por falta de instrucciones.",
+      "Se borran todos los datos por seguridad."
+    ],
+    "respuesta_correcta": "El algoritmo termina cuando detecta que ya no es necesario hacer intercambios."
+  },
+  {
+    "pregunta": "¿Qué se compara en el algoritmo de inserción para desplazar los elementos?",
+    "opciones": [
+      "Cada uno de los elementos siguientes con los anteriores.",
+      "Solo el primer número con el último.",
+      "Los números con su propia sombra en memoria.",
+      "nicamente los números que son mayores a 100."
+    ],
+    "respuesta_correcta": "Cada uno de los elementos siguientes con los anteriores."
+  },
+  {
+    "pregunta": "En la comparación de órdenes de organizaci?n, ¿cuál es el objetivo final?",
+    "opciones": [
+      "Elegir el mejor algoritmo para resolver problemas en programación y recursos digitales.",
+      "Hacer que el código sea más largo y difícil de entender.",
+      "Demostrar que todos los contenidos tardan lo mismo.",
+      "Evitar el uso de la notación Big-O."
+    ],
+    "respuesta_correcta": "Elegir el mejor algoritmo para resolver problemas en programación y recursos digitales."
+  },
+  {
+    "pregunta": "¿Qué representa la variable 'j' en el código de organizaci?n de informaci?n por inserción (Figura 6)?",
+    "opciones": [
+      "La posición que se va comparando hacia atrás con la carta anterior.",
+      "El valor total de la suma de las cartas.",
+      "El nombre de la lista de cartas.",
+      "Un generador de números aleatorios."
+    ],
+    "respuesta_correcta": "La posición que se va comparando hacia atrás con la carta anterior."
+  },
+  {
+    "pregunta": "En el organizaci?n de informaci?n por selección, ¿qué se busca en el 'resto de la lista'?",
+    "opciones": [
+      "El siguiente elemento más pequeño.",
+      "El número más grande para borrarlo.",
+      "Un número que sea igual al primero.",
+      "La palabra 'Fin'."
+    ],
+    "respuesta_correcta": "El siguiente elemento más pequeño."
+  },
+  {
+    "pregunta": "¿Cómo se describe la eficiencia de un algoritmo según el texto?",
+    "opciones": [
+      "Considerando el tiempo que tarda y la cantidad de recursos que utiliza al aumentar los datos.",
+      "Basándose únicamente en la marca de la computadora.",
+      "Midiendo cuántas personas pueden leer el código al mismo tiempo.",
+      "Contando cuántos colores diferentes tiene el diagrama de flujo."
+    ],
+    "respuesta_correcta": "Considerando el tiempo que tarda y la cantidad de recursos que utiliza al aumentar los datos."
+  }
+]
+

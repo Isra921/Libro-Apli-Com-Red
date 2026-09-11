@@ -1,0 +1,353 @@
+[
+  {
+    "pregunta": "Cul es el objetivo principal del problema de la bsqueda en algoritmia?",
+    "opciones": [
+      "Encontrar un dato especfico dentro de un conjunto de informacin de la manera ms rpida y eficiente posible.",
+      "Borrar datos que no se han usado en mucho tiempo.",
+      "Cambiar el orden de los elementos de una lista al azar.",
+      "Multiplicar todos los valores de una base de datos."
+    ],
+    "respuesta_correcta": "Encontrar un dato especfico dentro de un conjunto de informacin de la manera ms rpida y eficiente posible."
+  },
+  {
+    "pregunta": "Qu habilidades desarrollan los estudiantes al comprender los contenidos de bsqueda?",
+    "opciones": [
+      "Optimizar programas, mejorar el rendimiento de sistemas y fortalecer el pensamiento lgico.",
+      "Aprender a escribir correos electrnicos profesionales.",
+      "Reparar fsicamente componentes de hardware.",
+      "Disear interfaces grficas con muchos colores."
+    ],
+    "respuesta_correcta": "Optimizar programas, mejorar el rendimiento de sistemas y fortalecer el pensamiento lgico."
+  },
+  {
+    "pregunta": "En qu consiste el algoritmo de bsqueda secuencial?",
+    "opciones": [
+      "En recorrer uno a uno los elementos de una lista hasta encontrar el dato o terminar el recorrido.",
+      "En dividir la lista en dos partes iguales repetidamente.",
+      "En usar un ndice auxiliar para saltar directamente al dato.",
+      "En preguntar al usuario en qu posicin cree que est el dato."
+    ],
+    "respuesta_correcta": "En recorrer uno a uno los elementos de una lista hasta encontrar el dato o terminar el recorrido."
+  },
+  {
+    "pregunta": "Requiere la bsqueda secuencial que los datos estn ordenados?",
+    "opciones": [
+      "No, puede aplicarse en cualquier conjunto de informacin, ya que compara los datos en el orden en que se encuentran.",
+      "S, es obligatorio que estn ordenados de menor a mayor.",
+      "Solo si la lista tiene ms de 100 elementos.",
+      "S, pero solo si son datos de tipo numrico."
+    ],
+    "respuesta_correcta": "No, puede aplicarse en cualquier conjunto de informacin, ya que compara los datos en el orden en que se encuentran."
+  },
+  {
+    "pregunta": "Qu sucede con el tiempo de ejecucin de la bsqueda secuencial conforme crece el nmero de elementos?",
+    "opciones": [
+      "Su tiempo de ejecucin aumenta proporcionalmente.",
+      "Su tiempo de ejecucin disminuye.",
+      "El tiempo de ejecucin se mantiene constante.",
+      "El algoritmo deja de funcionar automticamente."
+    ],
+    "respuesta_correcta": "Su tiempo de ejecucin aumenta proporcionalmente."
+  },
+  {
+    "pregunta": "Segn Weiss (2014), cundo se utiliza principalmente la bsqueda secuencial?",
+    "opciones": [
+      "Cuando se trabaja con colecciones pequeas de datos o no es posible ordenarlos previamente.",
+      "En bases de datos de millones de registros.",
+      "Cuando se requiere la mxima velocidad posible en supercomputadoras.",
+      "Solo para buscar nombres de personas."
+    ],
+    "respuesta_correcta": "Cuando se trabaja con colecciones pequeas de datos o no es posible ordenarlos previamente."
+  },
+  {
+    "pregunta": "Por qu es importante estudiar la bsqueda secuencial en la formacin de nivel superior?",
+    "opciones": [
+      "Sirve como base para analizar mtodos ms eficientes dentro de las recursos digitales.",
+      "Es el nico algoritmo que se usa en la industria actualmente.",
+      "Porque no requiere el uso de computadoras para ejecutarse.",
+      "Para aprender a memorizar listas de nmeros."
+    ],
+    "respuesta_correcta": "Sirve como base para analizar mtodos ms eficientes dentro de las recursos digitales."
+  },
+  {
+    "pregunta": "Cul es una caracterstica principal de la bsqueda secuencial respecto a su implementacin?",
+    "opciones": [
+      "Es uno de los contenidos ms simples y fciles de implementar.",
+      "Requiere conocimientos avanzados de clculo integral.",
+      "Es extremadamente difcil de programar en Python.",
+      "Necesita hardware especial para funcionar."
+    ],
+    "respuesta_correcta": "Es uno de los contenidos ms simples y fciles de implementar."
+  },
+  {
+    "pregunta": "Cul es la mayor desventaja de la bsqueda secuencial mencionada en el texto?",
+    "opciones": [
+      "Menor eficiencia en listas grandes.",
+      "Que solo funciona con nmeros enteros.",
+      "Que borra los datos despus de encontrarlos.",
+      "Que requiere demasiada memoria RAM."
+    ],
+    "respuesta_correcta": "Menor eficiencia en listas grandes."
+  },
+  {
+    "pregunta": "Qu elemento es fundamental para que la bsqueda binaria funcione correctamente?",
+    "opciones": [
+      "La lista debe estar ordenada.",
+      "La lista debe contener solo nmeros primos.",
+      "El usuario debe ingresar la posicin media.",
+      "Se debe usar un generador de nmeros aleatorios."
+    ],
+    "respuesta_correcta": "La lista debe estar ordenada."
+  },
+  {
+    "pregunta": "Cul es la organizaci?n algortmica de la bsqueda binaria segn la Figura 12?",
+    "opciones": [
+      "O(log n)",
+      "O(n)",
+      "O(n)",
+      "O(1)"
+    ],
+    "respuesta_correcta": "O(log n)"
+  },
+  {
+    "pregunta": "Cmo se describe la eficiencia de la bsqueda binaria en comparacin con la secuencial?",
+    "opciones": [
+      "Es ms eficiente porque busca en logaritmo, reduciendo el rea de bsqueda.",
+      "Es menos eficiente porque divide demasiado el arreglo.",
+      "Tienen la misma eficiencia.",
+      "Es ms lenta pero ms segura."
+    ],
+    "respuesta_correcta": "Es ms eficiente porque busca en logaritmo, reduciendo el rea de bsqueda."
+  },
+  {
+    "pregunta": "Qu sucede en el modo kernel respecto a los recursos del sistema?",
+    "opciones": [
+      "Tiene acceso total de la CPU y privilegios en todos los recursos del sistema operativo.",
+      "No tiene acceso al hardware.",
+      "Tiene menos privilegios que el modo usuario.",
+      "Solo puede leer archivos de texto."
+    ],
+    "respuesta_correcta": "Tiene acceso total de la CPU y privilegios en todos los recursos del sistema operativo."
+  },
+  {
+    "pregunta": "Quin controla el acceso a la memoria en el modo kernel?",
+    "opciones": [
+      "La CPU, permitiendo o deteniendo la ejecucin de programas y lectura/escritura.",
+      "El usuario final mediante el teclado.",
+      "Un algoritmo probabilstico.",
+      "Un archivo de Excel externo."
+    ],
+    "respuesta_correcta": "La CPU, permitiendo o deteniendo la ejecucin de programas y lectura/escritura."
+  },
+  {
+    "pregunta": "Qu es la bsqueda indexada?",
+    "opciones": [
+      "Un mtodo que utiliza una estructura auxiliar llamada ndice para localizar informacin rpido.",
+      "Un sistema para buscar libros en una biblioteca fsica.",
+      "Un algoritmo que busca datos basndose en su color.",
+      "Una forma de bsqueda que solo funciona en internet."
+    ],
+    "respuesta_correcta": "Un mtodo que utiliza una estructura auxiliar llamada ndice para localizar informacin rpido."
+  },
+  {
+    "pregunta": "Cul es la funcin principal del ndice en la bsqueda indexada?",
+    "opciones": [
+      "Evitar recorrer todos los elementos uno por uno e identificar la seccin probable del dato.",
+      "Ordenar la lista cada vez que se hace una bsqueda.",
+      "Contar cuntas veces se ha buscado el mismo dato.",
+      "Traducir los datos a cdigo binario."
+    ],
+    "respuesta_correcta": "Evitar recorrer todos los elementos uno por uno e identificar la seccin probable del dato."
+  },
+  {
+    "pregunta": "Qu requisito previo tienen los datos en la bsqueda indexada?",
+    "opciones": [
+      "Deben estar organizados previamente en bloques o grupos.",
+      "Deben estar cifrados con una contrasea.",
+      "Deben ser todos del mismo tamao en bytes.",
+      "Deben ser nmeros impares."
+    ],
+    "respuesta_correcta": "Deben estar organizados previamente en bloques o grupos."
+  },
+  {
+    "pregunta": "Cules son las dos etapas de la bsqueda indexada?",
+    "opciones": [
+      "Consultar el ndice para determinar el bloque y buscar dentro de ese bloque.",
+      "Pedir el dato al usuario y luego buscarlo en Google.",
+      "Dividir la lista a la mitad y luego unirla.",
+      "Borrar el ndice y crear uno nuevo en cada bsqueda."
+    ],
+    "respuesta_correcta": "Consultar el ndice para determinar el bloque y buscar dentro de ese bloque."
+  },
+  {
+    "pregunta": "Qu recurso adicional requiere la bsqueda indexada en comparacin con la secuencial?",
+    "opciones": [
+      "Memoria adicional para almacenar el ndice.",
+      "Un procesador de ms ncleos.",
+      "Ms tiempo de espera por parte del usuario.",
+      "Una conexin a internet permanente."
+    ],
+    "respuesta_correcta": "Memoria adicional para almacenar el ndice."
+  },
+  {
+    "pregunta": "Dnde es comn utilizar el mtodo de bsqueda indexada?",
+    "opciones": [
+      "En archivos organizados, bases de datos y recursos digitales.",
+      "En el diseo de calculadoras simples.",
+      "Para ordenar iconos en el escritorio.",
+      "En juegos de azar nicamente."
+    ],
+    "respuesta_correcta": "En archivos organizados, bases de datos y recursos digitales."
+  },
+  {
+    "pregunta": "Cmo se clasifica tcnicamente a la bsqueda indexada?",
+    "opciones": [
+      "Como una tcnica intermedia entre la bsqueda secuencial y la binaria.",
+      "Como el algoritmo ms lento de todos.",
+      "Como una bsqueda de tipo voraz.",
+      "Como una bsqueda puramente probabilstica."
+    ],
+    "respuesta_correcta": "Como una tcnica intermedia entre la bsqueda secuencial y la binaria."
+  },
+  {
+    "pregunta": "Para qu se utiliza la comparacin de rdenes de organizaci?n en bsqueda?",
+    "opciones": [
+      "Para evaluar la eficiencia de diferentes contenidos conforme aumenta el tamao de los datos.",
+      "Para saber qu programador cobra ms por su trabajo.",
+      "Para medir la temperatura del servidor durante la bsqueda.",
+      "Para contar cuntas palabras tiene el cdigo fuente."
+    ],
+    "respuesta_correcta": "Para evaluar la eficiencia de diferentes contenidos conforme aumenta el tamao de los datos."
+  },
+  {
+    "pregunta": "Qu notacin se usa para clasificar contenidos segn su crecimiento (constante, lineal, etc.)?",
+    "opciones": [
+      "Notacin Big-O (O).",
+      "Notacin de flechas.",
+      "Notacin decimal.",
+      "Notacin de ingeniera de hardware."
+    ],
+    "respuesta_correcta": "Notacin Big-O (O)."
+  },
+  {
+    "pregunta": "En qu NO se enfoca la comparacin de rdenes de organizaci?n?",
+    "opciones": [
+      "En el tiempo exacto de ejecucin.",
+      "En el comportamiento del algoritmo al aumentar los datos.",
+      "En la cantidad de recursos necesarios.",
+      "En la seleccin del mejor algoritmo."
+    ],
+    "respuesta_correcta": "En el tiempo exacto de ejecucin."
+  },
+  {
+    "pregunta": "Cmo crece un algoritmo de orden O(n)?",
+    "opciones": [
+      "De forma proporcional al nmero de elementos.",
+      "De forma exponencial.",
+      "Se mantiene siempre igual sin importar los datos.",
+      "Crece mucho ms rpido que uno de O(n)."
+    ],
+    "respuesta_correcta": "De forma proporcional al nmero de elementos."
+  },
+  {
+    "pregunta": "Qu sucede con un algoritmo O(n) cuando se trabaja con grandes volmenes de informacin?",
+    "opciones": [
+      "Se vuelve menos eficiente porque aumenta mucho ms rpido que uno lineal.",
+      "Se vuelve el ms rpido de todos.",
+      "Optimiza automticamente el espacio en disco.",
+      "No cambia su comportamiento."
+    ],
+    "respuesta_correcta": "Se vuelve menos eficiente porque aumenta mucho ms rpido que uno lineal."
+  },
+  {
+    "pregunta": "Qu tipo de organizaci?n es preferible cuando el tamao del problema es grande?",
+    "opciones": [
+      "O(log n) u O(n).",
+      "O(n).",
+      "O(2).",
+      "Organizaci?n factorial."
+    ],
+    "respuesta_correcta": "O(log n) u O(n)."
+  },
+  {
+    "pregunta": "Por qu es fundamental el anlisis de organizaci?n en la formacin de nivel superior?",
+    "opciones": [
+      "Desarrolla la capacidad de disear programas ms eficientes y optimizados.",
+      "Es requisito para poder usar lenguajes como Python.",
+      "Para saber cuntos gigabytes comprar de memoria RAM.",
+      "Para poder dibujar grficas de colores en las presentaciones."
+    ],
+    "respuesta_correcta": "Desarrolla la capacidad de disear programas ms eficientes y optimizados."
+  },
+  {
+    "pregunta": "En la Figura 14, qu representa el eje vertical de la grfica?",
+    "opciones": [
+      "Tiempo de ejecucin.",
+      "Tamao del problema (n).",
+      "Nmero de variables.",
+      "Costo del software."
+    ],
+    "respuesta_correcta": "Tiempo de ejecucin."
+  },
+  {
+    "pregunta": "Segn la Figura 14, cul es la organizaci?n de O(1)?",
+    "opciones": [
+      "Constante.",
+      "Lineal.",
+      "Exponencial.",
+      "Logartmica."
+    ],
+    "respuesta_correcta": "Constante."
+  },
+  {
+    "pregunta": "Qu representa O(2) en la comparacin de organizaci?nes?",
+    "opciones": [
+      "Organizaci?n Exponencial.",
+      "Organizaci?n Lineal.",
+      "Organizaci?n Cuadrtica.",
+      "Organizaci?n Constante."
+    ],
+    "respuesta_correcta": "Organizaci?n Exponencial."
+  },
+  {
+    "pregunta": "En la Figura 13 (Bsqueda Indexada), qu bloques se muestran como ejemplo?",
+    "opciones": [
+      "Bloque A, Bloque B y Bloque C.",
+      "Bloque 1, Bloque 2 y Bloque 3.",
+      "Bloque Inicial y Bloque Final.",
+      "No hay bloques, solo una lista larga."
+    ],
+    "respuesta_correcta": "Bloque A, Bloque B y Bloque C."
+  },
+  {
+    "pregunta": "Qu indica el cronmetro con datos binarios (01010101) en la Figura 14?",
+    "opciones": [
+      "La medicin del tiempo y recursos en relacin a la organizaci?n.",
+      "Que el tiempo se ha agotado.",
+      "La velocidad de descarga de internet.",
+      "El nmero de bits del procesador."
+    ],
+    "respuesta_correcta": "La medicin del tiempo y recursos en relacin a la organizaci?n."
+  },
+  {
+    "pregunta": "Qu sucede si un dato NO se encuentra en una bsqueda secuencial?",
+    "opciones": [
+      "Se termina el recorrido de toda la lista.",
+      "El algoritmo borra la lista completa.",
+      "La computadora se reinicia.",
+      "Se aade el dato automticamente al final."
+    ],
+    "respuesta_correcta": "Se termina el recorrido de toda la lista."
+  },
+  {
+    "pregunta": "Cul es la eficiencia de la bsqueda en logaritmo comparada con la lineal?",
+    "opciones": [
+      "Es mejor rendimiento porque crece ms lentamente.",
+      "Es peor porque requiere ms clculos.",
+      "Es igual porque n es el mismo.",
+      "Depende de si el usuario es administrador o kernel."
+    ],
+    "respuesta_correcta": "Es mejor rendimiento porque crece ms lentamente."
+  }
+]
+

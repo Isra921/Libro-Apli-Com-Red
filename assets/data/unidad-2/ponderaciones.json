@@ -1,0 +1,129 @@
+[
+  {
+    "aciertos": 0,
+    "type": "defeat",
+    "icon": "fas fa-book-reader",
+    "text": "Te recomendamos revisar el tema. Todo gran aprendizaje comienza con un primer paso. No te desanimes; cada nuevo intento es una oportunidad para crecer y mejorar."
+  },
+  {
+    "aciertos": 1,
+    "type": "defeat",
+    "icon": "fas fa-book-reader",
+    "text": "Te recomendamos revisar el tema. Has comenzado el camino del aprendizaje. Dedica un poco mÃ¡s de tiempo al estudio y descubrirÃ¡s que puedes avanzar mucho mÃ¡s."
+  },
+  {
+    "aciertos": 2,
+    "type": "defeat",
+    "icon": "fas fa-book-reader",
+    "text": "Te recomendamos revisar el tema. El conocimiento se construye poco a poco. Sigue esforzÃ¡ndote y cada dÃ­a comprenderÃ¡s mejor los conceptos."
+  },
+  {
+    "aciertos": 3,
+    "type": "defeat",
+    "icon": "fas fa-book-reader",
+    "text": "Te recomendamos revisar el tema. Los errores forman parte del aprendizaje. Analiza tus respuestas y vuelve a intentarlo con confianza."
+  },
+  {
+    "aciertos": 4,
+    "type": "defeat",
+    "icon": "fas fa-book-reader",
+    "text": "Te recomendamos revisar el tema. Ya identificas algunos conceptos importantes. ContinÃºa practicando y fortalecerÃ¡s tus habilidades."
+  },
+  {
+    "aciertos": 5,
+    "type": "defeat",
+    "icon": "fas fa-book-reader",
+    "text": "Te recomendamos revisar el tema. La perseverancia es la clave del Ã©xito. MantÃ©n una actitud positiva y continÃºa avanzando."
+  },
+  {
+    "aciertos": 6,
+    "type": "defeat",
+    "icon": "fas fa-book-reader",
+    "text": "Te recomendamos revisar el tema. Tu esfuerzo comienza a reflejarse en tus resultados. Sigue estudiando y alcanzarÃ¡s mejores logros."
+  },
+  {
+    "aciertos": 7,
+    "type": "defeat",
+    "icon": "fas fa-book-reader",
+    "text": "Te recomendamos revisar el tema. Has logrado avances importantes. No te detengas; cada paso te acerca a tu objetivo."
+  },
+  {
+    "aciertos": 8,
+    "type": "defeat",
+    "icon": "fas fa-book-reader",
+    "text": "Te recomendamos revisar el tema. EstÃ¡s construyendo bases sÃ³lidas de conocimiento. ContinÃºa practicando y fortaleciendo los temas que aÃºn representan un reto."
+  },
+  {
+    "aciertos": 9,
+    "type": "defeat",
+    "icon": "fas fa-book-reader",
+    "text": "Te recomendamos revisar el tema. Has demostrado interÃ©s y dedicaciÃ³n. Con un poco mÃ¡s de esfuerzo podrÃ¡s superar este resultado."
+  },
+  {
+    "aciertos": 10,
+    "type": "defeat",
+    "icon": "fas fa-book-reader",
+    "text": "Te recomendamos revisar el tema. Te encuentras a mitad del camino. Sigue trabajando y pronto lograrÃ¡s alcanzar la calificaciÃ³n aprobatoria."
+  },
+  {
+    "aciertos": 11,
+    "type": "defeat",
+    "icon": "fas fa-book-reader",
+    "text": "Te recomendamos revisar el tema. EstÃ¡s muy cerca de lograrlo. Revisa los puntos clave y continÃºa esforzÃ¡ndote para alcanzar la meta."
+  },
+  {
+    "aciertos": 12,
+    "type": "continue",
+    "icon": "fas fa-book-reader",
+    "text": "Vamos por buen camino. Has alcanzado el nivel aprobatorio. Ahora el reto es fortalecer tus conocimientos para seguir creciendo acadÃ©micamente."
+  },
+  {
+    "aciertos": 13,
+    "type": "continue",
+    "icon": "fas fa-chart-line",
+    "text": "Vamos por buen camino. Has demostrado una comprensiÃ³n adecuada del tema. ContinÃºa estudiando y conviÃ©rtete en un referente de excelencia."
+  },
+  {
+    "aciertos": 14,
+    "type": "continue",
+    "icon": "fas fa-chart-line",
+    "text": "Vamos por buen camino. Tu desempeÃ±o refleja compromiso con el aprendizaje. MantÃ©n la constancia y alcanzarÃ¡s resultados aÃºn mÃ¡s sobresalientes."
+  },
+  {
+    "aciertos": 15,
+    "type": "continue",
+    "icon": "fas fa-chart-line",
+    "text": "Vamos por buen camino. Has construido una buena base de conocimientos. El siguiente paso es perfeccionar los detalles para acercarte a la excelencia."
+  },
+  {
+    "aciertos": 16,
+    "type": "continue",
+    "icon": "fas fa-chart-line",
+    "text": "Vamos por buen camino. Tu esfuerzo estÃ¡ generando resultados muy positivos. ContinÃºa aprendiendo con disciplina y alcanzarÃ¡s niveles superiores de desempeÃ±o."
+  },
+  {
+    "aciertos": 17,
+    "type": "victory",
+    "icon": "fas fa-medal",
+    "text": "Vamos por buen camino. Has demostrado una comprensiÃ³n sÃ³lida del tema. Sigue fortaleciendo tus habilidades para convertir un buen resultado en uno extraordinario."
+  },
+  {
+    "aciertos": 18,
+    "type": "victory",
+    "icon": "fas fa-medal",
+    "text": "Vamos por buen camino. Excelente trabajo. EstÃ¡s muy cerca de la excelencia acadÃ©mica; continÃºa con la misma dedicaciÃ³n y entusiasmo."
+  },
+  {
+    "aciertos": 19,
+    "type": "victory",
+    "icon": "fas fa-trophy",
+    "text": "Vamos por buen camino. Has alcanzado un nivel sobresaliente. Un pequeÃ±o esfuerzo adicional te permitirÃ¡ lograr el mÃ¡ximo desempeÃ±o y consolidar tu dominio del tema."
+  },
+  {
+    "aciertos": 20,
+    "type": "victory",
+    "icon": "fas fa-crown",
+    "text": "Â¡Felicidades! Has alcanzado la excelencia acadÃ©mica. Tu dedicaciÃ³n, disciplina y compromiso con el aprendizaje se reflejan en este resultado excepcional. ContinÃºa cultivando tu curiosidad, compartiendo tus conocimientos y enfrentando nuevos desafÃ­os. Recuerda que la excelencia no es un destino, sino un hÃ¡bito que se construye dÃ­a a dÃ­a. Â¡Sigue aprendiendo, creciendo y alcanzando nuevas metas!"
+  }
+]
+

@@ -1,0 +1,18 @@
+:root {
+--light: var(--surface);
+    --dark: var(--primary);
+    --gray: var(--text-muted);
+--case-color: var(--secondary);
+    --card-border: var(--secondary);
+    --card-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+    --card-bg: linear-gradient(135deg, var(--secondary), rgba(44, 62, 80, 0.62));
+    --quiz-correct: var(--success);
+    --quiz-incorrect: var(--danger);
+    --intro-border: var(--secondary);
+    --submenu-bg: var(--secondary);
+    --soft-panel: var(--secondary);
+    --page-bg: linear-gradient(135deg, var(--primary) 0%, var(--primary) 48%, var(--primary) 100%);
+    --scroll-track: rgba(26, 42, 58, 0.95);
+    --scroll-thumb: var(--secondary);
+    --scroll-thumb-hover: var(--secondary);
+}

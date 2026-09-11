@@ -1,0 +1,224 @@
+{
+  "id": "caso_operacion_enlace",
+  "title": "Operación Enlace: modernización de la red de respuesta de Ciudad Nova",
+  "summary": "Sofía, ingeniera de software del Centro de Coordinación de Ciudad Nova, diseñó una solución basada en árboles, montículos y grafos para organizar la infraestructura, priorizar incidentes y calcular rutas de atención. El equipo comparó distintas implementaciones para comprobar su eficiencia y escalabilidad.",
+  "sections": [
+    {
+      "id": "contexto",
+      "title": "Contexto",
+      "icon": "fa-city",
+      "content": "Ciudad Nova administra 20 000 dispositivos de comunicación, 1.2 millones de reportes históricos y una red operativa de 1 200 puntos conectados por 3 600 enlaces bidireccionales. El sistema anterior recorría listas y tablas completas para localizar dispositivos, asignaba incidentes por orden de llegada y calculaba rutas manualmente. Durante horas de alta demanda esto provocaba búsquedas lentas, atención tardía de emergencias y decisiones de ruta inconsistentes."
+    },
+    {
+      "id": "objetivo",
+      "title": "Objetivo e hipótesis",
+      "icon": "fa-bullseye",
+      "content": "El objetivo fue seleccionar e implementar estructuras que mantuvieran tiempos de respuesta previsibles al crecer los datos. Sofía planteó que un árbol balanceado reduciría las búsquedas del directorio, un montículo atendería primero los incidentes más urgentes, un árbol B+ disminuiría los accesos a disco y los contenidos de grafos permitirían analizar conectividad y rutas con costos conocidos."
+    },
+    {
+      "id": "arquitectura",
+      "title": "Diseño de la solución",
+      "icon": "fa-diagram-project",
+      "content": "El organigrama N-ario de zonas, sectores y estaciones se transformó a una representación binaria mediante la regla hijo izquierdo-hermano derecho. Para el directorio se comparó un árbol binario de búsqueda sin balancear contra un árbol rojo-negro. Los incidentes se almacenaron en un montículo máximo según su prioridad; el histórico se indexó con un árbol B+; y la red de puntos y enlaces se representó como un grafo mediante listas de adyacencia."
+    },
+    {
+      "id": "contenidos",
+      "title": "Contenidos aplicados",
+      "icon": "fa-code-branch",
+      "content": "En los árboles se verificaron los recorridos preorden, inorden y postorden. En el grafo, la búsqueda en amplitud (BEA) se utilizó para descubrir puntos por niveles y comprobar alcance; la búsqueda en profundidad (BEP), para inspeccionar exhaustivamente ramificaciones; y Dijkstra, apoyado por un montículo mínimo, para obtener rutas de menor costo total entre el Centro y los destinos."
+    },
+    {
+      "id": "alcance",
+      "title": "Alcance de las pruebas",
+      "icon": "fa-microchip",
+      "content": "Se cargaron 20 000 identificadores de dispositivos, primero en orden ascendente y después en orden aleatorio. Se simularon 5 000 altas y extracciones de incidentes, se consultó el índice histórico de 1.2 millones de registros y se ejecutaron BEA, BEP y Dijkstra sobre el grafo de 1 200 vértices y 3 600 aristas."
+    },
+    {
+      "id": "procedimiento",
+      "title": "Procedimiento",
+      "icon": "fa-list-check",
+      "content": "El equipo construyó cada estructura con el mismo conjunto de datos, validó que los resultados fueran correctos y repitió cada operación en condiciones equivalentes. Registró altura del árbol, tiempo promedio, porcentaje de operaciones dentro del objetivo y memoria estimada. Para Dijkstra se usaron exclusivamente pesos no negativos que representan minutos de traslado."
+    },
+    {
+      "id": "analisis",
+      "title": "Plan de análisis",
+      "icon": "fa-chart-column",
+      "content": "Se contrastaron los resultados observados con sus organizaci?nes esperadas: O(n) en el peor caso de un árbol binario de búsqueda degenerado, O(log n) en árboles balanceados y operaciones principales de montículos, O(V+E) para BEA y BEP con listas de adyacencia, y O((V+E) log V) para Dijkstra con lista de adyacencia y montículo mínimo."
+    },
+    {
+      "id": "limitaciones",
+      "title": "Posibles limitaciones",
+      "icon": "fa-triangle-exclamation",
+      "content": "Las pruebas se realizaron con una topología estática y pesos no negativos. No se evaluaron cierres de calles en tiempo real, enlaces dirigidos, pesos negativos ni fallas simultáneas de servidores. Además, los tiempos dependen del equipo de prueba y no deben generalizarse sin nuevas mediciones."
+    }
+  ],
+  "resources": [
+    {
+      "id": "tabla_implementaciones",
+      "type": "table",
+      "title": "Resultados por módulo e implementación",
+      "description": "Promedios obtenidos en las pruebas de Ciudad Nova.",
+      "columns": [
+        "Módulo",
+        "Estructura o algoritmo",
+        "Volumen evaluado",
+        "Tiempo promedio",
+        "Dentro del objetivo",
+        "Organizaci?n relevante"
+      ],
+      "rows": [
+        [
+          "Directorio inicial",
+          "ABB sin balancear, claves ascendentes",
+          "20 000 registros",
+          "41 ms",
+          "74.0 %",
+          "O(n), peor caso"
+        ],
+        [
+          "Directorio mejorado",
+          "Árbol rojo-negro",
+          "20 000 registros",
+          "2 ms",
+          "99.0 %",
+          "O(log n)"
+        ],
+        [
+          "Tema provisional de incidentes",
+          "Montículo máximo",
+          "5 000 solicitudes",
+          "1 ms",
+          "98.5 %",
+          "O(log n), insertar/extraer"
+        ],
+        [
+          "Histórico en disco",
+          "Árbol B+",
+          "1.2 millones de registros",
+          "4 ms",
+          "97.0 %",
+          "O(log n)"
+        ],
+        [
+          "Conectividad",
+          "Lista de adyacencia + BEA/BEP",
+          "V = 1 200, E = 3 600",
+          "6 ms",
+          "96.0 %",
+          "O(V+E)"
+        ],
+        [
+          "Ruta de menor costo",
+          "Dijkstra + montículo mínimo",
+          "V = 1 200, E = 3 600",
+          "9 ms",
+          "94.0 %",
+          "O((V+E) log V)"
+        ]
+      ]
+    },
+    {
+      "id": "tabla_recorridos",
+      "type": "table",
+      "title": "Recorridos del árbol de prueba",
+      "description": "Secuencias obtenidas para el ABB construido con las claves 50, 30, 70, 20, 40, 60 y 80.",
+      "columns": ["Recorrido", "Secuencia", "Uso en la prueba"],
+      "rows": [
+        [
+          "Preorden",
+          "50, 30, 20, 40, 70, 60, 80",
+          "Procesar la raíz antes de sus subárboles"
+        ],
+        [
+          "Inorden",
+          "20, 30, 40, 50, 60, 70, 80",
+          "Obtener las claves del ABB en orden ascendente"
+        ],
+        [
+          "Postorden",
+          "20, 40, 30, 60, 80, 70, 50",
+          "Procesar los subárboles antes de la raíz"
+        ]
+      ]
+    },
+    {
+      "id": "tabla_rutas",
+      "type": "table",
+      "title": "Rutas candidatas del Centro al Hospital",
+      "description": "Cada peso representa minutos estimados de traslado.",
+      "columns": ["Ruta", "Suma de pesos", "Resultado"],
+      "rows": [
+        ["Centro  Norte  Hospital", "4 + 6 = 10 min", "No óptima"],
+        [
+          "Centro  Oriente  Norte  Hospital",
+          "2 + 1 + 6 = 9 min",
+          "No óptima"
+        ],
+        ["Centro  Oriente  Sur  Hospital", "2 + 4 + 2 = 8 min", "ptima"],
+        [
+          "Centro  Oriente  Almacén  Hospital",
+          "2 + 7 + 1 = 10 min",
+          "No óptima"
+        ]
+      ]
+    },
+    {
+      "id": "tabla_representacion_grafo",
+      "type": "table",
+      "title": "Representación del grafo operativo",
+      "description": "Comparación para una red dispersa de 1 200 vértices y 3 600 aristas.",
+      "columns": [
+        "Representación",
+        "Elementos principales",
+        "Memoria estimada",
+        "Recorrer vecinos de un vértice"
+      ],
+      "rows": [
+        ["Matriz de adyacencia", "1 440 000 celdas", "5.5 MB", "O(V)"],
+        [
+          "Lista de adyacencia",
+          "1 200 listas y 7 200 referencias",
+          "84 KB",
+          "O(grado del vértice)"
+        ]
+      ]
+    },
+    {
+      "id": "grafica_cumplimiento",
+      "type": "bar",
+      "title": "Operaciones dentro del tiempo objetivo",
+      "description": "Porcentaje de cumplimiento de cada implementación.",
+      "unit": "%",
+      "max": 100,
+      "bars": [
+        {
+          "label": "ABB sin balancear",
+          "value": 74
+        },
+        {
+          "label": "Rojo-negro",
+          "value": 99
+        },
+        {
+          "label": "Montículo",
+          "value": 98.5
+        },
+        {
+          "label": "Árbol B+",
+          "value": 97
+        },
+        {
+          "label": "BEA/BEP",
+          "value": 96
+        },
+        {
+          "label": "Dijkstra",
+          "value": 94
+        }
+      ]
+    }
+  ],
+  "resultsNarrative": "El árbol rojo-negro redujo el tiempo promedio del directorio de 41 ms a 2 ms y elevó el cumplimiento de 74.0 % a 99.0 %, evitando la degeneración causada por insertar claves ascendentes en un ABB sin balancear. El montículo máximo obtuvo 98.5 % de cumplimiento al priorizar incidentes; el árbol B+ respondió en 4 ms sobre datos en disco; y la lista de adyacencia usó mucha menos memoria que la matriz. Dijkstra determinó como ruta óptima Centro  Oriente  Sur  Hospital, con un costo total de 8 minutos."
+}
+
+

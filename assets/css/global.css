@@ -1,0 +1,28 @@
+@import url("variables.css");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.error-page {
+  width: min(720px, calc(100% - 40px));
+  margin: 15vh auto;
+  padding: 40px;
+  color: var(--surface);
+  background: var(--primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.error-page a {
+  color: var(--surface);
+}

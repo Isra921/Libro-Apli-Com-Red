@@ -1,0 +1,323 @@
+[
+  {
+    "id": 1,
+    "type": "opcion_multiple",
+    "category": "Tema de ejemplo",
+    "question": "Antes de programar la solucin para la app de la biblioteca, Ana escribe los pasos en espaol simple para que su equipo los entienda. Qu herramienta est usando?",
+    "options": ["Pseudocdigo", "Un algoritmo voraz", "Bsqueda binaria", "Notacin Big-O"],
+    "answer": "Pseudocdigo",
+    "explanation": "El pseudocdigo describe los pasos de un algoritmo en lenguaje natural estructurado, sin depender de un lenguaje de programacin especfico."
+  },
+  {
+    "id": 2,
+    "type": "opcion_multiple",
+    "category": "Tema de ejemplo",
+    "question": "El profesor le pide a Ana que su algoritmo, con los mismos libros de entrada, siempre entregue el mismo resultado. Qu caracterstica del algoritmo le est exigiendo?",
+    "options": ["Que sea determinstico", "Que sea probabilstico", "Que sea voraz", "Que sea no lineal"],
+    "answer": "Que sea determinstico",
+    "explanation": "Un algoritmo determinstico produce siempre la misma salida ante la misma entrada."
+  },
+  {
+    "id": 3,
+    "type": "opcion_multiple",
+    "category": "Tema de ejemplo",
+    "question": "Ana decide representar la coleccin de libros como una TDA donde cada libro tiene un nico libro anterior y uno siguiente en el estante. Qu tipo de TDA es?",
+    "options": ["Lineal", "No lineal", "Voraz", "Probabilstico"],
+    "answer": "Lineal",
+    "explanation": "Una estructura donde cada elemento tiene un nico predecesor y un nico sucesor corresponde a un TDA lineal."
+  },
+  {
+    "id": 4,
+    "type": "opcion_multiple",
+    "category": "Organizaci?n de informaci?n",
+    "question": "La biblioteca recibi 500 libros nuevos sin ningn orden. Ana necesita ordenarlos por nmero de folio antes de guardarlos. Qu tipo de algoritmo necesita usar primero?",
+    "options": ["Un algoritmo de organizaci?n de informaci?n", "Un algoritmo de bsqueda", "Un algoritmo de exploracin exhaustiva", "Un algoritmo probabilstico"],
+    "answer": "Un algoritmo de organizaci?n de informaci?n",
+    "explanation": "Para organizar un conjunto de datos desordenado segn un criterio (el folio) se requiere un algoritmo de organizaci?n de informaci?n."
+  },
+  {
+    "id": 5,
+    "type": "ordenar_proceso",
+    "category": "Organizaci?n de informaci?n",
+    "instruction": "Ordena los pasos que sigui Ana para ordenar los 500 libros nuevos con Merge Sort.",
+    "segments": [
+      "Dividir el conjunto de 500 libros en grupos ms pequeos",
+      "Ordenar cada grupo pequeo por separado",
+      "Mezclar los grupos ordenados comparando sus elementos",
+      "Repetir la mezcla hasta obtener un nico grupo ordenado por folio"
+    ],
+    "answer": [
+      "Dividir el conjunto de 500 libros en grupos ms pequeos",
+      "Ordenar cada grupo pequeo por separado",
+      "Mezclar los grupos ordenados comparando sus elementos",
+      "Repetir la mezcla hasta obtener un nico grupo ordenado por folio"
+    ],
+    "explanation": "Merge Sort sigue el principio de divide y vencers: divide, ordena cada parte, y mezcla los resultados hasta obtener el conjunto completo ordenado."
+  },
+  {
+    "id": 6,
+    "type": "ordenar_proceso",
+    "category": "Organizaci?n de informaci?n",
+    "instruction": "Ordena los pasos del organizaci?n de informaci?n por insercin que aplic Ana con los libros nuevos.",
+    "segments": [
+      "Tomar el siguiente libro sin ordenar",
+      "Comparar su folio con los libros ya ordenados, de derecha a izquierda",
+      "Desplazar los libros con folio mayor una posicin a la derecha",
+      "Insertar el libro en la posicin correcta dentro de la parte ordenada"
+    ],
+    "answer": [
+      "Tomar el siguiente libro sin ordenar",
+      "Comparar su folio con los libros ya ordenados, de derecha a izquierda",
+      "Desplazar los libros con folio mayor una posicin a la derecha",
+      "Insertar el libro en la posicin correcta dentro de la parte ordenada"
+    ],
+    "explanation": "El organizaci?n de informaci?n por insercin toma cada elemento, lo compara con la parte ya ordenada, desplaza lo necesario y lo inserta en su lugar correcto."
+  },
+  {
+    "id": 7,
+    "type": "ordenar_proceso",
+    "category": "Bsqueda",
+    "instruction": "Ordena los pasos que sigue Ana al aplicar bsqueda binaria para encontrar el folio 342.",
+    "segments": [
+      "Tomar el libro central del rango de estantera ordenado",
+      "Comparar el folio 342 con el folio del libro central",
+      "Descartar la mitad del rango donde no puede estar el folio buscado",
+      "Repetir el proceso sobre la mitad restante hasta encontrar el folio 342"
+    ],
+    "answer": [
+      "Tomar el libro central del rango de estantera ordenado",
+      "Comparar el folio 342 con el folio del libro central",
+      "Descartar la mitad del rango donde no puede estar el folio buscado",
+      "Repetir el proceso sobre la mitad restante hasta encontrar el folio 342"
+    ],
+    "explanation": "La bsqueda binaria compara con el elemento central, descarta la mitad donde el valor no puede estar, y repite sobre la mitad restante."
+  },
+  {
+    "id": 8,
+    "type": "ordenar_proceso",
+    "category": "Exploracin y vuelta atrs",
+    "instruction": "Ordena los pasos del proceso de backtracking que us Ana para armar el horario de estudio.",
+    "segments": [
+      "Asignar un horario tentativo a la siguiente materia",
+      "Verificar si ese horario genera un empalme con las materias ya asignadas",
+      "Si hay empalme, deshacer la asignacin y probar otro horario",
+      "Si no hay empalme, continuar con la siguiente materia hasta completar el horario"
+    ],
+    "answer": [
+      "Asignar un horario tentativo a la siguiente materia",
+      "Verificar si ese horario genera un empalme con las materias ya asignadas",
+      "Si hay empalme, deshacer la asignacin y probar otro horario",
+      "Si no hay empalme, continuar con la siguiente materia hasta completar el horario"
+    ],
+    "explanation": "El backtracking asigna, verifica la validez, retrocede ante un conflicto y avanza cuando la asignacin es vlida, hasta completar la solucin."
+  },
+  {
+    "id": 9,
+    "type": "seleccion_multiple",
+    "category": "Organizaci?n de informaci?n",
+    "instruction": "Selecciona todas las respuestas correctas.",
+    "question": "Cules de los siguientes son contenidos de organizaci?n de informaci?n que consider o us Ana para los 500 libros nuevos?",
+    "options": [
+      "Organizaci?n de informaci?n de burbuja",
+      "Organizaci?n de informaci?n por insercin",
+      "Organizaci?n de informaci?n por mezcla (Merge Sort)",
+      "Bsqueda binaria",
+      "Bsqueda indexada"
+    ],
+    "answer": [
+      "Organizaci?n de informaci?n de burbuja",
+      "Organizaci?n de informaci?n por insercin",
+      "Organizaci?n de informaci?n por mezcla (Merge Sort)"
+    ],
+    "explanation": "Ana compar burbuja, insercin y Merge Sort como estrategias de organizaci?n de informaci?n; bsqueda binaria e indexada son contenidos de bsqueda, no de organizaci?n de informaci?n."
+  },
+  {
+    "id": 10,
+    "type": "seleccion_multiple",
+    "category": "Bsqueda",
+    "instruction": "Selecciona todas las respuestas correctas.",
+    "question": "Cules de las siguientes son tcnicas de bsqueda que Ana implement o consider para el catlogo?",
+    "options": [
+      "Bsqueda binaria",
+      "Bsqueda secuencial",
+      "Bsqueda indexada",
+      "Organizaci?n de informaci?n por seleccin",
+      "Backtracking"
+    ],
+    "answer": [
+      "Bsqueda binaria",
+      "Bsqueda secuencial",
+      "Bsqueda indexada"
+    ],
+    "explanation": "Binaria, secuencial e indexada son las tres tcnicas de bsqueda que Ana evalu; organizaci?n de informaci?n por seleccin y backtracking pertenecen a otros temas."
+  },
+  {
+    "id": 11,
+    "type": "seleccion_multiple",
+    "category": "Tema de ejemplo",
+    "instruction": "Selecciona todas las respuestas correctas.",
+    "question": "Cules de las siguientes son caractersticas o principios de los contenidos que aplic Ana en su proyecto?",
+    "options": [
+      "Determinismo",
+      "Limitacin (finitud)",
+      "Abstraccin",
+      "Empalme de horarios",
+      "Bsqueda indexada"
+    ],
+    "answer": [
+      "Determinismo",
+      "Limitacin (finitud)",
+      "Abstraccin"
+    ],
+    "explanation": "Determinismo, finitud y abstraccin son principios generales de los contenidos y TDA; las otras opciones corresponden a problemas especficos, no a principios."
+  },
+  {
+    "id": 12,
+    "type": "seleccion_multiple",
+    "category": "Exploracin y vuelta atrs",
+    "instruction": "Selecciona todas las respuestas correctas.",
+    "question": "Cules de las siguientes afirmaciones sobre el backtracking que us Ana son correctas?",
+    "options": [
+      "Regresa a un paso anterior cuando un camino no puede llevar a una solucin vlida",
+      "Ahorra trabajo frente a probar todas las combinaciones sin control",
+      "Es exactamente igual a la bsqueda binaria",
+      "Se us para armar el horario de estudio sin empalmes",
+      "Solo puede aplicarse a problemas de organizaci?n de informaci?n"
+    ],
+    "answer": [
+      "Regresa a un paso anterior cuando un camino no puede llevar a una solucin vlida",
+      "Ahorra trabajo frente a probar todas las combinaciones sin control",
+      "Se us para armar el horario de estudio sin empalmes"
+    ],
+    "explanation": "El backtracking descarta caminos invlidos y retrocede para probar otra opcin; no es lo mismo que la bsqueda binaria ni se limita a problemas de organizaci?n de informaci?n."
+  },
+  {
+    "id": 13,
+    "type": "interpretar_datos",
+    "category": "Bsqueda",
+    "question": "Cul es la organizaci?n de la bsqueda binaria que us Ana para encontrar el folio 342?",
+    "options": ["O(log n)", "O(n)", "O(n)", "O(1)"],
+    "answer": "O(log n)",
+    "explanation": "Al descartar la mitad de los elementos en cada paso, la bsqueda binaria tiene organizaci?n logartmica, O(log n)."
+  },
+  {
+    "id": 14,
+    "type": "interpretar_datos",
+    "category": "Bsqueda",
+    "question": "Qu recurso adicional necesita Ana para que la bsqueda indexada funcione, en comparacin con la bsqueda secuencial?",
+    "options": ["Memoria adicional para guardar el ndice", "Un procesador ms rpido", "Ms libros fsicos", "Una conexin a internet"],
+    "answer": "Memoria adicional para guardar el ndice",
+    "explanation": "La bsqueda indexada intercambia memoria extra (para el ndice) por mayor velocidad de bsqueda."
+  },
+  {
+    "id": 15,
+    "type": "interpretar_datos",
+    "category": "Bsqueda",
+    "question": "Al final del proyecto, Ana compara el tiempo que tardaran su bsqueda secuencial O(n) contra su bsqueda binaria O(log n) si la biblioteca creciera a un milln de libros. Qu algoritmo sera ms eficiente en ese escenario?",
+    "options": ["La bsqueda binaria O(log n)", "La bsqueda secuencial O(n)", "Ambos tardaran exactamente lo mismo", "Ninguno, porque el tamao de datos no afecta la eficiencia"],
+    "answer": "La bsqueda binaria O(log n)",
+    "explanation": "Conforme crece n, O(log n) crece mucho ms lento que O(n), por lo que la bsqueda binaria resulta ms eficiente en catlogos grandes."
+  },
+  {
+    "id": 16,
+    "type": "interpretar_datos",
+    "category": "Exploracin y vuelta atrs",
+    "question": "Si Ana tuviera que armar el horario probando literalmente todas las combinaciones posibles sin descartar ninguna anticipadamente, con qu tipo de organizaci?n se asociara frecuentemente ese proceso?",
+    "options": ["Exponencial o factorial", "Constante", "Logartmica", "Lineal"],
+    "answer": "Exponencial o factorial",
+    "explanation": "La exploracin exhaustiva sin poda suele crecer de forma exponencial o factorial respecto al nmero de elementos a combinar."
+  },
+  {
+    "id": 17,
+    "type": "clasificar",
+    "category": "Organizaci?n de informaci?n",
+    "instruction": "Clasifica cada tcnica segn el tema de la Unidad 1 al que pertenece.",
+    "categories": ["Organizaci?n de informaci?n", "Bsqueda", "Exploracin y vuelta atrs"],
+    "items": [
+      { "text": "Organizaci?n de informaci?n por mezcla (Merge Sort)", "category": "Organizaci?n de informaci?n" },
+      { "text": "Bsqueda indexada", "category": "Bsqueda" },
+      { "text": "Backtracking", "category": "Exploracin y vuelta atrs" }
+    ],
+    "explanation": "Merge Sort pertenece al organizaci?n de informaci?n, la bsqueda indexada al tema de bsqueda, y el backtracking a la exploracin con vuelta atrs."
+  },
+  {
+    "id": 18,
+    "type": "clasificar",
+    "category": "Tema de ejemplo",
+    "instruction": "Clasifica cada concepto segn lo que describe.",
+    "categories": ["Principio de algoritmia", "Algoritmo de organizaci?n de informaci?n", "Algoritmo de bsqueda"],
+    "items": [
+      { "text": "Abstraccin", "category": "Principio de algoritmia" },
+      { "text": "Organizaci?n de informaci?n por insercin", "category": "Algoritmo de organizaci?n de informaci?n" },
+      { "text": "Bsqueda secuencial", "category": "Algoritmo de bsqueda" }
+    ],
+    "explanation": "La abstraccin es un principio general de la algoritmia, mientras que insercin y bsqueda secuencial son contenidos concretos de sus respectivos temas."
+  },
+  {
+    "id": 19,
+    "type": "clasificar",
+    "category": "Organizaci?n de informaci?n",
+    "instruction": "Clasifica cada algoritmo de organizaci?n de informaci?n segn su estrategia principal.",
+    "categories": ["Comparacin e intercambio de pares", "Insercin en posicin", "Divide y vencers"],
+    "items": [
+      { "text": "Organizaci?n de informaci?n de burbuja", "category": "Comparacin e intercambio de pares" },
+      { "text": "Organizaci?n de informaci?n por insercin", "category": "Insercin en posicin" },
+      { "text": "Organizaci?n de informaci?n por mezcla (Merge Sort)", "category": "Divide y vencers" }
+    ],
+    "explanation": "Burbuja compara e intercambia pares consecutivos, insercin desplaza cada elemento a su posicin, y Merge Sort divide el problema en partes ms pequeas."
+  },
+  {
+    "id": 20,
+    "type": "clasificar",
+    "category": "Bsqueda",
+    "instruction": "Clasifica cada tcnica de bsqueda segn su caracterstica principal.",
+    "categories": ["Requiere datos ordenados", "No requiere datos ordenados", "Usa una estructura auxiliar"],
+    "items": [
+      { "text": "Bsqueda binaria", "category": "Requiere datos ordenados" },
+      { "text": "Bsqueda secuencial", "category": "No requiere datos ordenados" },
+      { "text": "Bsqueda indexada", "category": "Usa una estructura auxiliar" }
+    ],
+    "explanation": "La bsqueda binaria necesita datos ordenados, la secuencial funciona sin orden, y la indexada se apoya en una estructura auxiliar de ndice."
+  },
+  {
+    "id": 21,
+    "type": "identificar_error",
+    "category": "Bsqueda",
+    "scenario": "Un compaero le dice a Ana: 'Da igual si los libros estn ordenados o no, la bsqueda binaria funciona siempre igual de bien.'",
+    "question": "Cul es el error principal en esta afirmacin?",
+    "options": ["Ignora que la bsqueda binaria requiere que los libros estn ordenados por folio para funcionar correctamente", "La bsqueda binaria en realidad nunca requiere orden previo", "La bsqueda binaria es siempre ms lenta que la secuencial", "La bsqueda binaria solo funciona con menos de 10 libros"],
+    "answer": "Ignora que la bsqueda binaria requiere que los libros estn ordenados por folio para funcionar correctamente",
+    "explanation": "La bsqueda binaria depende de que los datos estn ordenados; sin esa condicin, dividir a la mitad no garantiza descartar la mitad correcta."
+  },
+  {
+    "id": 22,
+    "type": "identificar_error",
+    "category": "Exploracin y vuelta atrs",
+    "scenario": "Un compaero afirma: 'El backtracking que us Ana es exactamente lo mismo que probar todas las combinaciones sin control, no tiene ninguna ventaja.'",
+    "question": "Cul es el error principal en esta afirmacin?",
+    "options": ["Ignora que el backtracking descarta caminos invlidos antes de seguir avanzando, ahorrando trabajo frente a la exploracin exhaustiva pura", "El backtracking siempre es ms lento que probar todas las combinaciones", "El backtracking nunca encuentra una solucin vlida", "La exploracin exhaustiva nunca prueba combinaciones invlidas"],
+    "answer": "Ignora que el backtracking descarta caminos invlidos antes de seguir avanzando, ahorrando trabajo frente a la exploracin exhaustiva pura",
+    "explanation": "La ventaja del backtracking es podar caminos que ya se sabe que no llevarn a una solucin, evitando explorar combinaciones innecesarias."
+  },
+  {
+    "id": 23,
+    "type": "identificar_error",
+    "category": "Organizaci?n de informaci?n",
+    "scenario": "Un compaero afirma: 'Como el organizaci?n de informaci?n de burbuja es el ms simple de programar, siempre es la mejor opcin para ordenar cualquier cantidad de libros.'",
+    "question": "Cul es el error principal en esta afirmacin?",
+    "options": ["Ignora que contenidos como Merge Sort son ms eficientes que la burbuja al crecer el nmero de libros", "El organizaci?n de informaci?n de burbuja no puede ordenar folios numricos", "El organizaci?n de informaci?n de burbuja es un algoritmo de bsqueda, no de organizaci?n de informaci?n", "La simplicidad de un algoritmo garantiza que sea el ms rpido"],
+    "answer": "Ignora que contenidos como Merge Sort son ms eficientes que la burbuja al crecer el nmero de libros",
+    "explanation": "La simplicidad de implementacin no implica eficiencia; para volmenes grandes de datos, Merge Sort tiene una organizaci?n ms controlada que la burbuja."
+  },
+  {
+    "id": 24,
+    "type": "identificar_error",
+    "category": "Tema de ejemplo",
+    "scenario": "Un compaero afirma: 'La notacin Big-O que us Ana mide directamente cuntos segundos tardar el programa en la computadora de la biblioteca.'",
+    "question": "Cul es el error principal en esta afirmacin?",
+    "options": ["Big-O mide cmo crece el nmero de operaciones respecto al tamao de los datos, no el tiempo exacto en un hardware especfico", "Big-O solo se puede usar en contenidos de bsqueda", "Big-O mide el nmero de lneas de cdigo del programa", "Big-O no tiene relacin con la eficiencia de los contenidos"],
+    "answer": "Big-O mide cmo crece el nmero de operaciones respecto al tamao de los datos, no el tiempo exacto en un hardware especfico",
+    "explanation": "La notacin Big-O describe el crecimiento del nmero de operaciones en funcin del tamao de la entrada, independientemente del hardware."
+  }
+]
+

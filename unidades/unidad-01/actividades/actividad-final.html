@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../../../assets/css/variables.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad final de la Unidad 1</title>
+    <link rel="icon" type="image/png" href="../../../assets/img/unidad-1/ESCOMB.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../assets/css/original/UNIDAD_1_RECURSOS_css_evaluacion-final.css">
+    
+  <link rel="stylesheet" href="../../../assets/css/paginas/unidades_unidad-01_actividades_actividad-final.css">
+</head>
+<body class="final-evaluation-page"
+      data-case-url="../../../assets/data/unidad-1/caso_unidad1.json"
+      data-questions-url="../../../assets/data/unidad-1/preguntas_evaluacion_unidad1.json"
+      data-time-minutes="45">
+    <div class="reading-progress" aria-hidden="true">
+        <div class="reading-progress-bar" id="readingProgressBar"></div>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú de navegación" aria-controls="sidebarNav" aria-expanded="false">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+    </button>
+    <a href="../../../index.html" class="floating-home-btn" title="Ir a Unidad 1" aria-label="Ir a Unidad 1">
+        <i class="fas fa-book-open" aria-hidden="true"></i>
+    </a>
+    <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+    <nav class="sidebar-nav" id="sidebarNav" aria-label="Navegación lateral" aria-hidden="true">
+        <div class="sidebar-header">
+            <div class="sidebar-title">Actividad final</div>
+            <div class="sidebar-subtitle">Unidad 1</div>
+        </div>
+        <div class="nav-sections">
+            <div class="nav-section">
+                <div class="nav-section-title">Libro virtual</div>
+                <a href="../../../index.html" class="nav-item"><i class="fas fa-home" aria-hidden="true"></i> Inicio</a>
+                <a href="../../../Unidades.html" class="nav-item"><i class="fas fa-layer-group" aria-hidden="true"></i> Unidades</a>
+                <a href="../../../index.html" class="nav-item"><i class="fas fa-book-open" aria-hidden="true"></i> Unidad 1</a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-title">Contenido de la unidad</div>
+                <a href="../temas/tema-01-01.html" class="nav-item"><i class="fas fa-diagram-project" aria-hidden="true"></i> 1.1 Tema de ejemplo</a>
+                <a href="../temas/tema-01-01.html" class="nav-item"><i class="fas fa-arrow-down-1-9" aria-hidden="true"></i> 1.2 Organizaci?n de informaci?n</a>
+                <a href="../temas/tema-01-01.html" class="nav-item"><i class="fas fa-magnifying-glass" aria-hidden="true"></i> 1.3 Búsqueda</a>
+                <a href="../temas/tema-01-01.html" class="nav-item"><i class="fas fa-route" aria-hidden="true"></i> 1.4 Exploración y vuelta atrás</a>
+                <a href="actividad-1-1.html" class="nav-item"><i class="fas fa-tasks" aria-hidden="true"></i> Actividad 1.1</a>
+                <a href="actividad-1-2.html" class="nav-item"><i class="fas fa-tasks" aria-hidden="true"></i> Actividad 1.2</a>
+                <a href="actividad-1-3.html" class="nav-item"><i class="fas fa-tasks" aria-hidden="true"></i> Actividad 1.3</a>
+                <a href="actividad-1-4.html" class="nav-item"><i class="fas fa-tasks" aria-hidden="true"></i> Actividad 1.4</a>
+                <a href="actividad-final.html" class="nav-item active" aria-current="page"><i class="fas fa-clipboard-check" aria-hidden="true"></i> Actividad final de la Unidad 1</a>
+                <a href="../referencias.html" class="nav-item"><i class="fas fa-bookmark" aria-hidden="true"></i> Referencias</a>
+            </div>
+        </div>
+    </nav>
+    <button class="scroll-to-top" id="scrollToTop" type="button" aria-label="Volver al inicio">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <div class="evaluation-shell">
+        <header class="evaluation-header" id="inicio">
+            <nav class="breadcrumb" aria-label="Ruta de navegación">
+                <a href="../../../index.html"><i class="fas fa-home" aria-hidden="true"></i> Inicio</a>
+                <span aria-hidden="true">/</span>
+                <a href="../../../Unidades.html">Unidades</a>
+                <span aria-hidden="true">/</span>
+                <a href="../../../index.html">Unidad 1</a>
+                <span aria-hidden="true">/</span>
+                <span>Actividad final</span>
+            </nav>
+            <div class="header-title-content">
+                <p class="eyebrow">Actividad final · Unidad 1</p>
+                <h1>El Archivista Caótico</h1>
+                <p class="header-subtitle">Caso hipotético: contenidos fundamentales aplicados a una biblioteca universitaria</p>
+            </div>
+        </header>
+
+        <main>
+            <section id="loadingState" class="state-card" aria-live="polite">
+                <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+                <p>Preparando el caso y la actividad</p>
+            </section>
+
+            <section id="loadError" class="state-card error-state is-hidden" role="alert">
+                <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
+                <h2>No fue posible cargar la actividad</h2>
+                <p id="loadErrorMessage">Verifica los archivos de datos e intenta nuevamente.</p>
+                <button class="btn btn-secondary" id="retryLoadBtn" type="button">
+                    <i class="fas fa-rotate-right" aria-hidden="true"></i> Reintentar
+                </button>
+            </section>
+
+            <section id="introScreen" class="is-hidden" aria-labelledby="introTitle">
+                <div class="intro-card">
+                    <div class="intro-copy">
+                        <p class="eyebrow">Caso hipotético de contenidos fundamentales</p>
+                        <h2 id="introTitle">Aplica los conocimientos de toda la unidad</h2>
+                        <p>Analiza el caso, sus datos y sus limitaciones. Después, tomarás decisiones sobre qué técnica algorítmica resuelve mejor cada problema de Ana. La retroalimentación y las respuestas correctas se mostrarán al finalizar la actividad.</p>
+                    </div>
+                    <div class="evaluation-facts" role="list" aria-label="Datos de la actividad">
+                        <div class="fact" role="listitem"><i class="fas fa-list-ol" aria-hidden="true"></i><strong>24</strong><span>preguntas</span></div>
+                        <div class="fact" role="listitem"><i class="fas fa-clock" aria-hidden="true"></i><strong>45</strong><span>minutos</span></div>
+                        <div class="fact" role="listitem"><i class="fas fa-layer-group" aria-hidden="true"></i><strong>6</strong><span>tipos de reactivo</span></div>
+                    </div>
+                    <div class="intro-instructions" aria-labelledby="instructionsTitle">
+                        <h3 id="instructionsTitle"><i class="fas fa-list-check" aria-hidden="true"></i> Indicaciones de la actividad</h3>
+                        <p>Responde de acuerdo con la dinámica indicada. La retroalimentación aparecerá solamente al finalizar la actividad.</p>
+                        <ul class="instruction-types">
+                            <li><span class="instruction-type-icon"><i class="fas fa-circle-dot" aria-hidden="true"></i></span><span><strong>Opción múltiple:</strong> elige una respuesta.</span></li>
+                            <li><span class="instruction-type-icon"><i class="fas fa-list-check" aria-hidden="true"></i></span><span><strong>Selección múltiple:</strong> marca todas las correctas.</span></li>
+                            <li><span class="instruction-type-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></span><span><strong>Clasificación:</strong> asigna cada elemento a su categoría.</span></li>
+                            <li><span class="instruction-type-icon"><i class="fas fa-chart-column" aria-hidden="true"></i></span><span><strong>Interpretación:</strong> analiza los datos del caso.</span></li>
+                            <li><span class="instruction-type-icon"><i class="fas fa-triangle-exclamation" aria-hidden="true"></i></span><span><strong>Identificación de errores:</strong> localiza el problema principal.</span></li>
+                            <li><span class="instruction-type-icon"><i class="fas fa-arrow-down-1-9" aria-hidden="true"></i></span><span><strong>Organizaci?n de informaci?n:</strong> organiza correctamente el proceso.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <section class="case-card" aria-labelledby="casePresentationTitle">
+                    <div class="section-heading">
+                        <div>
+                            <h2 id="casePresentationTitle">Presentación del caso</h2>
+                        </div>
+                    </div>
+                    <div id="casePresentation" class="case-content"></div>
+                </section>
+
+                <div class="start-panel">
+                    <div>
+                        <h2>Cuando hayas revisado el caso, inicia la actividad.</h2>
+                        <p>Durante el intento podrás consultar nuevamente toda la información sin perder tus respuestas.</p>
+                    </div>
+                    <button class="btn btn-primary btn-large" id="startEvaluationBtn" type="button">
+                        <i class="fas fa-play" aria-hidden="true"></i> Iniciar actividad
+                    </button>
+                </div>
+            </section>
+
+            <section id="evaluationScreen" class="is-hidden" aria-labelledby="evaluationTitle">
+                <div class="evaluation-toolbar">
+                    <div>
+                        <h2 id="evaluationTitle">Desarrollo de la actividad</h2>
+                    </div>
+                    <div class="toolbar-actions">
+                        <button class="btn btn-secondary" id="consultCaseBtn" type="button">
+                            <i class="fas fa-folder-open" aria-hidden="true"></i> Consultar caso
+                        </button>
+                        <div class="timer" id="timer" role="timer" aria-live="polite">
+                            <i class="fas fa-stopwatch" aria-hidden="true"></i>
+                            <span>Tiempo</span>
+                            <strong id="timerValue">45:00</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress-panel">
+                    <div class="progress-copy">
+                        <strong id="questionCounter">Pregunta 1 de 24</strong>
+                        <span id="answeredCounter">0 respondidas</span>
+                    </div>
+                    <div class="question-progress" role="progressbar" aria-label="Progreso de la actividad" aria-valuemin="0" aria-valuemax="24" aria-valuenow="0">
+                        <div id="questionProgressBar"></div>
+                    </div>
+                </div>
+
+                <article class="question-card" id="questionCard" aria-live="polite"></article>
+
+                <div class="question-navigation">
+                    <button class="btn btn-secondary" id="previousQuestionBtn" type="button">
+                        <i class="fas fa-arrow-left" aria-hidden="true"></i> Anterior
+                    </button>
+                    <div class="question-dots" id="questionDots" aria-label="Ir a una pregunta"></div>
+                    <button class="btn btn-primary" id="nextQuestionBtn" type="button">
+                        Siguiente <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-evaluate is-hidden" id="evaluateFinalBtn" type="button">
+                        <i class="fas fa-check-circle" aria-hidden="true"></i> Finalizar actividad
+                    </button>
+                </div>
+            </section>
+
+            <section id="resultsScreen" class="is-hidden" aria-labelledby="resultsTitle">
+                <div class="results-hero">
+                    <span class="results-icon" aria-hidden="true"><i class="fas fa-chart-line"></i></span>
+                    <div>
+                        <p class="eyebrow">Actividad finalizada</p>
+                        <h2 id="resultsTitle">Resultado de la actividad</h2>
+                        <p id="resultsMessage"></p>
+                    </div>
+                    <div class="grade-ring" id="gradeRing"><strong id="gradeValue">0.0</strong><span>puntuación</span></div>
+                </div>
+                <div class="results-summary" id="resultsSummary"></div>
+                <section class="performance-card" aria-labelledby="performanceTitle">
+                    <h3 id="performanceTitle">Desempeño por categoría</h3>
+                    <div id="categoryPerformance" class="category-performance"></div>
+                </section>
+                <section class="review-section" aria-labelledby="reviewTitle">
+                    <div class="section-heading">
+                        <div><p class="eyebrow">Retroalimentación</p><h3 id="reviewTitle">Revisión por pregunta</h3></div>
+                    </div>
+                    <div id="questionReview" class="question-review"></div>
+                </section>
+                <div class="results-actions">
+                    <button class="btn btn-primary btn-large" id="retryEvaluationBtn" type="button">
+                        <i class="fas fa-rotate-right" aria-hidden="true"></i> Intentar de nuevo
+                    </button>
+                    <a class="btn btn-secondary btn-large" href="../../../index.html">
+                        <i class="fas fa-book-open" aria-hidden="true"></i> Volver a la Unidad 1
+                    </a>
+                    <!--BOTN PDF -->
+                <button class="btn btn-large" id="downloadPdfBtn" type="button"
+    style="background:var(--danger); color:var(--surface); border:none; cursor:pointer; border-radius:30px; padding:12px 25px; font-weight:bold;">
+    <i class="fas fa-file-pdf"></i> Descargar resultados PDF
+</button>
+
+        </div>
+    </section>
+</main>
+                </div>
+            </section>
+        </main>
+
+        <nav class="bottom-navigation" aria-label="Navegación de la actividad">
+            <a href="actividad-1-4.html" class="btn btn-nav"><i class="fas fa-arrow-left" aria-hidden="true"></i> Actividad 1.4</a>
+            <a href="../../../index.html" class="btn btn-nav">Volver a Unidad 1 <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </nav>
+
+        <footer>
+            <p>Contenidos y Estructuras de Datos - Unidad 1</p>
+            <p>Desarrollado para fines educativos - © 2026</p>
+        </footer>
+    </div>
+
+    <div class="drawer-overlay is-hidden" id="caseDrawerOverlay" aria-hidden="true">
+        <aside class="case-drawer" id="caseDrawer" role="dialog" aria-modal="true" aria-labelledby="caseDrawerTitle" tabindex="-1">
+            <div class="drawer-header">
+                <div><p class="eyebrow">Consulta permanente</p><h2 id="caseDrawerTitle">Caso de la biblioteca</h2></div>
+                <button class="icon-button" id="closeCaseDrawerBtn" type="button" aria-label="Cerrar caso"><i class="fas fa-times" aria-hidden="true"></i></button>
+            </div>
+            <nav class="drawer-tabs" aria-label="Apartados del caso">
+                <button type="button" data-case-target="case-summary">Resumen</button>
+                <button type="button" data-case-target="case-procedure">Procedimiento</button>
+            </nav>
+            <div class="drawer-body case-content" id="caseDrawerContent"></div>
+        </aside>
+    </div>
+
+    <div class="dialog-overlay is-hidden" id="pendingDialog" aria-hidden="true">
+        <div class="confirm-dialog" role="dialog" aria-modal="true" aria-labelledby="pendingDialogTitle" aria-describedby="pendingDialogText" tabindex="-1">
+            <span class="dialog-icon" aria-hidden="true"><i class="fas fa-circle-question"></i></span>
+            <h2 id="pendingDialogTitle">Hay preguntas sin responder</h2>
+            <p id="pendingDialogText"></p>
+            <div class="dialog-actions">
+                <button class="btn btn-secondary" id="continueEvaluationBtn" type="button">Seguir respondiendo</button>
+                <button class="btn btn-evaluate" id="confirmSubmitBtn" type="button">Finalizar actividad</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../../assets/js/original/UNIDAD_1_RECURSOS_js_evaluacion-final.js"></script>
+    <script src="../../../assets/js/original/UNIDAD_1_RECURSOS_js_copiar-texto-plano.js"></script>
+
+<script src="../../../assets/js/original/UNIDAD_1_RECURSOS_js_evaluacion-final.js"></script>
+    <script src="../../../assets/js/original/UNIDAD_1_RECURSOS_js_copiar-texto-plano.js"></script>
+<script src="https://unpkg.com/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+
+  <script src="../../../assets/js/paginas/unidades_unidad-01_actividades_actividad-final.js"></script>
+</body>
+</html>
+</body>
+</html>
+

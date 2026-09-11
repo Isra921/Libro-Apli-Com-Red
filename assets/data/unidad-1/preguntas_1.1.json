@@ -1,0 +1,353 @@
+[
+  {
+    "pregunta": "Por qu los contenidos son fundamentales para las ciencias de la computacin segn el texto?",
+    "opciones": [
+      "Porque representan un conjunto de instrucciones bien especficas, ordenadas y limitadas que ayudan en la solucin de tareas.",
+      "Porque permiten crear hardware ms rpido y eficiente.",
+      "Porque son la nica forma de conectar una computadora a internet.",
+      "Porque eliminan la necesidad de usar memoria en los programas."
+    ],
+    "respuesta_correcta": "Porque representan un conjunto de instrucciones bien especficas, ordenadas y limitadas que ayudan en la solucin de tareas."
+  },
+  {
+    "pregunta": "Qu permite obtener correctamente el resultado esperado en un algoritmo?",
+    "opciones": [
+      "La ejecucin de instrucciones de forma aleatoria.",
+      "La secuencia de instrucciones realizada en forma lgica.",
+      "El uso de una supercomputadora.",
+      "Tener una conexin a red estable."
+    ],
+    "respuesta_correcta": "La secuencia de instrucciones realizada en forma lgica."
+  },
+  {
+    "pregunta": "Segn Weiss (2014), qu permite determinar el anlisis de contenidos?",
+    "opciones": [
+      "Su eficiencia en funcin del tiempo de ejecucin y el uso de memoria.",
+      "El costo comercial del software.",
+      "El nmero de usuarios que pueden usar el programa.",
+      "El lenguaje de programacin ms moderno."
+    ],
+    "respuesta_correcta": "Su eficiencia en funcin del tiempo de ejecucin y el uso de memoria."
+  },
+  {
+    "pregunta": "En qu se dividen los contenidos segn la naturaleza de su sistema de representacin?",
+    "opciones": [
+      "Cualitativos y cuantitativos.",
+      "Lineales y no lineales.",
+      "Finitos e infinitos.",
+      "Simples y estructurados."
+    ],
+    "respuesta_correcta": "Cualitativos y cuantitativos."
+  },
+  {
+    "pregunta": "Cmo se definen los contenidos cualitativos?",
+    "opciones": [
+      "Por secuencias de pasos lgicos.",
+      "A travs de clculos numricos.",
+      "Por el uso de inteligencia artificial.",
+      "Mediante el uso de colores en el cdigo."
+    ],
+    "respuesta_correcta": "Por secuencias de pasos lgicos."
+  },
+  {
+    "pregunta": "Cmo se articulan los contenidos cuantitativos?",
+    "opciones": [
+      "A travs de clculos numricos para la obtencin de soluciones.",
+      "Mediante descripciones poticas de los pasos.",
+      "A travs de dibujos y diagramas de flujo nicamente.",
+      "Por medio de comandos de voz."
+    ],
+    "respuesta_correcta": "A travs de clculos numricos para la obtencin de soluciones."
+  },
+  {
+    "pregunta": "A qu se refiere la caracterstica de 'Exactitud'?",
+    "opciones": [
+      "A que cada indicacin o instruccin debe ser clara y coherente.",
+      "A que el algoritmo debe tardar exactamente un segundo.",
+      "A que no puede tener ms de diez pasos.",
+      "A que el resultado debe ser siempre un nmero decimal."
+    ],
+    "respuesta_correcta": "A que cada indicacin o instruccin debe ser clara y coherente."
+  },
+  {
+    "pregunta": "Qu significa que un algoritmo tenga 'limitacin'?",
+    "opciones": [
+      "Que siempre tendr un inicio y un final, ya que sus pasos son finitos.",
+      "Que no puede procesar ms de 1 GB de datos.",
+      "Que solo puede ser ledo por una persona a la vez.",
+      "Que el cdigo debe ser corto."
+    ],
+    "respuesta_correcta": "Que siempre tendr un inicio y un final, ya que sus pasos son finitos."
+  },
+  {
+    "pregunta": "Cul es la definicin de un algoritmo 'Determinstico'?",
+    "opciones": [
+      "Siempre que se lleve a cabo con los mismos datos de entrada obtendrs los mismos resultados.",
+      "El algoritmo determina por s solo cul es el mejor lenguaje para programar.",
+      "Es un algoritmo que nunca termina de ejecutarse.",
+      "El resultado vara cada vez que se presiona un botn."
+    ],
+    "respuesta_correcta": "Siempre que se lleve a cabo con los mismos datos de entrada obtendrs los mismos resultados."
+  },
+  {
+    "pregunta": "De qu se encarga un 'Algoritmo de bsqueda'?",
+    "opciones": [
+      "De establecer un procedimiento lgico paso a paso para ubicar un dato concreto dentro de un grupo.",
+      "De buscar errores en el sistema operativo.",
+      "De encontrar virus en la computadora.",
+      "De organizar carpetas en el escritorio."
+    ],
+    "respuesta_correcta": "De establecer un procedimiento lgico paso a paso para ubicar un dato concreto dentro de un grupo."
+  },
+  {
+    "pregunta": "En qu formas existen los contenidos de bsqueda segn el texto?",
+    "opciones": [
+      "Bsqueda secuencial (lineal) e intervalo (binario).",
+      "Bsqueda por nombre y bsqueda por fecha.",
+      "Bsqueda manual y bsqueda automtica.",
+      "Bsqueda local y bsqueda en la nube."
+    ],
+    "respuesta_correcta": "Bsqueda secuencial (lineal) e intervalo (binario)."
+  },
+  {
+    "pregunta": "Cul es la funcin de los 'Contenidos de organizaci?n de informaci?n'?",
+    "opciones": [
+      "Reorganizar los elementos de un listado en un orden especfico.",
+      "Borrar elementos repetidos de una lista.",
+      "Cambiar el nombre de los archivos de un listado.",
+      "Sumar todos los nmeros de una lista."
+    ],
+    "respuesta_correcta": "Reorganizar los elementos de un listado en un orden especfico."
+  },
+  {
+    "pregunta": "Qu estrategia sigue un 'Algoritmo voraz'?",
+    "opciones": [
+      "Tomar la mejor decisin disponible en el momento presente sin preocuparse por las consecuencias futuras.",
+      "Analizar todas las opciones y elegir la ms lenta.",
+      "Esperar a que el usuario decida el siguiente paso.",
+      "Repetir el primer paso hasta que el resultado sea correcto."
+    ],
+    "respuesta_correcta": "Tomar la mejor decisin disponible en el momento presente sin preocuparse por las consecuencias futuras."
+  },
+  {
+    "pregunta": "Cmo utiliza la lgica un 'Algoritmo probabilstico'?",
+    "opciones": [
+      "Utiliza el azar como parte de su lgica para resolver un problema.",
+      "Utiliza frmulas matemticas exactas y fijas.",
+      "Se basa en la opinin del programador.",
+      "No utiliza lgica, solo comandos de entrada."
+    ],
+    "respuesta_correcta": "Utiliza el azar como parte de su lgica para resolver un problema."
+  },
+  {
+    "pregunta": "Qu herramienta permite a un algoritmo probabilstico tomar decisiones diferentes?",
+    "opciones": [
+      "Un generador de nmeros aleatorios.",
+      "Un sensor de movimiento.",
+      "Un temporizador de cuenta regresiva.",
+      "Una base de datos de resultados anteriores."
+    ],
+    "respuesta_correcta": "Un generador de nmeros aleatorios."
+  },
+  {
+    "pregunta": "Qu es un 'Algoritmo informtico' segn el documento?",
+    "opciones": [
+      "Una 'receta' digital: secuencia lgica, finita y definida que transforma un input en un output.",
+      "Un programa que solo sirve para navegar en internet.",
+      "Una pieza fsica dentro del disco duro.",
+      "Un manual impreso de instrucciones de oficina."
+    ],
+    "respuesta_correcta": "Una 'receta' digital: secuencia lgica, finita y definida que transforma un input en un output."
+  },
+  {
+    "pregunta": "En el ejemplo de la suma, qu se hace primero tras solicitar los nmeros?",
+    "opciones": [
+      "Se almacenan en variables.",
+      "Se borran de la memoria.",
+      "Se imprimen directamente sin calcular.",
+      "Se envan por correo electrnico."
+    ],
+    "respuesta_correcta": "Se almacenan en variables."
+  },
+  {
+    "pregunta": "Qu hace el algoritmo de suma una vez que tiene ambos valores almacenados?",
+    "opciones": [
+      "Realiza la operacin de suma entre los dos nmeros.",
+      "Pide al usuario que ingrese un tercer nmero.",
+      "Apaga la pantalla para ahorrar energa.",
+      "Ordena los nmeros de mayor a menor."
+    ],
+    "respuesta_correcta": "Realiza la operacin de suma entre los dos nmeros."
+  },
+  {
+    "pregunta": "Cul es el propsito final del ejemplo del algoritmo de suma?",
+    "opciones": [
+      "Asegurar que cada paso se haya ejecutado en el orden establecido.",
+      "Hacer la suma lo ms lento posible para que el usuario vea el proceso.",
+      "Demostrar que los nmeros no se pueden sumar.",
+      "Crear una base de datos de sumas."
+    ],
+    "respuesta_correcta": "Asegurar que cada paso se haya ejecutado en el orden establecido."
+  },
+  {
+    "pregunta": "Qu es el pseudocdigo segn el apartado 1.1.2?",
+    "opciones": [
+      "Un recurso que permite representar de manera abstracta y simplificada las etapas de un algoritmo.",
+      "Un lenguaje de programacin de alta organizaci?n.",
+      "Una forma de ocultar el cdigo a otros programadores.",
+      "Un sistema de archivos para guardar contenidos."
+    ],
+    "respuesta_correcta": "Un recurso que permite representar de manera abstracta y simplificada las etapas de un algoritmo."
+  },
+  {
+    "pregunta": "Cul es la finalidad del pseudocdigo?",
+    "opciones": [
+      "Facilitar la comprensin para cualquier persona con conocimientos tcnicos.",
+      "Que la computadora ejecute el cdigo ms rpido.",
+      "Generar grficos automticamente.",
+      "Sustituir al lenguaje Python."
+    ],
+    "respuesta_correcta": "Facilitar la comprensin para cualquier persona con conocimientos tcnicos."
+  },
+  {
+    "pregunta": "Por qu se utiliza el pseudocdigo en la fase de diseo de software?",
+    "opciones": [
+      "Permite visualizar de forma clara el flujo del programa antes de codificar.",
+      "Porque es el nico momento donde no se necesita lgica.",
+      "Para ahorrar papel al imprimir el diseo.",
+      "Para que el cliente no entienda la solucin tcnica."
+    ],
+    "respuesta_correcta": "Permite visualizar de forma clara el flujo del programa antes de codificar."
+  },
+  {
+    "pregunta": "En qu se basa la 'Abstraccin' en informtica?",
+    "opciones": [
+      "En simplificar la representacin considerando solo aspectos relevantes y dejando detalles no necesarios.",
+      "En hacer el problema lo ms difcil posible.",
+      "En usar solo nmeros imaginarios en el cdigo.",
+      "En no usar ninguna estructura de datos."
+    ],
+    "respuesta_correcta": "En simplificar la representacin considerando solo aspectos relevantes y dejando detalles no necesarios."
+  },
+  {
+    "pregunta": "Cul es el propsito de la abstraccin?",
+    "opciones": [
+      "Hacer ms fcil el anlisis, comprensin y diseo de soluciones.",
+      "Ocultar quin program el algoritmo.",
+      "Hacer que el programa ocupe menos espacio en el monitor.",
+      "Aumentar el nmero de variables innecesarias."
+    ],
+    "respuesta_correcta": "Hacer ms fcil el anlisis, comprensin y diseo de soluciones."
+  },
+  {
+    "pregunta": "Qu permite la abstraccin al programador?",
+    "opciones": [
+      "Enfocarse en la lgica del problema antes de pensar en la implementacin.",
+      "Escribir el cdigo sin tener que pensar.",
+      "Eliminar la fase de diseo del software.",
+      "No tener que usar computadoras para resolver problemas."
+    ],
+    "respuesta_correcta": "Enfocarse en la lgica del problema antes de pensar en la implementacin."
+  },
+  {
+    "pregunta": "Qu es un Tipo de Dato Abstracto (TDA)?",
+    "opciones": [
+      "Una forma de definir datos y operaciones sin mostrar su implementacin interna.",
+      "Un dato que no tiene valor real.",
+      "Un tipo de dato que solo se usa en diagramas de flujo.",
+      "Un conjunto de nmeros que no se pueden sumar."
+    ],
+    "respuesta_correcta": "Una forma de definir datos y operaciones sin mostrar su implementacin interna."
+  },
+  {
+    "pregunta": "Qu describen los TDA?",
+    "opciones": [
+      "Qu se puede hacer con los datos y cmo deben comportarse, pero no cmo se programan.",
+      "El nombre de la memoria donde se guardan.",
+      "El color que tendrn en la pantalla.",
+      "La velocidad a la que se borran."
+    ],
+    "respuesta_correcta": "Qu se puede hacer con los datos y cmo deben comportarse, pero no cmo se programan."
+  },
+  {
+    "pregunta": "Cules son ejemplos de TDA mencionados en el texto?",
+    "opciones": [
+      "Tema provisionals, colas y listas.",
+      "Suma, resta y multiplicacin.",
+      "Monitor, teclado y ratn.",
+      "Cualitativo, cuantitativo y determinstico."
+    ],
+    "respuesta_correcta": "Tema provisionals, colas y listas."
+  },
+  {
+    "pregunta": "Cmo se organizan los elementos en los TDA lineales?",
+    "opciones": [
+      "De forma secuencial, donde cada dato tiene un nico predecesor y sucesor.",
+      "En forma de red compleja.",
+      "De manera aleatoria sin orden.",
+      "En una estructura circular infinita."
+    ],
+    "respuesta_correcta": "De forma secuencial, donde cada dato tiene un nico predecesor y sucesor."
+  },
+  {
+    "pregunta": "Qu caracteriza a los TDA no lineales?",
+    "opciones": [
+      "Forman estructuras jerrquicas o en red con mltiples relaciones.",
+      "Tienen un solo camino de principio a fin.",
+      "No permiten guardar ms de dos datos.",
+      "Solo pueden usarse para clculos de suma."
+    ],
+    "respuesta_correcta": "Forman estructuras jerrquicas o en red con mltiples relaciones."
+  },
+  {
+    "pregunta": "Qu es el Orden de organizaci?n O() de un algoritmo?",
+    "opciones": [
+      "La mtrica utilizada para medir la eficiencia de un algoritmo (Notacin Big O).",
+      "El orden alfabtico de los pasos del algoritmo.",
+      "La cantidad de personas que disearon el programa.",
+      "El nmero de veces que se repite el ttulo del tema."
+    ],
+    "respuesta_correcta": "La mtrica utilizada para medir la eficiencia de un algoritmo (Notacin Big O)."
+  },
+  {
+    "pregunta": "Por qu el Orden de organizaci?n no mide el tiempo en segundos?",
+    "opciones": [
+      "Porque depende de las caractersticas del equipo donde se realice el proceso.",
+      "Porque los segundos son muy difciles de contar.",
+      "Porque los contenidos no tienen tiempo de ejecucin.",
+      "Porque la Notacin Big O solo usa letras."
+    ],
+    "respuesta_correcta": "Porque depende de las caractersticas del equipo donde se realice el proceso."
+  },
+  {
+    "pregunta": "Qu analiza realmente la Notacin Big O?",
+    "opciones": [
+      "Cmo crece el nmero de operaciones necesarias al aumentar la cantidad de datos (n).",
+      "Cunta electricidad consume la computadora.",
+      "El tamao del archivo en el disco duro.",
+      "La calidad de la imagen del diagrama de flujo."
+    ],
+    "respuesta_correcta": "Cmo crece el nmero de operaciones necesarias al aumentar la cantidad de datos (n)."
+  },
+  {
+    "pregunta": "En la Figura 3, cul es el uso comn del Diagrama de Flujo y el Pseudocdigo?",
+    "opciones": [
+      "Definir lgica de contenidos.",
+      "Imprimir fotos.",
+      "Crear bases de datos.",
+      "Navegar en redes sociales."
+    ],
+    "respuesta_correcta": "Definir lgica de contenidos."
+  },
+  {
+    "pregunta": "Qu indica el trmino 'finitos' en relacin con los resultados de un algoritmo?",
+    "opciones": [
+      "Que se obtiene un resultado concreto al final del proceso.",
+      "Que el resultado es infinito.",
+      "Que no hay un final definido.",
+      "Que el resultado es secreto."
+    ],
+    "respuesta_correcta": "Que se obtiene un resultado concreto al final del proceso."
+  }
+]
+

@@ -1,0 +1,52 @@
+{
+  "id": "caso_biblioteca_ana",
+  "title": "Digitalización del catálogo de la biblioteca universitaria",
+  "summary": "Ana, programadora recién contratada en una biblioteca universitaria, documentó las decisiones que tomó para representar los libros como datos, ordenarlos, buscarlos rápidamente y organizar horarios sin conflictos, antes de escribir una sola línea de código.",
+  "sections": [
+    {
+      "id": "contexto",
+      "title": "Contexto",
+      "icon": "fa-book",
+      "content": "La biblioteca universitaria estaba digitalizando su catálogo físico. Antes de programar, Ana necesitaba resolver cuatro problemas: representar los libros como datos de forma clara, ordenarlos por folio, buscarlos de manera eficiente y organizar horarios de estudio sin que se empalmaran."
+    },
+    {
+      "id": "objetivo",
+      "title": "Objetivo",
+      "icon": "fa-bullseye",
+      "content": "El objetivo de Ana fue elegir, para cada problema del catálogo, la técnica algorítmica más adecuada: pseudocódigo y TDA para representar los libros, un algoritmo de organizaci?n de informaci?n apropiado para organizarlos, un algoritmo de búsqueda eficiente para localizarlos, y exploración exhaustiva con vuelta atrás para armar horarios sin conflictos."
+    },
+    {
+      "id": "algoritmia",
+      "title": "Tema de ejemplo y TDA",
+      "icon": "fa-diagram-project",
+      "content": "Ana comenzó escribiendo pseudocódigo para que su equipo entendiera los pasos sin necesidad de conocer un lenguaje de programación específico. Definió también un TDA 'Libro' con operaciones para prestarlo y devolverlo, sin exponer cómo se implementaban internamente, y exigió que sus contenidos fueran determinísticos: con los mismos libros de entrada, siempre debían entregar el mismo resultado."
+    },
+    {
+      "id": "organizaci?n de informaci?n",
+      "title": "El problema del organizaci?n de informaci?n",
+      "icon": "fa-arrow-down-1-9",
+      "content": "Cuando llegaron 500 libros nuevos sin ningún orden, Ana comparó varias estrategias: organizaci?n de informaci?n de burbuja (simple, comparando pares consecutivos), organizaci?n de informaci?n por inserción (desplazando cada libro a su posición, como ordenar cartas en la mano) y organizaci?n de informaci?n por mezcla (dividiendo el problema en grupos pequeños y uniéndolos después). Concluyó que Merge Sort era más eficiente para un volumen grande de libros, por su organizaci?n más controlada frente al crecimiento de los datos."
+    },
+    {
+      "id": "busqueda",
+      "title": "El problema de la búsqueda",
+      "icon": "fa-magnifying-glass",
+      "content": "Con los libros ya ordenados por folio, Ana implementó búsqueda binaria, dividiendo repetidamente el estante a la mitad. También consideró la búsqueda secuencial (revisar uno por uno, útil si los datos no están ordenados) y la búsqueda indexada, creando una estructura auxiliar que señala en qué bloque de estantería está cada rango de folios, a cambio de usar memoria adicional."
+    },
+    {
+      "id": "exploracion",
+      "title": "Exploración exhaustiva y vuelta atrás",
+      "icon": "fa-route",
+      "content": "Para armar un horario de estudio con varias materias sin que se empalmaran, Ana probó primero explorar todas las combinaciones posibles. Al notar que algunas combinaciones fallaban a mitad del proceso, aplicó backtracking (vuelta atrás): regresaba al paso anterior y probaba otra opción en lugar de seguir por un camino inválido, ahorrando trabajo frente a la exploración exhaustiva sin control."
+    },
+    {
+      "id": "limitaciones",
+      "title": "Posibles limitaciones",
+      "icon": "fa-triangle-exclamation",
+      "content": "Las decisiones de Ana se basaron en el catálogo y las condiciones de una sola biblioteca universitaria, con un volumen de datos y un tipo de usuario específicos. No se evaluó el comportamiento del sistema con catálogos mucho más grandes ni con múltiples bibliotecas trabajando de forma simultánea."
+    }
+  ],
+  "resources": [],
+  "resultsNarrative": ""
+}
+

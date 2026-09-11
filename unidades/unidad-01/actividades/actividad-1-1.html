@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../../../assets/css/variables.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad de aprendizaje 1.1 - Tema de ejemplo</title>
+    <link rel="icon" type="image/png" href="../../../assets/img/logoescom.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+  <link rel="stylesheet" href="../../../assets/css/paginas/unidades_unidad-01_actividades_actividad-1-1.css">
+</head>
+<body>
+    <a href="../../../index.html" class="floating-home-btn" title="Ir al índice de unidades"><i class="fas fa-home"></i></a>
+
+    <div class="container">
+        <header>
+            <div class="breadcrumb">
+                <a href="https://escomisr.github.io/Algo_Estruct_Datos/index.html"><i class="fas fa-home"></i> Inicio</a>
+                <span>/</span><a href="../../../index.html">Unidad 1</a>
+                <span>/</span><a href="../temas/tema-01-01.html">1.1 Tema de ejemplo</a>
+                <span>/</span><span>Actividad 1.1</span>
+            </div>
+            <h1>Actividad de aprendizaje 1.1</h1>
+            <div class="subtitle">Tema de ejemplo</div>
+        </header>
+
+        <div class="instructions">
+            <h3><i class="fas fa-info-circle"></i> Indicaciones de la actividad</h3>
+            <p style="margin-bottom:10px;">Lee cuidadosamente cada pregunta y responde según el tipo de ejercicio indicado. Antes de comenzar, verifica que tengas tiempo suficiente para completar la actividad.</p>
+            <ul>
+                <li><strong>Opción múltiple:</strong> elige una sola respuesta correcta.</li>
+                <li><strong>Completar oración:</strong> selecciona la palabra que completa correctamente el enunciado.</li>
+                <li><strong>Verdadero o falso:</strong> indica si la afirmación es correcta o incorrecta.</li>
+                <li><strong>Ordenar oración:</strong> da clic a las palabras en el orden correcto para formar una oración coherente.</li>
+            </ul>
+        </div>
+
+        <div class="meta-panel">
+            <div class="meta-card"><div class="value">20</div><div class="label">Total de preguntas</div></div>
+            <div class="meta-card"><div class="value">10 min</div><div class="label">Tiempo disponible</div></div>
+            <div class="meta-card"><div class="value" id="lastScore">Sin calificación</div><div class="label">ltima calificación</div></div>
+        </div>
+
+        <div class="start-screen" id="startScreen">
+            <button class="btn" onclick="startQuiz()"><i class="fas fa-play"></i> Comenzar actividad</button>
+        </div>
+
+        <div class="timer-bar" id="timerBar" style="display:none;">
+            <i class="fas fa-clock"></i> Tiempo restante: <span id="timeLeft">10:00</span>
+        </div>
+
+        <div class="result-banner" id="resultBanner"></div>
+     <!-- BOTN PDF -->
+        <div style="text-align: center; margin-bottom: 20px;">
+    <button id="btnDescargarPDF" class="btn" onclick="generarPDFActividad()" style="display: none; background: var(--danger); color: white; margin: 0 auto; cursor: pointer;">
+        <i class="fas fa-file-pdf"></i> Descargar Resultados PDF
+    </button>
+        </div>
+
+        <div id="quizArea"></div>
+
+        <div class="actions" id="actionButtons" style="display:none;">
+            <button class="btn btn-success" onclick="tryEvaluate()"><i class="fas fa-check"></i> Evaluar respuestas</button>
+            <button class="btn btn-secondary" onclick="resetQuiz()"><i class="fas fa-redo"></i> Intentar de nuevo</button>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="../temas/tema-01-01.html" class="nav-btn"><i class="fas fa-arrow-left"></i> Volver al tema</a>
+            <a href="../../../index.html" class="nav-btn"><i class="fas fa-list"></i> Unidad 1</a>
+            <a href="../temas/tema-01-01.html" class="nav-btn">1.2 El problema del organizaci?n de informaci?n <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <footer>
+            <p>Aplicaciones para comunicacin en red (polilibro académico) - Unidad 1: Contenidos fundamentales</p>
+            <p>Desarrollado para fines educativos - © 2026</p>
+        </footer>
+    </div>
+
+    <div class="modal-overlay" id="confirmModal">
+        <div class="modal-box">
+            <p>Hay preguntas sin responder. Si continúas, se contarán como incorrectas. ¿Deseas evaluar ahora?</p>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" onclick="closeModal()"><i class="fas fa-pen"></i> Seguir respondiendo</button>
+                <button class="btn btn-success" onclick="procesarEvaluacion(true)"><i class="fas fa-check"></i> Evaluar respuestas</button>
+            </div>
+        </div>
+    </div>
+
+
+<!-- SCRIPT PARA PDF CORREGIDO -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <script src="../../../assets/js/paginas/unidades_unidad-01_actividades_actividad-1-1.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,353 @@
+[
+  {
+    "pregunta": "¿Cuál es la importancia de la exploración exhaustiva y vuelta atrás?",
+    "opciones": [
+      "Permite analizar todas las posibles soluciones de un problema de manera ordenada.",
+      "Sirve para borrar archivos que no tienen solución lógica.",
+      "Es el único método que no requiere el uso de contenidos.",
+      "Permite que el usuario adivine la respuesta sin procesar datos."
+    ],
+    "respuesta_correcta": "Permite analizar todas las posibles soluciones de un problema de manera ordenada."
+  },
+  {
+    "pregunta": "¿Qué garantiza el enfoque de exploración exhaustiva en la resolución de problemas?",
+    "opciones": [
+      "Que no se omitan caminos posibles dentro de un problema.",
+      "Que el programa se ejecute en menos de un milisegundo.",
+      "Que la computadora nunca se sobrecaliente.",
+      "Que el código sea imposible de copiar por otros."
+    ],
+    "respuesta_correcta": "Que no se omitan caminos posibles dentro de un problema."
+  },
+  {
+    "pregunta": "¿En qué situaciones es fundamental este enfoque según el texto?",
+    "opciones": [
+      "En laberintos, rompecabezas, asignación de tareas o búsqueda de rutas.",
+      "Para escribir documentos de texto y correos electrónicos.",
+      "Para instalar sistemas operativos desde cero.",
+      "nicamente para realizar sumas de dos números."
+    ],
+    "respuesta_correcta": "En laberintos, rompecabezas, asignación de tareas o búsqueda de rutas."
+  },
+  {
+    "pregunta": "¿Qué aporta la vuelta atrás (backtracking) en términos de eficiencia lógica?",
+    "opciones": [
+      "Si una decisión no conduce a una solución válida, el algoritmo regresa al paso anterior y prueba otra posibilidad.",
+      "Borra todo el progreso y reinicia la computadora.",
+      "Obliga al usuario a ingresar nuevos datos de entrada.",
+      "Multiplica el tiempo de ejecución por cada error encontrado."
+    ],
+    "respuesta_correcta": "Si una decisión no conduce a una solución válida, el algoritmo regresa al paso anterior y prueba otra posibilidad."
+  },
+  {
+    "pregunta": "¿Por qué es importante el estudio de estas técnicas para los estudiantes?",
+    "opciones": [
+      "Fortalece el pensamiento lógico, la resolución de problemas y la evaluación de alternativas.",
+      "Permite que los estudiantes no tengan que estudiar matemáticas.",
+      "Es un requisito para poder comprar una computadora nueva.",
+      "Para aprender a diseñar logotipos de empresas tecnológicas."
+    ],
+    "respuesta_correcta": "Fortalece el pensamiento lógico, la resolución de problemas y la evaluación de alternativas."
+  },
+  {
+    "pregunta": "¿Cómo actúa la exploración exhaustiva en las aplicaciones de usuario frente al sistema operativo?",
+    "opciones": [
+      "Como una interfaz para que las aplicaciones accedan a recursos y realicen tareas solicitadas.",
+      "Como un bloqueador de procesos no autorizados.",
+      "Como un sistema de archivos oculto.",
+      "Como un generador de contraseñas aleatorias."
+    ],
+    "respuesta_correcta": "Como una interfaz para que las aplicaciones accedan a recursos y realicen tareas solicitadas."
+  },
+  {
+    "pregunta": "¿De qué depende la evaluación de las peticiones que el kernel realiza al sistema?",
+    "opciones": [
+      "De los privilegios que se tengan en las llamadas al sistema.",
+      "Del color del monitor del usuario.",
+      "De la velocidad de la conexión a internet.",
+      "Del número de teclas presionadas por segundo."
+    ],
+    "respuesta_correcta": "De los privilegios que se tengan en las llamadas al sistema."
+  },
+  {
+    "pregunta": "¿En qué consiste específicamente la técnica de exploración exhaustiva?",
+    "opciones": [
+      "En evaluar todas las posibles soluciones hasta encontrar la correcta o más adecuada.",
+      "En elegir la primera opción que aparezca y detenerse.",
+      "En preguntarle a otro algoritmo cuál es la respuesta.",
+      "En borrar las opciones que parecen difíciles."
+    ],
+    "respuesta_correcta": "En evaluar todas las posibles soluciones hasta encontrar la correcta o más adecuada."
+  },
+  {
+    "pregunta": "Según Aho et al. (2006), ¿cuándo se utiliza la exploración exhaustiva?",
+    "opciones": [
+      "Cuando se requiere obtener resultados exactos o el número de opciones es limitado.",
+      "Cuando se tiene una cantidad infinita de datos.",
+      "Cuando no importa si el resultado es correcto o no.",
+      "Solo en programas que no tienen interfaz gráfica."
+    ],
+    "respuesta_correcta": "Cuando se requiere obtener resultados exactos o el número de opciones es limitado."
+  },
+  {
+    "pregunta": "¿Cuál es una característica importante del método de exploración exhaustiva?",
+    "opciones": [
+      "Analiza cada combinación o camino sin aplicar filtros previos.",
+      "Aplica filtros complejos antes de revisar cualquier opción.",
+      "Solo analiza la mitad de las opciones para ahorrar tiempo.",
+      "Requiere que el usuario elija qué caminos revisar."
+    ],
+    "respuesta_correcta": "Analiza cada combinación o camino sin aplicar filtros previos."
+  },
+  {
+    "pregunta": "¿Cuál es la principal desventaja de la exploración exhaustiva?",
+    "opciones": [
+      "Puede requerir mucho tiempo de ejecución cuando el número de posibilidades crece.",
+      "Es imposible de programar en lenguajes modernos.",
+      "No garantiza encontrar la solución correcta.",
+      "Ocupa demasiado espacio físico en el disco duro."
+    ],
+    "respuesta_correcta": "Puede requerir mucho tiempo de ejecución cuando el número de posibilidades crece."
+  },
+  {
+    "pregunta": "¿De qué sirve la exploración exhaustiva como punto de partida en algoritmia?",
+    "opciones": [
+      "Para el desarrollo de técnicas más eficientes como la poda, programación dinámica o vuelta atrás.",
+      "Para demostrar que no se pueden resolver problemas difíciles.",
+      "Para evitar tener que usar recursos digitales.",
+      "Para aprender a escribir código sin usar variables."
+    ],
+    "respuesta_correcta": "Para el desarrollo de técnicas más eficientes como la poda, programación dinámica o vuelta atrás."
+  },
+  {
+    "pregunta": "¿Cómo se define la programación por vuelta atrás (backtracking)?",
+    "opciones": [
+      "Técnica que explora todas las posibles soluciones paso a paso, retrocediendo cuando una opción no cumple las condiciones.",
+      "Algoritmo que siempre avanza y nunca mira hacia atrás.",
+      "Método que borra los pasos anteriores para ahorrar memoria.",
+      "Sistema que elige soluciones al azar sin revisar condiciones."
+    ],
+    "respuesta_correcta": "Técnica que explora todas las posibles soluciones paso a paso, retrocediendo cuando una opción no cumple las condiciones."
+  },
+  {
+    "pregunta": "Según Sedgewick & Wayne (2011), ¿cómo construye las soluciones el backtracking?",
+    "opciones": [
+      "De forma incremental.",
+      "De forma aleatoria.",
+      "Todas al mismo tiempo.",
+      "De atrás hacia adelante únicamente."
+    ],
+    "respuesta_correcta": "De forma incremental."
+  },
+  {
+    "pregunta": "¿Qué hace el algoritmo de backtracking cuando detecta que un camino no conducirá a una solución válida?",
+    "opciones": [
+      "Regresa al punto anterior para probar otra alternativa.",
+      "Se detiene y muestra un mensaje de error.",
+      "Borra todo el código del programa.",
+      "Sigue avanzando por ese camino hasta el final."
+    ],
+    "respuesta_correcta": "Regresa al punto anterior para probar otra alternativa."
+  },
+  {
+    "pregunta": "¿Cuál es una característica importante de la vuelta atrás respecto al número de combinaciones?",
+    "opciones": [
+      "Reduce el número de combinaciones a analizar al evitar opciones que no funcionarán.",
+      "Aumenta el número de combinaciones para estar seguro del resultado.",
+      "Mantiene el mismo número de combinaciones que la exploración exhaustiva.",
+      "No utiliza combinaciones, solo usa sumas simples."
+    ],
+    "respuesta_correcta": "Reduce el número de combinaciones a analizar al evitar opciones que no funcionarán."
+  },
+  {
+    "pregunta": "¿En qué problemas se utiliza con frecuencia la vuelta atrás?",
+    "opciones": [
+      "N-reinas, laberintos, combinatoria y rompecabezas.",
+      "Navegación por internet y redes sociales.",
+      "Edición de video y audio profesional.",
+      "Cálculo de impuestos anuales básicos."
+    ],
+    "respuesta_correcta": "N-reinas, laberintos, combinatoria y rompecabezas."
+  },
+  {
+    "pregunta": "¿Qué permite comprender el estudio de la vuelta atrás en algoritmia?",
+    "opciones": [
+      "Cómo optimizar la exploración exhaustiva mediante el descarte anticipado de soluciones inválidas.",
+      "Cómo hacer que la computadora sea más bonita visualmente.",
+      "Cómo evitar el uso de funciones en el código.",
+      "Cómo programar sin necesidad de lógica."
+    ],
+    "respuesta_correcta": "Cómo optimizar la exploración exhaustiva mediante el descarte anticipado de soluciones inválidas."
+  },
+  {
+    "pregunta": "¿Para qué sirven las nociones de organizaci?n en estos temas?",
+    "opciones": [
+      "Para analizar cuánto tiempo y cuántos recursos requiere un algoritmo.",
+      "Para saber cuántas páginas tiene el libro de texto.",
+      "Para medir la calidad de las imágenes del documento.",
+      "Para contar cuántos estudiantes están usando el programa."
+    ],
+    "respuesta_correcta": "Para analizar cuánto tiempo y cuántos recursos requiere un algoritmo."
+  },
+  {
+    "pregunta": "¿Con qué tipo de organizaci?nes se asocia frecuentemente la exploración exhaustiva?",
+    "opciones": [
+      "Organizaci?nes exponenciales o factoriales.",
+      "Organizaci?nes constantes.",
+      "Organizaci?nes logarítmicas.",
+      "Organizaci?nes lineales únicamente."
+    ],
+    "respuesta_correcta": "Organizaci?nes exponenciales o factoriales."
+  },
+  {
+    "pregunta": "¿Qué demuestra la noción de organizaci?n en problemas grandes para la exploración exhaustiva?",
+    "opciones": [
+      "Que puede volverse poco eficiente.",
+      "Que siempre es la mejor opción.",
+      "Que el tiempo de ejecución siempre es cero.",
+      "Que no requiere procesador para funcionar."
+    ],
+    "respuesta_correcta": "Que puede volverse poco eficiente."
+  },
+  {
+    "pregunta": "¿Cuál es la ventaja de la vuelta atrás frente a la exploración exhaustiva pura según el texto?",
+    "opciones": [
+      "Descarta caminos inválidos antes de seguir avanzando, reduciendo el trabajo innecesario.",
+      "Es mucho más fácil de escribir en papel.",
+      "No requiere el uso de memoria RAM.",
+      "Funciona incluso si la computadora está apagada."
+    ],
+    "respuesta_correcta": "Descarta caminos inválidos antes de seguir avanzando, reduciendo el trabajo innecesario."
+  },
+  {
+    "pregunta": "Según Skiena (2008), ¿qué sucede con la organizaci?n del backtracking en el peor de los casos?",
+    "opciones": [
+      "También puede ser muy alta, dependiendo del número de combinaciones.",
+      "Se vuelve una organizaci?n de O(1).",
+      "Desaparece por completo.",
+      "Es siempre menor que la de una suma simple."
+    ],
+    "respuesta_correcta": "También puede ser muy alta, dependiendo del número de combinaciones."
+  },
+  {
+    "pregunta": "En la Figura 14 (Exploración exhaustiva), ¿qué significa 'Revisar todas las alternativas'?",
+    "opciones": [
+      "Probar todas las opciones posibles sin ignorar ninguna.",
+      "Elegir solo las opciones que tienen la letra A.",
+      "Borrar las opciones que no tienen salida.",
+      "Saltarse pasos para llegar rápido a la meta."
+    ],
+    "respuesta_correcta": "Probar todas las opciones posibles sin ignorar ninguna."
+  },
+  {
+    "pregunta": "En la Figura 14 (Vuelta atrás), ¿qué se hace al detectar un camino inválido?",
+    "opciones": [
+      "Retroceder y probar otra ruta.",
+      "Detener el algoritmo para siempre.",
+      "Saltar a la meta directamente.",
+      "Marcar todas las rutas como inválidas."
+    ],
+    "respuesta_correcta": "Retroceder y probar otra ruta."
+  },
+  {
+    "pregunta": "Según la Figura 15, ¿cuáles son ejemplos de aplicación de backtracking?",
+    "opciones": [
+      "8 reinas, laberintos y combinaciones.",
+      "Suma de números y promedios.",
+      "Navegación GPS y mapas estáticos.",
+      "Dibujo técnico y diseño gráfico."
+    ],
+    "respuesta_correcta": "8 reinas, laberintos y combinaciones."
+  },
+  {
+    "pregunta": "En la Figura 15, ¿qué sucede en el 'Paso 1' si se detecta un 'Camino Inválido'?",
+    "opciones": [
+      "El algoritmo retrocede (flecha roja hacia arriba).",
+      "El algoritmo avanza al Paso 2 de todos modos.",
+      "Se llega a la solución automáticamente.",
+      "Se apaga la computadora del usuario."
+    ],
+    "respuesta_correcta": "El algoritmo retrocede (flecha roja hacia arriba)."
+  },
+  {
+    "pregunta": "¿Qué indica el término 'Multiplicidad' en la Figura 16?",
+    "opciones": [
+      "Que el algoritmo revisa todas las opciones existentes.",
+      "Que los números se multiplican entre sí.",
+      "Que hay múltiples programadores trabajando en el código.",
+      "Que el resultado es siempre un número múltiple de dos."
+    ],
+    "respuesta_correcta": "Que el algoritmo revisa todas las opciones existentes."
+  },
+  {
+    "pregunta": "Según la Figura 16, ¿qué efecto tiene el descarte de opciones inválidas en la vuelta atrás?",
+    "opciones": [
+      "Eficiencia mejorada y reducción de la organizaci?n.",
+      "Aumento del tiempo de ejecución exponencialmente.",
+      "Pérdida de datos importantes.",
+      "No tiene ningún efecto notable."
+    ],
+    "respuesta_correcta": "Eficiencia mejorada y reducción de la organizaci?n."
+  },
+  {
+    "pregunta": "¿Qué recurso audiovisual se menciona para complementar el tema de exploración exhaustiva?",
+    "opciones": [
+      "Un video de YouTube de Salas, I.",
+      "Un podcast de Spotify de Weiss.",
+      "Una película de cine sobre contenidos.",
+      "Un programa de radio en vivo."
+    ],
+    "respuesta_correcta": "Un video de YouTube de Salas, I."
+  },
+  {
+    "pregunta": "¿Qué significa que la vuelta atrás sea un 'descarte anticipado'?",
+    "opciones": [
+      "Que no continúa por ramas que ya se sabe que no funcionarán.",
+      "Que borra la solución antes de encontrarla.",
+      "Que el usuario descarta el programa antes de usarlo.",
+      "Que se eligen soluciones antes de que el problema exista."
+    ],
+    "respuesta_correcta": "Que no continúa por ramas que ya se sabe que no funcionarán."
+  },
+  {
+    "pregunta": "En la Figura 14 (Exploración Exhaustiva), ¿hacia dónde apunta la bandera de 'Meta'?",
+    "opciones": [
+      "Hacia la solución final después de revisar alternativas.",
+      "Hacia el inicio del laberinto.",
+      "Hacia afuera del dibujo.",
+      "No hay ninguna meta en ese dibujo."
+    ],
+    "respuesta_correcta": "Hacia la solución final después de revisar alternativas."
+  },
+  {
+    "pregunta": "¿Qué autor se cita para las nociones de organizaci?n en este tema?",
+    "opciones": [
+      "Skiena (2008).",
+      "Knuth (1998).",
+      "Weiss (2014).",
+      "Salas (s.f.)."
+    ],
+    "respuesta_correcta": "Skiena (2008)."
+  },
+  {
+    "pregunta": "¿Cuál es la función del algoritmo de backtracking en un sudoku según el texto?",
+    "opciones": [
+      "Hacer más eficiente la búsqueda al descartar caminos inválidos.",
+      "Resolver el sudoku de forma aleatoria sin reglas.",
+      "Borrar los números que el usuario ya escribió.",
+      "No se menciona el sudoku en el texto."
+    ],
+    "respuesta_correcta": "Hacer más eficiente la búsqueda al descartar caminos inválidos."
+  },
+  {
+    "pregunta": "En la Figura 16, ¿qué representa el reloj de arena junto a 'Análisis del tiempo y recursos'?",
+    "opciones": [
+      "La medición de la organizaci?n y el esfuerzo computacional.",
+      "Que el tiempo para el examen se está acabando.",
+      "La velocidad de rotación de los datos.",
+      "Un adorno visual sin significado técnico."
+    ],
+    "respuesta_correcta": "La medición de la organizaci?n y el esfuerzo computacional."
+  }
+]
+

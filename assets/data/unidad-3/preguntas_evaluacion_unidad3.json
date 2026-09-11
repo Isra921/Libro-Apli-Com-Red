@@ -1,0 +1,483 @@
+[
+  {
+    "id": 1,
+    "type": "opcion_multiple",
+    "category": "Comprensión del caso",
+    "question": "¿Qué problema motivó el proyecto Operación Enlace en Ciudad Nova?",
+    "options": [
+      "Las búsquedas, la asignación de incidentes y el cálculo manual de rutas se volvían lentos e inconsistentes al crecer los datos.",
+      "La ciudad quería eliminar todos sus dispositivos de comunicación.",
+      "El sistema anterior ya utilizaba árboles balanceados y solo necesitaba cambiar su interfaz."
+    ],
+    "answer": "Las búsquedas, la asignación de incidentes y el cálculo manual de rutas se volvían lentos e inconsistentes al crecer los datos.",
+    "explanation": "El contexto señala que los recorridos completos, la atención por llegada y las rutas manuales provocaban demoras y decisiones inconsistentes."
+  },
+  {
+    "id": 2,
+    "type": "opcion_multiple",
+    "category": "Árboles",
+    "question": "¿Qué representación utilizó Sofía para convertir el organigrama N-ario de zonas, sectores y estaciones en un árbol binario?",
+    "options": [
+      "La regla hijo izquierdo-hermano derecho.",
+      "Una matriz de adyacencia ponderada.",
+      "La eliminación de todos los hijos posteriores al segundo."
+    ],
+    "answer": "La regla hijo izquierdo-hermano derecho.",
+    "explanation": "Esta transformación conserva el primer hijo como enlace izquierdo y encadena a los hermanos mediante enlaces derechos, sin perder nodos."
+  },
+  {
+    "id": 3,
+    "type": "opcion_multiple",
+    "category": "Recorridos de árboles",
+    "resourceId": "tabla_recorridos",
+    "question": "¿Qué recorrido del ABB de prueba produce las claves en orden ascendente?",
+    "options": ["Inorden.", "Preorden.", "Postorden."],
+    "answer": "Inorden.",
+    "explanation": "En un árbol binario de búsqueda, el recorrido izquierda-raíz-derecha devuelve las claves ordenadas; la tabla muestra 20, 30, 40, 50, 60, 70 y 80."
+  },
+  {
+    "id": 4,
+    "type": "opcion_multiple",
+    "category": "Árboles balanceados",
+    "question": "¿Por qué el árbol rojo-negro mejoró el directorio construido inicialmente con claves ascendentes?",
+    "options": [
+      "Porque usa colores y rotaciones para limitar la altura y conservar operaciones O(log n).",
+      "Porque convierte automáticamente todas las claves en aristas sin peso.",
+      "Porque garantiza que cada búsqueda tenga organizaci?n O(1)."
+    ],
+    "answer": "Porque usa colores y rotaciones para limitar la altura y conservar operaciones O(log n).",
+    "explanation": "El ABB inicial se degeneró por el orden de inserción. El rojo-negro se autobalancea y evita que la altura crezca linealmente."
+  },
+  {
+    "id": 5,
+    "type": "opcion_multiple",
+    "category": "Montículos",
+    "question": "¿Por qué se eligió un montículo máximo para administrar los incidentes?",
+    "options": [
+      "Porque mantiene en la raíz el incidente con mayor prioridad y permite insertarlo o extraerlo en O(log n).",
+      "Porque almacena en la raíz el incidente que llegó primero, sin considerar su urgencia.",
+      "Porque genera un recorrido inorden completamente ordenado después de cada inserción."
+    ],
+    "answer": "Porque mantiene en la raíz el incidente con mayor prioridad y permite insertarlo o extraerlo en O(log n).",
+    "explanation": "En un montículo máximo, la clave de cada padre es mayor o igual que la de sus hijos, por lo que la urgencia más alta queda disponible en la raíz."
+  },
+  {
+    "id": 6,
+    "type": "opcion_multiple",
+    "category": "Otros tipos de árboles",
+    "question": "¿Qué necesidad del caso resolvió el árbol B+?",
+    "options": [
+      "Indexar 1.2 millones de reportes históricos y reducir accesos a disco.",
+      "Representar únicamente dos hijos por estación.",
+      "Seleccionar el incidente más urgente de la memoria principal."
+    ],
+    "answer": "Indexar 1.2 millones de reportes históricos y reducir accesos a disco.",
+    "explanation": "Los árboles B+ almacenan muchas claves por nodo y son adecuados para índices de bases de datos y almacenamiento secundario."
+  },
+  {
+    "id": 7,
+    "type": "opcion_multiple",
+    "category": "Tema provisional",
+    "question": "¿Qué algoritmo empleó el equipo para descubrir los puntos de la red nivel por nivel y comprobar su alcance?",
+    "options": [
+      "Búsqueda en amplitud (BEA).",
+      "Búsqueda en profundidad (BEP).",
+      "Recorrido postorden."
+    ],
+    "answer": "Búsqueda en amplitud (BEA).",
+    "explanation": "BEA utiliza una cola y explora primero los vértices vecinos, avanzando por niveles."
+  },
+  {
+    "id": 8,
+    "type": "opcion_multiple",
+    "category": "Rutas de menor costo",
+    "question": "¿Qué característica de Dijkstra fue esencial para calcular la ruta al Hospital?",
+    "options": [
+      "Minimiza la suma de pesos no negativos desde el origen hasta los destinos.",
+      "Solo cuenta el número de vértices, aunque las aristas tengan costos distintos.",
+      "Requiere que el grafo sea un árbol binario completo."
+    ],
+    "answer": "Minimiza la suma de pesos no negativos desde el origen hasta los destinos.",
+    "explanation": "En el caso, los pesos representan minutos y son no negativos, condición bajo la cual Dijkstra obtiene distancias mínimas."
+  },
+  {
+    "id": 9,
+    "type": "seleccion_multiple",
+    "category": "Árboles binarios de búsqueda",
+    "instruction": "Selecciona todas las respuestas correctas.",
+    "question": "¿Qué afirmaciones describen correctamente a los árboles binarios y al ABB del caso?",
+    "options": [
+      "Cada nodo de un árbol binario puede tener como máximo dos hijos.",
+      "En un ABB, las claves menores se ubican en el subárbol izquierdo y las mayores en el derecho.",
+      "El recorrido inorden de un ABB produce las claves ordenadas.",
+      "Todo ABB permanece balanceado sin importar el orden de inserción.",
+      "Un árbol binario debe ser siempre completo."
+    ],
+    "answer": [
+      "Cada nodo de un árbol binario puede tener como máximo dos hijos.",
+      "En un ABB, las claves menores se ubican en el subárbol izquierdo y las mayores en el derecho.",
+      "El recorrido inorden de un ABB produce las claves ordenadas."
+    ],
+    "explanation": "Las tres primeras propiedades son correctas. Un ABB común puede degenerarse y un árbol binario no tiene que ser completo."
+  },
+  {
+    "id": 10,
+    "type": "seleccion_multiple",
+    "category": "Árboles balanceados y montículos",
+    "instruction": "Selecciona todas las respuestas correctas.",
+    "question": "¿Cuáles afirmaciones son consistentes con las estructuras utilizadas por Sofía?",
+    "options": [
+      "El árbol rojo-negro utiliza colores, recoloreos y rotaciones para conservar el balance.",
+      "La altura de un árbol rojo-negro se mantiene en O(log n).",
+      "En un montículo máximo, la raíz contiene una clave mayor o igual que las de sus hijos.",
+      "El recorrido inorden de cualquier montículo máximo queda totalmente ordenado.",
+      "Los árboles B y B+ pueden almacenar múltiples claves y tener más de dos hijos por nodo."
+    ],
+    "answer": [
+      "El árbol rojo-negro utiliza colores, recoloreos y rotaciones para conservar el balance.",
+      "La altura de un árbol rojo-negro se mantiene en O(log n).",
+      "En un montículo máximo, la raíz contiene una clave mayor o igual que las de sus hijos.",
+      "Los árboles B y B+ pueden almacenar múltiples claves y tener más de dos hijos por nodo."
+    ],
+    "explanation": "El rojo-negro conserva altura logarítmica mediante ajustes locales, el montículo máximo mantiene el máximo en la raíz y los árboles B/B+ admiten múltiples claves e hijos. Un montículo no es un arreglo completamente ordenado."
+  },
+  {
+    "id": 11,
+    "type": "seleccion_multiple",
+    "category": "Contenidos sobre grafos",
+    "instruction": "Selecciona todas las respuestas correctas.",
+    "question": "¿Qué asociaciones entre algoritmo y comportamiento son correctas?",
+    "options": [
+      "BEA usa una cola y explora el grafo por niveles.",
+      "BEP puede implementarse con una pila o mediante recursividad.",
+      "Dijkstra calcula rutas de peso mínimo cuando los pesos son no negativos.",
+      "BEA requiere obligatoriamente una matriz de adyacencia.",
+      "Dijkstra es el método indicado para grafos con pesos negativos sin ajustes."
+    ],
+    "answer": [
+      "BEA usa una cola y explora el grafo por niveles.",
+      "BEP puede implementarse con una pila o mediante recursividad.",
+      "Dijkstra calcula rutas de peso mínimo cuando los pesos son no negativos."
+    ],
+    "explanation": "BEA y BEP funcionan con distintas representaciones; Dijkstra es apropiado para los pesos no negativos definidos en el caso."
+  },
+  {
+    "id": 12,
+    "type": "seleccion_multiple",
+    "category": "Conclusiones y recomendaciones",
+    "instruction": "Selecciona todas las respuestas correctas.",
+    "question": "¿Qué decisiones están respaldadas por el caso y sus resultados?",
+    "options": [
+      "Mantener listas de adyacencia para la red dispersa.",
+      "Usar el árbol B+ para el índice histórico almacenado en disco.",
+      "Conservar el montículo máximo para atender primero la mayor prioridad.",
+      "Volver al ABB sin balancear con claves ascendentes porque obtuvo el mayor cumplimiento.",
+      "Sustituir toda estructura por una matriz de adyacencia porque siempre consume menos memoria."
+    ],
+    "answer": [
+      "Mantener listas de adyacencia para la red dispersa.",
+      "Usar el árbol B+ para el índice histórico almacenado en disco.",
+      "Conservar el montículo máximo para atender primero la mayor prioridad."
+    ],
+    "explanation": "Estas decisiones corresponden a la densidad de la red, al almacenamiento histórico y al criterio de urgencia. El ABB sin balancear tuvo el peor cumplimiento y la matriz consumió más memoria."
+  },
+  {
+    "id": 13,
+    "type": "clasificar",
+    "category": "Aplicaciones de estructuras",
+    "instruction": "Clasifica cada componente según la necesidad que resuelve en Ciudad Nova.",
+    "categories": [
+      "Directorio balanceado",
+      "Prioridad de incidentes",
+      "Índice histórico en disco",
+      "Red de conexiones"
+    ],
+    "items": [
+      {
+        "text": "Árbol rojo-negro",
+        "category": "Directorio balanceado"
+      },
+      {
+        "text": "Montículo máximo",
+        "category": "Prioridad de incidentes"
+      },
+      {
+        "text": "Árbol B+",
+        "category": "Índice histórico en disco"
+      },
+      {
+        "text": "Grafo con lista de adyacencia",
+        "category": "Red de conexiones"
+      }
+    ],
+    "explanation": "Cada estructura fue seleccionada por sus propiedades: balance, acceso a la máxima prioridad, eficiencia en disco o representación de relaciones."
+  },
+  {
+    "id": 14,
+    "type": "clasificar",
+    "category": "Recorridos de árboles",
+    "instruction": "Clasifica cada patrón de visita según el recorrido correspondiente.",
+    "categories": ["Preorden", "Inorden", "Postorden"],
+    "items": [
+      {
+        "text": "Raíz  subárbol izquierdo  subárbol derecho",
+        "category": "Preorden"
+      },
+      {
+        "text": "Subárbol izquierdo  raíz  subárbol derecho",
+        "category": "Inorden"
+      },
+      {
+        "text": "Subárbol izquierdo  subárbol derecho  raíz",
+        "category": "Postorden"
+      }
+    ],
+    "explanation": "La posición en la que se procesa la raíz distingue los tres recorridos recursivos."
+  },
+  {
+    "id": 15,
+    "type": "clasificar",
+    "category": "Contenidos sobre grafos",
+    "instruction": "Clasifica cada tarea según el algoritmo más adecuado.",
+    "categories": ["BEA", "BEP", "Dijkstra"],
+    "items": [
+      {
+        "text": "Descubrir estaciones vecinas nivel por nivel",
+        "category": "BEA"
+      },
+      {
+        "text": "Seguir exhaustivamente una ramificación antes de retroceder",
+        "category": "BEP"
+      },
+      {
+        "text": "Minimizar la suma de minutos de traslado",
+        "category": "Dijkstra"
+      }
+    ],
+    "explanation": "BEA avanza por niveles, BEP profundiza antes de retroceder y Dijkstra optimiza el costo acumulado."
+  },
+  {
+    "id": 16,
+    "type": "clasificar",
+    "category": "Organizaci?n",
+    "instruction": "Clasifica cada operación según la organizaci?n indicada en el análisis del caso.",
+    "categories": ["O(n)", "O(log n)", "O(V+E)", "O((V+E) log V)"],
+    "items": [
+      {
+        "text": "Búsqueda en un ABB degenerado",
+        "category": "O(n)"
+      },
+      {
+        "text": "Búsqueda en un árbol rojo-negro",
+        "category": "O(log n)"
+      },
+      {
+        "text": "Recorrido BEA o BEP con lista de adyacencia",
+        "category": "O(V+E)"
+      },
+      {
+        "text": "Dijkstra con lista de adyacencia y montículo mínimo",
+        "category": "O((V+E) log V)"
+      }
+    ],
+    "explanation": "La organizaci?n depende del balance del árbol y, en grafos, del número de vértices, aristas y la estructura de prioridad utilizada."
+  },
+  {
+    "id": 17,
+    "type": "interpretar_datos",
+    "category": "Interpretación de datos",
+    "resourceId": "tabla_implementaciones",
+    "question": "¿Cuánto disminuyó el tiempo promedio del directorio al sustituir el ABB sin balancear por el árbol rojo-negro?",
+    "options": ["39 ms.", "2 ms.", "25 ms."],
+    "answer": "39 ms.",
+    "explanation": "La tabla reporta 41 ms para el ABB sin balancear y 2 ms para el rojo-negro; la diferencia es 41  2 = 39 ms."
+  },
+  {
+    "id": 18,
+    "type": "interpretar_datos",
+    "category": "Interpretación de datos",
+    "resourceId": "tabla_recorridos",
+    "question": "Según la tabla, ¿qué secuencia corresponde al recorrido postorden del árbol de prueba?",
+    "options": [
+      "20, 40, 30, 60, 80, 70, 50.",
+      "50, 30, 20, 40, 70, 60, 80.",
+      "20, 30, 40, 50, 60, 70, 80."
+    ],
+    "answer": "20, 40, 30, 60, 80, 70, 50.",
+    "explanation": "El postorden procesa primero ambos subárboles y deja la raíz 50 hasta el final."
+  },
+  {
+    "id": 19,
+    "type": "interpretar_datos",
+    "category": "Rutas de menor costo",
+    "resourceId": "tabla_rutas",
+    "question": "¿Qué ruta debe devolver Dijkstra entre el Centro y el Hospital con los pesos registrados?",
+    "options": [
+      "Centro  Oriente  Sur  Hospital, con 8 minutos.",
+      "Centro  Oriente  Norte  Hospital, con 9 minutos.",
+      "Centro  Norte  Hospital, con 10 minutos."
+    ],
+    "answer": "Centro  Oriente  Sur  Hospital, con 8 minutos.",
+    "explanation": "Es la ruta candidata con la menor suma de pesos: 2 + 4 + 2 = 8 minutos."
+  },
+  {
+    "id": 20,
+    "type": "interpretar_datos",
+    "category": "Representación de grafos",
+    "resourceId": "tabla_representacion_grafo",
+    "question": "¿Qué conclusión está respaldada por la comparación de representaciones del grafo?",
+    "options": [
+      "La lista de adyacencia es más conveniente para esta red dispersa: usa 84 KB y recorre solo los vecinos del vértice.",
+      "La matriz es más compacta: usa 84 KB frente a 5.5 MB de la lista.",
+      "Ambas representaciones usan exactamente la misma memoria y el mismo costo para recorrer vecinos."
+    ],
+    "answer": "La lista de adyacencia es más conveniente para esta red dispersa: usa 84 KB y recorre solo los vecinos del vértice.",
+    "explanation": "La tabla muestra que la lista ocupa mucha menos memoria y su recorrido depende del grado, una ventaja en grafos dispersos."
+  },
+  {
+    "id": 21,
+    "type": "identificar_error",
+    "category": "Análisis crítico",
+    "scenario": "Un integrante del equipo afirma: «Todo árbol binario de búsqueda permite buscar en O(log n), incluso si se insertan 20 000 claves en orden ascendente».",
+    "question": "¿Cuál es el error principal de la afirmación?",
+    "options": [
+      "Ignora que un ABB sin balancear puede degenerarse hasta altura n y tener búsquedas O(n).",
+      "Confunde O(log n) con O(1), porque todos los ABB buscan siempre en tiempo constante.",
+      "Supone incorrectamente que un ABB puede almacenar claves numéricas."
+    ],
+    "answer": "Ignora que un ABB sin balancear puede degenerarse hasta altura n y tener búsquedas O(n).",
+    "explanation": "El orden ascendente produjo precisamente el peor caso del directorio inicial; el balance no es automático en un ABB común."
+  },
+  {
+    "id": 22,
+    "type": "identificar_error",
+    "category": "Análisis crítico",
+    "scenario": "Un reporte indica: «Como los incidentes están en un montículo máximo, todos sus elementos permanecen completamente ordenados de mayor a menor después de cada inserción».",
+    "question": "¿Cuál es el error principal del reporte?",
+    "options": [
+      "La propiedad del montículo solo garantiza la relación entre cada padre y sus hijos; no un orden total entre todos los elementos.",
+      "Un montículo máximo coloca siempre la prioridad menor en la raíz.",
+      "Los montículos no admiten inserciones después de construirse."
+    ],
+    "answer": "La propiedad del montículo solo garantiza la relación entre cada padre y sus hijos; no un orden total entre todos los elementos.",
+    "explanation": "El máximo queda en la raíz, pero los nodos de distintas ramas no tienen que estar ordenados entre sí."
+  },
+  {
+    "id": 23,
+    "type": "identificar_error",
+    "category": "Análisis crítico",
+    "scenario": "Para encontrar la ruta más rápida al Hospital, un programador propone ejecutar BEA y elegir el camino con menos aristas, sin considerar los minutos de cada enlace.",
+    "question": "¿Cuál es el error principal de la propuesta?",
+    "options": [
+      "Menos aristas no implica menor suma de pesos; para los tiempos no negativos del caso debe utilizarse Dijkstra.",
+      "BEA solo puede ejecutarse sobre árboles B+.",
+      "Dijkstra sirve únicamente para recorrer un árbol en postorden."
+    ],
+    "answer": "Menos aristas no implica menor suma de pesos; para los tiempos no negativos del caso debe utilizarse Dijkstra.",
+    "explanation": "BEA encuentra caminos mínimos por número de aristas en grafos no ponderados; la ruta del caso debe minimizar minutos acumulados."
+  },
+  {
+    "id": 24,
+    "type": "identificar_error",
+    "category": "Análisis crítico",
+    "scenario": "Al convertir el organigrama N-ario en binario, un desarrollador conserva solo los dos primeros hijos de cada nodo y elimina todos los demás.",
+    "question": "¿Cuál es el error principal del procedimiento?",
+    "options": [
+      "Pierde información; los hermanos deben enlazarse por la derecha mediante la representación hijo izquierdo-hermano derecho.",
+      "Todo árbol N-ario ya es binario y no necesita transformación.",
+      "Los hijos deben convertirse en pesos negativos para conservarse."
+    ],
+    "answer": "Pierde información; los hermanos deben enlazarse por la derecha mediante la representación hijo izquierdo-hermano derecho.",
+    "explanation": "La transformación correcta conserva todos los nodos: el primer hijo se enlaza a la izquierda y los hermanos sucesivos a la derecha."
+  },
+  {
+    "id": 25,
+    "type": "ordenar_proceso",
+    "category": "Transformación de árboles",
+    "instruction": "Ordena el procedimiento para transformar un árbol general a la representación hijo izquierdo-hermano derecho.",
+    "segments": [
+      "Identificar, para cada nodo padre, a su primer hijo y a los hermanos de este",
+      "Conectar el primer hijo como hijo izquierdo del padre",
+      "Enlazar cada hermano siguiente como hijo derecho del hermano anterior",
+      "Retirar los enlaces directos del padre hacia los hijos que ya quedaron en la cadena de hermanos",
+      "Verificar que todos los nodos del árbol original sigan siendo alcanzables"
+    ],
+    "answer": [
+      "Identificar, para cada nodo padre, a su primer hijo y a los hermanos de este",
+      "Conectar el primer hijo como hijo izquierdo del padre",
+      "Enlazar cada hermano siguiente como hijo derecho del hermano anterior",
+      "Retirar los enlaces directos del padre hacia los hijos que ya quedaron en la cadena de hermanos",
+      "Verificar que todos los nodos del árbol original sigan siendo alcanzables"
+    ],
+    "explanation": "El primer hijo ocupa el enlace izquierdo y los demás hijos se conservan como una cadena de hermanos derechos."
+  },
+  {
+    "id": 26,
+    "type": "ordenar_proceso",
+    "category": "Árboles balanceados",
+    "instruction": "Ordena el proceso general para insertar una clave y restaurar las propiedades de un árbol rojo-negro.",
+    "segments": [
+      "Insertar la nueva clave respetando el orden de un ABB",
+      "Colorear inicialmente de rojo el nuevo nodo",
+      "Comprobar si existe una violación rojo-rojo con el padre",
+      "Aplicar recoloreos y, cuando corresponda, rotaciones según el caso",
+      "Asegurar que la raíz quede de color negro"
+    ],
+    "answer": [
+      "Insertar la nueva clave respetando el orden de un ABB",
+      "Colorear inicialmente de rojo el nuevo nodo",
+      "Comprobar si existe una violación rojo-rojo con el padre",
+      "Aplicar recoloreos y, cuando corresponda, rotaciones según el caso",
+      "Asegurar que la raíz quede de color negro"
+    ],
+    "explanation": "La inserción comienza como en un ABB y después repara posibles violaciones mediante colores y rotaciones, manteniendo negra la raíz."
+  },
+  {
+    "id": 27,
+    "type": "ordenar_proceso",
+    "category": "Rutas de menor costo",
+    "instruction": "Ordena el proceso esencial de Dijkstra desde el Centro.",
+    "segments": [
+      "Asignar distancia 0 al Centro e infinito a los demás vértices",
+      "Insertar el Centro en el montículo mínimo",
+      "Extraer el vértice no procesado con menor distancia tentativa",
+      "Relajar sus aristas y actualizar las distancias de los vecinos cuando se encuentre un costo menor",
+      "Actualizar el montículo y repetir hasta procesar el destino o agotar los vértices alcanzables",
+      "Reconstruir la ruta al Hospital mediante los predecesores"
+    ],
+    "answer": [
+      "Asignar distancia 0 al Centro e infinito a los demás vértices",
+      "Insertar el Centro en el montículo mínimo",
+      "Extraer el vértice no procesado con menor distancia tentativa",
+      "Relajar sus aristas y actualizar las distancias de los vecinos cuando se encuentre un costo menor",
+      "Actualizar el montículo y repetir hasta procesar el destino o agotar los vértices alcanzables",
+      "Reconstruir la ruta al Hospital mediante los predecesores"
+    ],
+    "explanation": "Dijkstra avanza desde la menor distancia tentativa, relaja aristas y conserva predecesores para recuperar la ruta óptima."
+  },
+  {
+    "id": 28,
+    "type": "ordenar_proceso",
+    "category": "Montículos",
+    "instruction": "Ordena el flujo para registrar y atender un incidente con el montículo máximo.",
+    "segments": [
+      "Asignar al incidente una prioridad numérica según su urgencia",
+      "Agregar el incidente en la siguiente posición disponible del montículo",
+      "Intercambiarlo con su padre mientras viole la propiedad de montículo máximo",
+      "Consultar la raíz para identificar el incidente de mayor prioridad",
+      "Extraer la raíz y mover el último elemento a esa posición",
+      "Hundir el nuevo elemento raíz hasta restaurar la propiedad del montículo"
+    ],
+    "answer": [
+      "Asignar al incidente una prioridad numérica según su urgencia",
+      "Agregar el incidente en la siguiente posición disponible del montículo",
+      "Intercambiarlo con su padre mientras viole la propiedad de montículo máximo",
+      "Consultar la raíz para identificar el incidente de mayor prioridad",
+      "Extraer la raíz y mover el último elemento a esa posición",
+      "Hundir el nuevo elemento raíz hasta restaurar la propiedad del montículo"
+    ],
+    "explanation": "La inserción agrega y asciende el elemento; la extracción atiende la raíz, coloca el último elemento en su lugar y lo hunde para recuperar el orden parcial."
+  }
+]
+
+

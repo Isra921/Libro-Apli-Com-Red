@@ -1,0 +1,124 @@
+[
+  {
+    "pregunta": "Antes de programar la solucin para la app de la biblioteca, Ana escribe los pasos en espaol simple para que su equipo los entienda. Qu herramienta est usando?",
+    "opciones": ["Pseudocdigo", "Un algoritmo voraz", "Bsqueda binaria", "Notacin Big-O"],
+    "respuesta_correcta": "Pseudocdigo"
+  },
+  {
+    "pregunta": "El profesor le pide a Ana que su algoritmo, con los mismos libros de entrada, siempre entregue el mismo resultado. Qu caracterstica del algoritmo le est exigiendo?",
+    "opciones": ["Que sea determinstico", "Que sea probabilstico", "Que sea voraz", "Que sea no lineal"],
+    "respuesta_correcta": "Que sea determinstico"
+  },
+  {
+    "pregunta": "Ana decide representar la coleccin de libros como una TDA donde cada libro tiene un nico libro anterior y uno siguiente en el estante. Qu tipo de TDA es?",
+    "opciones": ["Lineal", "No lineal", "Voraz", "Probabilstico"],
+    "respuesta_correcta": "Lineal"
+  },
+  {
+    "pregunta": "La biblioteca recibi 500 libros nuevos sin ningn orden. Ana necesita ordenarlos por nmero de folio antes de guardarlos. Qu tipo de algoritmo necesita usar primero?",
+    "opciones": ["Un algoritmo de organizaci?n de informaci?n", "Un algoritmo de bsqueda", "Un algoritmo de exploracin exhaustiva", "Un algoritmo probabilstico"],
+    "respuesta_correcta": "Un algoritmo de organizaci?n de informaci?n"
+  },
+  {
+    "pregunta": "Como los 500 libros llegaron revueltos y Ana quiere una solucin simple aunque no sea la ms rpida, decide comparar pares consecutivos e ir moviendo el folio ms alto hacia el final repetidamente. Qu algoritmo est usando?",
+    "opciones": ["Organizaci?n de informaci?n de burbuja", "Bsqueda binaria", "Backtracking", "Bsqueda indexada"],
+    "respuesta_correcta": "Organizaci?n de informaci?n de burbuja"
+  },
+  {
+    "pregunta": "Ana decide en cambio tomar el primer libro como referencia y desplazar cada libro siguiente hacia la posicin que le corresponde, como cuando se ordenan cartas en la mano. Qu algoritmo aplic?",
+    "opciones": ["Organizaci?n de informaci?n por insercin", "Organizaci?n de informaci?n por mezcla", "Bsqueda secuencial", "Exploracin exhaustiva"],
+    "respuesta_correcta": "Organizaci?n de informaci?n por insercin"
+  },
+  {
+    "pregunta": "Un compaero le sugiere a Ana dividir los 500 libros en grupos pequeos, ordenar cada grupo por separado y despus unirlos en orden. Qu algoritmo le est recomendando?",
+    "opciones": ["Organizaci?n de informaci?n por mezcla (Merge Sort)", "Organizaci?n de informaci?n por seleccin", "Bsqueda indexada", "Backtracking"],
+    "respuesta_correcta": "Organizaci?n de informaci?n por mezcla (Merge Sort)"
+  },
+  {
+    "pregunta": "Con los 500 libros, qu algoritmo de organizaci?n de informaci?n sera ms eficiente segn su orden de organizaci?n frente a un crecimiento grande de datos?",
+    "opciones": ["Merge Sort, porque crece de forma ms controlada que O(n)", "Burbuja, porque siempre es el ms rpido", "Cualquiera, porque todos tardan lo mismo", "Ninguno, porque el orden no afecta la eficiencia"],
+    "respuesta_correcta": "Merge Sort, porque crece de forma ms controlada que O(n)"
+  },
+  {
+    "pregunta": "Ya con los libros ordenados por folio, un usuario pide el libro con folio 342. Ana decide dividir repetidamente el estante a la mitad, comparando el folio buscado con el central. Qu algoritmo de bsqueda est aplicando?",
+    "opciones": ["Bsqueda binaria", "Bsqueda secuencial", "Bsqueda indexada", "Organizaci?n de informaci?n por seleccin"],
+    "respuesta_correcta": "Bsqueda binaria"
+  },
+  {
+    "pregunta": "Por qu Ana solo puede usar bsqueda binaria en este caso?",
+    "opciones": ["Porque los libros ya estn ordenados por folio", "Porque hay menos de 10 libros", "Porque los libros son de ficcin", "Porque no requiere hardware especial"],
+    "respuesta_correcta": "Porque los libros ya estn ordenados por folio"
+  },
+  {
+    "pregunta": "Cul es la organizaci?n de la bsqueda binaria que us Ana para encontrar el folio 342?",
+    "opciones": ["O(log n)", "O(n)", "O(n)", "O(1)"],
+    "respuesta_correcta": "O(log n)"
+  },
+  {
+    "pregunta": "Si en vez de estar ordenados, los 500 libros estuvieran revueltos y Ana tuviera que revisarlos uno por uno hasta encontrar el folio 342, qu algoritmo estara usando?",
+    "opciones": ["Bsqueda secuencial", "Bsqueda binaria", "Bsqueda indexada", "Backtracking"],
+    "respuesta_correcta": "Bsqueda secuencial"
+  },
+  {
+    "pregunta": "Para agilizar futuras bsquedas, Ana crea una estructura auxiliar que indica en qu bloque de estantera est cada rango de folios. Qu tcnica de bsqueda est implementando?",
+    "opciones": ["Bsqueda indexada", "Bsqueda binaria", "Organizaci?n de informaci?n por burbuja", "Exploracin exhaustiva"],
+    "respuesta_correcta": "Bsqueda indexada"
+  },
+  {
+    "pregunta": "Qu recurso adicional necesita Ana para que la bsqueda indexada funcione, en comparacin con la bsqueda secuencial?",
+    "opciones": ["Memoria adicional para guardar el ndice", "Un procesador ms rpido", "Ms libros fsicos", "Una conexin a internet"],
+    "respuesta_correcta": "Memoria adicional para guardar el ndice"
+  },
+  {
+    "pregunta": "Ahora Ana debe armar un horario de estudio combinando 6 materias en distintos horarios sin que se empalmen, probando todas las combinaciones posibles hasta encontrar una vlida. Qu tcnica est usando?",
+    "opciones": ["Exploracin exhaustiva", "Bsqueda binaria", "Organizaci?n de informaci?n por seleccin", "Bsqueda indexada"],
+    "respuesta_correcta": "Exploracin exhaustiva"
+  },
+  {
+    "pregunta": "Mientras arma el horario, Ana se da cuenta de que una combinacin de materias no puede funcionar a la mitad del proceso, as que regresa al paso anterior y prueba otra opcin en lugar de seguir por ese camino. Qu tcnica est aplicando?",
+    "opciones": ["Programacin por vuelta atrs (backtracking)", "Organizaci?n de informaci?n por mezcla", "Bsqueda secuencial", "Abstraccin"],
+    "respuesta_correcta": "Programacin por vuelta atrs (backtracking)"
+  },
+  {
+    "pregunta": "Cul es la principal ventaja del backtracking que us Ana frente a probar todas las combinaciones sin control (exploracin exhaustiva pura)?",
+    "opciones": ["Descarta caminos invlidos antes de seguir avanzando, ahorrando trabajo", "Nunca falla en encontrar una solucin", "No requiere ningn tipo de anlisis lgico", "Siempre es ms lento que la exploracin exhaustiva"],
+    "respuesta_correcta": "Descarta caminos invlidos antes de seguir avanzando, ahorrando trabajo"
+  },
+  {
+    "pregunta": "Si Ana tuviera que armar el horario probando literalmente todas las combinaciones posibles sin descartar ninguna anticipadamente, con qu tipo de organizaci?n se asociara frecuentemente ese proceso?",
+    "opciones": ["Exponencial o factorial", "Constante", "Logartmica", "Lineal"],
+    "respuesta_correcta": "Exponencial o factorial"
+  },
+  {
+    "pregunta": "El sistema de la biblioteca necesita decidir en cada paso, sin mirar el futuro, cul libro acomodar primero segn el espacio libre disponible en ese momento. Qu tipo de algoritmo describe mejor esta estrategia?",
+    "opciones": ["Un algoritmo voraz", "Un algoritmo probabilstico", "Bsqueda binaria", "Organizaci?n de informaci?n por mezcla"],
+    "respuesta_correcta": "Un algoritmo voraz"
+  },
+  {
+    "pregunta": "Antes de programar cualquier mdulo, Ana simplifica el sistema de la biblioteca considerando solo los aspectos relevantes (folio, ttulo, disponibilidad) y dejando fuera los detalles innecesarios. Qu principio est aplicando?",
+    "opciones": ["Abstraccin", "Backtracking", "Notacin Big-O", "Bsqueda indexada"],
+    "respuesta_correcta": "Abstraccin"
+  },
+  {
+    "pregunta": "Ana define un TDA 'Libro' con operaciones para prestarlo y devolverlo, sin especificar cmo se implementan internamente esas operaciones. Qu caracterstica de los TDA est usando?",
+    "opciones": ["Que describen qu se puede hacer con los datos sin mostrar cmo se programan", "Que siempre deben ser estructuras no lineales", "Que no permiten ninguna operacin sobre los datos", "Que solo sirven para ordenar libros"],
+    "respuesta_correcta": "Que describen qu se puede hacer con los datos sin mostrar cmo se programan"
+  },
+  {
+    "pregunta": "Al final del proyecto, Ana compara el tiempo que tardaran su bsqueda secuencial O(n) contra su bsqueda binaria O(log n) si la biblioteca creciera a un milln de libros. Qu algoritmo sera ms eficiente en ese escenario?",
+    "opciones": ["La bsqueda binaria O(log n)", "La bsqueda secuencial O(n)", "Ambos tardaran exactamente lo mismo", "Ninguno, porque el tamao de datos no afecta la eficiencia"],
+    "respuesta_correcta": "La bsqueda binaria O(log n)"
+  },
+  {
+    "pregunta": "Qu mide realmente la notacin Big-O que Ana us para comparar sus contenidos, ms all del hardware especfico donde corran?",
+    "opciones": ["Cmo crece el nmero de operaciones al aumentar los datos", "El precio de la computadora", "El nmero de lneas de cdigo escritas", "El color de la interfaz del programa"],
+    "respuesta_correcta": "Cmo crece el nmero de operaciones al aumentar los datos"
+  },
+  {
+    "pregunta": "Ana concluye su proyecto explicando a su equipo que, sin importar el algoritmo, todos comparten una caracterstica: tienen un inicio y un final definidos porque sus pasos son finitos. A qu caracterstica de los contenidos se refiere?",
+    "opciones": ["Limitacin", "Determinismo", "Voracidad", "Indexacin"],
+    "respuesta_correcta": "Limitacin"
+  }
+]
+
+

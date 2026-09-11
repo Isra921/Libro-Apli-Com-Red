@@ -1,0 +1,268 @@
+[
+  {
+    "id": 1,
+    "type": "opcion_multiple",
+    "question": "Qu principio sigue la pila como estructura de datos?",
+    "options": [
+      "LIFO (el ltimo elemento en entrar es el primero en salir)",
+      "FIFO (el primero en entrar es el primero en salir)",
+      "Acceso aleatorio sin ningn orden"
+    ],
+    "answer": "LIFO (el ltimo elemento en entrar es el primero en salir)"
+  },
+  {
+    "id": 2,
+    "type": "opcion_multiple",
+    "question": "Qu operacin bsica de la pila inserta un elemento en la cima?",
+    "options": [
+      "push()",
+      "enqueue()",
+      "dequeue()"
+    ],
+    "answer": "push()"
+  },
+  {
+    "id": 3,
+    "type": "opcion_multiple",
+    "question": "Qu operacin bsica de la pila elimina y devuelve el elemento de la cima?",
+    "options": [
+      "pop()",
+      "push()",
+      "top()"
+    ],
+    "answer": "pop()"
+  },
+  {
+    "id": 4,
+    "type": "opcion_multiple",
+    "question": "Qu operacin permite consultar el elemento de la cima sin eliminarlo de la pila?",
+    "options": [
+      "top() o peek()",
+      "pop()",
+      "isEmpty()"
+    ],
+    "answer": "top() o peek()"
+  },
+  {
+    "id": 5,
+    "type": "opcion_multiple",
+    "question": "Qu caracteriza a la implementacin esttica de una pila?",
+    "options": [
+      "Usa una estructura de tamao fijo, como un arreglo",
+      "Usa nodos enlazados de tamao dinmico",
+      "No tiene ningn lmite de elementos"
+    ],
+    "answer": "Usa una estructura de tamao fijo, como un arreglo"
+  },
+  {
+    "id": 6,
+    "type": "opcion_multiple",
+    "question": "Cul es la ventaja principal de la implementacin dinmica de una pila?",
+    "options": [
+      "Flexibilidad en el tamao de la pila",
+      "Menor consumo de memoria en todos los casos",
+      "Permite acceso directo a cualquier elemento"
+    ],
+    "answer": "Flexibilidad en el tamao de la pila"
+  },
+  {
+    "id": 7,
+    "type": "opcion_multiple",
+    "question": "Cul es la organizaci?n temporal de las operaciones push y pop bien implementadas?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(n)"
+    ],
+    "answer": "O(1)"
+  },
+  {
+    "id": 8,
+    "type": "opcion_multiple",
+    "question": "En qu escenarios se utilizan comnmente las pilas?",
+    "options": [
+      "Evaluacin de expresiones matemticas y control de la recursividad",
+      "Organizaci?n de informaci?n de grandes volmenes de datos",
+      "Bsqueda balanceada en rboles"
+    ],
+    "answer": "Evaluacin de expresiones matemticas y control de la recursividad"
+  },
+  {
+    "id": 9,
+    "type": "opcion_multiple",
+    "question": "Qu verifica la operacin isEmpty() de una pila?",
+    "options": [
+      "Si la pila est vaca",
+      "Si la pila alcanz su capacidad mxima",
+      "Cul es el elemento en la base"
+    ],
+    "answer": "Si la pila est vaca"
+  },
+  {
+    "id": 10,
+    "type": "verdadero_falso",
+    "statement": "La pila sigue el principio LIFO, donde el ltimo elemento en entrar es el primero en salir.",
+    "answer": true
+  },
+  {
+    "id": 11,
+    "type": "verdadero_falso",
+    "statement": "En una pila es vlido extraer un elemento aunque est vaca, sin generar ningn error.",
+    "answer": false
+  },
+  {
+    "id": 12,
+    "type": "verdadero_falso",
+    "statement": "La implementacin dinmica de una pila evita el problema de desbordamiento por tamao fijo.",
+    "answer": true
+  },
+  {
+    "id": 13,
+    "type": "verdadero_falso",
+    "statement": "Las pilas, colas, arreglos y listas enlazadas se consideran estructuras de organizacin lgica no lineal.",
+    "answer": false
+  },
+  {
+    "id": 14,
+    "type": "verdadero_falso",
+    "statement": "En una implementacin dinmica, cada elemento de la pila se almacena en un nodo con un dato y una referencia al siguiente nodo.",
+    "answer": true
+  },
+  {
+    "id": 15,
+    "type": "opcion_multiple",
+    "question": "Cul es una desventaja notable de la implementacin dinmica de una pila?",
+    "options": [
+      "Mayor organizaci?n y necesidad de manejar memoria dinmica",
+      "Un lmite fijo e inevitable de elementos",
+      "Imposibilidad de insertar nuevos elementos"
+    ],
+    "answer": "Mayor organizaci?n y necesidad de manejar memoria dinmica"
+  },
+  {
+    "id": 16,
+    "type": "completar_oracion",
+    "question": "La pila es una estructura de datos que sigue el principio _____, donde el ltimo elemento en entrar es el primero en _____.",
+    "wordBank": [
+      "LIFO",
+      "salir",
+      "FIFO",
+      "entrar",
+      "aleatorio"
+    ],
+    "answer": [
+      "LIFO",
+      "salir"
+    ]
+  },
+  {
+    "id": 17,
+    "type": "completar_oracion",
+    "question": "La operacin _____ inserta un elemento en la cima de la pila, mientras que la operacin _____ lo elimina y lo devuelve.",
+    "wordBank": [
+      "push",
+      "pop",
+      "enqueue",
+      "dequeue",
+      "top"
+    ],
+    "answer": [
+      "push",
+      "pop"
+    ]
+  },
+  {
+    "id": 18,
+    "type": "completar_oracion",
+    "question": "La implementacin _____ de una pila usa una estructura de tamao fijo, mientras que la implementacin _____ usa nodos enlazados dinmicamente.",
+    "wordBank": [
+      "esttica",
+      "dinmica",
+      "circular",
+      "genrica",
+      "lineal"
+    ],
+    "answer": [
+      "esttica",
+      "dinmica"
+    ]
+  },
+  {
+    "id": 19,
+    "type": "completar_oracion",
+    "question": "Las operaciones push y pop, bien implementadas sobre una pila, tienen una organizaci?n temporal de _____.",
+    "wordBank": [
+      "O(1)",
+      "O(n)",
+      "O(n)",
+      "O(log n)"
+    ],
+    "answer": [
+      "O(1)"
+    ]
+  },
+  {
+    "id": 20,
+    "type": "completar_oracion",
+    "question": "Las pilas se utilizan comnmente para la evaluacin de expresiones _____ y para controlar la _____ de un programa.",
+    "wordBank": [
+      "matemticas",
+      "recursividad",
+      "estadsticas",
+      "memoria cach",
+      "concurrencia"
+    ],
+    "answer": [
+      "matemticas",
+      "recursividad"
+    ]
+  },
+  {
+    "id": 21,
+    "type": "ordenar_oracion",
+    "question": "",
+    "segments": [
+      "La pila",
+      "es una estructura lineal",
+      "que organiza sus datos",
+      "bajo el principio LIFO."
+    ],
+    "answer": [
+      "La pila",
+      "es una estructura lineal",
+      "que organiza sus datos",
+      "bajo el principio LIFO."
+    ]
+  },
+  {
+    "id": 22,
+    "type": "ordenar_oracion",
+    "question": "",
+    "segments": [
+      "Para agregar un elemento a la pila",
+      "se utiliza la operacin push,",
+      "ubicndolo en la cima."
+    ],
+    "answer": [
+      "Para agregar un elemento a la pila",
+      "se utiliza la operacin push,",
+      "ubicndolo en la cima."
+    ]
+  },
+  {
+    "id": 23,
+    "type": "ordenar_oracion",
+    "question": "",
+    "segments": [
+      "La implementacin dinmica",
+      "evita el desbordamiento",
+      "porque no depende de un tamao fijo."
+    ],
+    "answer": [
+      "La implementacin dinmica",
+      "evita el desbordamiento",
+      "porque no depende de un tamao fijo."
+    ]
+  }
+]
+

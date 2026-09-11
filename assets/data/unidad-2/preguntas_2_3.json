@@ -1,0 +1,272 @@
+[
+  {
+    "id": 1,
+    "type": "opcion_multiple",
+    "question": "¿Cómo se define una lista en algoritmia?",
+    "options": [
+      "Una estructura de datos lineal que permite almacenar un conjunto de elementos de manera ordenada",
+      "Una estructura que solo admite un único elemento",
+      "Un conjunto de datos sin ningún orden posible"
+    ],
+    "answer": "Una estructura de datos lineal que permite almacenar un conjunto de elementos de manera ordenada"
+  },
+  {
+    "id": 2,
+    "type": "opcion_multiple",
+    "question": "¿Qué partes principales componen cada nodo en una lista simple enlazada?",
+    "options": [
+      "Un dato y un enlace o puntero al siguiente nodo",
+      "Solamente un dato, sin ningún puntero",
+      "Un dato y dos punteros, uno anterior y otro siguiente"
+    ],
+    "answer": "Un dato y un enlace o puntero al siguiente nodo"
+  },
+  {
+    "id": 3,
+    "type": "opcion_multiple",
+    "question": "En una lista simple enlazada, ¿a qué apunta el enlace del último nodo?",
+    "options": [
+      "A un valor nulo (NULL)",
+      "Al primer nodo de la lista",
+      "A un nodo vacío especial"
+    ],
+    "answer": "A un valor nulo (NULL)"
+  },
+  {
+    "id": 4,
+    "type": "opcion_multiple",
+    "question": "¿Cuál es una desventaja de las listas simples enlazadas frente a los arreglos?",
+    "options": [
+      "No permiten el acceso directo a un elemento; hay que recorrer la lista desde el inicio",
+      "Ocupan más memoria que cualquier arreglo",
+      "No permiten insertar nuevos elementos"
+    ],
+    "answer": "No permiten el acceso directo a un elemento; hay que recorrer la lista desde el inicio"
+  },
+  {
+    "id": 5,
+    "type": "opcion_multiple",
+    "question": "¿Cuántas partes principales contiene un nodo en una lista doblemente enlazada?",
+    "options": [
+      "Tres: un dato, un puntero al nodo anterior y un puntero al nodo siguiente",
+      "Dos: solo un dato y un puntero al siguiente",
+      "Una: únicamente el dato almacenado"
+    ],
+    "answer": "Tres: un dato, un puntero al nodo anterior y un puntero al nodo siguiente"
+  },
+  {
+    "id": 6,
+    "type": "opcion_multiple",
+    "question": "¿Qué tipo de recorrido facilita una lista doblemente enlazada?",
+    "options": [
+      "Recorrido en ambos sentidos (hacia adelante y hacia atrás)",
+      "nicamente recorrido hacia adelante",
+      "nicamente recorrido aleatorio"
+    ],
+    "answer": "Recorrido en ambos sentidos (hacia adelante y hacia atrás)"
+  },
+  {
+    "id": 7,
+    "type": "opcion_multiple",
+    "question": "¿Qué característica define principalmente a una lista circular?",
+    "options": [
+      "El último nodo se enlaza con el primero, formando un ciclo cerrado",
+      "El último nodo siempre apunta a NULL",
+      "Cada nodo tiene tres punteros distintos"
+    ],
+    "answer": "El último nodo se enlaza con el primero, formando un ciclo cerrado"
+  },
+  {
+    "id": 8,
+    "type": "opcion_multiple",
+    "question": "¿Para qué tipo de escenarios resulta ideal el uso de listas circulares?",
+    "options": [
+      "Procesos donde se requiere rotar entre elementos repetitivamente, como turnos o buffers circulares",
+      "Búsquedas que requieren orden alfabético estricto",
+      "Almacenamiento de una única constante fija"
+    ],
+    "answer": "Procesos donde se requiere rotar entre elementos repetitivamente, como turnos o buffers circulares"
+  },
+  {
+    "id": 9,
+    "type": "opcion_multiple",
+    "question": "¿Cuál es la organizaci?n temporal de acceder a un elemento en un arreglo?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(n²)"
+    ],
+    "answer": "O(1)"
+  },
+  {
+    "id": 10,
+    "type": "verdadero_falso",
+    "statement": "Los arreglos almacenan sus elementos en posiciones contiguas de memoria.",
+    "answer": true
+  },
+  {
+    "id": 11,
+    "type": "verdadero_falso",
+    "statement": "Insertar o eliminar un elemento en una lista enlazada requiere desplazar todos los demás elementos, igual que en un arreglo.",
+    "answer": false
+  },
+  {
+    "id": 12,
+    "type": "verdadero_falso",
+    "statement": "La organizaci?n de buscar un elemento en una lista simple enlazada es O(n).",
+    "answer": true
+  },
+  {
+    "id": 13,
+    "type": "verdadero_falso",
+    "statement": "La lista doblemente enlazada usa menos memoria que la lista simple porque no requiere punteros adicionales.",
+    "answer": false
+  },
+  {
+    "id": 14,
+    "type": "verdadero_falso",
+    "statement": "Las listas enlazadas se utilizan comúnmente en la gestión dinámica de memoria.",
+    "answer": true
+  },
+  {
+    "id": 15,
+    "type": "opcion_multiple",
+    "question": "¿Qué desventaja principal tiene la lista doblemente enlazada frente a la lista simple?",
+    "options": [
+      "Usa más memoria porque cada nodo requiere dos punteros",
+      "No permite recorrerse en ningún sentido",
+      "No puede almacenar más de un dato por nodo"
+    ],
+    "answer": "Usa más memoria porque cada nodo requiere dos punteros"
+  },
+  {
+    "id": 16,
+    "type": "completar_oracion",
+    "question": "Cada nodo de una lista simple enlazada contiene un _____ y un _____ al siguiente nodo.",
+    "wordBank": [
+      "dato",
+      "puntero",
+      "índice",
+      "hash",
+      "arreglo"
+    ],
+    "answer": [
+      "dato",
+      "puntero"
+    ]
+  },
+  {
+    "id": 17,
+    "type": "completar_oracion",
+    "question": "En una lista doblemente enlazada, cada nodo tiene un puntero al nodo _____ y otro al nodo _____.",
+    "wordBank": [
+      "anterior",
+      "siguiente",
+      "circular",
+      "raíz",
+      "hash"
+    ],
+    "answer": [
+      "anterior",
+      "siguiente"
+    ]
+  },
+  {
+    "id": 18,
+    "type": "completar_oracion",
+    "question": "En una lista circular, el último nodo se enlaza con el _____ nodo, en lugar de apuntar a _____.",
+    "wordBank": [
+      "primer",
+      "NULL",
+      "último",
+      "un hash"
+    ],
+    "answer": [
+      "primer",
+      "NULL"
+    ]
+  },
+  {
+    "id": 19,
+    "type": "completar_oracion",
+    "question": "Acceder a un elemento en un arreglo tiene organizaci?n _____, mientras que buscarlo en una lista simple enlazada tiene organizaci?n _____.",
+    "wordBank": [
+      "O(1)",
+      "O(n)",
+      "O(n²)",
+      "O(log n)"
+    ],
+    "answer": [
+      "O(1)",
+      "O(n)"
+    ]
+  },
+  {
+    "id": 20,
+    "type": "completar_oracion",
+    "question": "Los arreglos almacenan sus datos en posiciones _____ de memoria, lo que permite un acceso _____ mediante un índice.",
+    "wordBank": [
+      "contiguas",
+      "directo",
+      "dispersas",
+      "aleatorio",
+      "indirecto"
+    ],
+    "answer": [
+      "contiguas",
+      "directo"
+    ]
+  },
+  {
+    "id": 21,
+    "type": "ordenar_oracion",
+    "question": "",
+    "segments": [
+      "Una lista enlazada",
+      "almacena sus elementos",
+      "de manera ordenada",
+      "mediante nodos conectados entre sí."
+    ],
+    "answer": [
+      "Una lista enlazada",
+      "almacena sus elementos",
+      "de manera ordenada",
+      "mediante nodos conectados entre sí."
+    ]
+  },
+  {
+    "id": 22,
+    "type": "ordenar_oracion",
+    "question": "",
+    "segments": [
+      "A diferencia de un arreglo,",
+      "una lista enlazada",
+      "no permite el acceso directo",
+      "a un elemento específico."
+    ],
+    "answer": [
+      "A diferencia de un arreglo,",
+      "una lista enlazada",
+      "no permite el acceso directo",
+      "a un elemento específico."
+    ]
+  },
+  {
+    "id": 23,
+    "type": "ordenar_oracion",
+    "question": "",
+    "segments": [
+      "En una lista circular,",
+      "el último nodo",
+      "se conecta nuevamente",
+      "con el primer nodo de la lista."
+    ],
+    "answer": [
+      "En una lista circular,",
+      "el último nodo",
+      "se conecta nuevamente",
+      "con el primer nodo de la lista."
+    ]
+  }
+]
+

@@ -1,0 +1,9 @@
+/* Oscurece el fondo del modal para mayor enfoque en el diagrama */
+.viewer-backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Cambia el cursor en la imagen de la página para indicar la acción */
+.figura img {
+  cursor: pointer;
+}
