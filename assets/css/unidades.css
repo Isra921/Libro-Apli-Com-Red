@@ -1,2 +1,405 @@
+/* ==========================================================================
+   ESTILOS DEL CATÁLOGO DE UNIDADES (unidades.html)
+   Polilibro Académico: Aplicaciones para Comunicaciones en Red
+   ========================================================================== */
+
 @import url("variables.css");
-@import url("paginas/Unidades.css");
+
+/* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: var(--bg-deep);
+            color: var(--text-light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- ESTILOS DEL MENÚ DE NAVEGACIÓN --- */
+        header.main-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            width: 100%;
+            border-bottom: 1px solid var(--border-color);
+            background-color: color-mix(in srgb, var(--bg-main) 85%, transparent);
+            backdrop-filter: blur(8px);
+        }
+
+        .header-container {
+            display: flex;
+            height: 4rem;
+            align-items: center;
+            padding: 0 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon-wrapper {
+            display: flex;
+            height: 2.5rem;
+            width: 2.5rem;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.5rem;
+            background: var(--surface);
+        }
+
+        .logo-icon-wrapper i {
+            font-size: 1.5rem;
+            color: var(--white);
+        }
+
+        .logo-text-wrapper {
+            display: none;
+        }
+
+        @media (min-width: 640px) {
+            .logo-text-wrapper {
+                display: block;
+            }
+        }
+
+        .logo-title {
+            font-size: 1.125rem;
+            font-weight: bold;
+            color: var(--text-light);
+        }
+
+        .logo-subtitle {
+            font-size: 0.75rem;
+            color: var(--text-muted-light);
+        }
+
+        .desktop-nav {
+            display: none;
+            margin-left: auto;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        @media (min-width: 768px) {
+            .desktop-nav {
+                display: flex;
+            }
+        }
+
+        .nav-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.375rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-light);
+            background-color: transparent;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            text-decoration: none;
+        }
+
+        .nav-button:hover {
+            background-color: var(--card-bg);
+            color: var(--white);
+        }
+
+        .nav-button.active {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .nav-button i {
+            font-size: 1rem;
+        }
+
+        .mobile-nav-trigger {
+            margin-left: auto;
+            display: block;
+        }
+
+        @media (min-width: 768px) {
+            .mobile-nav-trigger {
+                display: none;
+            }
+        }
+
+        #mobile-menu-button {
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .sheet {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 256px;
+            height: 100%;
+            background-color: var(--surface);
+            border-left: 1px solid var(--border-color);
+            z-index: 100;
+            transition: right 0.3s ease-in-out;
+            padding: 1.5rem;
+            box-shadow: -10px 0 30px color-mix(in srgb, var(--shadow-color) 30%, transparent);
+        }
+
+        .sheet.open {
+            right: 0;
+        }
+
+        .sheet-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .sheet-header .logo-icon-wrapper {
+            height: 2rem;
+            width: 2rem;
+        }
+        .sheet-header .logo-icon-wrapper i {
+            font-size: 1rem;
+        }
+
+        .sheet-header .logo-title {
+            font-size: 0.875rem;
+        }
+
+        .sheet-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-top: 1.5rem;
+        }
+
+        .sheet-content .nav-button {
+            justify-content: flex-start;
+            width: 100%;
+        }
+
+        #close-menu-button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+
+        /* Cabecera de la sección de unidades */
+        .page-header {
+            text-align: center;
+            margin: 2rem 0 3rem 0;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--white);
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px color-mix(in srgb, var(--shadow-color) 30%, transparent);
+        }
+
+        .page-header p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Contenedor de las tarjetas */
+        .units-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* Estilo de tarjeta individual (ahora es un enlace <a>) */
+        .unit-card {
+            background: var(--surface);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 8px 25px color-mix(in srgb, var(--shadow-color) 20%, transparent);
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            text-decoration: none; /* Quita el subrayado del enlace */
+            color: var(--text-light); /* Asegura que el texto herede el color correcto */
+            display: block; /* Para que el enlace se comporte como un bloque */
+        }
+
+        .unit-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 35px color-mix(in srgb, var(--shadow-color) 40%, transparent);
+            background: var(--surface-hover);
+        }
+
+        .unit-card .card-header {
+            padding: 1.5rem;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .unit-card .card-header::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 80px;
+            height: 80px;
+            background: color-mix(in srgb, var(--white) 10%, transparent);
+            border-radius: 50%;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .header-top i {
+            font-size: 2rem;
+            opacity: 0.9;
+        }
+/* cambio de color para las semanas  */
+        .duration-badge {
+            background-color: color-mix(in srgb, var(--bg-deep) 85.1%, transparent);
+            color: color-mix(in srgb, var(--white) 87.8%, transparent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.25rem;
+        }
+
+        .card-subtitle {
+            font-size: 1.1rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-description {
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .topics-section p {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-muted-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .topics-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .topic-badge {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 0.2rem 0.6rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-duration {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .explore-link {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-light);
+            background: var(--surface);
+            border: 1px solid color-mix(in srgb, var(--white) 18%, transparent);
+            border-radius: 8px;
+            padding: 0.55rem 0.8rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .unit-card:hover .explore-link {
+            color: var(--text-light);
+            background: var(--accent);
+        }
+
+        .explore-link i {
+            transition: transform 0.3s;
+        }
+
+        .unit-card:hover .explore-link i {
+            transform: translateX(5px);
+        }
+
+        /* Asignación de gradientes a cada tarjeta */
+        #unit-1 .card-header { background: var(--gradient-unit-1); }
+        #unit-2 .card-header { background: var(--gradient-unit-2); }
+        #unit-3 .card-header { background: var(--gradient-unit-3); }
+
+
+        /* Footer de la página */
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem;
+            color: var(--white);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+        }
