@@ -51,30 +51,7 @@
         }
 
         .floating-home-btn {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: var(--secondary);
-            color: var(--white);
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            box-shadow: 0 4px 20px color-mix(in srgb, var(--surface-hover) 30%, transparent);
-            transition: all 0.3s ease;
-            z-index: 1000;
-            font-size: 1.5rem;
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .floating-home-btn:hover {
-            background: var(--primary);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 25px color-mix(in srgb, var(--surface-hover) 50%, transparent);
+            display: none !important;
         }
 
         .sidebar-nav {

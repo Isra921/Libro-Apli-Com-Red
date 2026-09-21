@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="assets/css/variables.css">
-  <link rel="stylesheet" href="assets/css/global.css">
-  <link rel="stylesheet" href="assets/css/inicio.css">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polilibro académico - ESCOM | Aplicaciones para Comunicaciones en Red</title>
+    <title>Aplicaciones para Comunicaciones en Red - Polilibro Académico</title>
+    <meta name="description" content="Polilibro académico interactivo de la Unidad de Aprendizaje Aplicaciones para Comunicaciones en Red de la Escuela Superior de Cómputo (ESCOM - IPN).">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/inicio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <link rel="icon" type="image/png" href="assets/img/favicon-escom.png">
-  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/png" href="assets/img/ESCOMB.png">
+    <link rel="shortcut icon" type="image/png" href="assets/img/ESCOMB.png">
 </head>
 <body>
 
-
     <header class="site-nav">
         <a class="brand" href="index.html">ESCOM · Polilibro académico<small>Aplicaciones para Comunicaciones en Red</small></a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" onclick="const nav=document.getElementById('main-navigation'); nav.classList.toggle('is-open'); this.setAttribute('aria-expanded', nav.classList.contains('is-open'));">
             <span class="sr-only">Abrir navegación</span><i class="fas fa-bars" aria-hidden="true"></i>
         </button>
         <nav id="main-navigation" aria-label="Navegación principal">
-            <a class="active" href="index.html">Inicio</a>
-            <a href="unidades.html">Unidades</a>
-            <a href="unidades/unidad-01/referencias.html">Referencias</a>
+            <a class="active" href="index.html"><i class="fas fa-home" aria-hidden="true"></i> Inicio</a>
+            <a href="unidades.html"><i class="fas fa-book-open" aria-hidden="true"></i> Unidades</a>
+            <a href="unidades/unidad-01/referencias.html"><i class="fas fa-bookmark" aria-hidden="true"></i> Referencias</a>
         </nav>
     </header>
 
@@ -32,12 +31,10 @@
             <img class="hero-emblem hero-emblem-ipn" src="assets/img/IPNb.png" alt="Instituto Politécnico Nacional">
             <img class="hero-emblem hero-emblem-escom" src="assets/img/ESCOMB.png" alt="ESCOM">
             <div class="hero-institutional" aria-label="Identidad institucional">
-
                 <div class="hero-title-lockup">
                     <span class="institutional-line">INSTITUTO POLITÉCNICO NACIONAL · ESCOM</span>
                     <h1>Aplicaciones para<br><span class="hero-subject">Comunicaciones en Red</span></h1>
                 </div>
-
             </div>
             <div class="hero-content">
                 <div class="hero-copy">
@@ -55,12 +52,22 @@
             </div>
         </section>
 
-        <section class="welcome-section">
-            <div class="welcome-copy">
-                <h2>Bienvenida</h2>
-                <div class="welcome-content" tabindex="0" role="region" aria-label="Bienvenida completa">
+        <section class="welcome-section" id="seccion-bienvenida">
+            <div class="welcome-copy dynamic-viewer" id="dynamicViewer">
+                <div class="viewer-header">
+                    <div class="viewer-title-box">
+                        <span class="viewer-tag" id="viewerTag"><i class="fas fa-home"></i> Presentación institucional</span>
+                        <h2 id="viewerHeading">Bienvenida</h2>
+                    </div>
+                    <button class="btn-return-bienvenida" id="btnReturnBienvenida" type="button" onclick="activateSection('bienvenida')" style="display:none;" aria-label="Volver a la Bienvenida">
+                        <i class="fas fa-undo-alt" aria-hidden="true"></i> Volver a Bienvenida
+                    </button>
+                </div>
 
-                    <p><strong>Aplicaciones para Comunicaciones en Red </strong> (polilibro académico), fue diseñado para inspirar la curiosidad, despertar el pensamiento lógico y fortalecer la capacidad de análisis
+                <div class="dynamic-content-area prose" id="dynamicContentArea" tabindex="0" role="region" aria-label="Contenido de la sección activa">
+                    <!-- Vista: Bienvenida -->
+                    <div class="viewer-pane active" id="pane-bienvenida">
+<p><strong>Aplicaciones para Comunicaciones en Red </strong> (polilibro académico), fue diseñado para inspirar la curiosidad, despertar el pensamiento lógico y fortalecer la capacidad de análisis
                          en el fascinante mundo de la computación. Este recurso nace como una herramienta educativa dinámica e innovadora que acompaña a las y los estudiantes en el desarrollo de habilidades fundamentales para comprender cómo los datos se organizan,
                          se procesan y se transforman mediante Aplicaciones para Comunicaciones en Red en los sistemas computacionales. </p>
 
@@ -74,59 +81,31 @@
                     <p>Más que un material de estudio, Aplicaciones para Comunicaciones en Red, es una invitación a descubrir el poder de la lógica y la creatividad en la informática. Aquí comienza un viaje donde cada
                          concepto abre nuevas posibilidades de aprendizaje, donde cada algoritmo cuenta una historia de eficiencia y donde cada estructura de datos se convierte en una herramienta para transformar ideas en soluciones innovadoras. Bienvenido a esta
                          experiencia de aprendizaje donde la tecnología, el conocimiento y la curiosidad se encuentran.</p>
-                </div>
-            </div>
-            <div class="material-panel" id="material">
-                <h3>Secciones del material</h3>
-                <div class="quick-links">
-                    <button class="quick-link" data-modal="Introducción"><i class="fas fa-lightbulb"></i><span>Introducción<small>Contexto y objetivos de la materia.</small></span></button>
-                    <button class="quick-link" data-modal="programa"><i class="fas fa-file-alt"></i><span>Programa académico<small>Propósitos y organización del curso.</small></span></button>
-                    <button class="quick-link" data-modal="metodologia"><i class="fas fa-sitemap"></i><span>Metodología<small>Estrategia y métodos de aprendizaje.</small></span></button>
-                    <button class="quick-link" data-modal="examen"><i class="fas fa-file-signature"></i><span>Examen diagnóstico<small>Revisa tus conocimientos previos.</small></span></button>
-                    <button class="quick-link" data-modal="actividades"><i class="fas fa-gamepad"></i><span>Actividades<small>Ejercicios por tema y por unidad.</small></span></button>
-                    <button class="quick-link" type="button" onclick="openGlosarioModal()"><i class="fas fa-book"></i><span>Glosario de términos<small>Consulta los conceptos principales.</small></span></button>
-                    <button class="quick-link" data-modal="creadores"><i class="fas fa-users"></i><span>Autores y colaboradores<small>Conoce al equipo del polilibro.</small></span></button>
-                    <button class="quick-link" data-modal="licencia"><i class="fab fa-creative-commons"></i><span>Términos de uso y licenciamiento<small>Condiciones de uso del material.</small></span></button>
-                </div>
-            </div>
-        </section>
+                    </div>
 
-        <section class="cta-section"><a href="unidades.html" class="cta-button">Explorar las unidades <i class="fas fa-arrow-right"></i></a></section>
+                    <!-- Vista: Introducción y Objetivos -->
+                    <div class="viewer-pane" id="pane-introduccion">
+<h3>Introducción</h3>
+                    <p style="text-align: justify;"><strong>Aplicaciones para Comunicaciones en Red</strong> (polilibro académico), Aplicaciones para Comunicaciones en Red, Aborda el estudio de Aplicaciones para Comunicaciones en Red que constituye uno de los pilares fundamentales en la formación dentro del área de la computación,
+                        ya que permite comprender cómo se organiza, se procesa y se recupera la información dentro de los sistemas informáticos. En el contexto actual, donde el manejo eficiente de los datos es esencial para el desarrollo de soluciones tecnológicas, este recurso didáctico digital Contenidos almacena y
+                        recupera Datos (polilibro académico) ha sido diseñado como una herramienta innovadora orientada al aprendizaje activo, con el propósito de fortalecer el pensamiento lógico, el análisis estructurado y la capacidad para resolver problemas mediante el uso de Aplicaciones para Comunicaciones en Red.
+                        A través de este material, el estudiantado desarrollará competencias que le permitirán comprender el funcionamiento interno de los programas y la manera en que la información puede ser organizada y manipulada de forma eficiente.</p>
 
-        <footer>
-            <p>Aplicaciones para Comunicaciones en Red - Polilibro académico</p>
-            <p>Desarrollado para fines educativos - © 2026</p>
-        </footer>
-    </main>
+                <h3>Objetivo general</h3>
+                    <p style="text-align: justify;">Desarrollar en el estudiante de Ingeniería en Sistemas Computacionales las habilidades necesarias para el manejo eficiente de datos en memoria mediante el uso de Aplicaciones para Comunicaciones en Red, incluyendo técnicas de organización de información y búsqueda aplicadas en sistemas computacionales, contribuyendo al perfil de egreso profesional. Asimismo,
+                         fomentar habilidades transversales como el trabajo en equipo, la comunicación efectiva, la ética profesional, la resolución de problemas, la creatividad y el ingenio, necesarias para proponer soluciones tecnológicas en contextos reales.</p>
 
-    <div id="modal-container" class="modal-overlay">
-        <div class="modal-content">
-            <button class="modal-close-btn" id="modal-close-button" aria-label="Cerrar ventana"><i class="fas fa-times"></i></button>
-            <div class="modal-body prose">
+                    <p style="text-align: justify;"><strong>En la primera unidad</strong> se aborda a los contenidos fundamentales en donde se tiene como propósito que el estudiantado identifique contenidos fundamentales de la computación con base en sus órdenes de organización, analizando su comportamiento, eficiencia y aplicación en la solución de problemas. </p>
 
-                <div id="modal-Encuadre" class="modal-section">
-                    <h3>Contenido</h3>
-                    <p><strong><p style="text-align: justify;">Aplicaciones para Comunicaciones en Red </strong> (polilibro académico), ha sido diseñado como un recurso didáctico digital innovador orientado al aprendizaje activo en el siglo XXI, en un contexto caracterizado por el avance constante de la tecnología,
-                         la modernidad y el uso de modelos computacionales para la resolución de problemas. Este material surge como una estrategia educativa dinámica que busca fortalecer de manera progresiva el desarrollo del pensamiento lógico, el análisis estructurado y la capacidad para comprender cómo la
-                         información se organiza, se procesa y se transforma dentro de los sistemas computacionales mediante el uso de Aplicaciones para Comunicaciones en Red. A través de este enfoque, se promueve la gestión eficiente de la información, el pensamiento crítico y autocrítico, la creatividad,
-                         la ética profesional y la capacidad de adaptación a nuevos entornos tecnológicos.</p>
+                     <p style="text-align: justify;"><strong>En la segunda unidad</strong> se aborda las recursos digitales lineales, se busca que el estudiantado analice y programe diferentes tipos de recursos digitales lineales a partir de especificaciones genéricas, comprendiendo la forma en que se organizan los datos de manera secuencial para facilitar su almacenamiento y recuperación. Finalmente</p>
 
-                    <p><p style="text-align: justify;">Este polilibro explora el núcleo de los contenidos de la materia como fundamentos esenciales de la computación moderna, permitiendo que las y los estudiantes comprendan cómo se diseñan soluciones eficientes para distintos problemas mediante
-                         procedimientos lógicos y ordenados. A lo largo del contenido se analizan los principios que permiten almacenar, organizar y recuperar datos, así como la forma en que los contenidos utilizan dichas estructuras para optimizar procesos. El estudio de estructuras lineales y no lineales,
-                         junto con el análisis de la organización de los contenidos, favorece el desarrollo de habilidades para modelar soluciones, mejorar el rendimiento de los programas y comprender el funcionamiento interno de los sistemas informáticos.</p>
+                    <p style="text-align: justify;"><strong>En la tercera unidad</strong> se centra las recursos digitales no lineales, la competencia se orienta a que el estudiantado analice y programe recursos digitales no lineales a partir de sus aplicaciones, organización y representaciones, permitiendo diseñar soluciones para problemas más complejos y optimizar el manejo de la información.
+                         De esta manera, el recorrido por estas unidades favorece el desarrollo del pensamiento computacional y la capacidad para generar soluciones eficientes en distintos contextos tecnológicos.</p>
+                    </div>
 
-                    <p><p style="text-align: justify;">En el desarrollo de las lecturas de cada unidad se presentan los elementos necesarios para situar el aprendizaje dentro de un contexto aplicado y significativo, facilitando la comprensión de conceptos, métodos y procesos relacionados con el diseño de contenidos,
-                         la construcción de recursos digitales y su implementación en problemas reales. Cada sección ha sido organizada con un enfoque pedagógico que integra explicación teórica, ejemplos prácticos, actividades de reflexión y ejercicios que permiten consolidar el conocimiento de manera gradual y consciente.</p>
-
-                         <p><p style="text-align: justify;">De esta manera, el presente recurso didáctico digital, Aplicaciones para Comunicaciones en Red, busca que el estudiantado comprenda, analice y utilice los contenidos de la materia como herramientas fundamentales para la solución de problemas en el ámbito computacional.
-                             Más que un material de estudio, este polilibro representa una invitación a descubrir el poder de la lógica, la organización y "la creatividad en el desarrollo de sistemas computacionales", donde cada algoritmo permite transformar ideas en soluciones y cada estructura de datos se convierte en el medio para almacenar, recuperar y dar sentido
-                             a la información. Aquí comienza una experiencia de aprendizaje en la que el conocimiento, la tecnología y la curiosidad se integran para construir competencias sólidas para el presente y el futuro.</p>
-                 </div>
-
-                <div id="modal-programa" class="modal-section">
-
-
-                    <div class="text-center" style="margin-bottom: 2rem;">
+                    <!-- Vista: Programa académico -->
+                    <div class="viewer-pane" id="pane-programa">
+<div class="text-center" style="margin-bottom: 2rem;">
                         <div style="width: 8rem; height: 8rem; background: linear-gradient(135deg, var(--surface-hover), var(--surface-hover)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
                             <i class="fas fa-file-alt" style="font-size: 4rem; color: var(--white);"></i>
                         </div>
@@ -140,9 +119,9 @@
                         <div class="program-card">
                             <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
                                 <span class="program-card-ipn">IPN</span>
-                                <span style="font-weight: 600; color: var(--success);">Instituto Politécnico Nacional</span>
+                                <span style="font-weight: 600; color: var(--accent);">Instituto Politécnico Nacional</span>
                             </div>
-                            <div style="color: var(--success);">
+                            <div style="color: var(--accent);">
                                 <p style="margin: 0;"><strong>Secretaría Académica</strong></p>
                                 <p style="margin: 0;"><strong>Dirección de Educación Superior</strong></p>
                                 <p style="margin-top: 0.5rem; font-size: 1.25rem; font-weight: 600;">Programa sintético</p>
@@ -168,8 +147,8 @@
                             </div>
                         </div>
 
-                        <div style="margin-top: 1.5rem; padding: 1.5rem; border: 1px solid var(--text-muted-light); border-radius: 0.75rem;">
-                            <h4 style="color: var(--bg-deep); margin-bottom: 0.75rem;">
+                        <div style="margin-top: 1.5rem; padding: 1.5rem; border: 1px solid var(--border-color); border-radius: 0.75rem;">
+                            <h4 style="color: #FFFFFF; margin-bottom: 0.75rem;">
                                 Propósito de la unidad de aprendizaje
                             </h4>
                             <p>
@@ -177,117 +156,11 @@
                             </p>
                         </div>
                     </div>
-                </div>
-
-                <div id="modal-encuadre" class="modal-section">
-                    <h3>Encuadre</h3>
-                    <p>El propósito de la unidad de aprendizaje (UA) <strong>Aplicaciones para Comunicaciones en Red</strong> (polilibro académico), es un recurso didáctico digital concebido como una experiencia de aprendizaje
-                       innovadora que invita a las y los estudiantes a descubrir el poder de la lógica, la organización de la información y la construcción de soluciones inteligentes en el mundo de la computación. En el siglo XXI, donde la tecnología transforma
-                       la manera en que se generan y procesan los datos, este material impulsa el desarrollo del pensamiento analítico y computacional, permitiendo comprender cómo los contenidos de la materia hacen posible que los sistemas informáticos almacenen,
-                       procesen y recuperen información de manera eficiente, fomentando al mismo tiempo la creatividad, el pensamiento crítico y la capacidad de adaptación ante nuevos desafíos tecnológicos. </p>
-                    <p>A lo largo de las unidades, el polilibro guía al estudiantado en el estudio de los principios fundamentales que permiten almacenar y recuperar datos de forma eficiente, así como en el diseño de contenidos y la construcción de recursos digitales lineales y no lineales.
-                       Cada sección presenta contenidos con un enfoque aplicado y significativo, integrando explicaciones, ejemplos y actividades que favorecen el aprendizaje activo, con el propósito de que el estudiantado desarrolle competencias para analizar, modelar y resolver problemas
-                       computacionales mediante el uso de la lógica y el pensamiento computacional.</p>
-                </div>
-
-                <div id="modal-Introducción" class="modal-section">
-                    <h3>Introducción</h3>
-                    <p style="text-align: justify;"><strong>Aplicaciones para Comunicaciones en Red</strong> (polilibro académico), Aplicaciones para Comunicaciones en Red, Aborda el estudio de Aplicaciones para Comunicaciones en Red que constituye uno de los pilares fundamentales en la formación dentro del área de la computación,
-                        ya que permite comprender cómo se organiza, se procesa y se recupera la información dentro de los sistemas informáticos. En el contexto actual, donde el manejo eficiente de los datos es esencial para el desarrollo de soluciones tecnológicas, este recurso didáctico digital Contenidos almacena y
-                        recupera Datos (polilibro académico) ha sido diseñado como una herramienta innovadora orientada al aprendizaje activo, con el propósito de fortalecer el pensamiento lógico, el análisis estructurado y la capacidad para resolver problemas mediante el uso de Aplicaciones para Comunicaciones en Red.
-                        A través de este material, el estudiantado desarrollará competencias que le permitirán comprender el funcionamiento interno de los programas y la manera en que la información puede ser organizada y manipulada de forma eficiente.</p>
-
-                <h3>Objetivo general</h3>
-                    <p style="text-align: justify;">Desarrollar en el estudiante de Ingeniería en Sistemas Computacionales las habilidades necesarias para el manejo eficiente de datos en memoria mediante el uso de Aplicaciones para Comunicaciones en Red, incluyendo técnicas de organización de información y búsqueda aplicadas en sistemas computacionales, contribuyendo al perfil de egreso profesional. Asimismo,
-                         fomentar habilidades transversales como el trabajo en equipo, la comunicación efectiva, la ética profesional, la resolución de problemas, la creatividad y el ingenio, necesarias para proponer soluciones tecnológicas en contextos reales.</p>
-
-                    <p style="text-align: justify;"><strong>En la primera unidad</strong> se aborda a los contenidos fundamentales en donde se tiene como propósito que el estudiantado identifique contenidos fundamentales de la computación con base en sus órdenes de organización, analizando su comportamiento, eficiencia y aplicación en la solución de problemas. </p>
-
-                     <p style="text-align: justify;"><strong>En la segunda unidad</strong> se aborda las recursos digitales lineales, se busca que el estudiantado analice y programe diferentes tipos de recursos digitales lineales a partir de especificaciones genéricas, comprendiendo la forma en que se organizan los datos de manera secuencial para facilitar su almacenamiento y recuperación. Finalmente</p>
-
-                    <p style="text-align: justify;"><strong>En la tercera unidad</strong> se centra las recursos digitales no lineales, la competencia se orienta a que el estudiantado analice y programe recursos digitales no lineales a partir de sus aplicaciones, organización y representaciones, permitiendo diseñar soluciones para problemas más complejos y optimizar el manejo de la información.
-                         De esta manera, el recorrido por estas unidades favorece el desarrollo del pensamiento computacional y la capacidad para generar soluciones eficientes en distintos contextos tecnológicos.</p>
-                </div>
-
-                <div id="modal-creadores" class="modal-section">
-                    <h3>Autores</h3>
-                    <div class="modal-subsection-nav" aria-label="Secciones de autores">
-                        <span class="modal-subsection active">Autores</span>
-                        <button type="button" class="modal-subsection" onclick="openModal('colaboradores')">Equipo de desarrollo</button>
                     </div>
 
-                    <div class="creator-block">
-                        <img src="assets/img/Yaxkin.png" alt="Yaxin Flores Mendoza">
-                        <div class="creator-info">
-                           <h4>Yaxkin Flores Mendoza</h4>
-                            <p class="email">yfloresme@ipn.mx</p>
-                            <p style="text-align: justify;"><strong>Semblanza:</strong> Yaxkin Flores Mendoza. Ingeniero en sistemas computacionales, maestro en ciencias de la computación y doctor en educación. Docente de tiempo completo del departamento de Ciencias e Ingeniería de la Computación de la Escom.</p>
-                            <p style="text-align: justify;"><strong>Áreas de interés:</strong> Neurociencia de la Educación y Redes Neuronales, Metodología de la Investigación, Educación en Línea con plataformas virtuales.</p>
-                        </div>
-                    </div>
-
-                    <div class="creator-block">
-                        <img src="assets/img/isr.png" alt="Israel Salas Ramírez">
-                        <div class="creator-info">
-                            <h4>Israel Salas Ramírez</h4>
-                            <p class="email">isalasr@ipn.mx</p>
-                            <p style="text-align: justify;"><strong>Semblanza:</strong> docente en la Escuela Superior de Cómputo del Instituto Politécnico Nacional, es doctor y maestro en ciencias de la educación, ingeniero en comunicaciones y electrónica de la ESIME Zacatenco, ha trabajado como responsable de unidades de Informática y generación de proyectos de Inversión Tecnológica.</p>
-                            <p style="text-align: justify;"><strong>Áreas de interés:</strong> Sistemas Operativos, Administración de Redes, Neurociencia en la Educación, Redes Neuronales, Generación de Simuladores Médicos y Plataformas Virtuales Aplicados a la Educación.</p>
-                        </div>
-                    </div>
-
-                    <hr>
-
-                    <div class="creator-block">
-                        <img src="assets/img/Daniel_Cruz_Garcia.png" alt="Daniel Cruz García">
-                        <div class="creator-info">
-                           <h4>Daniel Cruz García</h4>
-                            <p class="email">dcruzg@ipn.mx</p>
-                            <p style="text-align: justify;"><strong>Semblanza:</strong> Profesor de tiempo completo en la Escuela Superior de Cómputo, Ingeniería en Sistemas Computacionales, maestro en ciencias en la especialidad de Ingeniería Eléctrica, opción Computación.</p>
-                            <p style="text-align: justify;"><strong>Áreas de interés:</strong> Sistemas Distribuidos, Redes, Seguridad e Inteligencia Artificial.</p>
-                        </div>
-                    </div>
-
-                    <hr>
-
-                </div>
-
-               <div id="modal-colaboradores" class="modal-section">
-    <h3>Equipo de desarrollo</h3>
-    <div class="modal-subsection-nav" aria-label="Secciones de autores">
-        <button type="button" class="modal-subsection" onclick="openModal('creadores')">Autores</button>
-        <span class="modal-subsection active">Equipo de desarrollo</span>
-    </div>
-    <p style="text-align:center; margin-bottom: 2rem;">Estudiantes que contribuyeron a la creación de este recurso digital.</p>
-    <div class="collaborator-grid">
-        <div class="collaborator-card">
-            <img src="assets/img/pedro.jpg" alt="Fattel Orellana Pedro Jelani">
-            <div class="collaborator-info">
-                <h4>Fattel Orellana Pedro Jelani</h4>
-                <p class="email">pfattelo2000@alumno.ipn.mx</p>
-            </div>
-        </div>
-
-        <div class="collaborator-card">
-            <img src="assets/img/FLORES_CEDILLO.jpg" alt="Foto">
-            <div class="collaborator-info">
-                <h4>Flores Cedillo Rubén Antonio</h4>
-                <p class="email">rfloresc1900@alumno.ipn.mx</p>
-            </div>
-        </div>
-
-        <div class="collaborator-card">
-            <img src="assets/img/BERNAL_RAMIREZ.jpeg" alt="Foto">
-            <div class="collaborator-info">
-                <h4>Bernal Ramírez Brian Ricardo</h4>
-                <p class="email">bbernalr1900@alumno.ipn.mx</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-                <div id="modal-metodologia" class="modal-section">
-                   <h3>Metodología</h3><p style="text-align: justify;"><strong>Aplicaciones para Comunicaciones en Red</strong> (polilibro académico), se diseñó como un recurso didáctico innovador para las y los estudiantes de Ingeniería en Sistemas Computacionales de la Escuela Superior de Cómputo del Instituto Politécnico Nacional,
+                    <!-- Vista: Metodología -->
+                    <div class="viewer-pane" id="pane-metodologia">
+<h3>Metodología</h3><p style="text-align: justify;"><strong>Aplicaciones para Comunicaciones en Red</strong> (polilibro académico), se diseñó como un recurso didáctico innovador para las y los estudiantes de Ingeniería en Sistemas Computacionales de la Escuela Superior de Cómputo del Instituto Politécnico Nacional,
                        con el propósito de fortalecer el aprendizaje en la unidad de Contenidos y Estructuras de Datos desde un enfoque tecnológico y actual. Este material impulsa el desarrollo del pensamiento lógico y el análisis algorítmico, permitiendo comprender cómo los datos se almacenan, organizan y
                        recuperan de forma eficiente. A través de una propuesta interactiva y a la vanguardia, promueve el aprendizaje activo y la formación de competencias esenciales para la solución de problemas en entornos computacionales modernos. </p>
 
@@ -323,14 +196,11 @@
                      <li><p style="text-align: justify;"> <strong>Aprendizaje autónomo</strong>. El o la estudiante navega de forma autogestionada por el contenido del Polilibro Académico, apoyándose en recursos interactivos, lecturas clave y ejemplos guiados.</p></li>
                      <li><p style="text-align: justify;"> <strong>Aprendizaje basado en problemas</strong>. Los y las estudiantes resuelven problemas desafiantes y auténticos en el ámbito de los Aplicaciones para Comunicaciones en Red, buscan soluciones de manera colaborativa analizando y resolviendo problemas reales en el uso de la memoria y de los sistemas computacionales </p></li>
                   </ul>
-            </div>
-                <div id="modal-cuestionario" class="modal-section">
-                    <h3>Cuestionario de Comentarios</h3>
-                    <p>Tu opinión es muy importante para mejorar los Aplicaciones para Comunicaciones en Red (polilibro académico). Por favor, haznos saber tus sugerencias.</p>
-                </div>
+                    </div>
 
-                <div id="modal-examen" class="modal-section">
-                    <h3>Examen diagnóstico</h3>
+                    <!-- Vista: Examen diagnóstico -->
+                    <div class="viewer-pane" id="pane-examen">
+<h3>Examen diagnóstico</h3>
                     <p><strong>Examen diagnóstico para la unidad de aprendizaje Aplicaciones para Comunicaciones en Red.</strong></p>
 
                     <h4>Instrucciones</h4>
@@ -417,182 +287,28 @@
                             <button id="diagnostic-restart" class="diagnostic-secondary-button" type="button">Realizar otra prueba</button>
                         </section>
                     </div>
-                </div>
+                    </div>
 
-                <div id="modal-licencia" class="modal-section">
-                    <h3>Licencia Creative Commons</h3>
-                    <p style="text-align: center;">
-                        <i class="fab fa-creative-commons" style="font-size: 5rem; color: var(--primary);"></i>
-                    </p>
-                    <p><a href="index.html">Aplicaciones para Comunicaciones en Red (polilibro académico), Aplicaciones para Comunicaciones en Red</a> © 2026 by <a href="index.html">Yaxkin Flores Mendoza, Israel Salas Ramirez y Daniel Cruz García</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"></p>
-                </div>
-
-               <div id="modal-actividades" class="modal-section"><h3>Actividades</h3>
+                    <!-- Vista: Actividades -->
+                    <div class="viewer-pane" id="pane-actividades">
+<h3>Actividades</h3>
 <div class="activity-subsections" aria-label="Categorías de actividades"><button type="button" class="modal-subsection active" aria-pressed="true" aria-controls="activities-topics" data-activity-panel="activities-topics">Actividades de temas</button><button type="button" class="modal-subsection" aria-pressed="false" aria-controls="activities-finals" data-activity-panel="activities-finals">Actividades finales</button></div>
 <div id="activities-topics"><h4>Unidad 1</h4><ul class="video-list"><li><a href="unidades/unidad-01/actividades/actividad-1-1.html"><i class="fas fa-gamepad" aria-hidden="true"></i> Actividad 1.1</a></li><li><a href="unidades/unidad-01/actividades/actividad-1-2.html"><i class="fas fa-gamepad" aria-hidden="true"></i> Actividad 1.2</a></li><li><a href="unidades/unidad-01/actividades/actividad-1-3.html"><i class="fas fa-gamepad" aria-hidden="true"></i> Actividad 1.3</a></li><li><a href="unidades/unidad-01/actividades/actividad-1-4.html"><i class="fas fa-gamepad" aria-hidden="true"></i> Actividad 1.4</a></li></ul>
 <h4>Unidad 2</h4><ul class="video-list"><li><a href="unidades/unidad-02/actividades/actividad-2-1.html"><i class="fas fa-gamepad" aria-hidden="true"></i> Actividad 2.1</a></li><li><a href="unidades/unidad-02/actividades/actividad-2-2.html"><i class="fas fa-gamepad" aria-hidden="true"></i> Actividad 2.2</a></li><li><a href="unidades/unidad-02/actividades/actividad-2-3.html"><i class="fas fa-gamepad" aria-hidden="true"></i> Actividad 2.3</a></li><li><a href="unidades/unidad-02/actividades/actividad-2-4.html"><i class="fas fa-gamepad" aria-hidden="true"></i> Actividad 2.4</a></li></ul>
 <h4>Unidad 3</h4><ul class="video-list"><li><a href="unidades/unidad-03/actividades/actividad-3-1.html"><i class="fas fa-gamepad" aria-hidden="true"></i> Actividad 3.1</a></li></ul></div><div id="activities-finals" hidden><h4>Unidad 1</h4><ul class="video-list"><li><a href="unidades/unidad-01/actividades/actividad-final.html"><i class="fas fa-trophy" aria-hidden="true"></i> Actividad final de la Unidad 1</a></li></ul>
 <h4>Unidad 2</h4><ul class="video-list"><li><a href="unidades/unidad-02/actividades/actividad-final.html"><i class="fas fa-trophy" aria-hidden="true"></i> Actividad final de la Unidad 2</a></li></ul>
-<h4>Unidad 3</h4><ul class="video-list"><li><a href="unidades/unidad-03/actividades/actividad-final.html"><i class="fas fa-trophy" aria-hidden="true"></i> Actividad final de la Unidad 3</a></li></ul></div><p>Estas actividades no son parte de la evaluación, funcionan únicamente como una manera de reforzar tu aprendizaje.</p></div>
-<div id="modal-referencias" class="modal-section">
-                    <h3>Referencias bibliográficas</h3>
-                    <p>Bibliografía base para el desarrollo de este material didáctico:</p>
-
-<!-- (UNIDAD 1) -->
-    <h4 class="unit-title">Unidad 1: Contenidos y Organización</h4>
-    <ul style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
-        <li style="margin-bottom: 0.5rem;">Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). <i>Introduction to Algorithms</i> (3rd ed.). MIT Press.</li>
-        <li style="margin-bottom: 0.5rem;">Joyanes Aguilar, L., & Zahonero Martínez, I. (2008). <i>Recursos digitales en Java</i>. McGraw-Hill.</li>
-    </ul>
-
-
-
-                    <ul style="list-style-type: none; padding-left: 0;">
-                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; text-indent: -1.5rem;">
-                            Andrews, G. R. (2013). <i>Fundamentos de programación multihilo, paralela y distribuida</i>. Addison-Wesley.
-                        </li>
-                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; text-indent: -1.5rem;">
-                            Bovet, D. P., & Cesati, M. (2005). <i>Comprendiendo el núcleo de Linux</i> (3.ª ed.). OReilly Media.
-                        </li>
-                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; text-indent: -1.5rem;">
-                            Love, R. (2010). <i>Desarrollo del núcleo de Linux</i> (3.ª ed.). Addison-Wesley Professional.
-                        </li>
-                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; text-indent: -1.5rem;">
-                            Silberschatz, A., Galvin, P. B., & Gagne, G. (2022). <i>Conceptos de sistemas operativos</i> (10.ª ed.). Wiley.
-                        </li>
-                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; text-indent: -1.5rem;">
-                            Silberschatz, A., Korth, H. F., & Sudarshan, S. (2020). <i>Conceptos de sistemas de bases de datos</i> (7.ª ed.). McGraw-Hill Education.
-                        </li>
-                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; text-indent: -1.5rem;">
-                            Stallings, W. (2018). <i>Sistemas operativos: Aspectos internos y principios de diseño</i> (9.ª ed.). Pearson Educación.
-                        </li>
-                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; text-indent: -1.5rem;">
-                            Tanenbaum, A. S., & Bos, H. (2015). <i>Sistemas operativos modernos</i> (4.ª ed.). Pearson Educación.
-                        </li>
-                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; text-indent: -1.5rem;">
-                            Tanenbaum, A. S., & Van Steen, M. (2017). <i>Sistemas distribuidos: Principios y paradigmas</i> (3.ª ed.). Pearson Educación.
-                        </li>
-                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; text-indent: -1.5rem;">
-                            Wolf, M., Halter, J., & Dawson, J. (2015). <i>Tecnologías de computación en la nube y estrategias para centros de datos ubicuos</i> (2.ª ed.). CRC Press.
-                        </li>
-                    </ul>
-                </div>
-
-                <div id="modal-videos" class="modal-section">
-                    <h3>Material audiovisual</h3>
-                    <p>Selecciona un tema para reproducir el video explicativo correspondiente:</p>
-
-                    <div class="video-index">
-                        <h4 class="unit-title">Unidad I: Estructura de un sistema operativo</h4>
-                        <ul class="video-list">
-                            <li onclick="playVideo('8U92rOkobGI')" style="background-color: var(--title-mid); border-left: 4px solid var(--secondary);"><i class="fas fa-star"></i> <strong>General: Introducción y Modos de Operación</strong></li>
-
-                            <li onclick="playVideo('pZOxxGNxWVs')"><i class="fas fa-play-circle"></i> Estructura del sistema operativo</li>
-                            <li onclick="playVideo('fYo1R_h2dbA')"><i class="fas fa-play-circle"></i> Implementación del kernel</li>
-                            <li onclick="playVideo('EvXrjNJSbMI')"><i class="fas fa-play-circle"></i> Interrupciones</li>
-                            <li onclick="playVideo('v40mP-w8Lnk')"><i class="fas fa-play-circle"></i> Contadores</li>
-                            <li onclick="playVideo('KDXZkv2ROkU')"><i class="fas fa-play-circle"></i> Llamadas a sistema</li>
-                            <li onclick="playVideo('UeIdTPKO7ao')"><i class="fas fa-play-circle"></i> Procesos y señales</li>
-                            <li onclick="playVideo('68rPyKE16Kc')"><i class="fas fa-play-circle"></i> Directorios y archivos</li>
-                            <li onclick="playVideo('DE6Tl61BY28')"><i class="fas fa-play-circle"></i> Protección</li>
-                            <li onclick="playVideo('epIy6lg-5Hw')"><i class="fas fa-play-circle"></i> Shell</li>
-                            <li onclick="playVideo('7LWbVX2dAEo')"><i class="fas fa-play-circle"></i> Argumentos y variables</li>
-                            <li onclick="playVideo('asEPxm_-cfU')"><i class="fas fa-play-circle"></i> Estructuras de control y funciones</li>
-                        </ul>
-
-                        <h4 class="unit-title">Unidad II: Administración de procesos</h4>
-                        <ul class="video-list">
-                            <li onclick="playVideo('T9Xit0OAayo')" style="background-color: var(--title-mid); border-left: 4px solid var(--secondary);"><i class="fas fa-star"></i> <strong>General: Procesos, hilos y planificación</strong></li>
-
-                            <li onclick="playVideo('MZqmn8SMZMM')"><i class="fas fa-play-circle"></i> Estados de procesos</li>
-                            <li onclick="playVideo('S3-ZaInBiMs')"><i class="fas fa-play-circle"></i> Modelo multi-hilo</li>
-                            <li onclick="playVideo('v6UNbhdhdO0')"><i class="fas fa-play-circle"></i> Semáforos e hilos (Sincronización)</li>
-                            <li onclick="playVideo('kGWEHikIfQs')"><i class="fas fa-play-circle"></i> Planificación de procesos y contenidos</li>
-                            <li onclick="playVideo('f8Zs4xwD5hA')"><i class="fas fa-play-circle"></i> Planificación de hilos</li>
-                        </ul>
-
-                        <h4 class="unit-title">Unidad III: Administración de memoria</h4>
-                        <ul class="video-list">
-                            <li onclick="playVideo('JAjisuW9THU')" style="background-color: var(--title-mid); border-left: 4px solid var(--secondary);"><i class="fas fa-star"></i> <strong>General: Abstracción, virtualización y segmentación</strong></li>
-
-                            <li onclick="playVideo('MgSrUlrXO6I')"><i class="fas fa-play-circle"></i> Abstracción de memoria y organización</li>
-                            <li onclick="playVideo('lJWXDgA41uM')"><i class="fas fa-play-circle"></i> Admin. almacenamiento e intercambio</li>
-                            <li onclick="playVideo('I7o-0Dn8v-g')"><i class="fas fa-play-circle"></i> Mapas de bits y listas ligadas</li>
-                            <li onclick="playVideo('orbv50J7NT4')"><i class="fas fa-play-circle"></i> Memoria virtual y paginación</li>
-                            <li onclick="playVideo('k9gQjNbMKdA')"><i class="fas fa-play-circle"></i> Tablas de paginación y contenidos</li>
-                            <li onclick="playVideo('syi6ROCfW7I')"><i class="fas fa-play-circle"></i> Segmentación e implementación</li>
-                            <li onclick="playVideo('Yrs-0tILQrE')"><i class="fas fa-play-circle"></i> Segmentación con paginación</li>
-                        </ul>
-
-                        <h4 class="unit-title">Unidad IV: Sistema de archivos</h4>
-                        <ul class="video-list">
-                            <li onclick="playVideo('By5rFRRQsf4')" style="background-color: var(--title-mid); border-left: 4px solid var(--secondary);"><i class="fas fa-star"></i> <strong>General: Estructura, implementación y optimización</strong></li>
-
-                            <li onclick="playVideo('g-bhPcGNRog')"><i class="fas fa-play-circle"></i> Métodos de asignación de espacio</li>
-                            <li onclick="playVideo('Kn0aPg1xP_g')"><i class="fas fa-play-circle"></i> Sistemas de archivos estructurados</li>
-                            <li onclick="playVideo('s9rtMXOk38s')"><i class="fas fa-play-circle"></i> Sistemas estructurados por diario</li>
-                            <li onclick="playVideo('Aamcv3v43D8')"><i class="fas fa-play-circle"></i> Optimización del sistema de archivos</li>
-                        </ul>
-
-                        <h4 class="unit-title">Unidad V: Dispositivos de E/S</h4>
-                        <ul class="video-list">
-                            <li onclick="playVideo('CprZd_69QGM')" style="background-color: var(--title-mid); border-left: 4px solid var(--secondary);"><i class="fas fa-star"></i> <strong>General: Principios de hardware y software</strong></li>
-
-                            <li onclick="playVideo('MbRJ6lOiyIs')"><i class="fas fa-play-circle"></i> Generalidades de E/S</li>
-                            <li onclick="playVideo('qUFKoJ9Zxlc')"><i class="fas fa-play-circle"></i> Capas de software</li>
-                        </ul>
-
-                        <h4 class="unit-title">Unidad VI: Seguridad y virtualización</h4>
-                        <ul class="video-list">
-                            <li onclick="playVideo('By5rFRRQsf4')" style="background-color: var(--title-mid); border-left: 4px solid var(--secondary);"><i class="fas fa-star"></i> <strong>General: Ambiente de seguridad y virtualización</strong></li>
-
-                            <li onclick="playVideo('-0iRtpRkf6k')"><i class="fas fa-play-circle"></i> El ambiente de seguridad</li>
-                            <li onclick="playVideo('2aGSHXlO9f4')"><i class="fas fa-play-circle"></i> Control de acceso a los recursos</li>
-                            <li onclick="playVideo('Gbs0k6R2kJY')"><i class="fas fa-play-circle"></i> Implementación de matrices de acceso</li>
-                            <li onclick="playVideo('fNxP_789EzA')"><i class="fas fa-play-circle"></i> Modelos formales de seguridad</li>
-                            <li onclick="playVideo('h9OtB6xcDLo')"><i class="fas fa-play-circle"></i> Virtualización y emulación</li>
-                            <li onclick="playVideo('jt3sU0LHNHM')"><i class="fas fa-play-circle"></i> Virtualización asistida por hardware</li>
-                            <li onclick="playVideo('P8_u4rfOTEw')"><i class="fas fa-play-circle"></i> Paravirtualización y contenedores</li>
-                        </ul>
+<h4>Unidad 3</h4><ul class="video-list"><li><a href="unidades/unidad-03/actividades/actividad-final.html"><i class="fas fa-trophy" aria-hidden="true"></i> Actividad final de la Unidad 3</a></li></ul></div><p>Estas actividades no son parte de la evaluación, funcionan únicamente como una manera de reforzar tu aprendizaje.</p>
                     </div>
-                </div>
 
-
-
-            </div>
-        </div>
-    </div>
-
-    <div id="video-player-overlay" class="modal-overlay" style="z-index: 2000; background-color: color-mix(in srgb, var(--shadow-color) 95%, transparent);">
-        <div class="modal-content" style="background: var(--shadow-color); width: 900px; max-width: 95vw; padding: 0; border: 1px solid var(--bg-main);">
-            <button class="modal-close-btn" onclick="closeVideoPlayer()" style="color: var(--white); z-index: 10; top: -40px; right: 0;"><i class="fas fa-times"></i> Cerrar</button>
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                <iframe id="main-video-frame"
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
-                        src=""
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-    </div>
-<!-- 1. MODAL DEL GLOSARIO EN HTML -->
-    <div class="modal-overlay" id="glosarioModal">
-        <div class="modal-container">
-            <div class="modal-header">
-                <h2><i class="fas fa-book"></i> Glosario de términos</h2>
-                <button class="modal-close" aria-label="Cerrar ventana" onclick="closeGlosarioModal()"><i class="fas fa-times" aria-hidden="true"></i></button>
-            </div>
-
-            <div class="modal-tabs">
-                <button class="tab-btn active" onclick="switchUnit('u1', this)">Unidad 1</button>
-                <button class="tab-btn" onclick="switchUnit('u2', this)">Unidad 2</button>
-                <button class="tab-btn" onclick="switchUnit('u3', this)">Unidad 3</button>
-            </div>
-
-            <div class="modal-body">
-                <!-- UNIDAD 1 -->
+                    <!-- Vista: Glosario -->
+                    <div class="viewer-pane" id="pane-glosario">
+<div class="modal-tabs" style="display: flex; gap: 10px; margin-bottom: 20px;">
+    <button class="tab-btn active" type="button" onclick="switchUnit('u1', this)" style="padding: 8px 18px; border-radius: 999px; border: 1px solid var(--border-color); background: var(--secondary); color: white; cursor: pointer;">Unidad 1</button>
+    <button class="tab-btn" type="button" onclick="switchUnit('u2', this)" style="padding: 8px 18px; border-radius: 999px; border: 1px solid var(--border-color); background: color-mix(in srgb, var(--surface) 80%, transparent); color: var(--text-muted-light); cursor: pointer;">Unidad 2</button>
+    <button class="tab-btn" type="button" onclick="switchUnit('u3', this)" style="padding: 8px 18px; border-radius: 999px; border: 1px solid var(--border-color); background: color-mix(in srgb, var(--surface) 80%, transparent); color: var(--text-muted-light); cursor: pointer;">Unidad 3</button>
+</div>
+<div class="glosario-body prose">
+<!-- UNIDAD 1 -->
                 <div id="u1" class="unit-content active">
                     <p><strong>Abstracción:</strong> Proceso de simplificar la representación de un problema o sistema, considerando solo aspectos relevantes.</p>
                     <p><strong>Algoritmo:</strong> Conjunto finito, ordenado y bien definido de instrucciones para resolver un problema.</p>
@@ -650,5 +366,157 @@
 
     <script src="assets/js/original/RECURSOS_js_examen-diagnostico.js"></script>
   <script src="assets/js/paginas/index.js"></script>
+</body>
+</html>
+</div>
+                    </div>
+
+                    <!-- Vista: Autores y colaboradores -->
+                    <div class="viewer-pane" id="pane-creadores">
+<div class="modal-subsection-nav" style="display: flex; gap: 10px; margin-bottom: 20px;">
+    <button type="button" id="tab-autores" class="modal-subsection active" onclick="toggleCreadoresView('autores')">Autores principales</button>
+    <button type="button" id="tab-colaboradores" class="modal-subsection" onclick="toggleCreadoresView('colaboradores')">Equipo de desarrollo</button>
+</div>
+<div id="seccion-autores" class="prose">
+<h3>Autores</h3>
+                    
+
+                    <div class="creator-block">
+                        <img src="assets/img/Yaxkin.png" alt="Yaxin Flores Mendoza">
+                        <div class="creator-info">
+                           <h4>Yaxkin Flores Mendoza</h4>
+                            <p class="email">yfloresme@ipn.mx</p>
+                            <p style="text-align: justify;"><strong>Semblanza:</strong> Yaxkin Flores Mendoza. Ingeniero en sistemas computacionales, maestro en ciencias de la computación y doctor en educación. Docente de tiempo completo del departamento de Ciencias e Ingeniería de la Computación de la Escom.</p>
+                            <p style="text-align: justify;"><strong>Áreas de interés:</strong> Neurociencia de la Educación y Redes Neuronales, Metodología de la Investigación, Educación en Línea con plataformas virtuales.</p>
+                        </div>
+                    </div>
+
+                    <div class="creator-block">
+                        <img src="assets/img/isr.png" alt="Israel Salas Ramírez">
+                        <div class="creator-info">
+                            <h4>Israel Salas Ramírez</h4>
+                            <p class="email">isalasr@ipn.mx</p>
+                            <p style="text-align: justify;"><strong>Semblanza:</strong> docente en la Escuela Superior de Cómputo del Instituto Politécnico Nacional, es doctor y maestro en ciencias de la educación, ingeniero en comunicaciones y electrónica de la ESIME Zacatenco, ha trabajado como responsable de unidades de Informática y generación de proyectos de Inversión Tecnológica.</p>
+                            <p style="text-align: justify;"><strong>Áreas de interés:</strong> Sistemas Operativos, Administración de Redes, Neurociencia en la Educación, Redes Neuronales, Generación de Simuladores Médicos y Plataformas Virtuales Aplicados a la Educación.</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="creator-block">
+                        <img src="assets/img/Daniel_Cruz_Garcia.png" alt="Daniel Cruz García">
+                        <div class="creator-info">
+                           <h4>Daniel Cruz García</h4>
+                            <p class="email">dcruzg@ipn.mx</p>
+                            <p style="text-align: justify;"><strong>Semblanza:</strong> Profesor de tiempo completo en la Escuela Superior de Cómputo, Ingeniería en Sistemas Computacionales, maestro en ciencias en la especialidad de Ingeniería Eléctrica, opción Computación.</p>
+                            <p style="text-align: justify;"><strong>Áreas de interés:</strong> Sistemas Distribuidos, Redes, Seguridad e Inteligencia Artificial.</p>
+                        </div>
+                    </div>
+
+                    <hr>
+</div>
+<div id="seccion-colaboradores" class="prose" style="display:none;">
+<h3>Equipo de desarrollo</h3>
+    
+    <p style="text-align:center; margin-bottom: 2rem;">Estudiantes que contribuyeron a la creación de este recurso digital.</p>
+    <div class="collaborator-grid">
+        <div class="collaborator-card">
+            <img src="assets/img/pedro.jpg" alt="Fattel Orellana Pedro Jelani">
+            <div class="collaborator-info">
+                <h4>Fattel Orellana Pedro Jelani</h4>
+                <p class="email">pfattelo2000@alumno.ipn.mx</p>
+            </div>
+        </div>
+
+        <div class="collaborator-card">
+            <img src="assets/img/FLORES_CEDILLO.jpg" alt="Foto">
+            <div class="collaborator-info">
+                <h4>Flores Cedillo Rubén Antonio</h4>
+                <p class="email">rfloresc1900@alumno.ipn.mx</p>
+            </div>
+        </div>
+
+        <div class="collaborator-card">
+            <img src="assets/img/BERNAL_RAMIREZ.jpeg" alt="Foto">
+            <div class="collaborator-info">
+                <h4>Bernal Ramírez Brian Ricardo</h4>
+                <p class="email">bbernalr1900@alumno.ipn.mx</p>
+            </div>
+        </div>
+    </div>
+</div>
+                    </div>
+
+                    <!-- Vista: Términos y licenciamiento -->
+                    <div class="viewer-pane" id="pane-licencia">
+<h3>Licencia Creative Commons</h3>
+                    <p style="text-align: center;">
+                        <i class="fab fa-creative-commons" style="font-size: 5rem; color: var(--primary);"></i>
+                    </p>
+                    <p><a href="index.html">Aplicaciones para Comunicaciones en Red (polilibro académico), Aplicaciones para Comunicaciones en Red</a> © 2026 by <a href="index.html">Yaxkin Flores Mendoza, Israel Salas Ramirez y Daniel Cruz García</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="material-panel" id="material">
+                <h3>Secciones del material</h3>
+                <div class="quick-links" role="tablist" aria-label="Navegación de secciones del polilibro">
+                    <button class="quick-link active" data-section="bienvenida" role="tab" aria-selected="true" aria-controls="pane-bienvenida">
+                        <i class="fas fa-home" aria-hidden="true"></i>
+                        <span>Bienvenida<small>Presentación institucional del polilibro.</small></span>
+                    </button>
+                    <button class="quick-link" data-section="introduccion" role="tab" aria-selected="false" aria-controls="pane-introduccion">
+                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                        <span>Introducción<small>Contexto y objetivos de la materia.</small></span>
+                    </button>
+                    <button class="quick-link" data-section="programa" role="tab" aria-selected="false" aria-controls="pane-programa">
+                        <i class="fas fa-file-alt" aria-hidden="true"></i>
+                        <span>Programa académico<small>Propósitos y organización del curso.</small></span>
+                    </button>
+                    <button class="quick-link" data-section="metodologia" role="tab" aria-selected="false" aria-controls="pane-metodologia">
+                        <i class="fas fa-sitemap" aria-hidden="true"></i>
+                        <span>Metodología<small>Estrategia y métodos de aprendizaje.</small></span>
+                    </button>
+                    <button class="quick-link" data-section="examen" role="tab" aria-selected="false" aria-controls="pane-examen">
+                        <i class="fas fa-file-signature" aria-hidden="true"></i>
+                        <span>Examen diagnóstico<small>Revisa tus conocimientos previos.</small></span>
+                    </button>
+                    <button class="quick-link" data-section="actividades" role="tab" aria-selected="false" aria-controls="pane-actividades">
+                        <i class="fas fa-gamepad" aria-hidden="true"></i>
+                        <span>Actividades<small>Ejercicios por tema y por unidad.</small></span>
+                    </button>
+                    <button class="quick-link" data-section="glosario" role="tab" aria-selected="false" aria-controls="pane-glosario">
+                        <i class="fas fa-book" aria-hidden="true"></i>
+                        <span>Glosario de términos<small>Consulta los conceptos principales.</small></span>
+                    </button>
+                    <button class="quick-link" data-section="creadores" role="tab" aria-selected="false" aria-controls="pane-creadores">
+                        <i class="fas fa-users" aria-hidden="true"></i>
+                        <span>Autores y colaboradores<small>Conoce al equipo del polilibro.</small></span>
+                    </button>
+                    <button class="quick-link" data-section="licencia" role="tab" aria-selected="false" aria-controls="pane-licencia">
+                        <i class="fab fa-creative-commons" aria-hidden="true"></i>
+                        <span>Términos y licenciamiento<small>Condiciones de uso del material.</small></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section"><a href="unidades.html" class="cta-button">Explorar las unidades <i class="fas fa-arrow-right"></i></a></section>
+
+        <footer>
+            <p>Aplicaciones para Comunicaciones en Red - Polilibro académico</p>
+            <p>Desarrollado para fines educativos - © 2026</p>
+        </footer>
+    </main>
+
+    <div id="video-player-overlay" class="modal-overlay" style="z-index: 2000; background-color: color-mix(in srgb, var(--shadow-color) 95%, transparent);">
+        <div class="video-modal-content" style="position: relative; width: min(90vw, 900px); aspect-ratio: 16/9; background: #000; border-radius: 12px; overflow: hidden; box-shadow: 0 0 30px rgba(0,0,0,0.8);">
+            <button class="modal-close-btn" onclick="closeVideoPlayer()" style="color: var(--white); z-index: 10; top: 12px; right: 12px;" aria-label="Cerrar reproductor"><i class="fas fa-times"></i></button>
+            <iframe id="main-video-frame" style="width: 100%; height: 100%; border: none;" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script src="assets/js/paginas/index.js"></script>
+    <script src="assets/js/examen-diagnostico-contenidos-estructuras-datos.js"></script>
 </body>
 </html>

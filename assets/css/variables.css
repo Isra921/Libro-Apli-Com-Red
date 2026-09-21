@@ -15,32 +15,32 @@
   --footer-bg: #0A2A40;     /* Fondo del pie de página */
 
   /* --- Colores Primarios, Secundarios y Acentos --- */
-  --primary: #39B9E8;       /* Azul primario vibrante (enlaces, botones activos, títulos) */
-  --primary-hover: #55C9F0; /* Azul primario en estado hover */
-  --secondary: #39B9E8;     /* Alias secundario sincronizado con el primario */
-  --secondary-hover: #55C9F0;
+  --primary: #38BDF8;       /* Azul cielo vibrante de alto contraste (WCAG AAA) */
+  --primary-hover: #7DD3FC; /* Azul cielo luminoso en estado hover */
+  --secondary: #38BDF8;     /* Alias secundario sincronizado con el primario */
+  --secondary-hover: #7DD3FC;
   --accent: #54D6C5;        /* Turquesa / aguamarina de acento e iconografía */
   --accent-hover: #72EBD9;
-  --primary-soft: color-mix(in srgb, var(--primary) 14%, transparent);
-  --accent-soft: color-mix(in srgb, var(--accent) 14%, transparent);
+  --primary-soft: color-mix(in srgb, var(--primary) 16%, transparent);
+  --accent-soft: color-mix(in srgb, var(--accent) 16%, transparent);
   --info: var(--primary);
 
   /* --- Botones y Llamados a la Acción (CTA) --- */
-  --cta-color: #F0E9DA;     /* Tono crema para botones destacados */
-  --cta-hover: #E2D8C5;     /* Hover para botones CTA */
+  --cta-color: #082F42;     /* Contraste oscuro óptimo sobre fondo claro */
+  --cta-hover: #051F2D;     /* Hover para botones CTA */
   --cta-bg: linear-gradient(135deg, var(--accent), var(--primary));
 
-  /* --- Tipografía y Textos --- */
-  --text-light: #F5FAFD;       /* Texto principal blanco luminoso */
-  --text-muted-light: #D4E3EC; /* Texto secundario gris azulado claro */
-  --text-soft: #D5E8EF;        /* Párrafos, citas y descripciones */
+  /* --- Tipografía y Textos (Alto Contraste) --- */
+  --text-light: #FFFFFF;       /* Texto principal blanco puro para máxima legibilidad */
+  --text-muted-light: #E2E8F0; /* Texto secundario gris claro nítido */
+  --text-soft: #F1F5F9;        /* Párrafos, citas y descripciones altamente legibles */
   --text: var(--text-light);
   --text-muted: var(--text-muted-light);
   --white: #FFFFFF;
   --dark: var(--bg-deep);
   --gray: var(--text-muted-light);
-  --title-mid: #DDF3FF;
-  --title-end: #7CC9F5;
+  --title-mid: #FFFFFF;
+  --title-end: #BAE6FD;
 
   /* --- Bordes y Sombras --- */
   --border-color: color-mix(in srgb, var(--text-light) 12%, transparent);
