@@ -1,179 +1,217 @@
 // ==========================================================================
 // CONTROLADOR DE LA PÁGINA DE INICIO (index.html)
-// Master-Detail Dynamic Viewer, Navegación y Accesibilidad
 // ==========================================================================
 
-// --- 1. METADATOS Y CONTROLADOR DEL VISOR DINÁMICO ---
-const sectionMetadata = {
-    'bienvenida': { title: 'Bienvenida', tag: 'Presentación institucional', icon: 'fa-home' },
-    'introduccion': { title: 'Introducción y Objetivos', tag: 'Contexto de la materia', icon: 'fa-lightbulb' },
-    'programa': { title: 'Programa académico', tag: 'Estructura curricular', icon: 'fa-file-alt' },
-    'metodologia': { title: 'Metodología', tag: 'Estrategias de aprendizaje', icon: 'fa-sitemap' },
-    'examen': { title: 'Examen diagnóstico', tag: 'Evaluación inicial', icon: 'fa-file-signature' },
-    'actividades': { title: 'Actividades de aprendizaje', tag: 'Práctica formativa', icon: 'fa-gamepad' },
-    'glosario': { title: 'Glosario de términos', tag: 'Conceptos clave', icon: 'fa-book' },
-    'creadores': { title: 'Autores y colaboradores', tag: 'Equipo de desarrollo', icon: 'fa-users' },
-    'colaboradores': { title: 'Autores y colaboradores', tag: 'Equipo de desarrollo', icon: 'fa-users' },
-    'licencia': { title: 'Términos y licenciamiento', tag: 'Licencia Creative Commons', icon: 'fa-creative-commons' }
-};
+// --- 1. SECCIONES DEL MATERIAL EN MODAL ---
+const modalContainer = document.getElementById('modal-container');
+const modalCloseButton = document.getElementById('modal-close-button');
+let modalTrigger = null;
 
-function activateSection(sectionId, scrollOnMobile = true) {
-    if (sectionId === 'Introducción' || sectionId === 'encuadre') sectionId = 'introduccion';
+function openModal(modalId) {
+    const target = document.getElementById(`modal-${modalId}`);
+    if (!target || !modalContainer) return;
 
-    // 1. Ocultar todos los paneles
-    document.querySelectorAll('.viewer-pane').forEach(pane => {
-        pane.classList.remove('active');
+    document.querySelectorAll('#modal-container .modal-section').forEach(section => {
+        section.classList.remove('active');
     });
 
-    // 2. Deseleccionar todos los botones
-    document.querySelectorAll('.quick-link').forEach(btn => {
-        btn.classList.remove('active');
-        btn.setAttribute('aria-selected', 'false');
-    });
+    target.classList.add('active');
+    modalContainer.classList.add('show');
+    document.body.style.overflow = 'hidden';
 
-    // 3. Activar el panel seleccionado
-    const targetPane = document.getElementById(`pane-${sectionId}`);
-    if (targetPane) {
-        targetPane.classList.add('active');
-        const scrollArea = document.querySelector('.dynamic-content-area');
-        if (scrollArea) scrollArea.scrollTop = 0;
-    }
+    modalTrigger = document.activeElement;
 
-    // 4. Activar el botón correspondiente
-    const targetBtn = document.querySelector(`.quick-link[data-section="${sectionId}"]`);
-    if (targetBtn) {
-        targetBtn.classList.add('active');
-        targetBtn.setAttribute('aria-selected', 'true');
-    }
+    const scrollArea = target.querySelector('.section-modal-scroll');
+    if (scrollArea) scrollArea.scrollTop = 0;
 
-    // 5. Actualizar encabezado del visor
-    const meta = sectionMetadata[sectionId] || { title: 'Contenido', tag: 'Información', icon: 'fa-info-circle' };
-    const headingEl = document.getElementById('viewerHeading');
-    const tagEl = document.getElementById('viewerTag');
-    const btnReturn = document.getElementById('btnReturnBienvenida');
-
-    if (headingEl) headingEl.textContent = meta.title;
-    if (tagEl) tagEl.innerHTML = `<i class="fas ${meta.icon}"></i> ${meta.tag}`;
-    if (btnReturn) {
-        btnReturn.style.display = (sectionId === 'bienvenida') ? 'none' : 'inline-flex';
-    }
-
-    // 6. En pantallas móviles, scroll hacia el visor
-    if (scrollOnMobile && window.innerWidth <= 1000) {
-        const viewer = document.getElementById('dynamicViewer');
-        if (viewer) {
-            viewer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    }
+    modalCloseButton?.focus();
 }
 
-// Escuchadores de eventos para los botones de sección
-document.querySelectorAll('[data-section]').forEach(button => {
-    button.addEventListener('click', (e) => {
-        e.preventDefault();
-        const sectionId = button.getAttribute('data-section');
-        activateSection(sectionId);
-    });
-});
+function closeModal() {
+    if (!modalContainer) return;
+
+    modalContainer.classList.remove('show');
+    document.body.style.overflow = '';
+
+    if (modalTrigger instanceof HTMLElement) {
+        modalTrigger.focus();
+    }
+
+    modalTrigger = null;
+}
 
 document.querySelectorAll('[data-modal]').forEach(button => {
-    button.addEventListener('click', (e) => {
-        e.preventDefault();
-        const sectionId = button.getAttribute('data-modal');
-        activateSection(sectionId);
+    button.addEventListener('click', event => {
+        event.preventDefault();
+        openModal(button.dataset.modal);
     });
 });
 
-// Pestañas del glosario dentro del visor
+modalCloseButton?.addEventListener('click', closeModal);
+
+modalContainer?.addEventListener('click', event => {
+    if (event.target === modalContainer) {
+        closeModal();
+    }
+});
+
+
+// --- 2. PESTAÑAS DEL GLOSARIO ---
 function switchUnit(unitId, btn) {
-    document.querySelectorAll('.unit-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
-    const targetUnit = document.getElementById(unitId);
-    if (targetUnit) {
-        targetUnit.classList.add('active');
-        if (btn) btn.classList.add('active');
+    document.querySelectorAll('.unit-content').forEach(el => {
+        el.classList.remove('active');
+    });
+
+    document.querySelectorAll('.tab-btn').forEach(el => {
+        el.classList.remove('active');
+    });
+
+    const target = document.getElementById(unitId);
+
+    if (target) {
+        target.classList.add('active');
+        btn?.classList.add('active');
     }
 }
 
-function openGlosarioModal() {
-    activateSection('glosario');
-}
-function closeGlosarioModal() {
-    activateSection('bienvenida');
-}
-function openModal(modalId) {
-    activateSection(modalId);
-}
-function closeModal() {
-    activateSection('bienvenida');
-}
 
-// Pestañas de actividades
+// --- 3. PESTAÑAS DE ACTIVIDADES ---
 document.querySelectorAll('[data-activity-panel]').forEach(button => {
     button.addEventListener('click', () => {
         document.querySelectorAll('[data-activity-panel]').forEach(tab => {
             const selected = tab === button;
+
             tab.classList.toggle('active', selected);
             tab.setAttribute('aria-pressed', String(selected));
-            const targetEl = document.getElementById(tab.dataset.activityPanel);
-            if (targetEl) targetEl.hidden = !selected;
+
+            const target = document.getElementById(tab.dataset.activityPanel);
+
+            if (target) {
+                target.hidden = !selected;
+            }
         });
     });
 });
 
-// Pestañas de autores / colaboradores
+
+// --- 4. AUTORES / COLABORADORES ---
 function toggleCreadoresView(viewId) {
-    const autoresSection = document.getElementById('seccion-autores');
-    const colaboradoresSection = document.getElementById('seccion-colaboradores');
+    const autores = document.getElementById('seccion-autores');
+    const colaboradores = document.getElementById('seccion-colaboradores');
     const tabAutores = document.getElementById('tab-autores');
-    const tabColab = document.getElementById('tab-colaboradores');
-    if (viewId === 'colaboradores') {
-        if (autoresSection) autoresSection.style.display = 'none';
-        if (colaboradoresSection) colaboradoresSection.style.display = 'block';
-        if (tabAutores) tabAutores.classList.remove('active');
-        if (tabColab) tabColab.classList.add('active');
-    } else {
-        if (autoresSection) autoresSection.style.display = 'block';
-        if (colaboradoresSection) colaboradoresSection.style.display = 'none';
-        if (tabAutores) tabAutores.classList.add('active');
-        if (tabColab) tabColab.classList.remove('active');
+    const tabColaboradores = document.getElementById('tab-colaboradores');
+
+    const mostrarColaboradores = viewId === 'colaboradores';
+
+    if (autores) {
+        autores.style.display = mostrarColaboradores ? 'none' : 'block';
     }
+
+    if (colaboradores) {
+        colaboradores.style.display = mostrarColaboradores ? 'block' : 'none';
+    }
+
+    tabAutores?.classList.toggle('active', !mostrarColaboradores);
+    tabColaboradores?.classList.toggle('active', mostrarColaboradores);
 }
 
-// --- 2. BARRA DE NAVEGACIÓN GLOBAL ---
-// Gestionada de forma centralizada y unificada por assets/js/nav-global.js
+
+// --- 5. BARRA DE NAVEGACIÓN ---
+const siteNav = document.querySelector('.site-nav');
+const navToggle = document.querySelector('.nav-toggle');
+const mainNavigation = document.getElementById('main-navigation');
+
+if (navToggle && mainNavigation) {
+    navToggle.addEventListener('click', () => {
+        const open = mainNavigation.classList.toggle('is-open');
+        navToggle.setAttribute('aria-expanded', String(open));
+    });
+
+    mainNavigation.addEventListener('click', () => {
+        mainNavigation.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+    });
+}
 
 
-// --- 3. REPRODUCTOR DE VIDEO ---
+// --- 6. REPRODUCTOR DE VIDEO ---
 const videoOverlay = document.getElementById('video-player-overlay');
 const videoFrame = document.getElementById('main-video-frame');
 
 function playVideo(videoId) {
-    if (videoFrame && videoOverlay) {
-        videoFrame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-        videoOverlay.classList.add('show');
-    }
+    if (!videoOverlay || !videoFrame) return;
+
+    videoFrame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    videoOverlay.classList.add('show');
 }
 
 function closeVideoPlayer() {
-    if (videoOverlay && videoFrame) {
-        videoOverlay.classList.remove('show');
-        videoFrame.src = '';
+    if (!videoOverlay || !videoFrame) return;
+
+    videoOverlay.classList.remove('show');
+    videoFrame.src = '';
+}
+
+videoOverlay?.addEventListener('click', event => {
+    if (event.target === videoOverlay) {
+        closeVideoPlayer();
     }
-}
+});
 
-if (videoOverlay) {
-    videoOverlay.addEventListener('click', (e) => {
-        if (e.target === videoOverlay) closeVideoPlayer();
-    });
-}
 
-document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-        if (videoOverlay && videoOverlay.classList.contains('show')) closeVideoPlayer();
-        if (mainNavigation) {
-            mainNavigation.classList.remove('is-open');
-            if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
+// --- 7. ESTRUCTURA INTERNA DEL MODAL ---
+// Encabezado fijo + contenido desplazable.
+document.querySelectorAll('#modal-container .modal-section').forEach(section => {
+    const heading = section.querySelector(':scope > h3');
+
+    const filters = section.querySelector(
+        ':scope > .modal-subsection-nav, ' +
+        ':scope > .activity-subsections, ' +
+        ':scope > .modal-tabs'
+    );
+
+    const header = document.createElement('div');
+    header.className = 'section-modal-header';
+
+    if (heading) {
+        header.append(heading);
+    }
+
+    const content = document.createElement('div');
+    content.className = 'section-modal-scroll';
+
+    [...section.childNodes].forEach(node => {
+        if (node !== filters) {
+            content.append(node);
         }
+    });
+
+    section.append(header);
+
+    if (filters) {
+        section.append(filters);
+    }
+
+    section.append(content);
+});
+
+
+// --- 8. TECLA ESC ---
+document.addEventListener('keydown', event => {
+    if (event.key !== 'Escape') return;
+
+    if (videoOverlay?.classList.contains('show')) {
+        closeVideoPlayer();
+        return;
+    }
+
+    if (modalContainer?.classList.contains('show')) {
+        closeModal();
+        return;
+    }
+
+    if (mainNavigation) {
+        mainNavigation.classList.remove('is-open');
+        navToggle?.setAttribute('aria-expanded', 'false');
     }
 });
