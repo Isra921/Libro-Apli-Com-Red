@@ -140,21 +140,9 @@ function toggleCreadoresView(viewId) {
     }
 }
 
-// --- 2. BARRA DE NAVEGACIÓN (.site-nav) ---
-const siteNav = document.querySelector('.site-nav');
-const navToggle = document.querySelector('.nav-toggle');
-const mainNavigation = document.getElementById('main-navigation');
+// --- 2. BARRA DE NAVEGACIÓN GLOBAL ---
+// Gestionada de forma centralizada y unificada por assets/js/nav-global.js
 
-if (navToggle && mainNavigation) {
-    navToggle.addEventListener('click', () => {
-        const open = mainNavigation.classList.toggle('is-open');
-        navToggle.setAttribute('aria-expanded', String(open));
-    });
-    mainNavigation.addEventListener('click', () => {
-        mainNavigation.classList.remove('is-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-    });
-}
 
 // --- 3. REPRODUCTOR DE VIDEO ---
 const videoOverlay = document.getElementById('video-player-overlay');

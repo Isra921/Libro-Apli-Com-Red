@@ -98,6 +98,21 @@ a:hover {
   border-radius: 24px;
   box-shadow: var(--shadow-soft);
   box-sizing: border-box;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.28s ease;
+}
+
+.site-nav.is-hidden {
+  transform: translate(-50%, -135%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.site-nav:hover,
+.site-nav:focus-within,
+.site-nav.is-at-top {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .site-nav .brand {
