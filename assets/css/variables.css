@@ -1,32 +1,48 @@
+/* Paleta única del polilibro. Cambiar los colores aquí actualiza todas las páginas.
+   Los estados de evaluación conservan colores semánticos propios. */
 :root {
-  --bg-main: #103B5C;
-  --bg-section: #174A70;
-  --bg-hero: #0A2E47;
-  --surface: #1E5B84;
-  --surface-hover: #276D99;
-  --primary: #38A3D1;
-  --accent: #1FC1B2;
-  --text-light: #F4FAFD;
-  --text-muted-light: #C8DCE8;
-  --border-color: rgba(255, 255, 255, 0.12);
-  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.18);
+  --bg-deep: #082F42;
+  --bg-main: #123B5A;
+  --bg-section: #184A70;
+  --bg-hero: #0B2F49;
+  --surface: #2A6288;
+  --surface-hover: #34719C;
+  --primary: #39B9E8;
+  --primary-hover: #55C9F0;
+  --accent: #54D6C5;
+  --text-light: #F5FAFD;
+  --text-muted-light: #D4E3EC;
+  --text-soft: #D5E8EF;
+  --border-color: color-mix(in srgb, var(--text-light) 12%, transparent);
+  --border-soft: color-mix(in srgb, var(--text-light) 14%, transparent);
+  --shadow-soft: 0 8px 24px color-mix(in srgb, var(--shadow-color) 18%, transparent);
   --success: #41B883;
   --warning: #D9A441;
   --danger: #D96464;
-
-  /* Aliases retained for the existing modal and content rules. */
   --bg: var(--bg-main);
   --text: var(--text-light);
   --text-muted: var(--text-muted-light);
-  --primary-hover: var(--surface-hover);
   --secondary: var(--primary);
-  --primary-soft: rgba(56, 163, 209, 0.14);
-  --accent-soft: rgba(31, 193, 178, 0.14);
+  --primary-soft: color-mix(in srgb, var(--primary) 14%, transparent);
+  --accent-soft: color-mix(in srgb, var(--accent) 14%, transparent);
   --info: var(--primary);
   --card-bg: var(--surface);
   --border: var(--border-color);
-  --text-muted-light: #C8DCE8;
   --shadow-card: var(--shadow-soft);
   --radius-md: 12px;
   --radius-lg: 18px;
+  --icon-blue: #9EDCFF;
+  --icon-teal: #63E4D8;
+  --icon-bg-blue: color-mix(in srgb, var(--icon-blue) 14%, transparent);
+  --icon-bg-teal: color-mix(in srgb, var(--icon-teal) 14%, transparent);
+  --cta-color: #F0E9DA;
+  --cta-hover: #E2D8C5;
+  --footer-bg: #0A2A40;
+  --light: var(--text-light);
+  --dark: var(--bg-deep);
+  --gray: var(--text-muted-light);
+  --shadow-color: #000000;
+  --white: #FFFFFF;
+  --title-mid: #DDF3FF;
+  --title-end: #7CC9F5;
 }

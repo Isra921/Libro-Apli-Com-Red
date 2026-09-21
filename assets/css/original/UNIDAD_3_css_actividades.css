@@ -7,8 +7,8 @@
         }
 
         body {
-            background: linear-gradient(135deg, var(--primary), var(--primary), var(--primary));
-            color: var(--surface);
+            background: var(--bg-deep);
+            color: var(--text-light);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             min-height: 100vh;
@@ -23,9 +23,9 @@
             width: 100%;
             height: 100%;
             background:
-                radial-gradient(circle at 20% 20%, rgba(68, 108, 173, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(180, 224, 254, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 60%, rgba(0, 66, 130, 0.2) 0%, transparent 50%);
+                radial-gradient(circle at 20% 20%, color-mix(in srgb, var(--surface-hover) 15%, transparent) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, color-mix(in srgb, var(--icon-blue) 10%, transparent) 0%, transparent 50%),
+                radial-gradient(circle at 40% 60%, color-mix(in srgb, var(--bg-section) 20%, transparent) 0%, transparent 50%);
             z-index: -1;
             animation: backgroundShift 12s ease-in-out infinite;
         }
@@ -50,7 +50,7 @@
             top: 20px;
             right: 20px;
             background: var(--secondary);
-            color: white;
+            color: var(--white);
             width: 60px;
             height: 60px;
             border-radius: 50%;
@@ -58,7 +58,7 @@
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            box-shadow: 0 4px 20px rgba(68, 108, 173, 0.3);
+            box-shadow: 0 4px 20px color-mix(in srgb, var(--surface-hover) 30%, transparent);
             transition: all 0.3s ease;
             z-index: 1000;
             font-size: 1.5rem;
@@ -69,7 +69,7 @@
         .floating-home-btn:hover {
             background: var(--primary);
             transform: translateY(-3px);
-            box-shadow: 0 6px 25px rgba(68, 108, 173, 0.5);
+            box-shadow: 0 6px 25px color-mix(in srgb, var(--surface-hover) 50%, transparent);
         }
 
         .sidebar-nav {
@@ -78,9 +78,9 @@
             top: 0;
             width: 280px;
             height: 100vh;
-            background: rgba(0, 22, 48, 0.95);
+            background: color-mix(in srgb, var(--footer-bg) 95%, transparent);
             backdrop-filter: blur(10px);
-            border-right: 1px solid rgba(180, 224, 254, 0.2);
+            border-right: 1px solid color-mix(in srgb, var(--icon-blue) 20%, transparent);
             z-index: 999;
             transition: transform 0.3s ease;
             transform: translateX(-100%);
@@ -93,8 +93,8 @@
 
         .sidebar-header {
             padding: 20px;
-            background: rgba(68, 108, 173, 0.1);
-            border-bottom: 1px solid rgba(68, 108, 173, 0.3);
+            background: color-mix(in srgb, var(--surface-hover) 10%, transparent);
+            border-bottom: 1px solid color-mix(in srgb, var(--surface-hover) 30%, transparent);
         }
 
         .sidebar-title {
@@ -122,21 +122,21 @@
             font-size: 1rem;
             font-weight: 600;
             color: var(--secondary);
-            border-bottom: 1px solid rgba(68, 108, 173, 0.2);
+            border-bottom: 1px solid color-mix(in srgb, var(--surface-hover) 20%, transparent);
             margin-bottom: 10px;
         }
 
         .nav-item {
             display: block;
             padding: 12px 20px;
-            color: var(--surface);
+            color: var(--text-light);
             text-decoration: none;
             transition: all 0.3s ease;
             border-left: 3px solid transparent;
         }
 
         .nav-item:hover {
-            background: rgba(68, 108, 173, 0.2);
+            background: color-mix(in srgb, var(--surface-hover) 20%, transparent);
             border-left-color: var(--accent);
             padding-left: 25px;
         }
@@ -151,8 +151,8 @@
             position: fixed;
             top: 20px;
             left: 20px;
-            background: var(--primary);
-            color: white;
+            background: var(--surface);
+            color: var(--white);
             width: 50px;
             height: 50px;
             border-radius: 8px;
@@ -161,14 +161,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 15px color-mix(in srgb, var(--shadow-color) 30%, transparent);
             transition: all 0.3s ease;
             z-index: 1001;
             font-size: 1.2rem;
         }
 
         .menu-toggle:hover {
-            background: var(--secondary);
+            background: var(--surface);
             transform: translateY(-2px);
         }
 
@@ -182,7 +182,7 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background: rgba(255, 255, 255, 0.1);
+            background: color-mix(in srgb, var(--white) 10%, transparent);
             z-index: 998;
         }
 
@@ -199,7 +199,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6);
+            background: color-mix(in srgb, var(--shadow-color) 60%, transparent);
             z-index: 998;
             opacity: 0;
             visibility: hidden;
@@ -221,7 +221,7 @@
         .header {
             text-align: center;
             padding: 42px 24px;
-            background: rgba(0, 0, 0, 0.3);
+            background: color-mix(in srgb, var(--shadow-color) 30%, transparent);
             border-radius: 15px;
             margin-bottom: 30px;
         }
@@ -247,7 +247,7 @@
         }
 
         .breadcrumb a:hover {
-            color: white;
+            color: var(--white);
             text-decoration: underline;
         }
 
@@ -266,7 +266,7 @@
         h1 {
             font-size: 2.8rem;
             margin-bottom: 15px;
-            color: white;
+            color: var(--white);
         }
 
         .subtitle {
@@ -278,7 +278,7 @@
 
         .instructions {
             background: var(--card-bg);
-            border: 1px solid rgba(68, 108, 173, 0.3);
+            border: 1px solid color-mix(in srgb, var(--surface-hover) 30%, transparent);
             border-radius: 10px;
             padding: 24px 26px 24px 28px;
             margin-bottom: 30px;
@@ -293,14 +293,14 @@
         }
 
         .instructions p {
-            color: var(--surface);
+            color: var(--text-light);
             margin-bottom: 16px;
             line-height: 1.65;
         }
 
         .instructions ul {
             padding-left: 25px;
-            color: var(--surface);
+            color: var(--text-light);
         }
 
         .instructions li {
@@ -312,8 +312,8 @@
             border-radius: 15px;
             padding: 30px;
             margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(68, 108, 173, 0.3);
+            box-shadow: 0 5px 15px color-mix(in srgb, var(--shadow-color) 20%, transparent);
+            border: 1px solid color-mix(in srgb, var(--surface-hover) 30%, transparent);
             position: relative;
             overflow: hidden;
         }
@@ -325,7 +325,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 50% 50%, rgba(68, 108, 173, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--surface-hover) 10%, transparent) 0%, transparent 70%);
             z-index: -1;
             animation: panelGlow 4s ease-in-out infinite;
         }
@@ -339,9 +339,9 @@
             text-align: center;
             margin-bottom: 30px;
             padding: 25px;
-            background: rgba(0, 66, 130, 0.2);
+            background: color-mix(in srgb, var(--bg-section) 20%, transparent);
             border-radius: 15px;
-            border: 2px solid rgba(68, 108, 173, 0.4);
+            border: 2px solid color-mix(in srgb, var(--surface-hover) 40%, transparent);
             position: relative;
             overflow: hidden;
         }
@@ -353,7 +353,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(68, 108, 173, 0.15) 0%, transparent 70%);
+            background: radial-gradient(circle, color-mix(in srgb, var(--surface-hover) 15%, transparent) 0%, transparent 70%);
             animation: caseAura 3s linear infinite;
             z-index: -1;
         }
@@ -401,9 +401,9 @@
             display: grid;
             place-items: center;
             border-radius: 12px;
-            background: rgba(132, 202, 252, 0.18);
-            border: 1px solid rgba(213, 238, 255, 0.30);
-            color: var(--surface);
+            background: color-mix(in srgb, var(--title-end) 18%, transparent);
+            border: 1px solid color-mix(in srgb, var(--title-mid) 30%, transparent);
+            color: var(--text-light);
             font-size: 1.35rem;
         }
 
@@ -414,14 +414,14 @@
         }
 
         .evaluation-copy .case-name {
-            color: var(--surface);
+            color: var(--text-light);
             font-size: clamp(1.35rem, 2.6vw, 1.75rem);
             line-height: 1.2;
             margin-bottom: 0;
         }
 
         .evaluation-copy p {
-            color: var(--surface);
+            color: var(--text-light);
             line-height: 1.6;
             max-width: 820px;
             margin: 0 0 16px;
@@ -442,9 +442,9 @@
             min-height: 34px;
             padding: 7px 12px;
             border-radius: 999px;
-            background: rgba(0, 17, 41, 0.34);
-            border: 1px solid rgba(213, 238, 255, 0.22);
-            color: var(--surface);
+            background: color-mix(in srgb, var(--footer-bg) 34%, transparent);
+            border: 1px solid color-mix(in srgb, var(--title-mid) 22%, transparent);
+            color: var(--text-light);
             font-size: 0.92rem;
             line-height: 1.25;
         }
@@ -454,7 +454,7 @@
         }
 
         .evaluation-chip strong {
-            color: var(--surface);
+            color: var(--text-light);
             font-weight: 700;
         }
 
@@ -466,9 +466,9 @@
 
         .btn-start-activity {
             background: var(--secondary);
-            color: var(--surface);
+            color: var(--text-light);
             border: 1px solid var(--secondary);
-            box-shadow: 0 12px 24px rgba(0, 43, 90, 0.34);
+            box-shadow: 0 12px 24px color-mix(in srgb, var(--bg-hero) 34%, transparent);
             padding: 13px 26px;
             font-size: 1rem;
             font-weight: 800;
@@ -476,9 +476,9 @@
 
         .btn-start-activity:hover {
             background: var(--secondary);
-            border-color: var(--surface);
+            border-color: var(--text-light);
             transform: translateY(-2px);
-            box-shadow: 0 15px 30px rgba(0, 43, 90, 0.38);
+            box-shadow: 0 15px 30px color-mix(in srgb, var(--bg-hero) 38%, transparent);
         }
 
         .btn-start-activity:disabled {
@@ -501,27 +501,27 @@
             gap: 8px;
             padding: 10px 14px;
             border-radius: 999px;
-            background: rgba(0, 22, 48, 0.88);
-            border: 1px solid rgba(180, 224, 254, 0.55);
-            color: var(--surface);
-            box-shadow: 0 12px 28px rgba(0, 14, 24, 0.34);
+            background: color-mix(in srgb, var(--footer-bg) 88%, transparent);
+            border: 1px solid color-mix(in srgb, var(--icon-blue) 55%, transparent);
+            color: var(--text-light);
+            box-shadow: 0 12px 28px color-mix(in srgb, var(--footer-bg) 34%, transparent);
             backdrop-filter: blur(10px);
             font-size: 0.95rem;
         }
 
         .floating-timer i,
         .floating-timer strong {
-            color: var(--surface);
+            color: var(--text-light);
         }
 
         .answer-progress-container {
             width: 300px;
             height: 20px;
-            background: rgba(0, 0, 0, 0.4);
+            background: color-mix(in srgb, var(--shadow-color) 40%, transparent);
             border-radius: 10px;
             margin: 0 auto 15px;
             overflow: hidden;
-            border: 2px solid rgba(68, 108, 173, 0.5);
+            border: 2px solid color-mix(in srgb, var(--surface-hover) 50%, transparent);
         }
 
         .answer-progress-bar {
@@ -535,7 +535,7 @@
         .answer-progress-text {
             font-size: 1.2rem;
             font-weight: bold;
-            color: var(--surface);
+            color: var(--text-light);
         }
 
         .player-stats {
@@ -547,11 +547,11 @@
         }
 
         .stat-card {
-            background: rgba(255, 255, 255, 0.05);
+            background: color-mix(in srgb, var(--white) 5%, transparent);
             padding: 15px 20px;
             border-radius: 10px;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid color-mix(in srgb, var(--white) 10%, transparent);
         }
 
         .stat-value {
@@ -579,7 +579,7 @@
         }
 
         .question {
-            background: rgba(255, 255, 255, 0.05);
+            background: color-mix(in srgb, var(--white) 5%, transparent);
             border-radius: 10px;
             padding: 25px;
             margin-bottom: 25px;
@@ -588,7 +588,7 @@
         }
 
         .question:hover {
-            background: rgba(255, 255, 255, 0.08);
+            background: color-mix(in srgb, var(--white) 8%, transparent);
             transform: translateX(5px);
         }
 
@@ -612,8 +612,8 @@
         }
 
         .option {
-            background: rgba(0, 0, 0, 0.2);
-            border: 2px solid rgba(255, 255, 255, 0.1);
+            background: color-mix(in srgb, var(--shadow-color) 20%, transparent);
+            border: 2px solid color-mix(in srgb, var(--white) 10%, transparent);
             border-radius: 8px;
             padding: 15px;
             cursor: pointer;
@@ -624,28 +624,28 @@
         }
 
         .option:hover {
-            background: rgba(68, 108, 173, 0.2);
+            background: color-mix(in srgb, var(--surface-hover) 20%, transparent);
             border-color: var(--secondary);
             transform: translateX(3px);
         }
 
         .option.selected {
-            background: rgba(68, 108, 173, 0.3);
+            background: color-mix(in srgb, var(--surface-hover) 30%, transparent);
             border-color: var(--accent);
-            box-shadow: 0 0 15px rgba(68, 108, 173, 0.4);
+            box-shadow: 0 0 15px color-mix(in srgb, var(--surface-hover) 40%, transparent);
         }
 
         .option.correct {
-            background: rgba(150, 204, 46, 0.15);
+            background: color-mix(in srgb, var(--success) 15%, transparent);
             border-color: var(--quiz-correct);
-            box-shadow: 0 0 15px rgba(150, 204, 46, 0.3);
+            box-shadow: 0 0 15px color-mix(in srgb, var(--success) 30%, transparent);
             animation: correctPulse 0.6s ease;
         }
 
         .option.incorrect {
-            background: rgba(231, 60, 229, 0.15);
+            background: color-mix(in srgb, var(--text-muted-light) 15%, transparent);
             border-color: var(--quiz-incorrect);
-            box-shadow: 0 0 15px rgba(231, 60, 229, 0.3);
+            box-shadow: 0 0 15px color-mix(in srgb, var(--text-muted-light) 30%, transparent);
             animation: incorrectShake 0.6s ease;
         }
 
@@ -683,7 +683,7 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.2);
+            background: color-mix(in srgb, var(--shadow-color) 20%, transparent);
             border-radius: 10px;
             margin: 30px 0;
         }
@@ -704,8 +704,8 @@
 
         .btn-evaluate {
             background: var(--warning);
-            color: white;
-            box-shadow: 0 4px 15px rgba(60, 206, 255, 0.3);
+            color: var(--white);
+            box-shadow: 0 4px 15px color-mix(in srgb, var(--primary-hover) 30%, transparent);
             font-size: 1.2rem;
             padding: 18px 35px;
         }
@@ -713,11 +713,11 @@
         .btn-evaluate:hover {
             background: var(--success);
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(85, 177, 247, 0.4);
+            box-shadow: 0 6px 20px color-mix(in srgb, var(--primary-hover) 40%, transparent);
         }
 
         .btn-evaluate:disabled {
-            background: rgba(255, 255, 255, 0.2);
+            background: color-mix(in srgb, var(--white) 20%, transparent);
             color: var(--text-muted);
             cursor: not-allowed;
             transform: none;
@@ -725,19 +725,19 @@
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: color-mix(in srgb, var(--white) 10%, transparent);
+            color: var(--white);
+            border: 1px solid color-mix(in srgb, var(--white) 30%, transparent);
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: color-mix(in srgb, var(--white) 20%, transparent);
             transform: translateY(-3px);
         }
 
         .btn-nav {
             background: var(--secondary);
-            color: white;
+            color: var(--white);
         }
 
         .btn-nav:hover {
@@ -756,19 +756,19 @@
         }
 
         .game-status.victory {
-            background: rgba(150, 204, 46, 0.2);
+            background: color-mix(in srgb, var(--success) 20%, transparent);
             border: 2px solid var(--quiz-correct);
             color: var(--quiz-correct);
         }
 
         .game-status.defeat {
-            background: rgba(231, 60, 229, 0.2);
+            background: color-mix(in srgb, var(--text-muted-light) 20%, transparent);
             border: 2px solid var(--quiz-incorrect);
             color: var(--quiz-incorrect);
         }
 
         .game-status.continue {
-            background: rgba(180, 224, 254, 0.2);
+            background: color-mix(in srgb, var(--icon-blue) 20%, transparent);
             border: 2px solid var(--accent);
             color: var(--accent);
         }
@@ -790,7 +790,7 @@
         .progress-bar {
             width: 100%;
             height: 8px;
-            background: rgba(255, 255, 255, 0.1);
+            background: color-mix(in srgb, var(--white) 10%, transparent);
             border-radius: 4px;
             margin: 20px 0;
             overflow: hidden;
@@ -807,8 +807,8 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background: var(--secondary);
-            color: white;
+            background: var(--surface);
+            color: var(--white);
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -817,7 +817,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 15px rgba(68, 108, 173, 0.4);
+            box-shadow: 0 4px 15px color-mix(in srgb, var(--surface-hover) 40%, transparent);
             transition: all 0.3s ease;
             opacity: 0;
             visibility: hidden;
@@ -830,7 +830,7 @@
         }
 
         .scroll-to-top:hover {
-            background: var(--primary);
+            background: var(--surface);
             transform: translateY(-3px);
         }
 
@@ -840,7 +840,7 @@
             padding: 30px;
             color: var(--text-muted);
             font-size: 0.9rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid color-mix(in srgb, var(--white) 10%, transparent);
         }
 
         @media (max-width: 768px) {
@@ -875,7 +875,7 @@
 }
 
 .header {
-    background: linear-gradient(135deg, rgba(24, 50, 76, 0.88), rgba(31, 66, 101, 0.70));
+    background: linear-gradient(135deg, color-mix(in srgb, var(--bg-hero) 88%, transparent), color-mix(in srgb, var(--bg-section) 70%, transparent));
     padding: 40px 20px;
     border-radius: 12px;
 }
@@ -899,11 +899,11 @@
 
 .breadcrumb,
 .breadcrumb span {
-    color: var(--surface);
+    color: var(--text-light);
 }
 
 .breadcrumb a {
-    color: var(--surface);
+    color: var(--text-light);
 }
 
 .breadcrumb-separator {
@@ -911,7 +911,7 @@
 }
 
 .breadcrumb-current {
-    color: var(--surface);
+    color: var(--text-light);
     font-weight: 600;
 }
 
@@ -925,7 +925,7 @@
 }
 
 .subtitle {
-    color: var(--surface);
+    color: var(--text-light);
     max-width: 780px;
     margin: 0 auto;
     font-size: clamp(1.15rem, 2.4vw, 1.55rem);
@@ -948,7 +948,7 @@
     overflow: hidden;
     border-left: 4px solid var(--secondary);
     padding-left: 34px;
-    color: var(--surface);
+    color: var(--text-light);
 }
 
 .instructions::before {
@@ -959,7 +959,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    color: var(--surface);
+    color: var(--text-light);
     margin-bottom: 12px;
 }
 
@@ -969,7 +969,7 @@
 }
 
 .instructions p {
-    color: var(--surface);
+    color: var(--text-light);
     max-width: 920px;
     margin: 0 0 16px;
     line-height: 1.65;
@@ -983,7 +983,7 @@
     gap: 10px;
     margin: 0;
     padding-left: 1.25rem;
-    color: var(--surface);
+    color: var(--text-light);
 }
 
 .instructions li {
@@ -992,14 +992,14 @@
 }
 
 .instructions strong {
-    color: var(--surface);
+    color: var(--text-light);
     font-weight: 700;
 }
 
 .case-section,
 .question,
 .activity-controls {
-    background: rgba(36, 73, 111, 0.30);
+    background: color-mix(in srgb, var(--bg-section) 30%, transparent);
 }
 
 .questions-section h2 {
@@ -1007,7 +1007,7 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 18px;
-    color: var(--surface);
+    color: var(--text-light);
     font-size: 1.25rem;
     line-height: 1.25;
 }
@@ -1017,12 +1017,12 @@
 }
 
 .case-section {
-    border-color: rgba(211, 240, 255, 0.28);
+    border-color: color-mix(in srgb, var(--title-mid) 28%, transparent);
 }
 
 .answer-progress-container {
-    background: rgba(0, 17, 41, 0.78);
-    border-color: rgba(211, 240, 255, 0.32);
+    background: color-mix(in srgb, var(--footer-bg) 78%, transparent);
+    border-color: color-mix(in srgb, var(--title-mid) 32%, transparent);
 }
 
 .answer-progress-bar,
@@ -1033,37 +1033,37 @@
 
 .stat-card,
 .option {
-    background: rgba(0, 17, 41, 0.34);
-    border-color: rgba(211, 240, 255, 0.18);
+    background: color-mix(in srgb, var(--footer-bg) 34%, transparent);
+    border-color: color-mix(in srgb, var(--title-mid) 18%, transparent);
 }
 
 .question:hover,
 .option:hover,
 .option.selected {
-    background: rgba(149, 212, 240, 0.16);
+    background: color-mix(in srgb, var(--icon-blue) 16%, transparent);
     border-color: var(--secondary);
 }
 
 .option.selected {
-    box-shadow: 0 0 0 2px rgba(211, 240, 255, 0.16);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--title-mid) 16%, transparent);
 }
 
 .option.correct {
-    background: rgba(185, 214, 139, 0.16);
-    box-shadow: 0 0 15px rgba(185, 214, 139, 0.22);
+    background: color-mix(in srgb, var(--text-muted-light) 16%, transparent);
+    box-shadow: 0 0 15px color-mix(in srgb, var(--text-muted-light) 22%, transparent);
 }
 
 .option.incorrect {
-    background: rgba(216, 161, 240, 0.16);
-    box-shadow: 0 0 15px rgba(216, 161, 240, 0.22);
+    background: color-mix(in srgb, var(--text-muted-light) 16%, transparent);
+    box-shadow: 0 0 15px color-mix(in srgb, var(--text-muted-light) 22%, transparent);
 }
 
 .btn,
 .menu-toggle,
 .floating-home-btn,
 .scroll-to-top {
-    border: 1px solid rgba(211, 240, 255, 0.24);
-    box-shadow: 0 10px 22px rgba(0, 14, 24, 0.28);
+    border: 1px solid color-mix(in srgb, var(--title-mid) 24%, transparent);
+    box-shadow: 0 10px 22px color-mix(in srgb, var(--footer-bg) 28%, transparent);
 }
 
 .btn-evaluate,
@@ -1071,15 +1071,15 @@
 .menu-toggle,
 .floating-home-btn,
 .scroll-to-top {
-    background: linear-gradient(135deg, rgba(53, 102, 145, 0.96), rgba(31, 75, 111, 0.96));
-    color: var(--surface);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--surface) 96%, transparent), color-mix(in srgb, var(--bg-section) 96%, transparent));
+    color: var(--text-light);
 }
 
 .menu-toggle,
 .floating-home-btn {
     background: var(--secondary);
-    color: var(--surface);
-    box-shadow: 0 10px 24px rgba(0, 48, 90, 0.34);
+    color: var(--text-light);
+    box-shadow: 0 10px 24px color-mix(in srgb, var(--bg-hero) 34%, transparent);
 }
 
 .menu-toggle:hover,
@@ -1088,7 +1088,7 @@
 }
 
 .btn-evaluate {
-    box-shadow: 0 12px 26px rgba(0, 14, 24, 0.32);
+    box-shadow: 0 12px 26px color-mix(in srgb, var(--footer-bg) 32%, transparent);
 }
 
 .btn-evaluate:hover,
@@ -1096,8 +1096,8 @@
 .menu-toggle:hover,
 .floating-home-btn:hover,
 .scroll-to-top:hover {
-    background: linear-gradient(135deg, rgba(149, 212, 240, 0.92), rgba(53, 102, 145, 0.96));
-    border-color: rgba(211, 240, 255, 0.52);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--icon-blue) 92%, transparent), color-mix(in srgb, var(--surface) 96%, transparent));
+    border-color: color-mix(in srgb, var(--title-mid) 52%, transparent);
 }
 
 .menu-toggle,
@@ -1111,24 +1111,24 @@
 }
 
 .btn-secondary {
-    background: rgba(36, 73, 111, 0.34);
-    border-color: rgba(211, 240, 255, 0.24);
-    color: var(--surface);
+    background: color-mix(in srgb, var(--bg-section) 34%, transparent);
+    border-color: color-mix(in srgb, var(--title-mid) 24%, transparent);
+    color: var(--text-light);
 }
 
 .btn-secondary:hover {
-    background: rgba(149, 212, 240, 0.20);
-    border-color: rgba(211, 240, 255, 0.45);
+    background: color-mix(in srgb, var(--icon-blue) 20%, transparent);
+    border-color: color-mix(in srgb, var(--title-mid) 45%, transparent);
 }
 
 .btn-evaluate:disabled {
-    background: rgba(211, 240, 255, 0.12);
+    background: color-mix(in srgb, var(--title-mid) 12%, transparent);
     color: var(--text-muted);
-    border-color: rgba(211, 240, 255, 0.18);
+    border-color: color-mix(in srgb, var(--title-mid) 18%, transparent);
 }
 
 .game-status.continue {
-    background: rgba(149, 212, 240, 0.18);
+    background: color-mix(in srgb, var(--icon-blue) 18%, transparent);
     border-color: var(--accent);
 }
 
@@ -1154,14 +1154,14 @@
 }
 
 .stat-label {
-    color: var(--surface);
+    color: var(--text-light);
 }
 
 .game-status {
     padding: 0;
     background: transparent;
     border: 0;
-    color: var(--surface);
+    color: var(--text-light);
 }
 
 .game-status.victory,
@@ -1169,7 +1169,7 @@
 .game-status.continue {
     background: transparent;
     border: 0;
-    color: var(--surface);
+    color: var(--text-light);
 }
 
 .quiz-result {
@@ -1177,10 +1177,10 @@
     margin: 0 auto;
     padding: 34px 24px;
     text-align: center;
-    background: linear-gradient(135deg, rgba(24, 50, 76, 0.92), rgba(36, 73, 111, 0.72));
-    border: 1px solid rgba(211, 240, 255, 0.28);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--bg-hero) 92%, transparent), color-mix(in srgb, var(--bg-section) 72%, transparent));
+    border: 1px solid color-mix(in srgb, var(--title-mid) 28%, transparent);
     border-radius: 18px;
-    box-shadow: 0 18px 42px rgba(0, 14, 24, 0.32);
+    box-shadow: 0 18px 42px color-mix(in srgb, var(--footer-bg) 32%, transparent);
 }
 
 .grade-value {
@@ -1191,30 +1191,30 @@
 }
 
 .score-value {
-    font-size: 1rem; 
-    font-weight: 400; 
-    margin-top: 5px; 
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 5px;
 }
 
 .quiz-message {
     max-width: 680px;
     margin: 18px auto 0;
-    color: var(--surface);
+    color: var(--text-light);
     font-size: clamp(1rem, 2.2vw, 1.2rem);
     font-weight: 500;
     line-height: 1.55;
 }
 
 .quiz-result.defeat {
-    border-color: rgba(216, 161, 240, 0.45);
+    border-color: color-mix(in srgb, var(--text-muted-light) 45%, transparent);
 }
 
 .quiz-result.continue {
-    border-color: rgba(211, 240, 255, 0.38);
+    border-color: color-mix(in srgb, var(--title-mid) 38%, transparent);
 }
 
 .quiz-result.victory {
-    border-color: rgba(185, 214, 139, 0.42);
+    border-color: color-mix(in srgb, var(--text-muted-light) 42%, transparent);
 }
 
 /* Contenedor Responsivo para Iframes (Genially) */
@@ -1329,20 +1329,20 @@ body.activity-page {
         .activity-page .header {
             padding: 30px 22px 28px;
             margin-bottom: 24px;
-            background: linear-gradient(135deg, rgba(24, 50, 76, 0.88), rgba(31, 66, 101, 0.70));
+            background: linear-gradient(135deg, color-mix(in srgb, var(--bg-hero) 88%, transparent), color-mix(in srgb, var(--bg-section) 70%, transparent));
             border-radius: 12px;
         }
 
         .activity-page .breadcrumb {
             margin-bottom: 12px;
-            color: var(--surface);
+            color: var(--text-light);
             font-size: clamp(0.94rem, 1.5vw, 1rem);
             font-weight: 500;
             opacity: 1;
         }
 
         .activity-page .breadcrumb a {
-            color: var(--surface);
+            color: var(--text-light);
             font-weight: 500;
             min-width: 0;
             text-decoration-thickness: 1px;
@@ -1352,7 +1352,7 @@ body.activity-page {
 
         .activity-page .breadcrumb a:hover,
         .activity-page .breadcrumb a:focus-visible {
-            color: var(--surface);
+            color: var(--text-light);
         }
 
         .activity-page .breadcrumb-separator {
@@ -1360,7 +1360,7 @@ body.activity-page {
         }
 
         .activity-page .breadcrumb-current {
-            color: var(--surface);
+            color: var(--text-light);
             font-weight: 600;
             min-width: 0;
             white-space: normal;
@@ -1368,13 +1368,13 @@ body.activity-page {
 
         .activity-page .header h1 {
             margin-bottom: 6px;
-            color: var(--surface);
+            color: var(--text-light);
             font-weight: 800;
             line-height: 1.12;
         }
 
         .activity-page .subtitle {
-            color: var(--surface);
+            color: var(--text-light);
             font-weight: 400;
             line-height: 1.32;
         }
@@ -1384,12 +1384,12 @@ body.activity-page {
             padding: 22px 24px 22px 28px;
             border-left: 3px solid var(--secondary);
             background: var(--card-bg);
-            color: var(--surface);
+            color: var(--text-light);
         }
 
         .activity-page .instructions h2 {
             margin-bottom: 10px;
-            color: var(--surface);
+            color: var(--text-light);
             font-size: clamp(1.15rem, 2.2vw, 1.3rem);
             font-weight: 700;
             line-height: 1.25;
@@ -1415,7 +1415,7 @@ body.activity-page {
         .activity-page .instructions p {
             max-width: 900px;
             margin-bottom: 14px;
-            color: var(--surface);
+            color: var(--text-light);
             font-weight: 400;
             line-height: 1.76;
             text-align: left;
@@ -1428,7 +1428,7 @@ body.activity-page {
             gap: 0;
             margin: 0;
             padding: 0;
-            color: var(--surface);
+            color: var(--text-light);
             list-style: none;
         }
 
@@ -1439,7 +1439,7 @@ body.activity-page {
             min-height: 44px;
             margin: 0;
             padding: 11px 12px 11px 0;
-            border-top: 1px solid rgba(213, 238, 255, 0.11);
+            border-top: 1px solid color-mix(in srgb, var(--title-mid) 11%, transparent);
             line-height: 1.5;
         }
 
@@ -1453,11 +1453,11 @@ body.activity-page {
             flex: 0 0 34px;
             width: 34px;
             height: 34px;
-            color: var(--surface);
-            background: rgba(149, 212, 240, 0.16);
-            border: 1px solid rgba(211, 240, 255, 0.24);
+            color: var(--text-light);
+            background: color-mix(in srgb, var(--icon-blue) 16%, transparent);
+            border: 1px solid color-mix(in srgb, var(--title-mid) 24%, transparent);
             border-radius: 9px;
-            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+            box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--white) 3%, transparent);
         }
 
         .activity-page .instruction-types li > span:last-child {
@@ -1465,7 +1465,7 @@ body.activity-page {
         }
 
         .activity-page .instruction-types strong {
-            color: var(--surface);
+            color: var(--text-light);
             font-weight: 600;
         }
 
@@ -1486,15 +1486,15 @@ body.activity-page {
         .activity-page .evaluation-icon {
             width: 50px;
             height: 50px;
-            color: var(--surface);
-            background: rgba(149, 212, 240, 0.16);
-            border: 1px solid rgba(211, 240, 255, 0.24);
-            box-shadow: 0 10px 24px rgba(0, 14, 24, 0.24);
+            color: var(--text-light);
+            background: color-mix(in srgb, var(--icon-blue) 16%, transparent);
+            border: 1px solid color-mix(in srgb, var(--title-mid) 24%, transparent);
+            box-shadow: 0 10px 24px color-mix(in srgb, var(--footer-bg) 24%, transparent);
         }
 
         .activity-page .evaluation-copy .case-name {
             margin-bottom: 2px;
-            color: var(--surface);
+            color: var(--text-light);
             font-weight: 700;
         }
 
@@ -1507,9 +1507,9 @@ body.activity-page {
             min-height: 44px;
             padding: 8px 14px;
             border-radius: 12px;
-            background: rgba(0, 17, 41, 0.34);
-            border: 1px solid rgba(211, 240, 255, 0.18);
-            color: var(--surface);
+            background: color-mix(in srgb, var(--footer-bg) 34%, transparent);
+            border: 1px solid color-mix(in srgb, var(--title-mid) 18%, transparent);
+            color: var(--text-light);
             box-shadow: none;
             cursor: default;
             font-size: 0.95rem;
@@ -1522,7 +1522,7 @@ body.activity-page {
         }
 
         .activity-page .evaluation-chip strong {
-            color: var(--surface);
+            color: var(--text-light);
             font-weight: 600;
         }
 
@@ -1545,30 +1545,30 @@ body.activity-page {
         .activity-page .btn-start-activity {
             min-height: 52px;
             padding: 14px 28px;
-            color: var(--surface);
+            color: var(--text-light);
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--secondary) 100%);
-            border: 1px solid rgba(211, 240, 255, 0.30);
-            box-shadow: 0 10px 22px rgba(0, 14, 24, 0.28);
+            border: 1px solid color-mix(in srgb, var(--title-mid) 30%, transparent);
+            box-shadow: 0 10px 22px color-mix(in srgb, var(--footer-bg) 28%, transparent);
             font-size: 1.05rem;
             font-weight: 700;
         }
 
         .activity-page .btn-start-activity:hover {
             background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary) 48%, var(--primary) 100%);
-            border-color: rgba(211, 240, 255, 0.52);
-            box-shadow: 0 14px 28px rgba(0, 14, 24, 0.34);
+            border-color: color-mix(in srgb, var(--title-mid) 52%, transparent);
+            box-shadow: 0 14px 28px color-mix(in srgb, var(--footer-bg) 34%, transparent);
             transform: translateY(-2px);
         }
 
         .activity-page .btn-start-activity:active {
             transform: translateY(0);
-            box-shadow: 0 8px 18px rgba(0, 65, 136, 0.32);
+            box-shadow: 0 8px 18px color-mix(in srgb, var(--bg-section) 32%, transparent);
         }
 
         .activity-page .btn-start-activity:disabled {
-            color: var(--surface);
+            color: var(--text-light);
             background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 50%, var(--secondary) 100%);
-            border-color: rgba(211, 240, 255, 0.18);
+            border-color: color-mix(in srgb, var(--title-mid) 18%, transparent);
             box-shadow: none;
             cursor: wait;
             opacity: 1;
@@ -1577,7 +1577,7 @@ body.activity-page {
 
         .activity-page .question {
             border-left: 3px solid var(--secondary);
-            background: rgba(36, 73, 111, 0.30);
+            background: color-mix(in srgb, var(--bg-section) 30%, transparent);
         }
 
         .activity-page .question-number {
@@ -1594,30 +1594,30 @@ body.activity-page {
         .activity-page .option {
             min-height: 44px;
             width: 100%;
-            background: rgba(0, 17, 41, 0.34);
-            border: 1px solid rgba(211, 240, 255, 0.18);
-            color: var(--surface);
+            background: color-mix(in srgb, var(--footer-bg) 34%, transparent);
+            border: 1px solid color-mix(in srgb, var(--title-mid) 18%, transparent);
+            color: var(--text-light);
             font: inherit;
             line-height: 1.45;
             text-align: left;
         }
 
         .activity-page .option:hover {
-            background: rgba(149, 212, 240, 0.16);
+            background: color-mix(in srgb, var(--icon-blue) 16%, transparent);
             border-color: var(--secondary);
         }
 
         .activity-page .option.selected {
-            background: rgba(149, 212, 240, 0.16);
+            background: color-mix(in srgb, var(--icon-blue) 16%, transparent);
             border-color: var(--secondary);
-            box-shadow: 0 0 0 2px rgba(211, 240, 255, 0.16);
+            box-shadow: 0 0 0 2px color-mix(in srgb, var(--title-mid) 16%, transparent);
         }
 
         .activity-page .question:not([data-question-type="verdadero_falso"]) .option.selected .option-letter::after {
             content: "✓";
             display: inline-block;
             margin-left: 6px;
-            color: var(--surface);
+            color: var(--text-light);
             font-size: 0.95rem;
         }
 
@@ -1641,7 +1641,7 @@ body.activity-page {
 
         .activity-page .completion-sentence {
             margin: 0 0 16px;
-            color: var(--surface);
+            color: var(--text-light);
             font-size: 1.08rem;
             font-weight: 400;
             line-height: 2;
@@ -1656,9 +1656,9 @@ body.activity-page {
             margin: 0 5px;
             padding: 6px 14px;
             vertical-align: middle;
-            color: var(--surface);
-            background: rgba(0, 17, 41, 0.34);
-            border: 1px dashed rgba(211, 240, 255, 0.42);
+            color: var(--text-light);
+            background: color-mix(in srgb, var(--footer-bg) 34%, transparent);
+            border: 1px dashed color-mix(in srgb, var(--title-mid) 42%, transparent);
             border-radius: 10px;
             font: inherit;
             font-weight: 600;
@@ -1672,11 +1672,11 @@ body.activity-page {
             display: block;
             width: 92px;
             max-width: 100%;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.74);
+            border-bottom: 2px solid color-mix(in srgb, var(--white) 74%, transparent);
         }
 
         .activity-page .completion-inline-slot.has-answer {
-            background: rgba(149, 212, 240, 0.16);
+            background: color-mix(in srgb, var(--icon-blue) 16%, transparent);
             border-style: solid;
             border-color: var(--secondary);
         }
@@ -1684,7 +1684,7 @@ body.activity-page {
         .activity-page .completion-inline-slot:hover,
         .activity-page .completion-inline-slot.is-drag-over {
             border-color: var(--accent);
-            box-shadow: 0 0 0 2px rgba(211, 240, 255, 0.14);
+            box-shadow: 0 0 0 2px color-mix(in srgb, var(--title-mid) 14%, transparent);
         }
 
         .activity-page .completion-inline-slot:disabled {
@@ -1702,9 +1702,9 @@ body.activity-page {
         .activity-page .completion-word {
             min-height: 44px;
             padding: 10px 14px;
-            color: var(--surface);
-            background: rgba(0, 17, 41, 0.42);
-            border: 1px solid rgba(211, 240, 255, 0.22);
+            color: var(--text-light);
+            background: color-mix(in srgb, var(--footer-bg) 42%, transparent);
+            border: 1px solid color-mix(in srgb, var(--title-mid) 22%, transparent);
             border-radius: 9px;
             font: inherit;
             font-weight: 500;
@@ -1714,7 +1714,7 @@ body.activity-page {
         }
 
         .activity-page .completion-word:hover {
-            background: rgba(149, 212, 240, 0.16);
+            background: color-mix(in srgb, var(--icon-blue) 16%, transparent);
             border-color: var(--secondary);
         }
 
@@ -1730,9 +1730,9 @@ body.activity-page {
             width: 100%;
             min-height: 52px;
             padding: 13px 16px;
-            color: var(--surface);
-            background: rgba(0, 17, 41, 0.34);
-            border: 1px dashed rgba(211, 240, 255, 0.38);
+            color: var(--text-light);
+            background: color-mix(in srgb, var(--footer-bg) 34%, transparent);
+            border: 1px dashed color-mix(in srgb, var(--title-mid) 38%, transparent);
             border-radius: 10px;
             font: inherit;
             font-weight: 500;
@@ -1743,7 +1743,7 @@ body.activity-page {
         }
 
         .activity-page .completion-slot.has-answer {
-            background: rgba(149, 212, 240, 0.16);
+            background: color-mix(in srgb, var(--icon-blue) 16%, transparent);
             border-style: solid;
             border-color: var(--secondary);
         }
@@ -1751,7 +1751,7 @@ body.activity-page {
         .activity-page .completion-slot:hover,
         .activity-page .completion-slot.is-drag-over {
             border-color: var(--accent);
-            box-shadow: 0 0 0 2px rgba(211, 240, 255, 0.14);
+            box-shadow: 0 0 0 2px color-mix(in srgb, var(--title-mid) 14%, transparent);
         }
 
         .activity-page .completion-slot:disabled {
@@ -1762,17 +1762,17 @@ body.activity-page {
         .activity-page .completion-slot.correct,
         .activity-page .completion-inline-slot.correct,
         .activity-page .ordering-placed.correct {
-            background: rgba(150, 204, 46, 0.15);
+            background: color-mix(in srgb, var(--success) 15%, transparent);
             border-color: var(--quiz-correct);
-            box-shadow: 0 0 15px rgba(150, 204, 46, 0.24);
+            box-shadow: 0 0 15px color-mix(in srgb, var(--success) 24%, transparent);
         }
 
         .activity-page .completion-slot.incorrect,
         .activity-page .completion-inline-slot.incorrect,
         .activity-page .ordering-placed.incorrect {
-            background: rgba(231, 60, 229, 0.15);
+            background: color-mix(in srgb, var(--text-muted-light) 15%, transparent);
             border-color: var(--quiz-incorrect);
-            box-shadow: 0 0 15px rgba(231, 60, 229, 0.24);
+            box-shadow: 0 0 15px color-mix(in srgb, var(--text-muted-light) 24%, transparent);
         }
 
         .activity-page .true-false-options {
@@ -1785,7 +1785,7 @@ body.activity-page {
         }
 
         .activity-page .ordering-label {
-            color: var(--surface);
+            color: var(--text-light);
             font-size: 0.95rem;
             font-weight: 600;
         }
@@ -1797,8 +1797,8 @@ body.activity-page {
             gap: 10px;
             min-height: 52px;
             padding: 12px;
-            background: rgba(0, 17, 41, 0.26);
-            border: 1px solid rgba(211, 240, 255, 0.18);
+            background: color-mix(in srgb, var(--footer-bg) 26%, transparent);
+            border: 1px solid color-mix(in srgb, var(--title-mid) 18%, transparent);
             border-radius: 10px;
         }
 
@@ -1809,15 +1809,15 @@ body.activity-page {
         .activity-page .ordering-placed.is-drag-over,
         .activity-page .ordering-segment.is-drag-over {
             border-color: var(--accent);
-            box-shadow: 0 0 0 2px rgba(211, 240, 255, 0.14);
+            box-shadow: 0 0 0 2px color-mix(in srgb, var(--title-mid) 14%, transparent);
         }
 
         .activity-page .ordering-segment {
             min-height: 44px;
             padding: 10px 13px;
-            color: var(--surface);
-            background: rgba(0, 17, 41, 0.42);
-            border: 1px solid rgba(211, 240, 255, 0.22);
+            color: var(--text-light);
+            background: color-mix(in srgb, var(--footer-bg) 42%, transparent);
+            border: 1px solid color-mix(in srgb, var(--title-mid) 22%, transparent);
             border-radius: 9px;
             font: inherit;
             font-weight: 500;
@@ -1827,13 +1827,13 @@ body.activity-page {
         }
 
         .activity-page .ordering-segment:hover {
-            background: rgba(149, 212, 240, 0.16);
+            background: color-mix(in srgb, var(--icon-blue) 16%, transparent);
             border-color: var(--secondary);
         }
 
         .activity-page .ordering-segment.placed::after {
             content: "  ×";
-            color: var(--surface);
+            color: var(--text-light);
             font-weight: 600;
         }
 
@@ -1849,7 +1849,7 @@ body.activity-page {
 
         .activity-page .ordering-empty {
             align-self: center;
-            color: var(--surface);
+            color: var(--text-light);
             font-size: 0.95rem;
         }
 
@@ -1864,23 +1864,23 @@ body.activity-page {
             display: grid;
             place-items: center;
             padding: 20px;
-            background: rgba(0, 14, 24, 0.72);
+            background: color-mix(in srgb, var(--footer-bg) 72%, transparent);
             backdrop-filter: blur(4px);
         }
 
         .activity-page .activity-modal {
             width: min(520px, 100%);
             padding: 24px;
-            color: var(--surface);
-            background: linear-gradient(135deg, rgba(24, 50, 76, 0.98), rgba(31, 66, 101, 0.96));
-            border: 1px solid rgba(211, 240, 255, 0.24);
+            color: var(--text-light);
+            background: linear-gradient(135deg, color-mix(in srgb, var(--bg-hero) 98%, transparent), color-mix(in srgb, var(--bg-section) 96%, transparent));
+            border: 1px solid color-mix(in srgb, var(--title-mid) 24%, transparent);
             border-radius: 14px;
-            box-shadow: 0 22px 60px rgba(0, 14, 24, 0.46);
+            box-shadow: 0 22px 60px color-mix(in srgb, var(--footer-bg) 46%, transparent);
         }
 
         .activity-page .activity-modal p {
             margin: 0;
-            color: var(--surface);
+            color: var(--text-light);
             font-size: 1.04rem;
             line-height: 1.6;
             text-align: center;
@@ -1897,12 +1897,12 @@ body.activity-page {
         .activity-page .activity-modal-actions .btn {
             justify-content: center;
             min-width: min(220px, 100%);
-            color: var(--surface);
+            color: var(--text-light);
         }
 
         .activity-page .activity-modal-actions .btn-secondary {
-            background: rgba(0, 17, 41, 0.44);
-            border: 1px solid rgba(211, 240, 255, 0.28);
+            background: color-mix(in srgb, var(--footer-bg) 44%, transparent);
+            border: 1px solid color-mix(in srgb, var(--title-mid) 28%, transparent);
         }
 
         .activity-page .activity-modal-actions .btn-evaluate {
@@ -1914,7 +1914,7 @@ body.activity-page {
             gap: 8px;
             padding: 0 0 14px;
             margin: 0 0 18px;
-            border-bottom: 1px solid rgba(211, 240, 255, 0.18);
+            border-bottom: 1px solid color-mix(in srgb, var(--title-mid) 18%, transparent);
         }
 
         .activity-page .evaluation-overview.activity-questions-heading .evaluation-icon {
@@ -1937,7 +1937,7 @@ body.activity-page {
         .activity-page .evaluation-overview.activity-results-heading {
             padding-bottom: 18px;
             margin-bottom: 22px;
-            border-bottom: 1px solid rgba(211, 240, 255, 0.18);
+            border-bottom: 1px solid color-mix(in srgb, var(--title-mid) 18%, transparent);
         }
 
         .activity-page .question-number {
@@ -1975,9 +1975,9 @@ body.activity-page {
             align-items: flex-start;
             gap: 16px;
             padding: 22px;
-            color: var(--surface);
-            background: rgba(36, 73, 111, 0.30);
-            border: 1px solid rgba(211, 240, 255, 0.24);
+            color: var(--text-light);
+            background: color-mix(in srgb, var(--bg-section) 30%, transparent);
+            border: 1px solid color-mix(in srgb, var(--title-mid) 24%, transparent);
             border-left: 3px solid var(--secondary);
             border-radius: 12px;
         }
@@ -1989,13 +1989,13 @@ body.activity-page {
         }
 
         .activity-page .activity-pending strong {
-            color: var(--surface);
+            color: var(--text-light);
             font-size: 1.05rem;
         }
 
         .activity-page .activity-pending p {
             margin: 4px 0 0;
-            color: var(--surface);
+            color: var(--text-light);
         }
 
         .activity-page .evaluation-overview.is-unavailable .start-activity-wrap {
@@ -2007,7 +2007,7 @@ body.activity-page {
             margin: 28px 0 12px;
             background: transparent;
             border: 0;
-            border-top: 1px solid rgba(211, 240, 255, 0.18);
+            border-top: 1px solid color-mix(in srgb, var(--title-mid) 18%, transparent);
             border-radius: 0;
             box-shadow: none;
         }
@@ -2019,15 +2019,15 @@ body.activity-page {
         }
 
         .activity-page .retry-controls .btn {
-            color: var(--surface);
+            color: var(--text-light);
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--secondary) 100%);
-            border: 1px solid rgba(211, 240, 255, 0.24);
-            box-shadow: 0 10px 22px rgba(0, 14, 24, 0.28);
+            border: 1px solid color-mix(in srgb, var(--title-mid) 24%, transparent);
+            box-shadow: 0 10px 22px color-mix(in srgb, var(--footer-bg) 28%, transparent);
         }
 
         .activity-page .retry-controls .btn:hover {
             background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary) 48%, var(--primary) 100%);
-            border-color: rgba(211, 240, 255, 0.45);
+            border-color: color-mix(in srgb, var(--title-mid) 45%, transparent);
             transform: translateY(-2px);
         }
 
@@ -2048,15 +2048,15 @@ body.activity-page {
         }
 
         .activity-page .btn-nav {
-            color: var(--surface);
+            color: var(--text-light);
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--secondary) 100%);
-            border: 1px solid rgba(211, 240, 255, 0.24);
-            box-shadow: 0 10px 22px rgba(0, 14, 24, 0.28);
+            border: 1px solid color-mix(in srgb, var(--title-mid) 24%, transparent);
+            box-shadow: 0 10px 22px color-mix(in srgb, var(--footer-bg) 28%, transparent);
         }
 
         .activity-page .btn-nav:hover {
             background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary) 48%, var(--primary) 100%);
-            border-color: rgba(211, 240, 255, 0.52);
+            border-color: color-mix(in srgb, var(--title-mid) 52%, transparent);
             transform: translateY(-2px);
         }
 
@@ -2079,9 +2079,9 @@ body.activity-page {
             min-height: 44px;
             padding: 12px 18px;
             border-radius: 999px;
-            color: var(--surface);
+            color: var(--text-light);
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--secondary) 100%);
-            border: 1px solid rgba(211, 240, 255, 0.24);
+            border: 1px solid color-mix(in srgb, var(--title-mid) 24%, transparent);
             font-weight: 500;
             line-height: 1.25;
             text-align: center;
@@ -2089,7 +2089,7 @@ body.activity-page {
 
         .activity-page .nav-unit-link:hover {
             background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary) 48%, var(--primary) 100%);
-            border-color: rgba(211, 240, 255, 0.45);
+            border-color: color-mix(in srgb, var(--title-mid) 45%, transparent);
             transform: translateY(-2px);
         }
 
@@ -2098,7 +2098,7 @@ body.activity-page {
         }
 
         .activity-page .nav-unit-link i {
-            color: var(--surface);
+            color: var(--text-light);
         }
 
         .activity-page footer {
@@ -2106,7 +2106,7 @@ body.activity-page {
             color: var(--text-muted);
             font-size: 0.95rem;
             line-height: 1.55;
-            border-top-color: rgba(213, 238, 255, 0.13);
+            border-top-color: color-mix(in srgb, var(--title-mid) 13%, transparent);
         }
 
         .activity-page .btn:focus-visible,
@@ -2130,14 +2130,14 @@ body.activity-page {
             min-width: 44px;
             min-height: 44px;
             background: var(--secondary);
-            border-color: rgba(211, 240, 255, 0.24);
+            border-color: color-mix(in srgb, var(--title-mid) 24%, transparent);
         }
 
         .activity-page .menu-toggle:hover,
         .activity-page .floating-home-btn:hover,
         .activity-page .scroll-to-top:hover {
             background: var(--secondary);
-            border-color: rgba(211, 240, 255, 0.52);
+            border-color: color-mix(in srgb, var(--title-mid) 52%, transparent);
         }
 
         @media (max-width: 820px) {

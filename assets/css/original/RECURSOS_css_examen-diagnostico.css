@@ -2,8 +2,8 @@
     margin-bottom: 1.5rem;
     padding: 1rem;
     color: var(--primary);
-    background: rgba(24, 126, 195, 0.09);
-    border: 1px solid rgba(24, 126, 195, 0.28);
+    background: color-mix(in srgb, var(--surface-hover) 9%, transparent);
+    border: 1px solid color-mix(in srgb, var(--surface-hover) 28%, transparent);
     border-left: 4px solid var(--secondary);
     border-radius: 0.75rem;
 }
@@ -32,7 +32,7 @@
 .diagnostic-panel,
 .diagnostic-question,
 .diagnostic-progress {
-    border: 1px solid rgba(44, 62, 80, 0.18);
+    border: 1px solid color-mix(in srgb, var(--bg-main) 18%, transparent);
     border-radius: 0.85rem;
     background: var(--surface);
 }
@@ -45,7 +45,7 @@
 .diagnostic-status-error {
     color: var(--danger);
     background: var(--surface);
-    border-color: rgba(220, 38, 38, 0.35);
+    border-color: color-mix(in srgb, var(--danger) 35%, transparent);
 }
 
 .diagnostic-panel {
@@ -61,7 +61,7 @@
     padding: 0.8rem 1rem;
     color: var(--primary);
     border-left: 4px solid var(--secondary);
-    background: rgba(24, 126, 195, 0.08);
+    background: color-mix(in srgb, var(--surface-hover) 8%, transparent);
 }
 
 .diagnostic-fields {
@@ -80,7 +80,7 @@
 .diagnostic-fields input,
 .diagnostic-question textarea {
     width: 100%;
-    border: 1px solid rgba(44, 62, 80, 0.28);
+    border: 1px solid color-mix(in srgb, var(--bg-main) 28%, transparent);
     border-radius: 0.6rem;
     padding: 0.75rem;
     color: var(--primary);
@@ -90,7 +90,7 @@
 
 .diagnostic-fields input:focus,
 .diagnostic-question textarea:focus {
-    outline: 3px solid rgba(24, 126, 195, 0.2);
+    outline: 3px solid color-mix(in srgb, var(--surface-hover) 20%, transparent);
     border-color: var(--secondary);
 }
 
@@ -112,7 +112,7 @@
     height: 0.55rem;
     overflow: hidden;
     border-radius: 999px;
-    background: rgba(44, 62, 80, 0.12);
+    background: color-mix(in srgb, var(--bg-main) 12%, transparent);
 }
 
 #diagnostic-progress-bar {
@@ -164,12 +164,12 @@
 }
 
 .diagnostic-option:hover {
-    border-color: rgba(24, 126, 195, 0.3);
-    background: rgba(24, 126, 195, 0.07);
+    border-color: color-mix(in srgb, var(--surface-hover) 30%, transparent);
+    background: color-mix(in srgb, var(--surface-hover) 7%, transparent);
 }
 
 .diagnostic-option:has(input:focus-visible) {
-    outline: 3px solid rgba(24, 126, 195, 0.2);
+    outline: 3px solid color-mix(in srgb, var(--surface-hover) 20%, transparent);
     outline-offset: 1px;
 }
 
@@ -200,7 +200,7 @@
 .diagnostic-secondary-button {
     border-radius: 0.65rem;
     padding: 0.8rem 1.2rem;
-    color: var(--surface);
+    color: var(--text-light);
     font: inherit;
     font-weight: 700;
     cursor: pointer;
@@ -213,8 +213,8 @@
 
 .diagnostic-secondary-button {
     color: var(--primary);
-    border: 1px solid rgba(24, 126, 195, 0.32);
-    background: rgba(24, 126, 195, 0.1);
+    border: 1px solid color-mix(in srgb, var(--surface-hover) 32%, transparent);
+    background: color-mix(in srgb, var(--surface-hover) 10%, transparent);
 }
 
 .diagnostic-primary-button:hover,
@@ -224,7 +224,7 @@
 
 .diagnostic-primary-button:focus-visible,
 .diagnostic-secondary-button:focus-visible {
-    outline: 3px solid rgba(24, 126, 195, 0.28);
+    outline: 3px solid color-mix(in srgb, var(--surface-hover) 28%, transparent);
     outline-offset: 3px;
 }
 

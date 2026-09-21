@@ -1,6 +1,6 @@
 /* Oscurece el fondo del modal para mayor enfoque en el diagrama */
 .viewer-backdrop {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: color-mix(in srgb, var(--shadow-color) 70%, transparent);
 }
 
 /* Cambia el cursor en la imagen de la página para indicar la acción */

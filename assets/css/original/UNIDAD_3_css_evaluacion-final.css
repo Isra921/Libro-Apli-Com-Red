@@ -14,7 +14,7 @@ body.final-evaluation-page {
   min-height: 100vh;
   overflow-x: hidden;
   background: var(--page-bg);
-  color: var(--surface);
+  color: var(--text-light);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
 }
@@ -128,7 +128,7 @@ a {
   background: var(--gradient-unit-2);
   box-shadow: var(--card-shadow);
   font-size: 2.25rem;
-  color: var(--surface);
+  color: var(--text-light);
 }
 
 .eyebrow {
@@ -430,7 +430,7 @@ h1 {
   align-items: center;
   gap: 9px;
   margin-bottom: 8px;
-  color: var(--surface);
+  color: var(--text-light);
   font-size: 1.05rem;
 }
 
@@ -517,7 +517,7 @@ h1 {
 
 .data-table th {
   background: var(--primary);
-  color: var(--surface);
+  color: var(--text-light);
 }
 
 .data-table td:first-child,
@@ -549,7 +549,7 @@ h1 {
 
 .bar-value {
   margin-bottom: 7px;
-  color: var(--surface);
+  color: var(--text-light);
   font-weight: 800;
 }
 
@@ -572,7 +572,7 @@ h1 {
     --gradient-unit-3,
     linear-gradient(180deg, var(--success) 0%, var(--success) 100%)
   );
-  box-shadow: 0 8px 18px rgba(39, 174, 96, 0.2);
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--success) 20%, transparent);
 }
 
 .bar-label {
@@ -604,14 +604,14 @@ h1 {
 .btn-pdf {
   border-color: var(--danger);
   background: var(--danger);
-  color: var(--surface);
+  color: var(--text-light);
 }
 
 .btn-pdf:hover:not(:disabled),
 .btn-pdf:focus-visible:not(:disabled) {
   border-color: var(--danger);
   background: var(--danger);
-  color: var(--surface);
+  color: var(--text-light);
 }
 
 .btn {
@@ -623,7 +623,7 @@ h1 {
   align-items: center;
   justify-content: center;
   gap: 9px;
-  color: var(--surface);
+  color: var(--text-light);
   font-weight: 750;
   text-decoration: none;
   cursor: pointer;
@@ -642,11 +642,11 @@ h1 {
 .btn-nav {
   background: var(--gradient-unit-2);
   border-color: var(--card-border);
-  box-shadow: 0 10px 22px rgba(0, 14, 24, 0.28);
+  box-shadow: 0 10px 22px color-mix(in srgb, var(--footer-bg) 28%, transparent);
 }
 
 .btn-secondary {
-  background: rgba(36, 73, 111, 0.34);
+  background: color-mix(in srgb, var(--bg-section) 34%, transparent);
   border-color: var(--card-border);
 }
 
@@ -858,8 +858,8 @@ h1 {
   padding: 8px 11px;
   border: 1px solid var(--card-border);
   border-radius: 9px;
-  background: var(--primary);
-  color: var(--surface);
+  background: var(--surface);
+  color: var(--text-light);
 }
 
 .order-item {
@@ -880,7 +880,7 @@ h1 {
   display: grid;
   place-items: center;
   border-radius: 50%;
-  background: var(--primary);
+  background: var(--surface);
   font-weight: 800;
 }
 
@@ -894,7 +894,7 @@ h1 {
 .question-dot {
   border: 1px solid var(--card-border);
   background: var(--submenu-bg);
-  color: var(--surface);
+  color: var(--text-light);
   cursor: pointer;
 }
 
@@ -933,7 +933,7 @@ h1 {
 }
 
 .question-dot.is-current {
-  background: var(--secondary);
+  background: var(--surface);
   color: var(--primary);
   font-weight: 800;
 }
@@ -1131,7 +1131,7 @@ footer {
   position: fixed;
   inset: 0;
   z-index: 2000;
-  background: rgba(0, 17, 41, 0.82);
+  background: color-mix(in srgb, var(--footer-bg) 82%, transparent);
 }
 
 .drawer-overlay {
@@ -1153,7 +1153,7 @@ footer {
   top: 0;
   z-index: 2;
   padding: 20px 24px;
-  background: var(--primary);
+  background: var(--surface);
   border-bottom: 1px solid var(--card-border);
 }
 
@@ -1179,7 +1179,7 @@ footer {
   border: 1px solid var(--card-border);
   border-radius: 999px;
   background: var(--submenu-bg);
-  color: var(--surface);
+  color: var(--text-light);
   font-size: 0.85rem;
   font-weight: 700;
   text-decoration: none;
@@ -1259,7 +1259,7 @@ footer {
   border: 1px solid var(--card-border);
   border-radius: 50%;
   background: var(--primary);
-  color: var(--surface);
+  color: var(--text-light);
   display: grid;
   place-items: center;
   text-decoration: none;
@@ -1295,7 +1295,7 @@ footer {
   position: fixed;
   inset: 0;
   z-index: 1390;
-  background: rgba(0, 17, 41, 0.76);
+  background: color-mix(in srgb, var(--footer-bg) 76%, transparent);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s ease;
@@ -1315,7 +1315,7 @@ footer {
   overflow-y: auto;
   transform: translateX(-102%);
   transition: transform 0.25s ease;
-  background: var(--primary);
+  background: var(--surface);
   border-right: 1px solid var(--card-border);
   box-shadow: var(--card-shadow);
 }
@@ -1357,7 +1357,7 @@ footer {
   margin-top: 8px;
   padding: 10px;
   border-radius: 9px;
-  color: var(--surface);
+  color: var(--text-light);
   text-decoration: none;
 }
 

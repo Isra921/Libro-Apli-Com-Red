@@ -1,10 +1,5 @@
 
-      :root {
---light: var(--surface);
-        --dark: var(--primary);
-        --gray: var(--text-muted);
---card-bg: rgba(255, 255, 255, 0.05);
-      }
+
 
       * {
         margin: 0;
@@ -14,8 +9,8 @@
       }
 
       body {
-        background: linear-gradient(135deg, var(--primary), var(--primary));
-        color: var(--surface);
+        background: var(--bg-deep);
+        color: var(--text-light);
         min-height: 100vh;
         line-height: 1.7;
       }
@@ -30,7 +25,7 @@
         text-align: center;
         padding: 40px 20px;
         margin-bottom: 30px;
-        background: rgba(0, 0, 0, 0.3);
+        background: color-mix(in srgb, var(--shadow-color) 30%, transparent);
         border-radius: 15px;
         position: relative;
         overflow: hidden;
@@ -51,7 +46,7 @@
       }
 
       .breadcrumb a:hover {
-        color: white;
+        color: var(--white);
         text-decoration: underline;
       }
 
@@ -62,7 +57,7 @@
       h1 {
         font-size: 2.8rem;
         margin-bottom: 10px;
-        color: white;
+        color: var(--white);
       }
 
       .subtitle {
@@ -84,7 +79,7 @@
       }
 
       .section-title {
-        color: var(--surface);
+        color: var(--text-light);
         border-bottom: 2px solid var(--secondary);
         padding-bottom: 10px;
         margin: 50px 0 30px;
@@ -107,28 +102,28 @@
         background: var(--card-bg);
         border-radius: 15px;
         padding: 25px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 5px 15px color-mix(in srgb, var(--shadow-color) 20%, transparent);
         border-left: 4px solid var(--secondary);
         transition: all 0.3s ease;
       }
 
       .reference-item:hover {
         transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 8px 25px color-mix(in srgb, var(--shadow-color) 30%, transparent);
       }
 
       .reference-citation {
         font-size: 1.1rem;
         font-weight: 600;
-        color: white;
+        color: var(--white);
         margin-bottom: 15px;
         line-height: 1.6;
       }
 
       .reference-type {
         display: inline-block;
-        background: var(--secondary);
-        color: white;
+        background: var(--surface);
+        color: var(--white);
         padding: 4px 12px;
         border-radius: 20px;
         font-size: 0.85rem;
@@ -150,14 +145,14 @@
       }
 
       .reference-description {
-        color: var(--surface);
+        color: var(--text-light);
         font-size: 0.95rem;
         margin-bottom: 12px;
         opacity: 0.9;
       }
 
       .stats-section {
-        background: rgba(0, 0, 0, 0.2);
+        background: color-mix(in srgb, var(--shadow-color) 20%, transparent);
         border-radius: 15px;
         padding: 25px;
         margin: 40px 0;
@@ -172,7 +167,7 @@
       }
 
       .stat-item {
-        background: var(--secondary);
+        background: var(--surface);
         padding: 20px;
         border-radius: 10px;
         border: 1px solid var(--secondary);
@@ -235,7 +230,7 @@
         display: inline-flex;
         align-items: center;
         background: var(--secondary);
-        color: white;
+        color: var(--white);
         padding: 15px 30px;
         border-radius: 30px;
         text-decoration: none;
@@ -260,7 +255,7 @@
         padding: 30px;
         color: var(--text-muted);
         font-size: 0.9rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 1px solid color-mix(in srgb, var(--white) 10%, transparent);
       }
 
       @media (max-width: 768px) {
@@ -277,4 +272,4 @@
           grid-template-columns: 1fr;
         }
       }
-    
+

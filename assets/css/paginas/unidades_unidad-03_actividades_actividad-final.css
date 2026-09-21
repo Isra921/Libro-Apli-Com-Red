@@ -5,11 +5,11 @@
       }
 
       .final-evaluation-page .breadcrumb {
-        color: rgba(236, 240, 241, 0.72);
+        color: color-mix(in srgb, var(--text-light) 72%, transparent);
       }
 
       .final-evaluation-page .breadcrumb a {
-        color: rgba(236, 240, 241, 0.88);
+        color: color-mix(in srgb, var(--text-light) 88%, transparent);
       }
 
       .final-evaluation-page .breadcrumb > span[aria-hidden="true"] {
@@ -17,24 +17,24 @@
       }
 
       .final-evaluation-page .breadcrumb > span:last-child {
-        color: var(--surface);
+        color: var(--text-light);
         font-weight: 700;
       }
 
       .final-evaluation-page .evaluation-header .eyebrow {
-        color: var(--surface);
+        color: var(--text-light);
         font-size: 0.84rem;
         font-weight: 700;
         opacity: 0.92;
       }
 
       .final-evaluation-page .evaluation-header h1 {
-        color: var(--surface);
+        color: var(--text-light);
         font-size: clamp(1.9rem, 3.7vw, 2.8rem);
       }
 
       .final-evaluation-page .evaluation-header .header-subtitle {
-        color: var(--surface);
+        color: var(--text-light);
         opacity: 0.88;
       }
 
@@ -112,4 +112,4 @@
           right: 18px;
         }
       }
-    
+
