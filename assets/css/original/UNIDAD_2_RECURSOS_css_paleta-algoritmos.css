@@ -1,18 +1,2 @@
-:root {
-
-
-
---case-color: var(--secondary);
-    --card-border: var(--secondary);
-    --card-shadow: 0 14px 34px color-mix(in srgb, var(--shadow-color) 35%, transparent);
-
-    --quiz-correct: var(--success);
-    --quiz-incorrect: var(--danger);
-    --intro-border: var(--secondary);
-    --submenu-bg: var(--secondary);
-    --soft-panel: var(--secondary);
-    --page-bg: linear-gradient(135deg, var(--primary) 0%, var(--primary) 48%, var(--primary) 100%);
-    --scroll-track: color-mix(in srgb, var(--footer-bg) 95%, transparent);
-    --scroll-thumb: var(--secondary);
-    --scroll-thumb-hover: var(--secondary);
-}
+/* Paleta unificada con la paleta global del polilibro */
+@import url("../variables.css");

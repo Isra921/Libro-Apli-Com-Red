@@ -1,17 +1,6 @@
 
-        /* Variables CSS raíz */
-        :root {
+@import url("../variables.css");
 
-
-
-
-
-            /* Gradientes para las tarjetas de unidades */
-            --gradient-unit-1: linear-gradient(135deg, var(--secondary), var(--primary-hover));
-            --gradient-unit-2: linear-gradient(135deg, var(--accent), var(--secondary));
-            --gradient-unit-3: linear-gradient(135deg, var(--secondary), var(--primary-hover));
-;
-        }
 
         /* Estilos generales */
         * {
@@ -250,7 +239,7 @@
 
         /* Estilo de tarjeta individual (ahora es un enlace <a>) */
         .unit-card {
-            background: color-mix(in srgb, var(--footer-bg) 78%, transparent);
+            background: var(--surface);
             border-radius: 15px;
             overflow: hidden;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -265,6 +254,7 @@
         .unit-card:hover {
             transform: translateY(-10px) scale(1.03);
             box-shadow: 0 15px 35px color-mix(in srgb, var(--shadow-color) 40%, transparent);
+            background: var(--surface-hover);
         }
 
         .unit-card .card-header {

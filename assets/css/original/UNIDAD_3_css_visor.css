@@ -1,3 +1,4 @@
+@import url("../variables.css");
 /* Oscurece el fondo del modal para mayor enfoque en el diagrama */
 .viewer-backdrop {
   background-color: color-mix(in srgb, var(--shadow-color) 70%, transparent);

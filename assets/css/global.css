@@ -1,15 +1,64 @@
+/* ==========================================================================
+   ESTILOS GLOBALES DEL POLILIBRO (Comunicaciones en Red)
+   Asegura tipografía, esquemas de color, scrollbars y reseteos globales.
+   ========================================================================== */
+
 @import url("variables.css");
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
+  background-color: var(--bg-deep);
+  color: var(--text-light);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
 }
 
 img {
   max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--footer-bg);
+}
+
+/* Scrollbar global uniforme con la paleta */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scroll-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-thumb-hover);
 }
 
 .error-page {
@@ -17,12 +66,12 @@ img {
   margin: 15vh auto;
   padding: 40px;
   color: var(--text-light);
-  background: var(--primary);
+  background: var(--surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   text-align: center;
 }
 
 .error-page a {
-  color: var(--text-light);
+  color: var(--primary);
 }

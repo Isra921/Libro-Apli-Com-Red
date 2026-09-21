@@ -1,8 +1,6 @@
 
-        :root {
+@import url("../variables.css");
 
-        --monster-color:var(--surface-hover); /* morado para 1.3 */
-        }
         *{margin:0;padding:0;box-sizing:border-box}
         body{
         background: var(--bg-deep);

@@ -1,10 +1,6 @@
 
-      :root {
+@import url("../variables.css");
 
-
---submenu-bg: color-mix(in srgb, var(--shadow-color) 15%, transparent);
-
-      }
 
       * {
         margin: 0;
@@ -52,7 +48,7 @@
           ),
           radial-gradient(
             circle at 80% 70%,
-            var(--danger) 0%,
+            var(--accent) 0%,
             transparent 40%
           );
         z-index: -1;

@@ -1,15 +1,5 @@
-:root {
+@import url("../variables.css");
 
-
-
-
-  --azul: var(--secondary);
-  --azul-oscuro: var(--primary);
-  --rojo: var(--danger);
-  --gris: var(--surface);
-  --borde: var(--surface);
-  --texto: var(--primary);
-}
 
 * {
   margin: 0;

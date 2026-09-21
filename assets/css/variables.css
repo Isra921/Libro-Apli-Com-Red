@@ -1,48 +1,99 @@
-/* Paleta única del polilibro. Cambiar los colores aquí actualiza todas las páginas.
-   Los estados de evaluación conservan colores semánticos propios. */
+/* ==========================================================================
+   PALETA GLOBAL DEL POLILIBRO (Comunicaciones en Red)
+   Fuente de verdad visual basada en la página de inicio (index.html).
+   Todos los módulos, temas, actividades y evaluaciones dependen de esta paleta.
+   ========================================================================== */
+
 :root {
-  --bg-deep: #082F42;
-  --bg-main: #123B5A;
-  --bg-section: #184A70;
-  --bg-hero: #0B2F49;
-  --surface: #2A6288;
-  --surface-hover: #34719C;
-  --primary: #39B9E8;
-  --primary-hover: #55C9F0;
-  --accent: #54D6C5;
-  --text-light: #F5FAFD;
-  --text-muted-light: #D4E3EC;
-  --text-soft: #D5E8EF;
-  --border-color: color-mix(in srgb, var(--text-light) 12%, transparent);
-  --border-soft: color-mix(in srgb, var(--text-light) 14%, transparent);
-  --shadow-soft: 0 8px 24px color-mix(in srgb, var(--shadow-color) 18%, transparent);
-  --success: #41B883;
-  --warning: #D9A441;
-  --danger: #D96464;
-  --bg: var(--bg-main);
-  --text: var(--text-light);
-  --text-muted: var(--text-muted-light);
-  --secondary: var(--primary);
+  /* --- Fondos y Estructura Visual (Página de Inicio) --- */
+  --bg-deep: #082F42;       /* Fondo base de todo el sitio */
+  --bg-main: #123B5A;       /* Fondo principal de secciones y contenedores hero */
+  --bg-section: #184A70;    /* Barra de navegación superior y cabeceras de sección */
+  --bg-hero: #0B2F49;       /* Fondo oscuro institucional del hero */
+  --surface: #2A6288;       /* Fondo de tarjetas, paneles y bloques informativos */
+  --surface-hover: #34719C; /* Fondo al pasar el cursor sobre tarjetas y controles */
+  --footer-bg: #0A2A40;     /* Fondo del pie de página */
+
+  /* --- Colores Primarios, Secundarios y Acentos --- */
+  --primary: #39B9E8;       /* Azul primario vibrante (enlaces, botones activos, títulos) */
+  --primary-hover: #55C9F0; /* Azul primario en estado hover */
+  --secondary: #39B9E8;     /* Alias secundario sincronizado con el primario */
+  --secondary-hover: #55C9F0;
+  --accent: #54D6C5;        /* Turquesa / aguamarina de acento e iconografía */
+  --accent-hover: #72EBD9;
   --primary-soft: color-mix(in srgb, var(--primary) 14%, transparent);
   --accent-soft: color-mix(in srgb, var(--accent) 14%, transparent);
   --info: var(--primary);
-  --card-bg: var(--surface);
+
+  /* --- Botones y Llamados a la Acción (CTA) --- */
+  --cta-color: #F0E9DA;     /* Tono crema para botones destacados */
+  --cta-hover: #E2D8C5;     /* Hover para botones CTA */
+  --cta-bg: linear-gradient(135deg, var(--accent), var(--primary));
+
+  /* --- Tipografía y Textos --- */
+  --text-light: #F5FAFD;       /* Texto principal blanco luminoso */
+  --text-muted-light: #D4E3EC; /* Texto secundario gris azulado claro */
+  --text-soft: #D5E8EF;        /* Párrafos, citas y descripciones */
+  --text: var(--text-light);
+  --text-muted: var(--text-muted-light);
+  --white: #FFFFFF;
+  --dark: var(--bg-deep);
+  --gray: var(--text-muted-light);
+  --title-mid: #DDF3FF;
+  --title-end: #7CC9F5;
+
+  /* --- Bordes y Sombras --- */
+  --border-color: color-mix(in srgb, var(--text-light) 12%, transparent);
+  --border-soft: color-mix(in srgb, var(--text-light) 14%, transparent);
   --border: var(--border-color);
-  --shadow-card: var(--shadow-soft);
+  --card-border: var(--border-color);
+  --shadow-color: #000000;
+  --shadow-soft: 0 8px 24px color-mix(in srgb, var(--shadow-color) 18%, transparent);
+  --shadow-card: 0 8px 25px color-mix(in srgb, var(--shadow-color) 20%, transparent);
+  --card-shadow: var(--shadow-card);
+  --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 18px;
+  --radius-pill: 999px;
+
+  /* --- Gradientes Temáticos Globales (Unidades y Destacados) --- */
+  --gradient-unit-1: linear-gradient(135deg, var(--bg-main), var(--surface));
+  --gradient-unit-2: linear-gradient(135deg, var(--surface), var(--bg-section));
+  --gradient-unit-3: linear-gradient(135deg, var(--bg-section), var(--surface-hover));
+  --page-bg: var(--bg-deep);
+
+  /* --- Paneles, Evaluaciones y Componentes Interactivos --- */
+  --bg: var(--bg-main);
+  --card-bg: var(--surface);
+  --soft-panel: color-mix(in srgb, var(--surface) 35%, transparent);
+  --submenu-bg: color-mix(in srgb, var(--shadow-color) 25%, transparent);
+  --intro-border: var(--accent);
+  --case-color: var(--primary);
+  --monster-color: var(--accent);
+
+  /* --- Barras de Desplazamiento (Scrollbars) --- */
+  --scroll-track: var(--footer-bg);
+  --scroll-thumb: var(--surface);
+  --scroll-thumb-hover: var(--primary);
+
+  /* --- Iconografía --- */
   --icon-blue: #9EDCFF;
   --icon-teal: #63E4D8;
   --icon-bg-blue: color-mix(in srgb, var(--icon-blue) 14%, transparent);
   --icon-bg-teal: color-mix(in srgb, var(--icon-teal) 14%, transparent);
-  --cta-color: #F0E9DA;
-  --cta-hover: #E2D8C5;
-  --footer-bg: #0A2A40;
-  --light: var(--text-light);
-  --dark: var(--bg-deep);
-  --gray: var(--text-muted-light);
-  --shadow-color: #000000;
-  --white: #FFFFFF;
-  --title-mid: #DDF3FF;
-  --title-end: #7CC9F5;
+
+  /* --- Estados Semánticos --- */
+  --success: #41B883;
+  --warning: #D9A441;
+  --danger: #D96464;
+  --quiz-correct: var(--success);
+  --quiz-incorrect: var(--danger);
+
+  /* --- Compatibilidad Legacy (Unidad 3.1, etc.) --- */
+  --azul: var(--primary);
+  --azul-oscuro: var(--bg-main);
+  --rojo: var(--danger);
+  --gris: var(--surface);
+  --borde: var(--border-color);
+  --texto: var(--text-light);
 }
