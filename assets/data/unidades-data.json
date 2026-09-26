@@ -1,0 +1,9 @@
+{
+  "titulo": "Unidades temáticas",
+  "descripcion": "Recorre las unidades en orden: cada una retoma lo aprendido en la anterior y cierra con una actividad final que integra sus temas.",
+  "unidades": [
+    "unidad-01",
+    "unidad-02",
+    "unidad-03"
+  ]
+}
