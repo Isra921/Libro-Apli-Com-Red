@@ -1,0 +1,61 @@
+{
+  "id": "unidad-03",
+  "numero": 3,
+  "titulo": "Recursos Digitales No Lineales",
+  "descripcion": "Analizar y programar recursos digitales no lineales a partir de sus aplicaciones, organización y representaciones, permitiendo diseñar soluciones para problemas más complejos.",
+  "lema": "[Línea que sitúa la unidad dentro del curso y anticipa el producto de aprendizaje.]",
+  "duracion_horas": 27,
+
+  "introduccion": [
+    "[Primer párrafo de la introducción: contexto del tema, por qué importa en el ejercicio profesional y qué preguntas guía resolverá el estudiante.]",
+    "[Segundo párrafo: cómo se relaciona con la unidad anterior y qué conocimientos previos conviene repasar.]"
+  ],
+
+  "recorrido": "[Descripción del recorrido: en qué orden conviene leer los temas y qué actividad los cierra.]",
+
+  "temas": [
+    {
+      "numero": "3.1",
+      "nombre": "Árboles binarios",
+      "sintesis": "[Síntesis del tema en una línea: qué se explica y con qué recurso se apoya.]",
+      "url": "unidades/unidad-03/temas/tema-03-01.html",
+      "actividad": {
+        "nombre": "Actividad de aprendizaje 3.1",
+        "url": "unidades/unidad-03/actividades/actividad-3-1.html"
+      }
+    },
+    {
+      "numero": "3.2",
+      "nombre": "Tema provisional",
+      "sintesis": "[Síntesis del tema en una línea: qué se explica y con qué recurso se apoya.]",
+      "url": "",
+      "actividad": {
+        "nombre": "Actividad de aprendizaje 3.2",
+        "url": "unidades/unidad-03/actividades/actividad-3-2.html"
+      }
+    }
+  ],
+
+  "actividad_final": {
+    "nombre": "Actividad final de la Unidad III",
+    "descripcion": "Cierra la unidad integrando todos sus temas en un solo producto.",
+    "url": "unidades/unidad-03/actividades/actividad-final.html"
+  },
+
+  "objetivo": "[Verbo en infinitivo + objeto de conocimiento + condición y finalidad del aprendizaje.]",
+
+  "competencias": [
+    "[Competencia 1 redactada en términos observables.]",
+    "[Competencia 2 redactada en términos observables.]",
+    "[Competencia 3 redactada en términos observables.]"
+  ],
+
+  "video": {
+    "titulo": "Video de introducción a la Unidad III",
+    "url": "https://www.youtube.com/embed/kwnGrdaixaw"
+  },
+
+  "material_apoyo": [
+    { "nombre": "Referencias de la unidad", "url": "unidades/unidad-03/referencias.html" }
+  ]
+}

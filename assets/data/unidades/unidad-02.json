@@ -1,0 +1,81 @@
+{
+  "id": "unidad-02",
+  "numero": 2,
+  "titulo": "Recursos Digitales Lineales",
+  "descripcion": "Analizar y programar diferentes tipos de recursos digitales lineales a partir de especificaciones genéricas, comprendiendo la forma en que se organizan los datos de manera secuencial.",
+  "lema": "[Línea que sitúa la unidad dentro del curso y anticipa el producto de aprendizaje.]",
+  "duracion_horas": 27,
+
+  "introduccion": [
+    "[Primer párrafo de la introducción: contexto del tema, por qué importa en el ejercicio profesional y qué preguntas guía resolverá el estudiante.]",
+    "[Segundo párrafo: cómo se relaciona con la unidad anterior y qué conocimientos previos conviene repasar.]"
+  ],
+
+  "recorrido": "[Descripción del recorrido: en qué orden conviene leer los temas y qué actividad los cierra.]",
+
+  "temas": [
+    {
+      "numero": "2.1",
+      "nombre": "Tema provisional",
+      "sintesis": "[Síntesis del tema en una línea: qué se explica y con qué recurso se apoya.]",
+      "url": "unidades/unidad-02/temas/tema-02-01.html",
+      "actividad": {
+        "nombre": "Actividad de aprendizaje 2.1",
+        "url": "unidades/unidad-02/actividades/actividad-2-1.html"
+      }
+    },
+    {
+      "numero": "2.2",
+      "nombre": "Tema provisional 2",
+      "sintesis": "[Síntesis del tema en una línea: qué se explica y con qué recurso se apoya.]",
+      "url": "",
+      "actividad": {
+        "nombre": "Actividad de aprendizaje 2.2",
+        "url": "unidades/unidad-02/actividades/actividad-2-2.html"
+      }
+    },
+    {
+      "numero": "2.3",
+      "nombre": "Tema prrovisionaln 3",
+      "sintesis": "[Síntesis del tema en una línea: qué se explica y con qué recurso se apoya.]",
+      "url": "",
+      "actividad": {
+        "nombre": "Actividad de aprendizaje 2.3",
+        "url": "unidades/unidad-02/actividades/actividad-2-3.html"
+      }
+    },
+    {
+      "numero": "2.4",
+      "nombre": "Tema provisional 4",
+      "sintesis": "[Síntesis del tema en una línea: qué se explica y con qué recurso se apoya.]",
+      "url": "",
+      "actividad": {
+        "nombre": "Actividad de aprendizaje 2.4",
+        "url": "unidades/unidad-02/actividades/actividad-2-4.html"
+      }
+    }
+  ],
+
+  "actividad_final": {
+    "nombre": "Actividad final de la Unidad II",
+    "descripcion": "Cierra la unidad integrando todos sus temas en un solo producto.",
+    "url": "unidades/unidad-02/actividades/actividad-final.html"
+  },
+
+  "objetivo": "[Verbo en infinitivo + objeto de conocimiento + condición y finalidad del aprendizaje.]",
+
+  "competencias": [
+    "[Competencia 1 redactada en términos observables.]",
+    "[Competencia 2 redactada en términos observables.]",
+    "[Competencia 3 redactada en términos observables.]"
+  ],
+
+  "video": {
+    "titulo": "Video de introducción a la Unidad II",
+    "url": "https://www.youtube.com/embed/-hjFMM17DHw"
+  },
+
+  "material_apoyo": [
+    { "nombre": "Referencias de la unidad", "url": "unidades/unidad-02/referencias.html" }
+  ]
+}

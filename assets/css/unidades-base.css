@@ -1,0 +1,305 @@
+/* ==========================================================================
+   BASE COMPARTIDA · Catálogo de unidades y plantilla de unidad
+   Usa exclusivamente la paleta de variables.css.
+   Prefijo "u-" para no chocar con estilos antiguos de otras páginas.
+   ========================================================================== */
+
+@import url("variables.css");
+
+:root {
+  /* Medidas de estas vistas */
+  --u-max-width: 1180px;
+  --u-gutter: clamp(16px, 4vw, 32px);
+  --u-gap: 24px;
+  --u-radius-card: 22px;
+  --u-radius-inner: 14px;
+  --u-nav-offset: 104px;
+  --u-sidebar-width: 320px;
+
+  /* Superficies derivadas de la paleta */
+  --u-card-bg: linear-gradient(160deg,
+      color-mix(in srgb, var(--surface) 55%, var(--bg-main)),
+      var(--bg-main));
+  --u-card-border: color-mix(in srgb, var(--text-light) 10%, transparent);
+  --u-card-border-hover: color-mix(in srgb, var(--primary) 45%, transparent);
+  --u-inset: color-mix(in srgb, var(--bg-deep) 45%, transparent);
+  --u-shadow: 0 1px 0 color-mix(in srgb, var(--text-light) 8%, transparent) inset,
+              0 18px 40px -18px color-mix(in srgb, var(--shadow-color) 60%, transparent);
+  --u-shadow-hover: 0 1px 0 color-mix(in srgb, var(--text-light) 12%, transparent) inset,
+                    0 28px 50px -20px color-mix(in srgb, var(--shadow-color) 70%, transparent);
+  --u-ease: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Texto de elementos bloqueados (temas y actividades aún no disponibles) */
+  --u-disabled-text: color-mix(in srgb, var(--text-muted) 55%, transparent);
+}
+
+/* ---------- Página ---------- */
+body.u-body {
+  background:
+    radial-gradient(900px 480px at 85% -10%, color-mix(in srgb, var(--primary) 14%, transparent), transparent 70%),
+    radial-gradient(700px 420px at -10% 10%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 70%),
+    var(--bg-deep);
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.u-page {
+  width: 100%;
+  max-width: calc(var(--u-max-width) + 2 * var(--u-gutter));
+  margin: 0 auto;
+  padding: var(--u-nav-offset) var(--u-gutter) 56px;
+  flex: 1;
+}
+
+.u-sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0);
+  white-space: nowrap; border: 0;
+}
+
+/* Tipografía: se hereda de global.css (la misma del inicio). Los botones no heredan la fuente por defecto. */
+:where(.u-page) button { font-family: inherit; }
+
+:where(.u-page) a:focus-visible,
+:where(.u-page) button:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+/* ---------- Migas de pan ---------- */
+.u-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  font-size: .85rem;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+.u-breadcrumb a { color: var(--text-muted); }
+.u-breadcrumb a:hover { color: var(--primary); }
+.u-breadcrumb [aria-current] { color: var(--text-light); font-weight: 700; }
+.u-breadcrumb span[aria-hidden] { opacity: .5; }
+
+/* ---------- Textos auxiliares ---------- */
+.u-eyebrow {
+  margin: 0 0 6px;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.u-muted { color: var(--text-muted); margin: 0 0 18px; }
+
+/* ---------- Numeral de unidad ---------- */
+.u-numeral {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.u-numeral__label {
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.u-numeral__value {
+  font-weight: 700;
+  font-size: 3rem;
+  letter-spacing: -.02em;
+  background: linear-gradient(135deg, var(--title-mid), var(--title-end) 55%, var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Botones ---------- */
+.u-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 12px 22px;
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  font-size: .9rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .25s var(--u-ease), box-shadow .25s var(--u-ease), background .2s ease, border-color .2s ease, color .2s ease;
+}
+/* Botón principal: idéntico al CTA "Ver unidades" del inicio (inicio.css · .cta-button) */
+.u-btn--primary {
+  padding: 14px 26px;
+  border: 0;
+  background: var(--cta-bg);
+  color: var(--footer-bg);
+  font-size: 1.125rem;
+  font-weight: 700;
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--shadow-color) 22%, transparent);
+  transition: all .3s ease;
+}
+.u-btn--primary:hover {
+  background: var(--cta-hover);
+  color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--shadow-color) 20%, transparent);
+}
+.u-btn--primary i { transition: transform .3s ease; }
+.u-btn--primary:hover i { transform: translateX(5px); }
+.u-btn--primary:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+.u-btn.is-pending {
+  background: var(--u-inset);
+  color: var(--text-muted);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* ---------- Chips y etiquetas ---------- */
+.u-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--u-inset);
+  border: 1px solid var(--u-card-border);
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.u-chip i { color: var(--primary); }
+.u-chip--soft { background: var(--primary-soft); color: var(--text-light); }
+.u-chip--accent { background: var(--accent-soft); color: var(--text-light); }
+.u-chip--accent i { color: var(--accent); }
+
+.u-pending-label {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--warning) 18%, transparent);
+  color: var(--warning);
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+/* ---------- Selector de vista (Tarjetas / Lista) · compartido ---------- */
+.u-view-toggle {
+  display: inline-flex;
+  padding: 4px;
+  gap: 4px;
+  border-radius: var(--radius-pill);
+  background: var(--u-inset);
+  border: 1px solid var(--u-card-border);
+}
+.u-view-toggle button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: .8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease;
+}
+.u-view-toggle button:hover { color: var(--text-light); }
+.u-view-toggle button[aria-pressed="true"] {
+  background: var(--surface);
+  color: var(--text-light);
+  box-shadow: 0 4px 12px -4px color-mix(in srgb, var(--shadow-color) 50%, transparent);
+}
+
+@media (max-width: 600px) {
+  .u-view-toggle { width: 100%; }
+  .u-view-toggle button { flex: 1; justify-content: center; }
+}
+
+/* ---------- Mensajes de error / carga ---------- */
+.u-alert {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 22px 24px;
+  border-radius: var(--u-radius-card);
+  background: color-mix(in srgb, var(--danger) 14%, var(--bg-main));
+  border: 1px solid color-mix(in srgb, var(--danger) 45%, transparent);
+  grid-column: 1 / -1;
+}
+.u-alert p { margin: 0 0 6px; }
+.u-alert__icon { color: var(--danger); font-size: 1.4rem; margin-top: 2px; }
+.u-alert__title { font-weight: 600; }
+.u-alert__file {
+  font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+  font-size: .85rem;
+  color: var(--text-muted);
+}
+
+.u-loading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-muted);
+  padding: 32px 0;
+  grid-column: 1 / -1;
+}
+.u-loading::before {
+  content: "";
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  border-top-color: var(--primary);
+  animation: u-spin .8s linear infinite;
+}
+@keyframes u-spin { to { transform: rotate(360deg); } }
+
+/* ---------- Pie de página ---------- */
+.u-footer {
+  border-top: 1px solid var(--border-color);
+  background: var(--footer-bg);
+  color: var(--text-muted);
+  font-size: .8rem;
+}
+.u-footer__inner {
+  max-width: calc(var(--u-max-width) + 2 * var(--u-gutter));
+  margin: 0 auto;
+  padding: 20px var(--u-gutter);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
+.u-footer p { margin: 0; }
+
+/* ---------- Entrada suave ---------- */
+@keyframes u-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
