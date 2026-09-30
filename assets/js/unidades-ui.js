@@ -1,6 +1,6 @@
 // ==========================================================================
 // UNIDADES UI · Utilidades de interfaz compartidas
-// Usado por: unidades.html y unidades/unidad-XX/index.html
+// Usado por: unidades.html, unidades/unidad-XX/index.html y unidades/unidad-XX/temas/*.html
 // Depende de: data-manager.js
 // ==========================================================================
 
@@ -88,6 +88,36 @@ const UnidadesUI = {
                 </div>
             </div>`;
         contenedor.setAttribute('aria-busy', 'false');
+    },
+
+    /**
+     * Reproductor de video en un <dialog> (plantilla de unidad y de tema).
+     * El diálogo se crea la primera vez y se reutiliza. Al cerrarlo
+     * (botón, clic fuera o Esc) se detiene la reproducción.
+     */
+    abrirVideo({ url, titulo = 'Video' }) {
+        let dialogo = document.getElementById('videoModal');
+        if (!dialogo) {
+            document.body.insertAdjacentHTML('beforeend', `
+                <dialog class="u-video" id="videoModal">
+                    <div class="u-video__frame">
+                        <iframe allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <button class="u-video__close" type="button" aria-label="Cerrar video">
+                        <i class="fas fa-xmark" aria-hidden="true"></i>
+                    </button>
+                </dialog>`);
+            dialogo = document.getElementById('videoModal');
+            const frameNuevo = dialogo.querySelector('iframe');
+            dialogo.querySelector('.u-video__close').addEventListener('click', () => dialogo.close());
+            dialogo.addEventListener('click', e => { if (e.target === dialogo) dialogo.close(); });
+            dialogo.addEventListener('close', () => { frameNuevo.src = ''; });
+        }
+        const frame = dialogo.querySelector('iframe');
+        dialogo.setAttribute('aria-label', titulo);
+        frame.title = titulo;
+        frame.src = url;
+        dialogo.showModal();
     },
 
     VISTAS: { TARJETAS: 'tarjetas', LISTA: 'lista' },

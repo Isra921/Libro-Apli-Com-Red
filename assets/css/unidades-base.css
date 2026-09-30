@@ -273,6 +273,45 @@ body.u-body {
 }
 @keyframes u-spin { to { transform: rotate(360deg); } }
 
+/* ---------- Video (dialog nativo) · compartido por unidad y tema ---------- */
+.u-video {
+  width: min(960px, calc(100% - 32px));
+  padding: 0;
+  border: 1px solid var(--border-color);
+  border-radius: var(--u-radius-card);
+  background: var(--bg-main);
+  box-shadow: var(--u-shadow-hover);
+  overflow: visible;
+}
+.u-video::backdrop {
+  background: color-mix(in srgb, var(--bg-hero) 84%, transparent);
+  backdrop-filter: blur(4px);
+}
+.u-video__frame {
+  aspect-ratio: 16 / 9;
+  border-radius: var(--u-radius-card);
+  overflow: hidden;
+}
+.u-video__frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+.u-video__close {
+  position: absolute;
+  top: -14px; right: -14px;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: var(--surface);
+  color: var(--text-light);
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: background .2s ease;
+}
+.u-video__close:hover { background: var(--danger); }
+
+@media (max-width: 640px) {
+  .u-video__close { top: 8px; right: 8px; }
+}
+
 /* ---------- Pie de página ---------- */
 .u-footer {
   border-top: 1px solid var(--border-color);

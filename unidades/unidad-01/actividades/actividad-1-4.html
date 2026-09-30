@@ -1,162 +1,128 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividad de aprendizaje 1.4 | Aplicaciones para Comunicaciones en Red</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <link rel="stylesheet" href="../../../assets/css/variables.css">
   <link rel="stylesheet" href="../../../assets/css/global.css">
-  <link rel="stylesheet" href="../../../assets/css/actividades.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 1.4: Exploración exhaustiva y vuelta atrás</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+  <link rel="stylesheet" href="../../../assets/css/unidades-base.css?v=20260930">
+  <link rel="stylesheet" href="../../../assets/css/actividad.css">
+
   <link rel="icon" type="image/png" href="../../../assets/img/ESCOMB.png">
-  <link rel="shortcut icon" type="image/png" href="../../../assets/img/ESCOMB.png">
 </head>
-<body>
-    <header class="site-nav">
-        <a class="brand" href="../../../index.html">ESCOM · Polilibro académico<small>Aplicaciones para Comunicaciones en Red</small></a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" onclick="const nav=document.getElementById('main-navigation'); nav.classList.toggle('is-open'); this.setAttribute('aria-expanded', nav.classList.contains('is-open'));">
-            <span class="sr-only">Abrir navegación</span><i class="fas fa-bars" aria-hidden="true"></i>
-        </button>
-        <nav id="main-navigation" aria-label="Navegación principal">
-            <a href="../../../index.html"><i class="fas fa-home" aria-hidden="true"></i> Inicio</a>
-            <a class="active" href="../../../unidades.html"><i class="fas fa-book-open" aria-hidden="true"></i> Unidades</a>
-            <a href="../referencias.html"><i class="fas fa-bookmark" aria-hidden="true"></i> Referencias</a>
-        </nav>
-    </header>
-    <div class="reading-progress"><div class="reading-progress-bar" id="readingProgressBar"></div></div>
 
-    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+<!--
+  PLANTILLA DE ACTIVIDAD DE APRENDIZAJE
+  - data-unidad: JSON de la unidad (sin .json) · data-tema: "numero" del tema al que pertenece la actividad
+  - data-preguntas: banco de preguntas (ruta desde la raíz) · data-cantidad: preguntas por intento (al azar)
+  - El ejercicio, "Otras actividades" y la navegación inferior se generan solos.
+  Ver assets/data/unidades/LEEME.md
+-->
+<body class="u-body" data-root="../../../" data-unidad="unidad-01" data-tema="1.4"
+  data-preguntas="assets/data/unidad-1/preguntas_1.4.json" data-cantidad="10">
 
-    <a href="../../../index.html" class="floating-home-btn" title="Ir al inicio"><i class="fas fa-home"></i></a>
+  <header class="site-nav">
+    <a class="brand" href="../../../index.html">ESCOM · Polilibro académico<small>Aplicaciones para Comunicaciones en Red</small></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+      <span class="u-sr-only">Abrir navegación</span><i class="fas fa-bars" aria-hidden="true"></i>
+    </button>
+    <nav id="main-navigation" aria-label="Navegación principal">
+      <a href="../../../index.html"><i class="fas fa-home" aria-hidden="true"></i> Inicio</a>
+      <a class="active" href="../../../unidades.html"><i class="fas fa-book-open" aria-hidden="true"></i> Unidades</a>
+      <a href="../referencias.html"><i class="fas fa-bookmark" aria-hidden="true"></i> Referencias</a>
+    </nav>
+  </header>
 
-    <div class="sidebar-overlay" id="sidebarOverlay"></div>
-
-    <nav class="sidebar-nav" id="sidebarNav">
-        <div class="sidebar-header">
-            <div class="sidebar-title">1.4 Exploración exhaustiva</div>
-            <div class="sidebar-subtitle">Búsqueda completa y backtracking</div>
-        </div>
-        <div class="nav-sections">
-            <div class="nav-section">
-                <div class="nav-section-title">Navegación</div>
-                <a href="../../../index.html" class="nav-item"><i class="fas fa-home"></i> Menú principal</a>
-                <a href="../temas/tema-01-01.html" class="nav-item"><i class="fas fa-book-open"></i> Volver al material</a>
-            </div>
-            <div class="nav-section">
-                <div class="nav-section-title">Otras Actividades</div>
-                <a href="actividad-1-1.html" class="nav-item"><i class="fas fa-tasks"></i> Actividad 1.1</a>
-                <a href="actividad-1-2.html" class="nav-item"><i class="fas fa-tasks"></i> Actividad 1.2</a>
-                <a href="actividad-1-3.html" class="nav-item"><i class="fas fa-tasks"></i> Actividad 1.3</a>
-            </div>
-        </div>
+  <main class="u-page">
+    <nav class="u-breadcrumb" aria-label="Ruta de navegación">
+      <a href="../../../index.html">Inicio</a>
+      <span aria-hidden="true">/</span>
+      <a href="../../../unidades.html">Unidades</a>
+      <span aria-hidden="true">/</span>
+      <a href="../index.html">Unidad I</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">Actividad de aprendizaje 1.4</span>
     </nav>
 
-    <button class="scroll-to-top" id="scrollToTop"><i class="fas fa-chevron-up"></i></button>
+    <div class="a-layout">
+      <div class="a-main">
+        <header class="a-card a-head">
+          <div class="a-head__top">
+            <span class="a-badge">Actividad de aprendizaje</span>
+            <span class="a-head__where">Unidad I · 1.4</span>
+          </div>
+          <h1 class="a-title">Actividad de aprendizaje 1.4</h1>
+          <p class="a-purpose">Refuerza los conceptos del tema 1.4 <strong>Exploración exhaustiva y vuelta atrás</strong> con preguntas de opción múltiple. Cada respuesta recibe retroalimentación inmediata.</p>
+          <ul class="a-chips" aria-label="Datos de la actividad">
+            <li class="u-chip u-chip--soft"><i class="fas fa-shapes" aria-hidden="true"></i> Tipo: interactiva</li>
+            <li class="u-chip u-chip--soft"><i class="fas fa-list-ol" aria-hidden="true"></i> Preguntas: <strong id="totalPreguntas">10</strong></li>
+            <li class="u-chip u-chip--soft"><i class="far fa-clock" aria-hidden="true"></i> Duración estimada: 10 min</li>
+            <li class="u-chip u-chip--soft"><i class="fas fa-rotate" aria-hidden="true"></i> Intentos: ilimitados</li>
+            <li class="u-chip a-chip--outline">Sin valor en la calificación</li>
+            <li class="u-chip u-chip--accent" id="ultimoResultado" hidden><i class="fas fa-chart-simple" aria-hidden="true"></i> Último resultado: <strong></strong></li>
+          </ul>
+        </header>
 
-    <div class="container">
-        <div class="header">
-            <div class="breadcrumb">
-                <a href="https://escomisr.github.io/Libro_Digital_SO/index.html"><i class="fas fa-home"></i>Inicio</a>
-                <span>/</span>
-                <a href="../../../index.html">Unidad 1</a>                
-                <span>/</span>
-                <a href="../temas/tema-01-01.html">1.4 Exploración exhaustiva y vuelta atrás</a>
-                <span>/</span>
-                <span>Batalla de Exploración</span>
-            </div>
-            <h1> Batalla de Exploración y Vuelta Atrás</h1>
-            <div class="subtitle">¡Derrota al Laberinto Viviente evaluando todas las opciones!</div>
-        </div>
+        <section class="a-card" aria-labelledby="instruccionesTitulo">
+          <h2 class="a-card__title" id="instruccionesTitulo">Instrucciones</h2>
+          <ol class="a-steps">
+            <li>Repasa el tema 1.4 antes de responder; cada intento toma 10 preguntas al azar del banco del tema.</li>
+            <li>Lee cada pregunta, elige tu respuesta y pulsa <strong>Comprobar respuesta</strong>. Con <strong>Reiniciar</strong> comienzas un intento nuevo.</li>
+            <li>Lee la retroalimentación: si fallas, verás la respuesta correcta y dónde repasar el concepto. Al final obtendrás tu resultado.</li>
+          </ol>
+        </section>
 
-        <div class="instructions">
-            <h3><i class="fas fa-gamepad"></i> Instrucciones de Batalla</h3>
-            <ul>
-                <li><strong>Misión:</strong> Responde correctamente preguntas sobre exploración exhaustiva y programación por vuelta atrás.</li>
-                <li><strong>Mecánica:</strong> Cada respuesta correcta hace 1 punto de daño. Cada incorrecta suma un error.</li>
-                <li><strong>Victoria:</strong> Reduce la vida del guardián a 0 HP contestando correctamente las 8 preguntas.</li>
-                <li><strong>Derrota:</strong> Llegas a 3 errores antes de derrotarlo.</li>
-                <li><strong>Estrategia:</strong> Lee cuidadosamente y selecciona una opción en cada desafío.</li>
-            </ul>
-        </div>
+        <section class="a-card a-exercise" aria-labelledby="ejercicioTitulo">
+          <div class="a-exercise__bar">
+            <h2 class="a-exercise__label" id="ejercicioTitulo">Ejercicio</h2>
+            <span class="a-exercise__count" id="ejercicioContador" aria-live="polite"></span>
+          </div>
+          <div class="a-exercise__body" id="ejercicio" aria-busy="true">
+            <p class="u-loading">Cargando preguntas…</p>
+          </div>
+        </section>
 
-        <div class="battle-arena">
-            <div class="monster-section">
-                <div class="monster-avatar" id="monsterAvatar"></div>
-                <div class="monster-name">Laberinto Viviente</div>
-                <div class="health-bar-container">
-                    <div class="health-bar" id="healthBar" style="width: 100%;"></div>
-                </div>
-                <div class="health-text" id="healthText">8 / 8 HP</div>
-            </div>
+        <div id="retroalimentacion" aria-live="polite"></div>
 
-            <div class="player-stats">
-                <div class="stat-card">
-                    <div class="stat-value" id="timerValue">0s</div>
-                    <div class="stat-label"><i class="fas fa-clock"></i> Tiempo</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value" id="attemptsValue">0</div>
-                    <div class="stat-label"><i class="fas fa-sword"></i> Ataques</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value" id="errorsValue">0 / 3</div>
-                    <div class="stat-label"><i class="fas fa-skull"></i> Errores</div>
-                    <div class="error-indicators" id="errorIndicators">
-                        <div class="error-dot"></div>
-                        <div class="error-dot"></div>
-                        <div class="error-dot"></div>
-                    </div>
-                </div>
-            </div>
+        <!-- Se genera desde el JSON; este enlace es solo de respaldo -->
+        <nav class="a-pager" id="actividadNavegacion" aria-label="Navegación de la actividad">
+          <a class="a-pager__prev" href="../index.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Volver a la unidad</a>
+        </nav>
+      </div>
 
-            <div class="questions-section">
-                <h3><i class="fas fa-route"></i> Desafíos de Exploración</h3>
-                <div id="questionsContainer"></div>
-            </div>
+      <aside class="a-sidebar" aria-label="Información de la actividad">
+        <section class="a-side-card a-side-card--dark" aria-labelledby="antesTitulo">
+          <p class="a-side-title" id="antesTitulo">Antes de empezar</p>
+          <p class="a-side-text">Esta actividad refuerza el aprendizaje; no requiere entrega de evidencia.</p>
+          <a class="a-side-link" id="enlaceRepaso" href="../index.html"><i class="fas fa-book-open" aria-hidden="true"></i> <span>Repasar la unidad</span></a>
+        </section>
 
-            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-
-            <div class="battle-controls">
-                <button class="btn btn-attack" onclick="attack()" id="attackBtn">
-                    <i class="fas fa-bolt"></i> ¡ATACAR!
-                </button>
-                <button class="btn btn-secondary" onclick="resetBattle()">
-                    <i class="fas fa-redo"></i> Nueva Batalla
-                </button>
-                <button class="btn btn-secondary" onclick="showSolutions()">
-                    <i class="fas fa-lightbulb"></i> Ver Respuestas
-                </button>
-                <button class="btn btn-secondary" type="button"
-    onclick="typeof descargarResultadosPDF === 'function'
-        ? descargarResultadosPDF()
-        : alert('No se cargó generar-pdf-resultados.js')">
-    <i class="fas fa-file-pdf"></i> Descargar resultados PDF
-</button>
-            </div>
-
-            <div class="game-status" id="gameStatus"></div>
-        </div>
-
-        <div class="navigation">
-            <a href="../temas/tema-01-01.html" class="btn btn-success">
-                <i class="fas fa-arrow-left"></i> Volver al Material
-            </a>
-            <div class="nav-center">
-                <a href="../../../index.html" class="btn btn-secondary">
-                    <i class="fas fa-home"></i> Menú Principal
-                </a>
-            </div>
-            <a href="../../../index.html" class="btn btn-success">
-                Finalizar Unidad <i class="fas fa-flag-checkered"></i>
-            </a>
-        </div>
+        <nav class="a-side-card" aria-labelledby="otrasTitulo">
+          <p class="a-side-title" id="otrasTitulo">Otras actividades</p>
+          <div id="otrasActividades">
+            <a class="a-side-item" href="../index.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Volver a la unidad</a>
+          </div>
+        </nav>
+      </aside>
     </div>
+  </main>
 
-    
-<script src="../../../assets/js/original/UNIDAD_1_generar-pdf-resultados.js"></script>
-  <script src="../../../assets/js/paginas/unidades_unidad-01_actividades_actividad-1-4.js"></script>
+  <footer class="u-footer">
+    <div class="u-footer__inner">
+      <p>Aplicaciones para Comunicaciones en Red · Polilibro académico · ESCOM-IPN</p>
+      <p>Desarrollado con fines educativos · © 2026</p>
+    </div>
+  </footer>
+
   <script src="../../../assets/js/nav-global.js"></script>
+  <script src="../../../assets/js/data-manager.js?v=20260930"></script>
+  <script src="../../../assets/js/unidades-ui.js?v=20260930"></script>
+  <script src="../../../assets/js/paginas/actividad-plantilla.js"></script>
 </body>
-</html>
 
+</html>

@@ -280,39 +280,15 @@
             </nav>`;
     }
 
-    function dialogoVideo(unidad) {
-        if (!unidad.video || !unidad.video.url) return '';
-        const titulo = UI.esc(unidad.video.titulo || 'Video de la unidad');
-        return `
-            <dialog class="u-video" id="videoModal" aria-label="${titulo}">
-                <div class="u-video__frame">
-                    <iframe id="videoFrame" title="${titulo}"
-                        allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <button class="u-video__close" type="button" id="btnCerrarVideo" aria-label="Cerrar video">
-                    <i class="fas fa-xmark" aria-hidden="true"></i>
-                </button>
-            </dialog>`;
-    }
-
     // ---------- Interacción ----------
 
     function iniciarVideo(unidad) {
         const boton = document.getElementById('btnVideo');
-        const dialogo = document.getElementById('videoModal');
-        const frame = document.getElementById('videoFrame');
-        const cerrar = document.getElementById('btnCerrarVideo');
-        if (!boton || !dialogo || !frame) return;
-
-        boton.addEventListener('click', () => {
-            frame.src = unidad.video.url;
-            dialogo.showModal();
-        });
-        cerrar.addEventListener('click', () => dialogo.close());
-        // Clic fuera del video = cerrar.
-        dialogo.addEventListener('click', e => { if (e.target === dialogo) dialogo.close(); });
-        // Al cerrar (botón, clic fuera o Esc) se detiene la reproducción.
-        dialogo.addEventListener('close', () => { frame.src = ''; });
+        if (!boton) return;
+        boton.addEventListener('click', () => UI.abrirVideo({
+            url: unidad.video.url,
+            titulo: unidad.video.titulo || 'Video de la unidad'
+        }));
     }
 
     /**
@@ -376,8 +352,7 @@
                     </div>
                     ${lateral(unidad)}
                 </div>
-                ${navegacionUnidades(unidad, todas)}
-                ${dialogoVideo(unidad)}`;
+                ${navegacionUnidades(unidad, todas)}`;
 
             app.setAttribute('aria-busy', 'false');
 

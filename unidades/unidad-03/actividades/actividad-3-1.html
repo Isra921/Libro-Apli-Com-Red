@@ -1,335 +1,128 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividad de aprendizaje 3.1 | Aplicaciones para Comunicaciones en Red</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <link rel="stylesheet" href="../../../assets/css/variables.css">
   <link rel="stylesheet" href="../../../assets/css/global.css">
-  <link rel="stylesheet" href="../../../assets/css/actividades.css">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Actividad de aprendizaje 3.1 - Árboles binarios</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+  <link rel="stylesheet" href="../../../assets/css/unidades-base.css?v=20260930">
+  <link rel="stylesheet" href="../../../assets/css/actividad.css">
+
   <link rel="icon" type="image/png" href="../../../assets/img/ESCOMB.png">
-  <link rel="shortcut icon" type="image/png" href="../../../assets/img/ESCOMB.png">
 </head>
-  <body
-    class="activity-page"
-    data-activity-id="actividad_3_1"
-    data-unit="3"
-    data-activity-number="3.1"
-    data-topic-title="Árboles binarios"
-    data-question-file="../../../assets/data/unidad-3/preguntas_3_1.json"
-    data-total-questions="20"
-    data-time-limit-seconds="900"
-    data-return-url="../temas/tema-03-01.html"
-    data-unit-url="../index.html"
-    data-next-url="actividad-3-1.html"
-    data-next-label="3.1 Tema provisional"
-    data-storage-key="actividad_3_1_ultima_calificacion"
-  >
-    <header class="site-nav">
-        <a class="brand" href="../../../index.html">ESCOM · Polilibro académico<small>Aplicaciones para Comunicaciones en Red</small></a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" onclick="const nav=document.getElementById('main-navigation'); nav.classList.toggle('is-open'); this.setAttribute('aria-expanded', nav.classList.contains('is-open'));">
-            <span class="sr-only">Abrir navegación</span><i class="fas fa-bars" aria-hidden="true"></i>
-        </button>
-        <nav id="main-navigation" aria-label="Navegación principal">
-            <a href="../../../index.html"><i class="fas fa-home" aria-hidden="true"></i> Inicio</a>
-            <a class="active" href="../../../unidades.html"><i class="fas fa-book-open" aria-hidden="true"></i> Unidades</a>
-            <a href="../referencias.html"><i class="fas fa-bookmark" aria-hidden="true"></i> Referencias</a>
-        </nav>
-    </header>
-    <div class="reading-progress">
-      <div class="reading-progress-bar" id="readingProgressBar"></div>
-    </div>
 
-    <button
-      class="menu-toggle"
-      id="menuToggle"
-      type="button"
-      aria-label="Abrir menú de navegación"
-    >
-      <i class="fas fa-bars" aria-hidden="true"></i>
+<!--
+  PLANTILLA DE ACTIVIDAD DE APRENDIZAJE
+  - data-unidad: JSON de la unidad (sin .json) · data-tema: "numero" del tema al que pertenece la actividad
+  - data-preguntas: banco de preguntas (ruta desde la raíz) · data-cantidad: preguntas por intento (al azar)
+  - El ejercicio, "Otras actividades" y la navegación inferior se generan solos.
+  Ver assets/data/unidades/LEEME.md
+-->
+<body class="u-body" data-root="../../../" data-unidad="unidad-03" data-tema="3.1"
+  data-preguntas="assets/data/unidad-3/preguntas_3_1.json" data-cantidad="10">
+
+  <header class="site-nav">
+    <a class="brand" href="../../../index.html">ESCOM · Polilibro académico<small>Aplicaciones para Comunicaciones en Red</small></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+      <span class="u-sr-only">Abrir navegación</span><i class="fas fa-bars" aria-hidden="true"></i>
     </button>
+    <nav id="main-navigation" aria-label="Navegación principal">
+      <a href="../../../index.html"><i class="fas fa-home" aria-hidden="true"></i> Inicio</a>
+      <a class="active" href="../../../unidades.html"><i class="fas fa-book-open" aria-hidden="true"></i> Unidades</a>
+      <a href="../referencias.html"><i class="fas fa-bookmark" aria-hidden="true"></i> Referencias</a>
+    </nav>
+  </header>
 
-    <a
-      href="../../../index.html"
-      class="floating-home-btn"
-      title="Ir a Unidad 3"
-      aria-label="Ir a Unidad 3"
-    >
-      <i class="fas fa-book-open" aria-hidden="true"></i>
-    </a>
-
-    <div class="sidebar-overlay" id="sidebarOverlay"></div>
-
-    <nav class="sidebar-nav" id="sidebarNav" aria-label="Navegación lateral">
-      <div class="sidebar-header">
-        <div class="sidebar-title">3.1 Árboles binarios</div>
-        <div class="sidebar-subtitle">Actividad de aprendizaje 3.1</div>
-      </div>
-      <div class="nav-sections">
-        <div class="nav-section">
-          <div class="nav-section-title">Navegación</div>
-          <a href="../../../index.html" class="nav-item"
-            ><i class="fas fa-home" aria-hidden="true"></i> Unidad 3</a
-          >
-          <a href="../temas/tema-03-01.html" class="nav-item"
-            ><i class="fas fa-book" aria-hidden="true"></i> Volver al tema
-            3.1</a
-          >
-        </div>
-        <div class="nav-section">
-          <div class="nav-section-title">Actividades de la unidad</div>
-          <a href="actividad-3-1.html" class="nav-item"
-            ><i class="fas fa-tasks" aria-hidden="true"></i> Actividad 3.1
-            Árboles binarios</a
-          >
-          <a href="actividad-3-1.html" class="nav-item"
-            ><i class="fas fa-tasks" aria-hidden="true"></i> Actividad 3.1
-            Tema provisional</a
-          >
-          <a href="actividad-final.html" class="nav-item"
-            ><i class="fas fa-flag-checkered" aria-hidden="true"></i> Actividad
-            Final</a
-          >
-        </div>
-      </div>
+  <main class="u-page">
+    <nav class="u-breadcrumb" aria-label="Ruta de navegación">
+      <a href="../../../index.html">Inicio</a>
+      <span aria-hidden="true">/</span>
+      <a href="../../../unidades.html">Unidades</a>
+      <span aria-hidden="true">/</span>
+      <a href="../index.html">Unidad III</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">Actividad de aprendizaje 3.1</span>
     </nav>
 
-    <button
-      class="scroll-to-top"
-      id="scrollToTop"
-      type="button"
-      aria-label="Volver al inicio de la página"
-    >
-      <i class="fas fa-chevron-up" aria-hidden="true"></i>
-    </button>
-
-    <div class="floating-timer is-hidden" id="floatingTimer" aria-live="polite">
-      <i class="fas fa-stopwatch" aria-hidden="true"></i>
-      <span>Tiempo restante:</span>
-      <strong id="floatingTimerValue">--:--</strong>
-    </div>
-
-    <div class="container">
-      <header class="header" id="inicio">
-        <nav class="breadcrumb" aria-label="Migas de pan">
-          <a href="../../../index.html"
-            ><i class="fas fa-home" aria-hidden="true"></i> Inicio</a
-          >
-          <span class="breadcrumb-separator">/</span>
-          <a href="../../../index.html">Unidad 3</a>
-          <span class="breadcrumb-separator">/</span>
-          <a href="../temas/tema-03-01.html">Árboles binarios</a>
-          <span class="breadcrumb-separator">/</span>
-          <span class="breadcrumb-current" aria-current="page"
-            >Actividad 3.1</span
-          >
-        </nav>
-        <h1>Actividad de aprendizaje 3.1</h1>
-        <div class="subtitle">Árboles binarios</div>
-      </header>
-
-      <section class="instructions" aria-labelledby="instructionsTitle">
-        <h2 id="instructionsTitle">
-          <i class="fas fa-list-check" aria-hidden="true"></i> Indicaciones de
-          la actividad
-        </h2>
-        <p>
-          Lee cuidadosamente cada pregunta y responde según el tipo de ejercicio
-          indicado. Antes de comenzar, verifica que tengas tiempo suficiente
-          para completar la actividad.
-        </p>
-        <ul class="instruction-types">
-          <li>
-            <span class="instruction-type-icon" aria-hidden="true"
-              ><i class="fas fa-list-ul"></i></span
-            ><span
-              ><strong>Opción múltiple:</strong> elige una sola respuesta
-              correcta.</span
-            >
-          </li>
-          <li>
-            <span class="instruction-type-icon" aria-hidden="true"
-              ><i class="fas fa-pen-to-square"></i></span
-            ><span
-              ><strong>Completar oración:</strong> selecciona las palabras que
-              completan correctamente el enunciado.</span
-            >
-          </li>
-          <li>
-            <span class="instruction-type-icon" aria-hidden="true"
-              ><i class="fas fa-circle-check"></i></span
-            ><span
-              ><strong>Verdadero o falso:</strong> indica si la afirmación es
-              correcta o incorrecta.</span
-            >
-          </li>
-          <li>
-            <span class="instruction-type-icon" aria-hidden="true"
-              ><i class="fas fa-arrow-down-wide-short"></i></span
-            ><span
-              ><strong>Ordenar oración:</strong> acomoda las palabras para
-              formar una oración coherente.</span
-            >
-          </li>
-        </ul>
-      </section>
-
-      <main class="activity-panel" id="actividad">
-        <div class="evaluation-overview">
-          <div class="evaluation-icon" id="caseAvatar" aria-hidden="true">
-            <i class="fas fa-clipboard-list"></i>
+    <div class="a-layout">
+      <div class="a-main">
+        <header class="a-card a-head">
+          <div class="a-head__top">
+            <span class="a-badge">Actividad de aprendizaje</span>
+            <span class="a-head__where">Unidad III · 3.1</span>
           </div>
-          <div class="evaluation-copy">
-            <div class="case-name">Preguntas de evaluación</div>
-            <div
-              class="evaluation-meta"
-              role="list"
-              aria-label="Datos de la evaluación"
-            >
-              <div class="evaluation-chip" role="listitem">
-                <i class="fas fa-list-ol" aria-hidden="true"></i>
-                <span
-                  >Total de preguntas:
-                  <strong id="totalQuestionsValue">20</strong></span
-                >
-              </div>
-              <div class="evaluation-chip" role="listitem">
-                <i class="fas fa-clock" aria-hidden="true"></i>
-                <span
-                  >Tiempo disponible:
-                  <strong id="timeAvailableValue">15 min</strong></span
-                >
-              </div>
-              <div class="evaluation-chip" role="listitem">
-                <i class="fas fa-circle-info" aria-hidden="true"></i>
-                <span
-                  >ltima calificación:
-                  <strong id="lastGradeValue">Sin calificación</strong></span
-                >
-              </div>
-            </div>
-            <div class="start-activity-wrap">
-              <button
-                class="btn btn-start-activity"
-                id="startActivityBtn"
-                type="button"
-              >
-                <i class="fas fa-play" aria-hidden="true"></i> Comenzar
-                actividad
-              </button>
-              <button
-                class="btn btn-start-activity is-hidden"
-                id="resetActivityBtn"
-                type="button"
-              >
-                <i class="fas fa-rotate-right" aria-hidden="true"></i> Intentar
-                de nuevo
-              </button>
-            </div>
-          </div>
-        </div>
+          <h1 class="a-title">Actividad de aprendizaje 3.1</h1>
+          <p class="a-purpose">Refuerza los conceptos del tema 3.1 <strong>Árboles binarios</strong> con preguntas de opción múltiple, completar oraciones, verdadero o falso y ordenar oraciones. Cada respuesta recibe retroalimentación inmediata.</p>
+          <ul class="a-chips" aria-label="Datos de la actividad">
+            <li class="u-chip u-chip--soft"><i class="fas fa-shapes" aria-hidden="true"></i> Tipo: interactiva</li>
+            <li class="u-chip u-chip--soft"><i class="fas fa-list-ol" aria-hidden="true"></i> Preguntas: <strong id="totalPreguntas">10</strong></li>
+            <li class="u-chip u-chip--soft"><i class="far fa-clock" aria-hidden="true"></i> Duración estimada: 10 min</li>
+            <li class="u-chip u-chip--soft"><i class="fas fa-rotate" aria-hidden="true"></i> Intentos: ilimitados</li>
+            <li class="u-chip a-chip--outline">Sin valor en la calificación</li>
+            <li class="u-chip u-chip--accent" id="ultimoResultado" hidden><i class="fas fa-chart-simple" aria-hidden="true"></i> Último resultado: <strong></strong></li>
+          </ul>
+        </header>
 
-        <section
-          class="questions-section is-hidden"
-          id="questionsSection"
-          aria-label="Preguntas de la actividad"
-        >
-          <div id="questionsContainer"></div>
+        <section class="a-card" aria-labelledby="instruccionesTitulo">
+          <h2 class="a-card__title" id="instruccionesTitulo">Instrucciones</h2>
+          <ol class="a-steps">
+            <li>Repasa el tema 3.1 antes de responder; cada intento toma 10 preguntas al azar del banco del tema.</li>
+            <li>Lee cada pregunta, elige tu respuesta y pulsa <strong>Comprobar respuesta</strong>. Con <strong>Reiniciar</strong> comienzas un intento nuevo.</li>
+            <li>Lee la retroalimentación: si fallas, verás la respuesta correcta y dónde repasar el concepto. Al final obtendrás tu resultado.</li>
+          </ol>
         </section>
 
-        <div class="activity-controls is-hidden" id="activityControls">
-          <button class="btn btn-evaluate" id="evaluateBtn" type="button">
-            <i class="fas fa-check-circle" aria-hidden="true"></i> Evaluar
-            respuestas
-          </button>
-        </div>
-
-        <div class="game-status" id="gameStatus" aria-live="polite"></div>
-        <div class="retry-controls is-hidden" id="retryControls">
-          <button
-            class="btn btn-secondary"
-            id="resetActivityBottomBtn"
-            type="button"
-          >
-            <i class="fas fa-rotate-right" aria-hidden="true"></i> Intentar de
-            nuevo
-          </button>
-        </div>
-      </main>
-
-      <div
-        class="activity-modal-overlay is-hidden"
-        id="unansweredModal"
-        aria-hidden="true"
-      >
-        <div
-          class="activity-modal"
-          role="dialog"
-          aria-modal="true"
-          aria-describedby="unansweredModalMessage"
-          aria-label="Preguntas sin responder"
-          tabindex="-1"
-        >
-          <p id="unansweredModalMessage">
-            Hay preguntas sin responder. Si continúas, se contarán como
-            incorrectas. ¿Deseas evaluar ahora?
-          </p>
-          <div class="activity-modal-actions">
-            <button
-              class="btn btn-secondary"
-              id="continueAnsweringBtn"
-              type="button"
-            >
-              Seguir respondiendo
-            </button>
-            <button
-              class="btn btn-evaluate"
-              id="confirmEvaluateBtn"
-              type="button"
-            >
-              Evaluar respuestas
-            </button>
+        <section class="a-card a-exercise" aria-labelledby="ejercicioTitulo">
+          <div class="a-exercise__bar">
+            <h2 class="a-exercise__label" id="ejercicioTitulo">Ejercicio</h2>
+            <span class="a-exercise__count" id="ejercicioContador" aria-live="polite"></span>
           </div>
-        </div>
+          <div class="a-exercise__body" id="ejercicio" aria-busy="true">
+            <p class="u-loading">Cargando preguntas…</p>
+          </div>
+        </section>
+
+        <div id="retroalimentacion" aria-live="polite"></div>
+
+        <!-- Se genera desde el JSON; este enlace es solo de respaldo -->
+        <nav class="a-pager" id="actividadNavegacion" aria-label="Navegación de la actividad">
+          <a class="a-pager__prev" href="../index.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Volver a la unidad</a>
+        </nav>
       </div>
 
-      <nav class="navigation" aria-label="Navegación de la actividad">
-        <a href="../temas/tema-03-01.html" class="btn btn-nav" aria-label="Volver al tema 3.1">
-          <i class="fas fa-arrow-left" aria-hidden="true"></i> Volver al tema
-        </a>
-        <div class="nav-center">
-          <a
-            href="../../../index.html"
-            class="btn btn-secondary nav-unit-link"
-            aria-label="Ir a Unidad 3"
-          >
-            <i class="fas fa-book-open" aria-hidden="true"></i> Unidad 3
-          </a>
-        </div>
-        <a
-          href="actividad-3-1.html"
-          class="btn btn-nav"
-          aria-label="3.1 Tema provisional"
-        >
-          3.1 Tema provisional <i class="fas fa-arrow-right" aria-hidden="true"></i>
-        </a>
-      </nav>
+      <aside class="a-sidebar" aria-label="Información de la actividad">
+        <section class="a-side-card a-side-card--dark" aria-labelledby="antesTitulo">
+          <p class="a-side-title" id="antesTitulo">Antes de empezar</p>
+          <p class="a-side-text">Esta actividad refuerza el aprendizaje; no requiere entrega de evidencia.</p>
+          <a class="a-side-link" id="enlaceRepaso" href="../index.html"><i class="fas fa-book-open" aria-hidden="true"></i> <span>Repasar la unidad</span></a>
+        </section>
 
-      <footer>
-        <p>Contenidos y Estructuras de Datos - Unidad 3</p>
-        <p>Desarrollado para fines educativos - © 2026</p>
-      </footer>
+        <nav class="a-side-card" aria-labelledby="otrasTitulo">
+          <p class="a-side-title" id="otrasTitulo">Otras actividades</p>
+          <div id="otrasActividades">
+            <a class="a-side-item" href="../index.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Volver a la unidad</a>
+          </div>
+        </nav>
+      </aside>
     </div>
+  </main>
 
-    <script src="../../../assets/js/original/UNIDAD_3_js_actividades.js"></script>
-    <script src="../../../assets/js/original/UNIDAD_3_js_copiar-texto-plano.js"></script>
+  <footer class="u-footer">
+    <div class="u-footer__inner">
+      <p>Aplicaciones para Comunicaciones en Red · Polilibro académico · ESCOM-IPN</p>
+      <p>Desarrollado con fines educativos · © 2026</p>
+    </div>
+  </footer>
+
   <script src="../../../assets/js/nav-global.js"></script>
+  <script src="../../../assets/js/data-manager.js?v=20260930"></script>
+  <script src="../../../assets/js/unidades-ui.js?v=20260930"></script>
+  <script src="../../../assets/js/paginas/actividad-plantilla.js"></script>
 </body>
+
 </html>
-
-
