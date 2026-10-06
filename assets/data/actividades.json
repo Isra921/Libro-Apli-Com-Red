@@ -5,16 +5,16 @@
     {
       "id": "unidad-01",
       "pestana": "Unidad 1",
-      "titulo": "Unidad 1: Sockets Bloqueantes y Transporte",
-      "descripcion": "Actividades interactivas sobre servicios de transporte, sockets TCP/UDP bloqueantes y serialización.",
-      "nota": "Estas actividades refuerzan tu comprensión formativa y práctica de la programación de sockets.",
+      "titulo": "Unidad 1: Sockets bloqueantes",
+      "descripcion": "Actividades interactivas sobre servicios de transporte, modelo cliente-servidor, sockets TCP/UDP bloqueantes y serialización.",
+      "nota": "Estas actividades refuerzan tu comprensión formativa y práctica de la programación de sockets bloqueantes.",
       "items": [
         {
           "tag": "Tema 1.1",
           "reactivos": "5 reactivos",
           "tiempo": "15 min",
-          "titulo": "Actividad 1.1: Servicios de Transporte y Modelo Cliente-Servidor",
-          "descripcion": "Ejercicios interactivos sobre comunicación entre procesos y arquitectura cliente-servidor.",
+          "titulo": "Actividad 1.1: Servicios definidos en la capa de transporte",
+          "descripcion": "Ejercicios interactivos sobre funciones de transporte extremo a extremo, direccionamiento por puertos y control de flujo.",
           "url": "unidades/unidad-01/actividades/actividad-1-1.html",
           "icono": "fa-gamepad",
           "destacada": false
@@ -23,8 +23,8 @@
           "tag": "Tema 1.2",
           "reactivos": "5 reactivos",
           "tiempo": "15 min",
-          "titulo": "Actividad 1.2: Conexiones en el Dominio de Internet (TCP y UDP)",
-          "descripcion": "Prácticas de análisis comparativo entre protocolos orientados a conexión y datagramas sin conexión.",
+          "titulo": "Actividad 1.2: Modelo cliente-servidor",
+          "descripcion": "Prácticas de análisis sobre la arquitectura cliente-servidor y el ciclo de vida de conexión con llamadas al sistema.",
           "url": "unidades/unidad-01/actividades/actividad-1-2.html",
           "icono": "fa-gamepad",
           "destacada": false
@@ -33,8 +33,8 @@
           "tag": "Tema 1.3",
           "reactivos": "5 reactivos",
           "tiempo": "15 min",
-          "titulo": "Actividad 1.3: Sockets Orientados a Conexión Bloqueantes",
-          "descripcion": "Resolución de problemas sobre el ciclo de vida de sockets TCP y transmisión bidireccional.",
+          "titulo": "Actividad 1.3: Conexiones en el dominio de internet (TCP y UDP)",
+          "descripcion": "Resolución de problemas comparando sockets de flujo SOCK_STREAM frente a datagramas SOCK_DGRAM.",
           "url": "unidades/unidad-01/actividades/actividad-1-3.html",
           "icono": "fa-gamepad",
           "destacada": false
@@ -43,8 +43,8 @@
           "tag": "Tema 1.4",
           "reactivos": "5 reactivos",
           "tiempo": "20 min",
-          "titulo": "Actividad 1.4: Serialización de Datos",
-          "descripcion": "Aplicación de técnicas de serialización, formateo y ordenamiento de bytes en canales de red.",
+          "titulo": "Actividad 1.4: Sockets orientados a conexión bloqueantes",
+          "descripcion": "Programación práctica de servidores TCP bloqueantes con ServerSocket y transferencia bidireccional de streams.",
           "url": "unidades/unidad-01/actividades/actividad-1-4.html",
           "icono": "fa-gamepad",
           "destacada": false
@@ -53,9 +53,19 @@
           "tag": "Tema 1.5",
           "reactivos": "5 reactivos",
           "tiempo": "15 min",
-          "titulo": "Actividad 1.5: Sockets No Orientados a Conexión Bloqueantes",
-          "descripcion": "Ejercicios sobre el uso de sockets de datagrama UDP bloqueantes y delimitación de mensajes.",
+          "titulo": "Actividad 1.5: Serialización",
+          "descripcion": "Ejercicios sobre ordenamiento de bytes en red (Network Byte Order) y serialización de objetos estructurados.",
           "url": "unidades/unidad-01/actividades/actividad-1-5.html",
+          "icono": "fa-gamepad",
+          "destacada": false
+        },
+        {
+          "tag": "Tema 1.6",
+          "reactivos": "5 reactivos",
+          "tiempo": "15 min",
+          "titulo": "Actividad 1.6: Sockets no orientados a conexión bloqueantes",
+          "descripcion": "Transmisión y recepción de datagramas UDP mediante DatagramSocket en modo bloqueante.",
+          "url": "unidades/unidad-01/actividades/actividad-final.html",
           "icono": "fa-gamepad",
           "destacada": false
         },
@@ -74,16 +84,16 @@
     {
       "id": "unidad-02",
       "pestana": "Unidad 2",
-      "titulo": "Unidad 2: Arquitectura Multihilos y Sockets No Bloqueantes",
-      "descripcion": "Actividades prácticas con servidores concurrentes, sincronización, sockets no bloqueantes y multicast.",
-      "nota": "Pon a prueba tus habilidades de programación distribuida y optimización de canales de entrada/salida.",
+      "titulo": "Unidad 2: Arquitectura multihilos para servidores",
+      "descripcion": "Actividades prácticas con sincronía de hilos, servidores multihilo concurrentes y formatos de datos.",
+      "nota": "Pon a prueba tus habilidades de prevención de condiciones de carrera y concurrencia en servidores.",
       "items": [
         {
           "tag": "Tema 2.1",
           "reactivos": "5 reactivos",
           "tiempo": "15 min",
-          "titulo": "Actividad 2.1: Sincronía de Hilos y Concurrencia",
-          "descripcion": "Práctica de mecanismos de exclusión mutua, semáforos, candados y pools de hilos en servidores.",
+          "titulo": "Actividad 2.1: Sincronía de hilos",
+          "descripcion": "Práctica de mecanismos de exclusión mutua, secciones críticas, semáforos, candados y pools de hilos.",
           "url": "unidades/unidad-02/actividades/actividad-2-1.html",
           "icono": "fa-gamepad",
           "destacada": false
@@ -92,8 +102,8 @@
           "tag": "Tema 2.2",
           "reactivos": "5 reactivos",
           "tiempo": "15 min",
-          "titulo": "Actividad 2.2: Servidores Multihilos y Formatos de Datos",
-          "descripcion": "Diseño de servidores concurrentes y estructuración de mensajes en formatos estándar.",
+          "titulo": "Actividad 2.2: Multihilos",
+          "descripcion": "Diseño de arquitecturas de servidor concurrente (hilo por conexión y workers) y control de recursos.",
           "url": "unidades/unidad-02/actividades/actividad-2-2.html",
           "icono": "fa-gamepad",
           "destacada": false
@@ -102,19 +112,9 @@
           "tag": "Tema 2.3",
           "reactivos": "5 reactivos",
           "tiempo": "15 min",
-          "titulo": "Actividad 2.3: Sockets Orientados a Conexión No Bloqueantes",
-          "descripcion": "Análisis y configuración de canales de red no bloqueantes y multiplexación E/S.",
+          "titulo": "Actividad 2.3: Formatos de intercambio de datos",
+          "descripcion": "Estructuración de tramas de comunicación, formatos legibles por humanos (JSON/XML) y binarios.",
           "url": "unidades/unidad-02/actividades/actividad-2-3.html",
-          "icono": "fa-gamepad",
-          "destacada": false
-        },
-        {
-          "tag": "Tema 2.4",
-          "reactivos": "5 reactivos",
-          "tiempo": "20 min",
-          "titulo": "Actividad 2.4: Sockets de Multidifusión y Protocolo IGMP",
-          "descripcion": "Transmisión a grupos multicast, resolución de direcciones y control de membresía con IGMP.",
-          "url": "unidades/unidad-02/actividades/actividad-2-4.html",
           "icono": "fa-gamepad",
           "destacada": false
         },
@@ -122,8 +122,8 @@
           "tag": "Evaluación Integradora",
           "reactivos": "Reto integrador",
           "tiempo": "30 min",
-          "titulo": "Actividad Integradora de la Unidad 2",
-          "descripcion": "Desafío integrador de programación de sockets concurrentes y transmisión masiva en tiempo real.",
+          "titulo": "Actividad Integradora: Servicio de Mensajería Concurrente",
+          "descripcion": "Desafío de programación de un servidor multihilo con exclusión mutua y mensajería en red.",
           "url": "unidades/unidad-02/actividades/actividad-final.html",
           "icono": "fa-trophy",
           "destacada": true
@@ -133,16 +133,16 @@
     {
       "id": "unidad-03",
       "pestana": "Unidad 3",
-      "titulo": "Unidad 3: Protocolos de Aplicación, Java RMI y P2P",
-      "descripcion": "Actividades prácticas con protocolos estándar de aplicación, objetos remotos y redes descentralizadas.",
-      "nota": "Consolida las competencias de desarrollo de servicios distribuidos de alto nivel y arquitecturas P2P.",
+      "titulo": "Unidad 3: Sockets no bloqueantes",
+      "descripcion": "Actividades prácticas con canales no bloqueantes, multiplexación de E/S con selectores y multidifusión (Multicast).",
+      "nota": "Consolida las competencias de programación asíncrona de alto rendimiento y transmisión en grupo.",
       "items": [
         {
           "tag": "Tema 3.1",
           "reactivos": "5 reactivos",
           "tiempo": "15 min",
-          "titulo": "Actividad 3.1: Protocolos de la Capa de Aplicación",
-          "descripcion": "Evaluación formativa de protocolos estándar: DNS, DHCP, HTTP, FTP, SMTP y SNMP.",
+          "titulo": "Actividad 3.1: Sockets orientados a conexión no bloqueantes",
+          "descripcion": "Programación de canales SocketChannel, ServerSocketChannel y multiplexación con Selector.",
           "url": "unidades/unidad-03/actividades/actividad-3-1.html",
           "icono": "fa-gamepad",
           "destacada": false
@@ -150,10 +150,30 @@
         {
           "tag": "Tema 3.2",
           "reactivos": "5 reactivos",
-          "tiempo": "20 min",
-          "titulo": "Actividad 3.2: Invocación a Métodos Remotos (Java RMI)",
-          "descripcion": "Ejercicios sobre arquitectura RMI, generación de stubs, skeletons y publicación en RMIRegistry.",
+          "tiempo": "15 min",
+          "titulo": "Actividad 3.2: Sockets no orientados a conexión bloqueantes",
+          "descripcion": "Uso de canales DatagramChannel no bloqueantes para recepción asíncrona de datagramas UDP.",
           "url": "unidades/unidad-03/actividades/actividad-3-2.html",
+          "icono": "fa-gamepad",
+          "destacada": false
+        },
+        {
+          "tag": "Tema 3.3",
+          "reactivos": "5 reactivos",
+          "tiempo": "15 min",
+          "titulo": "Actividad 3.3: Multidifusión",
+          "descripcion": "Análisis de datagramas multicast, resolución lógica a física y protocolo de membresía IGMP.",
+          "url": "unidades/unidad-03/actividades/actividad-final.html",
+          "icono": "fa-gamepad",
+          "destacada": false
+        },
+        {
+          "tag": "Tema 3.4",
+          "reactivos": "5 reactivos",
+          "tiempo": "15 min",
+          "titulo": "Actividad 3.4: Sockets de multidifusión",
+          "descripcion": "Implementación práctica de aplicaciones de red con MulticastSocket y difusión en grupo.",
+          "url": "unidades/unidad-03/actividades/actividad-final.html",
           "icono": "fa-gamepad",
           "destacada": false
         },
@@ -161,8 +181,8 @@
           "tag": "Evaluación Integradora",
           "reactivos": "Reto integrador",
           "tiempo": "30 min",
-          "titulo": "Actividad Integradora de la Unidad 3",
-          "descripcion": "Reto integrador de protocolos de aplicación, servicios remotos RMI y redes Peer-to-Peer.",
+          "titulo": "Actividad Integradora: Servicio de Difusión y Sockets No Bloqueantes",
+          "descripcion": "Reto integrador que combina servidores con canales no bloqueantes y sockets multicast.",
           "url": "unidades/unidad-03/actividades/actividad-final.html",
           "icono": "fa-trophy",
           "destacada": true

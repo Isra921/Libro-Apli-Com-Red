@@ -1,23 +1,23 @@
 {
   "id": "unidad-03",
   "numero": 3,
-  "titulo": "Protocolos de Aplicación, Invocación Remota (RMI) y P2P",
-  "descripcion": "Construye aplicaciones distribuidas con base en especificaciones de protocolos de aplicación, interfaces de invocación a métodos remotos y modelos Peer-to-Peer.",
-  "lema": "Desarrolla servicios de red basados en estándares de aplicación, RMI y redes descentralizadas.",
-  "duracion_horas": 28,
+  "titulo": "Sockets no bloqueantes",
+  "descripcion": "Programa aplicaciones cliente-servidor, con base en el uso de sockets no bloqueantes y multidifusión.",
+  "lema": "Desarrolla canales de entrada/salida no bloqueantes con selectores y servicios de multidifusión multicast.",
+  "duracion_horas": 18,
 
   "introduccion": [
-    "La capa de aplicación representa la interfaz directa entre el usuario y la infraestructura de red. Comprender el funcionamiento interno de sus protocolos, así como los paradigmas de computación distribuida avanzada, permite construir sistemas robustos, interoperables y desacoplados.",
-    "En esta unidad estudiarás los protocolos esenciales de Internet (DNS, DHCP, HTTP, FTP, SMTP), implementarás esquemas de invocación a métodos remotos utilizando Java RMI y explorarás las arquitecturas descentralizadas Peer-to-Peer (P2P) para la compartición y enrutamiento distribuido de información."
+    "Cuando las aplicaciones de red deben escalar para atender miles de conexiones simultáneas (el desafío C10K), asignar un hilo por cada socket bloqueante resulta inviable debido al alto costo de memoria y conmutación de contexto. La entrada/salida no bloqueante y la multiplexación de canales permiten que un único hilo procese eficientemente múltiples conexiones activas.",
+    "Asimismo, la multidifusión (Multicast) proporciona un mecanismo eficiente para enviar un único flujo de datos a múltiples receptores suscritos a un grupo en la red sin duplicar tráfico en el emisor. En esta unidad aprenderás a programar sockets no bloqueantes orientados y no orientados a conexión, y a implementar servicios con sockets de multidifusión e IGMP."
   ],
 
-  "recorrido": "Comienza analizando la implementación de protocolos estándar de nivel de aplicación, continúa con la invocación remota mediante Java RMI y finaliza diseñando soluciones peer-to-peer descentralizadas.",
+  "recorrido": "Comienza estudiando la arquitectura de sockets orientados a conexión no bloqueantes y selectores, continúa con sockets no orientados a conexión, analiza la teoría y protocolos de multidifusión (IGMP) e implementa sockets de multidifusión en la actividad integradora.",
 
   "temas": [
     {
       "numero": "3.1",
-      "nombre": "Protocolos de la Capa de Aplicación",
-      "sintesis": "Protocolos orientados y no orientados a conexión: FTP, DNS, DHCP, HTTP, SMTP y SNMP.",
+      "nombre": "Sockets orientados a conexión no bloqueantes",
+      "sintesis": "Entrada/salida no bloqueante con SocketChannel, ServerSocketChannel, buffers de memoria y multiplexores (Selector).",
       "url": "unidades/unidad-03/temas/tema-03-01.html",
       "actividad": {
         "nombre": "Actividad de aprendizaje 3.1",
@@ -26,8 +26,8 @@
     },
     {
       "numero": "3.2",
-      "nombre": "Invocación a Métodos Remotos (Java RMI)",
-      "sintesis": "Arquitectura RMI, implementación de Stubs y Skeletons, registro de objetos remotos y RMIRegistry.",
+      "nombre": "Sockets no orientados a conexión bloqueantes",
+      "sintesis": "Operaciones con DatagramChannel, envío y recepción no bloqueante de datagramas sobre canales UDP.",
       "url": "",
       "actividad": {
         "nombre": "Actividad de aprendizaje 3.2",
@@ -36,32 +36,42 @@
     },
     {
       "numero": "3.3",
-      "nombre": "Arquitecturas y Aplicaciones P2P",
-      "sintesis": "Conectividad, enrutamiento descentralizado, seguridad, intercambio distribuido de archivos y telefonía P2P.",
+      "nombre": "Multidifusión",
+      "sintesis": "Conceptos de multicast: datagramas de multidifusión, resolución de direcciones lógicas (Clase D) a físicas y protocolo IGMP.",
       "url": "",
       "actividad": {
         "nombre": "Actividad de aprendizaje 3.3",
+        "url": "unidades/unidad-03/actividades/actividad-final.html"
+      }
+    },
+    {
+      "numero": "3.4",
+      "nombre": "Sockets de multidifusión",
+      "sintesis": "Programación con MulticastSocket, unión a grupos multicast (joinGroup), envío y recepción colaborativa de datos y audio.",
+      "url": "",
+      "actividad": {
+        "nombre": "Actividad de aprendizaje 3.4",
         "url": "unidades/unidad-03/actividades/actividad-final.html"
       }
     }
   ],
 
   "actividad_final": {
-    "nombre": "Actividad Integradora de la Unidad 3",
-    "descripcion": "Cierra la unidad integrando protocolos de aplicación, servicios remotos RMI y esquemas P2P.",
+    "nombre": "Servicio de Difusión y Sockets No Bloqueantes",
+    "descripcion": "Integra la multiplexación no bloqueante con selectores y la transmisión multicast en un reto práctico de red.",
     "url": "unidades/unidad-03/actividades/actividad-final.html"
   },
 
-  "objetivo": "Construir aplicaciones distribuidas con base en especificaciones de protocolos de la capa de aplicación, invocación a métodos remotos y modelos P2P de alta usabilidad con optimización de recursos.",
+  "objetivo": "Programa aplicaciones cliente-servidor, con base en el uso de sockets no bloqueantes y multidifusión.",
 
   "competencias": [
-    "Programa clientes y servidores implementando especificaciones de protocolos estándar de la capa de aplicación.",
-    "Construye sistemas distribuidos mediante interfaces de invocación a métodos remotos (Java RMI).",
-    "Diseña aplicaciones descentralizadas utilizando arquitecturas Peer-to-Peer para la gestión compartida de recursos."
+    "Diseña aplicaciones de red de alto rendimiento empleando canales no bloqueantes y selectores de eventos.",
+    "Implementa comunicación con sockets no orientados a conexión aprovechando canales asíncronos.",
+    "Construye servicios de difusión en red utilizando sockets de multidifusión y el protocolo IGMP."
   ],
 
   "video": {
-    "titulo": "Video de introducción a la Unidad III",
+    "titulo": "Video de introducción a la Unidad III: Sockets no bloqueantes",
     "url": "https://www.youtube.com/embed/kwnGrdaixaw"
   },
 

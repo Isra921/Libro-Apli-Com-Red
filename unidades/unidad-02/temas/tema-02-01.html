@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2.1 Tema provisional | Aplicaciones para Comunicaciones en Red</title>
+  <title>2.1 Sincronía de hilos | Aplicaciones para Comunicaciones en Red</title>
+  <meta name="description" content="Sincronía de hilos en servidores de red: instrucciones atómicas, sección crítica, candados (locks), exclusión mutua, semáforos y pools de hilos.">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="../../../assets/css/comun.css">
@@ -16,12 +17,13 @@
 
 <body class="u-body" data-root="../../../" data-unidad="unidad-02" data-tema="2.1">
 
+  <!-- Barra de navegación global unificada mediante componente dinámico -->
   <header class="site-nav" data-componente="navegacion"></header>
 
   <main class="u-page">
 
     <div class="t-layout">
-      <!-- Índice de la unidad: se genera desde el JSON; este contenido es solo de respaldo -->
+      <!-- Índice de la unidad: generado dinámicamente desde el JSON -->
       <aside class="t-index" aria-label="Contenido de la unidad">
         <div class="t-index__card">
           <div id="temaIndice">
@@ -39,28 +41,188 @@
         </div>
       </aside>
 
+      <!-- Artículo de lectura principal -->
       <article class="t-article">
         <p class="u-eyebrow">Unidad II · Tema 2.1</p>
-        <h1 class="t-title">Tema provisional</h1>
+        <h1 class="t-title">Sincronía de hilos</h1>
 
-        <p class="t-lead" id="idea-central" data-toc="Idea central">Contenido pendiente de aprobaci&oacute;n.</p>
+        <p class="t-lead" id="idea-central" data-toc="Idea central">
+          En los servidores de red concurrentes, la atención simultánea de múltiples clientes que leen y modifican recursos compartidos en memoria exige mecanismos rigurosos de sincronización para evitar condiciones de carrera y corrupción de datos.
+        </p>
 
         <div class="t-prose">
-          <p>Esta secci&oacute;n queda preparada para incorporar el contenido de la materia Aplicaciones para Comunicaciones en Red.</p>
+
+          <!-- Subtema 2.1.1 -->
+          <section id="instrucciones-atomicas" data-toc="2.1.1 Instrucciones atómicas">
+            <h2><span class="t-section__num">2.1.1</span>Instrucciones atómicas y coherencia de memoria</h2>
+            <p>
+              Una operación se considera <strong>atómica</strong> cuando se ejecuta como una unidad indivisible e ininterrumpible: o se completa en su totalidad o no se ejecuta en absoluto, sin que ningún otro hilo o procesador pueda observar un estado intermedio inconsistente.
+            </p>
+            <p>
+              En lenguajes de alto nivel como Java o C++, operaciones aparentemente simples como un incremento <code>contador++</code> <strong>no son atómicas</strong>. A nivel de máquina, este operador se descompone en tres instrucciones secuenciales distintas:
+            </p>
+            <ol>
+              <li><strong>Lectura (Read):</strong> Cargar el valor de la variable desde memoria RAM al registro del procesador.</li>
+              <li><strong>Modificación (Modify):</strong> Incrementar en 1 el valor en el registro de la CPU.</li>
+              <li><strong>Escritura (Write):</strong> Volcar el nuevo valor del registro a la memoria principal.</li>
+            </ol>
+            <p>
+              Si el planificador del sistema operativo realiza un cambio de contexto (<em>context switch</em>) entre la lectura y la escritura mientras otro hilo de red ejecuta la misma instrucción, se produce una pérdida de actualizaciones. Para resolver esto a nivel de hardware, se emplean primitivas atómicas del procesador como <em>Compare-And-Swap (CAS)</em>, implementadas en Java mediante clases como <code>AtomicInteger</code> o <code>AtomicLong</code>:
+            </p>
+
+            <pre><code>import java.util.concurrent.atomic.AtomicInteger;
+
+// Contador de conexiones activas completamente atómico y seguro entre hilos
+AtomicInteger clientesConectados = new AtomicInteger(0);
+
+// Incremento seguro garantizado a nivel de instrucción de máquina
+int actual = clientesConectados.incrementAndGet();</code></pre>
+          </section>
+
+          <!-- Subtema 2.1.2 -->
+          <section id="seccion-critica" data-toc="2.1.2 Sección crítica y condiciones de carrera">
+            <h2><span class="t-section__num">2.1.2</span>Sección crítica y condiciones de carrera en servidores de red</h2>
+            <p>
+              Una <strong>sección crítica</strong> es cualquier segmento de código que accede a una estructura de datos o recurso compartido (como la lista de clientes en un chat, la tabla de sesiones activas o un archivo de registro) donde al menos uno de los hilos realiza operaciones de escritura.
+            </p>
+            <p>
+              Cuando dos o más hilos concurrentes intentan entrar a la sección crítica y el resultado final depende del orden temporal impredecible de ejecución de sus instrucciones, se presenta una <strong>condición de carrera (Race Condition)</strong>.
+            </p>
+
+            <aside class="t-callout t-callout--warning">
+              <i class="fas fa-triangle-exclamation t-callout__icon" aria-hidden="true"></i>
+              <div>
+                <p class="t-callout__label">Peligro en servidores de red</p>
+                <p>Las condiciones de carrera son extremadamente elusivas: pueden manifestarse únicamente cuando el servidor se somete a altos volúmenes de tráfico concurrente, produciendo desconexiones espontáneas, valores duplicados o corrupción silenciosa de transacciones.</p>
+              </div>
+            </aside>
+          </section>
+
+          <!-- Subtema 2.1.3 -->
+          <section id="candados" data-toc="2.1.3 Candados (Locks)">
+            <h2><span class="t-section__num">2.1.3</span>Candados (Locks) y monitores</h2>
+            <p>
+              Para proteger una sección crítica, se implementan mecanismos de <strong>bloqueo (Locks)</strong>. Un hilo debe adquirir el cerrojo o llave antes de ingresar al bloque protegido; si el cerrojo ya se encuentra ocupado por otro hilo, el invocador se suspende hasta que el poseedor libere el candado.
+            </p>
+            <p>
+              En la plataforma Java, la sincronización se apoya en el concepto de <em>Monitor</em> mediante la palabra reservada <code>synchronized</code>, o bien a través de la interfaz explícita <code>Lock</code> del paquete <code>java.util.concurrent.locks</code>:
+            </p>
+
+            <pre><code>import java.util.concurrent.locks.ReentrantLock;
+
+public class GestorSalasChat {
+    private final ReentrantLock cerrojo = new ReentrantLock();
+
+    public void difundirMensaje(String mensaje) {
+        cerrojo.lock(); // Adquisición exclusiva del candado
+        try {
+            // Sección crítica: iteración y escritura a los sockets clientes
+            for (Socket cliente : listaClientes) {
+                enviarTrama(cliente, mensaje);
+            }
+        } finally {
+            cerrojo.unlock(); // Siempre liberar en bloque finally
+        }
+    }
+}</code></pre>
+          </section>
+
+          <!-- Subtema 2.1.4 -->
+          <section id="exclusion-mutua" data-toc="2.1.4 Exclusión mutua">
+            <h2><span class="t-section__num">2.1.4</span>Principio de exclusión mutua (Mutex)</h2>
+            <p>
+              La <strong>exclusión mutua</strong> (abreviada comúnmente como <em>Mutex</em>) es la propiedad fundamental que garantiza que, en cualquier instante dado, a lo sumo un solo hilo puede encontrarse ejecutando dentro de una sección crítica específica.
+            </p>
+            <p>
+              Para que una solución de exclusión mutua sea formalmente correcta y segura, debe satisfacer tres condiciones indispensables postuladas en la teoría de sistemas concurrentes:
+            </p>
+            <ul>
+              <li><strong>Exclusión mutua estricta:</strong> Ningún par de hilos puede encontrarse simultáneamente en la sección crítica asociada al mismo recurso.</li>
+              <li><strong>Ausencia de interbloqueo (Deadlock):</strong> Si ningún hilo está dentro de la sección crítica y varios intentan entrar, el sistema no debe congelarse indefinidamente; la decisión de quién entra debe resolverse en tiempo finito.</li>
+              <li><strong>Ausencia de inanición (Starvation / Progreso Justo):</strong> Ningún hilo debe esperar indefinidamente para obtener el acceso si otros hilos entran y salen repetidamente.</li>
+            </ul>
+          </section>
+
+          <!-- Subtema 2.1.5 -->
+          <section id="semaforos" data-toc="2.1.5 Semáforos">
+            <h2><span class="t-section__num">2.1.5</span>Semáforos (Semaphores contadores y binarios)</h2>
+            <p>
+              Introducidos originalmente por Edsger Dijkstra en 1965, los <strong>semáforos</strong> son variables protegidas de tipo entero acompañadas de dos operaciones primitivas atómicas:
+            </p>
+            <ul>
+              <li><code>acquire()</code> (históricamente operación <em>P</em>): Decrementa el valor del semáforo. Si el contador es menor o igual a cero, el hilo se bloquea en espera de permisos disponibles.</li>
+              <li><code>release()</code> (históricamente operación <em>V</em>): Incrementa el valor del semáforo y despierta a uno de los hilos en espera.</li>
+            </ul>
+
+            <p>
+              En servidores de red, los semáforos resultan idóneos para limitar el número máximo de transferencias simultáneas o restringir el consumo de ancho de banda:
+            </p>
+
+            <pre><code>import java.util.concurrent.Semaphore;
+
+// Limitar a máximo 50 descargas concurrentes simultáneas en el servidor de archivos
+Semaphore limiteDescargas = new Semaphore(50, true); // true = equidad FIFO
+
+public void descargarArchivo(Socket socket) {
+    limiteDescargas.acquire(); // Bloquea si ya hay 50 descargas en curso
+    try {
+        transmitirArchivo(socket);
+    } finally {
+        limiteDescargas.release(); // Libera el permiso para el siguiente cliente
+    }
+}</code></pre>
+          </section>
+
+          <!-- Subtema 2.1.6 -->
+          <section id="pools-hilos" data-toc="2.1.6 Pools de hilos">
+            <h2><span class="t-section__num">2.1.6</span>Pools de hilos (Thread Pools) y arquitectura ExecutorService</h2>
+            <p>
+              En un diseño ingenuo de servidor multihilo, se crea un hilo nuevo cada vez que un cliente se conecta: <code>new Thread(clienteHandler).start()</code>. Este modelo de <em>hilo por conexión (Thread-per-connection)</em> colapsa rápidamente bajo carga pesada:
+            </p>
+            <ul>
+              <li><strong>Sobrecarga de creación y destrucción:</strong> Asignar la pila de llamadas (call stack, típicamente 1 MB) y la memoria del sistema operativo por cada conexión consume tiempo y recursos considerables.</li>
+              <li><strong>Agotamiento de memoria (OutOfMemoryError):</strong> Un ataque o ráfaga de 5,000 conexiones simultáneas agotaría la memoria antes de procesar una sola petición.</li>
+            </ul>
+            <p>
+              Para resolver esto, la arquitectura estándar emplea una <strong>piscina o conjunto de hilos (Thread Pool)</strong>. Un pool mantiene un conjunto fijo o dinámico de hilos trabajadores (<em>worker threads</em>) que permanecen vivos en memoria, tomando tareas de una cola de bloqueo (<em>BlockingQueue</em>):
+            </p>
+
+            <pre><code>import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class ServidorConcurrentePool {
+    public static void main(String[] args) throws Exception {
+        ServerSocket server = new ServerSocket(8080);
+        // Pool administrado de 20 hilos trabajadores reutilizables
+        ExecutorService pool = Executors.newFixedThreadPool(20);
+
+        System.out.println("Servidor multihilo con pool activo en puerto 8080...");
+        while (true) {
+            Socket cliente = server.accept();
+            // La tarea se encola y es despachada por un hilo disponible del pool
+            pool.execute(new ManejadorCliente(cliente));
+        }
+    }
+}</code></pre>
+          </section>
+
         </div>
 
-        <!-- Se genera desde el JSON; este enlace es solo de respaldo -->
+        <!-- Navegación entre temas -->
         <nav class="t-pager" id="temaNavegacion" aria-label="Navegación entre temas">
           <a class="t-pager__prev" href="../index.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Volver a la unidad</a>
         </nav>
       </article>
 
+      <!-- Menú lateral: "En esta página" con scroll-spy -->
       <aside class="t-toc" aria-labelledby="tocTitulo">
-        <p class="t-toc__title" id="tocTitulo">En esta p&aacute;gina</p>
+        <p class="t-toc__title" id="tocTitulo">En esta página</p>
         <ol class="t-toc__list" id="temaTabla"></ol>
         <div class="t-refs">
           <p class="t-refs__title">Referencias del tema</p>
-          <a href="../referencias.html">Ver lista completa <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <a href="../referencias.html" data-enlace-referencias>Ver lista completa <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </aside>
     </div>
@@ -73,6 +235,7 @@
     </div>
   </footer>
 
+  <!-- Scripts modulares de soporte -->
   <script src="../../../assets/js/data-manager.js"></script>
   <script src="../../../assets/js/componentes.js"></script>
   <script src="../../../assets/js/unidades-ui.js"></script>

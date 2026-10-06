@@ -1,23 +1,23 @@
 {
   "id": "unidad-01",
   "numero": 1,
-  "titulo": "Sockets Bloqueantes y Comunicación en Red",
-  "descripcion": "Programa aplicaciones en red con base en el modelo cliente-servidor, empleando la API de sockets bloqueantes orientados a conexión (TCP) y no orientados a conexión (UDP).",
+  "titulo": "Sockets bloqueantes",
+  "descripcion": "Programa aplicaciones en red con base en el modelo cliente-servidor, usando sockets bloqueantes.",
   "lema": "Comprende la transmisión de flujos de datos, el ciclo de vida de los sockets y la serialización en red.",
-  "duracion_horas": 26,
+  "duracion_horas": 20.5,
 
   "introduccion": [
-    "La comunicación entre procesos a través de redes de computadoras constituye la base de los sistemas distribuidos modernos. La abstracción de sockets representa el mecanismo estándar que permite a los programas intercambiar datos mediante los protocolos de transporte fundamentales: TCP y UDP.",
-    "A lo largo de esta unidad, explorarás los servicios provistos por la capa de transporte, la arquitectura del modelo cliente-servidor, la creación y gestión de conexiones en el dominio de Internet, la serialización de estructuras complejas y la implementación práctica de sockets bloqueantes orientados y no orientados a conexión."
+    "La comunicación entre procesos a través de redes de computadoras constituye la base de los sistemas distribuidos modernos. La abstracción de sockets representa el mecanismo estándar que permite a las aplicaciones intercambiar flujos de bytes y datagramas mediante los protocolos fundamentales de transporte: TCP y UDP.",
+    "A lo largo de esta unidad, explorarás los servicios definidos en la capa de transporte, la arquitectura del modelo cliente-servidor, la creación y gestión de conexiones en el dominio de Internet, la serialización de estructuras complejas y la implementación práctica de sockets bloqueantes orientados y no orientados a conexión."
   ],
 
-  "recorrido": "Revisa los fundamentos de transporte y el modelo cliente-servidor, domina la programación de sockets TCP y UDP bloqueantes, aprende a serializar datos y concluye con el reto integrador de la unidad.",
+  "recorrido": "Revisa los servicios de la capa de transporte, comprende la arquitectura cliente-servidor, domina las conexiones TCP y UDP en el dominio de Internet, implementa sockets bloqueantes orientados a conexión, aplica serialización de objetos y sockets no orientados a conexión, y culmina con la actividad integradora.",
 
   "temas": [
     {
       "numero": "1.1",
-      "nombre": "Servicios de Transporte y Modelo Cliente-Servidor",
-      "sintesis": "Principios de comunicación entre procesos, servicios de la capa de transporte y arquitectura fundamental del modelo cliente-servidor.",
+      "nombre": "Servicios definidos en la capa de transporte",
+      "sintesis": "Funciones esenciales de transporte extremo a extremo, direccionamiento por puertos, multiplexación, control de flujo y control de congestión.",
       "url": "unidades/unidad-01/temas/tema-01-01.html",
       "actividad": {
         "nombre": "Actividad de aprendizaje 1.1",
@@ -26,8 +26,8 @@
     },
     {
       "numero": "1.2",
-      "nombre": "Conexiones en el Dominio de Internet (TCP y UDP)",
-      "sintesis": "Diferencias operativas entre protocolos orientados a conexión (TCP) y datagramas sin conexión (UDP), direccionamiento IP y puertos.",
+      "nombre": "Modelo cliente-servidor",
+      "sintesis": "Arquitectura y ciclo de vida de la interacción cliente-servidor, llamadas al sistema (socket, bind, listen, accept, connect) y roles asimétricos.",
       "url": "",
       "actividad": {
         "nombre": "Actividad de aprendizaje 1.2",
@@ -36,8 +36,8 @@
     },
     {
       "numero": "1.3",
-      "nombre": "Sockets Orientados a Conexión Bloqueantes",
-      "sintesis": "Ciclo de vida del socket TCP: creación, enlace (bind), escucha (listen), aceptación (accept) y transferencia bidireccional.",
+      "nombre": "Conexiones en el dominio de internet (TCP y UDP)",
+      "sintesis": "Dominios de sockets AF_INET / AF_INET6, tipos SOCK_STREAM frente a SOCK_DGRAM, protocolo TCP de 3 vías y protocolo UDP.",
       "url": "",
       "actividad": {
         "nombre": "Actividad de aprendizaje 1.3",
@@ -46,8 +46,8 @@
     },
     {
       "numero": "1.4",
-      "nombre": "Serialización de Datos",
-      "sintesis": "Técnicas de empaquetado, ordenamiento de bytes (Endianness) y serialización de objetos para su envío a través del canal de red.",
+      "nombre": "Sockets orientados a conexión bloqueantes",
+      "sintesis": "Programación con ServerSocket y Socket en modo bloqueante, lectura/escritura de streams y transferencia de archivos.",
       "url": "",
       "actividad": {
         "nombre": "Actividad de aprendizaje 1.4",
@@ -56,32 +56,42 @@
     },
     {
       "numero": "1.5",
-      "nombre": "Sockets No Orientados a Conexión Bloqueantes",
-      "sintesis": "Transmisión y recepción de datagramas UDP mediante sockets bloqueantes para escenarios de alta velocidad.",
+      "nombre": "Serialización",
+      "sintesis": "Empaquetado de tipos de datos, ordenamiento de bytes (Endianness / Network Byte Order) y serialización de objetos estructurados en red.",
       "url": "",
       "actividad": {
         "nombre": "Actividad de aprendizaje 1.5",
         "url": "unidades/unidad-01/actividades/actividad-1-5.html"
+      }
+    },
+    {
+      "numero": "1.6",
+      "nombre": "Sockets no orientados a conexión bloqueantes",
+      "sintesis": "Programación de DatagramSocket y DatagramPacket sobre UDP en modo bloqueante, delimitación de tramas y transmisión de audio/mensajes.",
+      "url": "",
+      "actividad": {
+        "nombre": "Actividad de aprendizaje 1.6",
+        "url": "unidades/unidad-01/actividades/actividad-final.html"
       }
     }
   ],
 
   "actividad_final": {
     "nombre": "El Archivista Caótico",
-    "descripcion": "Cierra la unidad integrando todos sus temas en un reto interactivo de transferencia de archivos por red.",
+    "descripcion": "Cierra la unidad integrando todos sus temas en un reto interactivo de transferencia de archivos con sockets bloqueantes.",
     "url": "unidades/unidad-01/actividades/actividad-final.html"
   },
 
-  "objetivo": "Programar aplicaciones en red con base en el modelo cliente-servidor, utilizando sockets bloqueantes orientados y no orientados a conexión con alto nivel de calidad y eficiencia.",
+  "objetivo": "Programa aplicaciones en red con base en el modelo cliente-servidor, usando sockets bloqueantes.",
 
   "competencias": [
-    "Identifica los servicios de la capa de transporte y las primitivas del modelo cliente-servidor en el dominio de Internet.",
-    "Desarrolla programas cliente y servidor empleando sockets bloqueantes TCP y mecanismos de transferencia de archivos.",
-    "Aplica serialización y sockets de datagrama UDP para la transmisión eficiente de datos estructurados."
+    "Identifica los servicios definidos en la capa de transporte y las conexiones en el dominio de Internet.",
+    "Desarrolla programas cliente y servidor empleando sockets orientados a conexión bloqueantes (TCP) y transferencia de flujos.",
+    "Aplica técnicas de serialización y sockets no orientados a conexión bloqueantes (UDP) para la transmisión estructurada de datos."
   ],
 
   "video": {
-    "titulo": "Video de introducción a la Unidad I",
+    "titulo": "Video de introducción a la Unidad I: Sockets bloqueantes",
     "url": "https://www.youtube.com/embed/iXw0JVL6rTc"
   },
 

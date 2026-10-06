@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1.1 Fundamentos de Arquitectura de Red y Modelos en Capas | Aplicaciones para Comunicaciones en Red</title>
-  <meta name="description" content="Fundamentos de arquitectura de red, principios de diseño en capas, encapsulamiento de datos y comparativa del Modelo OSI frente a la pila TCP/IP.">
+  <title>1.1 Servicios definidos en la capa de transporte | Aplicaciones para Comunicaciones en Red</title>
+  <meta name="description" content="Servicios definidos en la capa de transporte: comunicación de proceso a proceso, multiplexación por puertos, control de flujo, control de congestión y sockets.">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="../../../assets/css/comun.css">
@@ -44,150 +44,142 @@
       <!-- Artículo de lectura principal -->
       <article class="t-article">
         <p class="u-eyebrow">Unidad I · Tema 1.1</p>
-        <h1 class="t-title">Fundamentos de Arquitectura de Red y Modelos en Capas</h1>
+        <h1 class="t-title">Servicios definidos en la capa de transporte</h1>
 
         <p class="t-lead" id="idea-central" data-toc="Idea central">
-          La comunicación entre sistemas heterogéneos y dispersos geográficamente solo es viable gracias a una arquitectura modular basada en capas jerárquicas, donde cada nivel resuelve un reto específico de transmisión abstrayendo la complejidad a los niveles superiores.
+          La capa de transporte proporciona el enlace fundamental entre el software de aplicación y la infraestructura física de la red, convirtiendo la entrega básica de host a host de la capa de red en canales lógicos directos de proceso a proceso.
         </p>
 
         <div class="t-prose">
 
           <!-- Subtema 1.1.1 -->
-          <section id="por-que-capas" data-toc="1.1.1 ¿Por qué diseñar redes mediante capas?">
-            <h2><span class="t-section__num">1.1.1</span>¿Por qué diseñar redes mediante capas jerárquicas?</h2>
+          <section id="comunicacion-proceso-a-proceso" data-toc="1.1.1 Comunicación de proceso a proceso">
+            <h2><span class="t-section__num">1.1.1</span>Comunicación lógica extremo a extremo: de host a proceso</h2>
             <p>
-              Una red informática moderna debe resolver simultáneamente problemas de naturaleza radicalmente distinta: desde modular ondas electromagnéticas en una fibra óptica o canal inalámbrico, hasta sincronizar peticiones web seguras mediante TLS y serializar objetos JSON en memoria de aplicación.
+              Mientras que el protocolo IP en la capa de red se encarga exclusivamente de enrutar paquetes entre máquinas físicas o virtuales (comunicación <em>host-a-host</em>), las aplicaciones reales no interactúan directamente con computadoras completas, sino con <strong>procesos en ejecución</strong> específicos (un navegador web dialogando con un servidor HTTP, o un cliente de correo conectando a un daemon SMTP).
             </p>
             <p>
-              Si intentáramos programar una aplicación de chat o streaming mediante una única rutina monolítica que controlara directamente los pulsos eléctricos del cable y la retransmisión de bytes perdidos, cualquier cambio en la tarjeta de red obligaría a reescribir toda la aplicación. Por esta razón, la ingeniería de software y telecomunicaciones adopta el <strong>diseño en capas</strong>, cuyos beneficios fundamentales son:
+              La capa de transporte resuelve esta necesidad implementando canales de <strong>comunicación lógica extremo a extremo</strong>. Desde la perspectiva de las aplicaciones emisora y receptora, ambas se comunican como si estuvieran conectadas por un enlace dedicado, abstrayendo por completo los enrutadores intermedios, las topologías físicas y los medios de transmisión subyacentes.
             </p>
-            <ul>
-              <li><strong>Modularidad e interoperabilidad:</strong> Los desarrolladores de aplicaciones pueden programar sobre sockets de transporte sin preocuparse si el enlace físico subyacente es fibra óptica, Wi-Fi 6 o una conexión satelital.</li>
-              <li><strong>Facilidad de mantenimiento y evolución:</strong> Si se actualiza el estándar de cifrado en la capa de aplicación, los routers intermedios que conmutan paquetes a nivel de red no requieren ninguna modificación.</li>
-              <li><strong>Estandarización abierta:</strong> Fabricantes distintos pueden construir hardware y sistemas operativos diversos que dialogan fluidamente al compartir protocolos normalizados por organismos como la IETF y la IEEE.</li>
-            </ul>
 
             <aside class="t-callout t-callout--note">
               <i class="fas fa-network-wired t-callout__icon" aria-hidden="true"></i>
               <div>
-                <p class="t-callout__label">Punto clave</p>
-                <p>Cada capa ofrece un conjunto definido de <strong>servicios</strong> a la capa inmediatamente superior, ocultando los detalles de implementación interna y comunicándose con su capa homóloga remota mediante un <strong>protocolo</strong>.</p>
+                <p class="t-callout__label">Principio de diseño</p>
+                <p>La capa de transporte opera exclusivamente en los sistemas finales (end systems). Los enrutadores de la red troncal únicamente procesan las capas de red, enlace y física, garantizando el principio de extremo a extremo (end-to-end principle) de la arquitectura de Internet.</p>
               </div>
             </aside>
           </section>
 
           <!-- Subtema 1.1.2 -->
-          <section id="encapsulamiento" data-toc="1.1.2 Encapsulamiento y Unidades de Datos (PDU)">
-            <h2><span class="t-section__num">1.1.2</span>El proceso de encapsulamiento y las Unidades de Datos (PDU)</h2>
+          <section id="multiplexacion-puertos" data-toc="1.1.2 Multiplexación y demultiplexación por puertos">
+            <h2><span class="t-section__num">1.1.2</span>Multiplexación y demultiplexación mediante puertos</h2>
             <p>
-              Cuando un proceso emisor genera un mensaje, los datos atraviesan la pila de protocolos de arriba hacia abajo. En cada nivel, el protocolo local añade información de control denominada <strong>encabezado (header)</strong> y, en algunos casos, una cola de verificación de errores (trailer). Este fenómeno se conoce como <strong>encapsulamiento</strong>.
+              En cualquier sistema operativo contemporáneo coexisten decenas de procesos que utilizan simultáneamente la red a través de la misma tarjeta de interfaz de red (NIC). La capa de transporte hace esto posible mediante dos mecanismos complementarios:
             </p>
+            <ul>
+              <li><strong>Multiplexación en el emisor:</strong> Recolecta fragmentos de datos provenientes de distintos sockets de aplicación, añade las cabeceras de transporte con los números de puerto correspondientes y pasa los segmentos a la capa de red.</li>
+              <li><strong>Demultiplexación en el receptor:</strong> Examina los campos de puerto en la cabecera del segmento entrante y entrega los datos con precisión al socket del proceso destinatario.</li>
+            </ul>
+
             <p>
-              A cada bloque de datos resultante en un estrato específico se le denomina <strong>Unidad de Datos de Protocolo (PDU, por sus siglas en inglés)</strong>:
+              El <strong>puerto de red</strong> es un identificador numérico entero de 16 bits (rango de 0 a 65535) clasificado por la IANA en tres categorías fundamentales:
             </p>
-            <ol>
-              <li><strong>Capa de Aplicación:</strong> Genera los <em>Datos</em> o <em>Mensajes</em> brutos del usuario (ej. una solicitud HTTP GET).</li>
-              <li><strong>Capa de Transporte:</strong> Fragmenta el mensaje si es necesario y añade encabezado TCP o UDP, formando un <strong>Segmento</strong> o <em>Datagrama</em>.</li>
-              <li><strong>Capa de Red (Internet):</strong> Incorpora direcciones IP de origen y destino, conformando el <strong>Paquete</strong> (o Datagrama IP).</li>
-              <li><strong>Capa de Enlace de Datos:</strong> Añade direcciones físicas MAC y suma de verificación CRC, produciendo la <strong>Trama (Frame)</strong>.</li>
-              <li><strong>Capa Física:</strong> Transforma la trama en una secuencia de <strong>Bits</strong> modulados sobre el medio físico.</li>
-            </ol>
+            <ul>
+              <li><strong>Puertos bien conocidos (Well-Known Ports, 0 al 1023):</strong> Reservados para servicios universales del sistema (ej. 80 para HTTP, 443 para HTTPS, 53 para DNS, 21 para FTP).</li>
+              <li><strong>Puertos registrados (Registered Ports, 1024 al 49151):</strong> Utilizados por aplicaciones específicas de software (ej. 3306 para MySQL, 8080 para proxies o servidores de desarrollo).</li>
+              <li><strong>Puertos dinámicos o efímeros (Dynamic/Private Ports, 49152 al 65535):</strong> Asignados automáticamente por el sistema operativo cliente para entablar sesiones temporales de corta duración.</li>
+            </ul>
+
+            <p>
+              Una conexión orientada a transporte queda unívocamente identificada por la tupla de 4 elementos:
+              <code>(Dirección IP Origen, Puerto Origen, Dirección IP Destino, Puerto Destino)</code>.
+            </p>
           </section>
 
           <!-- Subtema 1.1.3 -->
-          <section id="comparativa-osi-tcpip" data-toc="1.1.3 Comparativa: Modelo OSI frente a Pila TCP/IP">
-            <h2><span class="t-section__num">1.1.3</span>Comparativa arquitectónica: Modelo OSI vs. Modelo TCP/IP</h2>
+          <section id="control-flujo-congestion" data-toc="1.1.3 Control de flujo y congestión">
+            <h2><span class="t-section__num">1.1.3</span>Servicios de confiabilidad, control de flujo y control de congestión</h2>
             <p>
-              En la literatura académica conviven dos modelos de referencia primordiales: el <strong>Modelo OSI de 7 capas</strong> (concebido por la ISO como marco formal teórico) y la <strong>Pila TCP/IP de 5/4 capas</strong> (el estándar de facto que gobierna la Internet operativa):
+              A diferencia de la capa de red que ofrece un servicio de entrega de mejor esfuerzo (<em>best-effort</em>) sin garantías contra pérdida o duplicación, la capa de transporte puede ofrecer servicios avanzados de calidad y gobernanza de la transmisión:
+            </p>
+            <ol>
+              <li><strong>Entrega confiable y ordenada:</strong> Mediante números de secuencia (Sequence Numbers) y confirmaciones de recepción (ACKs), el transporte detecta paquetes extraviados y solicita su retransmisión adaptativa.</li>
+              <li><strong>Control de flujo (Flow Control):</strong> Impide que un emisor veloz sature el búfer de memoria de un receptor lento. Se implementa mediante el mecanismo de <em>Ventana Deslizante (Sliding Window)</em>, donde el receptor notifica continuamente el espacio disponible en su búfer en el campo de ventana.</li>
+              <li><strong>Control de congestión (Congestion Control):</strong> Previene que la red en su conjunto entre en colapso cuando múltiples emisores inyectan más tráfico del que los enlaces y routers intermedios pueden procesar. Emplea algoritmos como <em>Slow Start</em>, <em>Congestion Avoidance</em> y <em>Fast Recovery</em>.</li>
+              <li><strong>Verificación de integridad:</strong> Campos de suma de comprobación (Checksum) en las cabeceras para validar que los bits no hayan sufrido corrupción electromagnética durante el tránsito.</li>
+            </ol>
+          </section>
+
+          <!-- Subtema 1.1.4 -->
+          <section id="comparativa-tcp-udp" data-toc="1.1.4 Paradigmas de servicio: TCP frente a UDP">
+            <h2><span class="t-section__num">1.1.4</span>Modelos de servicio en Internet: TCP frente a UDP</h2>
+            <p>
+              La pila de Internet ofrece dos protocolos principales en la capa de transporte con características y compromisos de diseño opuestos:
             </p>
 
             <div class="t-table">
               <table>
                 <thead>
                   <tr>
-                    <th>Nivel</th>
-                    <th>Modelo OSI (7 Capas)</th>
-                    <th>Pila TCP/IP de Internet</th>
-                    <th>Protocolos de Ejemplo</th>
+                    <th>Característica</th>
+                    <th>TCP (RFC 9293)</th>
+                    <th>UDP (RFC 768)</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>7</td>
-                    <td>Capa de Aplicación</td>
-                    <td rowspan="3"><strong>Capa de Aplicación</strong><br>(Agrupa funciones de presentación y sesión)</td>
-                    <td>HTTP/2, DNS, SSH, FTP, SMTP</td>
+                    <td><strong>Orientación</strong></td>
+                    <td>Orientado a conexión (Handshake de 3 vías)</td>
+                    <td>No orientado a conexión (Datagramas independientes)</td>
                   </tr>
                   <tr>
-                    <td>6</td>
-                    <td>Capa de Presentación</td>
-                    <td>TLS, JSON, ASN.1, MIME</td>
+                    <td><strong>Confiabilidad</strong></td>
+                    <td>Garantizada con retransmisiones automáticas</td>
+                    <td>Sin garantías (pérdida o duplicación posible)</td>
                   </tr>
                   <tr>
-                    <td>5</td>
-                    <td>Capa de Sesión</td>
-                    <td>RPC, Sockets de sincronización</td>
+                    <td><strong>Orden de entrega</strong></td>
+                    <td>Secuencial estricto y sin duplicados</td>
+                    <td>Sin garantía de orden de llegada</td>
                   </tr>
                   <tr>
-                    <td>4</td>
-                    <td>Capa de Transporte</td>
-                    <td><strong>Capa de Transporte</strong></td>
-                    <td>TCP (confiable), UDP (datagramas)</td>
+                    <td><strong>Naturaleza de datos</strong></td>
+                    <td>Flujo continuo de bytes (Stream)</td>
+                    <td>Mensajes delimitados (Datagramas con fronteras)</td>
                   </tr>
                   <tr>
-                    <td>3</td>
-                    <td>Capa de Red</td>
-                    <td><strong>Capa de Red (Internet)</strong></td>
-                    <td>IPv4, IPv6, ICMP, OSPF, BGP</td>
+                    <td><strong>Sobrecarga de cabecera</strong></td>
+                    <td>Mínimo 20 bytes (hasta 60 con opciones)</td>
+                    <td>8 bytes fijos</td>
                   </tr>
                   <tr>
-                    <td>2</td>
-                    <td>Capa de Enlace</td>
-                    <td><strong>Capa de Enlace de Datos</strong></td>
-                    <td>Ethernet (802.3), Wi-Fi (802.11), PPP</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Capa Física</td>
-                    <td><strong>Capa Física</strong></td>
-                    <td>Cobre UTP, Fibra óptica, Ondas RF</td>
+                    <td><strong>Casos de uso típicos</strong></td>
+                    <td>Web (HTTP/HTTPS), SSH, Transferencia de archivos (FTP)</td>
+                    <td>Streaming de audio/video en vivo, DNS, juegos en red, VoIP</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-
-            <aside class="t-callout t-callout--note">
-              <i class="fas fa-layer-group t-callout__icon" aria-hidden="true"></i>
-              <div>
-                <p class="t-callout__label">Conclusión de diseño</p>
-                <p>En el desarrollo de software distribuido para Internet, la capa de aplicación asume directamente la serialización de datos (presentación) y la gestión de sesiones de usuario (sesión), simplificando la arquitectura a una pila de 5 capas lógicas.</p>
-              </div>
-            </aside>
           </section>
 
-          <!-- Subtema 1.1.4 -->
-          <section id="puertos-transporte" data-toc="1.1.4 Puertos y direccionamiento de transporte">
-            <h2><span class="t-section__num">1.1.4</span>Direccionamiento por puertos y multiplexación</h2>
+          <!-- Subtema 1.1.5 -->
+          <section id="interfaz-sockets" data-toc="1.1.5 Sockets como interfaz de programación">
+            <h2><span class="t-section__num">1.1.5</span>La interfaz de Sockets: Punto de acceso al transporte</h2>
             <p>
-              Una computadora conectada a la red posee una dirección IP que identifica unívocamente al equipo host. Sin embargo, en un mismo instante una máquina puede estar ejecutando un navegador web, un cliente de correo y un servidor de base de datos.
+              Para que los programadores puedan invocar los servicios de la capa de transporte sin descender al núcleo del sistema operativo, se definió la API de <strong>Sockets de Berkeley</strong> (BSD Sockets).
             </p>
             <p>
-              ¿Cómo sabe la tarjeta de red a qué programa entregar cada paquete entrante? La respuesta es el <strong>puerto de red</strong>. El puerto es un número entero sin signo de 16 bits (0 al 65535) gestionado en la cabecera de transporte:
-            </p>
-            <ul>
-              <li><strong>Puertos bien conocidos (0 a 1023):</strong> Reservados para servicios estándar del sistema (ej. 80 para HTTP, 443 para HTTPS, 53 para DNS, 22 para SSH).</li>
-              <li><strong>Puertos registrados (1024 a 49151):</strong> Utilizados por aplicaciones de proveedores específicos (ej. 3306 para MySQL, 8080 para Tomcat).</li>
-              <li><strong>Puertos dinámicos o efímeros (49152 a 65535):</strong> Asignados automáticamente por el sistema operativo a los clientes para una conexión temporal.</li>
-            </ul>
-
-            <p>
-              La combinación de una <strong>Dirección IP</strong> y un <strong>Puerto de Transporte</strong> define un <strong>Socket</strong> (ej. <code>192.168.1.15:443</code>), permitiendo la <em>multiplexación</em> y <em>demultiplexación</em> de múltiples canales de datos sobre una única interfaz física.
+              Un socket es un descriptor de archivo o manejador que representa el punto final de una conexión de red. Al crear un socket, la aplicación especifica el dominio de direcciones (IPv4 / IPv6) y el tipo de transporte requerido:
             </p>
 
-            <pre><code>// Creación de socket de flujo TCP en Java
-ServerSocket serverSocket = new ServerSocket(8080);
-System.out.println("Servidor a la escucha en el puerto 8080...");
-Socket clientSocket = serverSocket.accept(); // Bloquea hasta recibir una conexión</code></pre>
+            <pre><code>// Creación de socket de flujo TCP en Java (bloqueante)
+try (ServerSocket serverSocket = new ServerSocket(8080)) {
+    System.out.println("Servidor a la escucha en el puerto 8080...");
+    // accept() bloquea el hilo hasta que un cliente completa el handshake TCP
+    Socket clientSocket = serverSocket.accept();
+    System.out.println("Cliente conectado desde: " + clientSocket.getRemoteSocketAddress());
+}</code></pre>
           </section>
 
         </div>

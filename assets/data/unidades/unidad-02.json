@@ -1,22 +1,22 @@
 {
   "id": "unidad-02",
   "numero": 2,
-  "titulo": "Arquitectura Multihilos y Sockets No Bloqueantes",
-  "descripcion": "Programa aplicaciones cliente-servidor concurrentes con base en el uso de hilos, mecanismos de sincronización, entrada/salida no bloqueante y multidifusión.",
-  "lema": "Desarrolla servidores concurrentes escalables y comunicaciones multicast de alto rendimiento.",
-  "duracion_horas": 27,
+  "titulo": "Arquitectura multihilos para servidores",
+  "descripcion": "Programa aplicaciones cliente-servidor con base en el uso de hilos, y mecanismos de sincronización.",
+  "lema": "Domina la sincronización de hilos, la concurrencia en servidores y los formatos de intercambio de datos.",
+  "duracion_horas": 17,
 
   "introduccion": [
-    "En los entornos productivos contemporáneos, los servidores de red deben ser capaces de atender miles de peticiones simultáneas sin degradar su tiempo de respuesta. Esto exige comprender a fondo los modelos de concurrencia y los mecanismos de comunicación asíncrona.",
-    "En esta unidad aprenderás a diseñar arquitecturas multihilo, gobernar el acceso concurrente mediante primitivas de sincronización (candados, semáforos y pools de hilos), optimizar la entrada/salida mediante sockets no bloqueantes y transmitir información a grupos selectos mediante sockets de multidifusión (Multicast)."
+    "En los entornos distribuidos modernos, los servidores de red deben ser capaces de atender múltiples clientes de forma simultánea manteniendo la consistencia de los datos y maximizando el aprovechamiento de los procesadores multinúcleo.",
+    "En esta unidad estudiarás los mecanismos fundamentales de sincronía de hilos (instrucciones atómicas, secciones críticas, cerrojos, exclusión mutua, semáforos y pools de hilos), el diseño de servidores multihilos concurrentes y los formatos estándar para el intercambio estructurado de información a través de la red."
   ],
 
-  "recorrido": "Comienza dominando la sincronización de hilos y pools en servidores, avanza hacia el diseño de canales no bloqueantes con multiplexores y concluye con la implementación de sockets multicast en tiempo real.",
+  "recorrido": "Comienza dominando los fundamentos de sincronía de hilos y prevención de condiciones de carrera, profundiza en el diseño de arquitecturas multihilo para servidores de red, aprende a estructurar formatos de intercambio de datos y resuelve la actividad integradora.",
 
   "temas": [
     {
       "numero": "2.1",
-      "nombre": "Sincronía de Hilos y Mecanismos de Concurrencia",
+      "nombre": "Sincronía de hilos",
       "sintesis": "Instrucciones atómicas, sección crítica, candados (locks), exclusión mutua, semáforos y pools de hilos en servidores de red.",
       "url": "unidades/unidad-02/temas/tema-02-01.html",
       "actividad": {
@@ -26,8 +26,8 @@
     },
     {
       "numero": "2.2",
-      "nombre": "Arquitectura Multihilos y Formatos de Intercambio",
-      "sintesis": "Diseño de servidores concurrentes por conexión y por petición, estructuración de mensajes y formatos de datos.",
+      "nombre": "Multihilos",
+      "sintesis": "Modelos de diseño para servidores multihilo: hilo por conexión, ciclo de vida de hilos trabajadores, escalabilidad y gestión de recursos.",
       "url": "",
       "actividad": {
         "nombre": "Actividad de aprendizaje 2.2",
@@ -36,42 +36,32 @@
     },
     {
       "numero": "2.3",
-      "nombre": "Sockets Orientados a Conexión No Bloqueantes",
-      "sintesis": "Operaciones asíncronas de entrada/salida, canales no bloqueantes y multiplexación de sockets mediante selectores.",
+      "nombre": "Formatos de intercambio de datos",
+      "sintesis": "Estructuración de datos en red: delimitación de tramas, codificación de texto (JSON, XML) frente a formatos binarios eficientes.",
       "url": "",
       "actividad": {
         "nombre": "Actividad de aprendizaje 2.3",
         "url": "unidades/unidad-02/actividades/actividad-2-3.html"
       }
-    },
-    {
-      "numero": "2.4",
-      "nombre": "Sockets de Multidifusión y Protocolo IGMP",
-      "sintesis": "Grupos de multidifusión (Multicast), datagramas de difusión selectiva, resolución lógica-física y membresía con IGMP.",
-      "url": "",
-      "actividad": {
-        "nombre": "Actividad de aprendizaje 2.4",
-        "url": "unidades/unidad-02/actividades/actividad-2-4.html"
-      }
     }
   ],
 
   "actividad_final": {
-    "nombre": "Actividad Integradora de la Unidad 2",
-    "descripcion": "Cierra la unidad integrando servidores multihilo, sockets no bloqueantes y mensajería en un solo producto interactivo.",
+    "nombre": "Servicio de Mensajería Concurrente",
+    "descripcion": "Integra los conceptos de sincronía de hilos, servidores multihilo y formatos de datos en un reto de servidor concurrente.",
     "url": "unidades/unidad-02/actividades/actividad-final.html"
   },
 
-  "objetivo": "Programar aplicaciones cliente-servidor con base en el uso de hilos, mecanismos de sincronización, sockets no bloqueantes y multidifusión con alta usabilidad y optimización de recursos.",
+  "objetivo": "Programa aplicaciones cliente-servidor con base en el uso de hilos, y mecanismos de sincronización.",
 
   "competencias": [
-    "Aplica mecanismos de sincronización y exclusión mutua para garantizar la consistencia en servidores multihilo.",
-    "Implementa canales de comunicación con sockets no bloqueantes para atender múltiples conexiones simultáneas.",
-    "Construye aplicaciones colaborativas y de transmisión masiva utilizando sockets de multidifusión (Multicast)."
+    "Aplica mecanismos de sincronización y exclusión mutua para garantizar la consistencia en el acceso concurrente a recursos.",
+    "Diseña e implementa servidores multihilo escalables para la atención simultánea de clientes en red.",
+    "Estructura mensajes de comunicación utilizando formatos de intercambio de datos estándar y optimizados."
   ],
 
   "video": {
-    "titulo": "Video de introducción a la Unidad II",
+    "titulo": "Video de introducción a la Unidad II: Arquitectura multihilos para servidores",
     "url": "https://www.youtube.com/embed/-hjFMM17DHw"
   },
 
