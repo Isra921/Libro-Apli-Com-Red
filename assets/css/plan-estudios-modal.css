@@ -187,3 +187,110 @@
   margin-bottom: 6px;
   text-align: justify;
 }
+
+/* Prácticas de Laboratorio */
+.pe-practicas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.pe-practica-card {
+  padding: 12px 14px;
+  background: color-mix(in srgb, var(--surface) 50%, var(--bg-main));
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pe-practica-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pe-practica-badge {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+}
+
+.pe-practica-hours {
+  font-size: 0.75rem;
+  color: var(--text-muted-light);
+  font-weight: 600;
+}
+
+.pe-practica-name {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--text-light);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Bibliografía Oficial */
+.pe-biblio-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pe-biblio-item {
+  padding: 10px 14px;
+  background: color-mix(in srgb, var(--surface) 40%, var(--bg-main));
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+
+.pe-chip-biblio {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  margin-right: 6px;
+}
+
+.pe-chip-biblio--básica,
+.pe-chip-biblio--basica {
+  background: color-mix(in srgb, var(--primary) 22%, transparent);
+  color: var(--primary-hover);
+  border: 1px solid color-mix(in srgb, var(--primary) 35%, transparent);
+}
+
+.pe-chip-biblio--complementaria {
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.pe-chip-biblio--digital {
+  background: color-mix(in srgb, var(--secondary) 25%, transparent);
+  color: var(--text-light);
+  border: 1px solid var(--secondary);
+}
+
+.pe-biblio-link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.pe-biblio-link:hover {
+  color: var(--text-light);
+}

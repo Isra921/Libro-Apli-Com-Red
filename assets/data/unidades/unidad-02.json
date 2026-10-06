@@ -1,23 +1,23 @@
 {
   "id": "unidad-02",
   "numero": 2,
-  "titulo": "Programación con Sockets y Modelos Concurrentes",
-  "descripcion": "Implementa soluciones cliente-servidor concurrentes empleando la API de Sockets, hilos y técnicas de multiplexación de entrada/salida.",
-  "lema": "Desarrolla aplicaciones distribuidas escalables y de alto rendimiento.",
+  "titulo": "Arquitectura Multihilos y Sockets No Bloqueantes",
+  "descripcion": "Programa aplicaciones cliente-servidor concurrentes con base en el uso de hilos, mecanismos de sincronización, entrada/salida no bloqueante y multidifusión.",
+  "lema": "Desarrolla servidores concurrentes escalables y comunicaciones multicast de alto rendimiento.",
   "duracion_horas": 27,
 
   "introduccion": [
-    "[Primer párrafo de la introducción: contexto del tema, por qué importa en el ejercicio profesional y qué preguntas guía resolverá el estudiante.]",
-    "[Segundo párrafo: cómo se relaciona con la unidad anterior y qué conocimientos previos conviene repasar.]"
+    "En los entornos productivos contemporáneos, los servidores de red deben ser capaces de atender miles de peticiones simultáneas sin degradar su tiempo de respuesta. Esto exige comprender a fondo los modelos de concurrencia y los mecanismos de comunicación asíncrona.",
+    "En esta unidad aprenderás a diseñar arquitecturas multihilo, gobernar el acceso concurrente mediante primitivas de sincronización (candados, semáforos y pools de hilos), optimizar la entrada/salida mediante sockets no bloqueantes y transmitir información a grupos selectos mediante sockets de multidifusión (Multicast)."
   ],
 
-  "recorrido": "[Descripción del recorrido: en qué orden conviene leer los temas y qué actividad los cierra.]",
+  "recorrido": "Comienza dominando la sincronización de hilos y pools en servidores, avanza hacia el diseño de canales no bloqueantes con multiplexores y concluye con la implementación de sockets multicast en tiempo real.",
 
   "temas": [
     {
       "numero": "2.1",
-      "nombre": "Tema provisional",
-      "sintesis": "[Síntesis del tema en una línea: qué se explica y con qué recurso se apoya.]",
+      "nombre": "Sincronía de Hilos y Mecanismos de Concurrencia",
+      "sintesis": "Instrucciones atómicas, sección crítica, candados (locks), exclusión mutua, semáforos y pools de hilos en servidores de red.",
       "url": "unidades/unidad-02/temas/tema-02-01.html",
       "actividad": {
         "nombre": "Actividad de aprendizaje 2.1",
@@ -26,8 +26,8 @@
     },
     {
       "numero": "2.2",
-      "nombre": "Tema provisional 2",
-      "sintesis": "[Síntesis del tema en una línea: qué se explica y con qué recurso se apoya.]",
+      "nombre": "Arquitectura Multihilos y Formatos de Intercambio",
+      "sintesis": "Diseño de servidores concurrentes por conexión y por petición, estructuración de mensajes y formatos de datos.",
       "url": "",
       "actividad": {
         "nombre": "Actividad de aprendizaje 2.2",
@@ -36,8 +36,8 @@
     },
     {
       "numero": "2.3",
-      "nombre": "Tema prrovisionaln 3",
-      "sintesis": "[Síntesis del tema en una línea: qué se explica y con qué recurso se apoya.]",
+      "nombre": "Sockets Orientados a Conexión No Bloqueantes",
+      "sintesis": "Operaciones asíncronas de entrada/salida, canales no bloqueantes y multiplexación de sockets mediante selectores.",
       "url": "",
       "actividad": {
         "nombre": "Actividad de aprendizaje 2.3",
@@ -46,8 +46,8 @@
     },
     {
       "numero": "2.4",
-      "nombre": "Tema provisional 4",
-      "sintesis": "[Síntesis del tema en una línea: qué se explica y con qué recurso se apoya.]",
+      "nombre": "Sockets de Multidifusión y Protocolo IGMP",
+      "sintesis": "Grupos de multidifusión (Multicast), datagramas de difusión selectiva, resolución lógica-física y membresía con IGMP.",
       "url": "",
       "actividad": {
         "nombre": "Actividad de aprendizaje 2.4",
@@ -57,17 +57,17 @@
   ],
 
   "actividad_final": {
-    "nombre": "Actividad final de la Unidad II",
-    "descripcion": "Cierra la unidad integrando todos sus temas en un solo producto.",
+    "nombre": "Actividad Integradora de la Unidad 2",
+    "descripcion": "Cierra la unidad integrando servidores multihilo, sockets no bloqueantes y mensajería en un solo producto interactivo.",
     "url": "unidades/unidad-02/actividades/actividad-final.html"
   },
 
-  "objetivo": "[Verbo en infinitivo + objeto de conocimiento + condición y finalidad del aprendizaje.]",
+  "objetivo": "Programar aplicaciones cliente-servidor con base en el uso de hilos, mecanismos de sincronización, sockets no bloqueantes y multidifusión con alta usabilidad y optimización de recursos.",
 
   "competencias": [
-    "[Competencia 1 redactada en términos observables.]",
-    "[Competencia 2 redactada en términos observables.]",
-    "[Competencia 3 redactada en términos observables.]"
+    "Aplica mecanismos de sincronización y exclusión mutua para garantizar la consistencia en servidores multihilo.",
+    "Implementa canales de comunicación con sockets no bloqueantes para atender múltiples conexiones simultáneas.",
+    "Construye aplicaciones colaborativas y de transmisión masiva utilizando sockets de multidifusión (Multicast)."
   ],
 
   "video": {

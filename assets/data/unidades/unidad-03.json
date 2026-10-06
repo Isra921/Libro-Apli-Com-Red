@@ -1,23 +1,23 @@
 {
   "id": "unidad-03",
   "numero": 3,
-  "titulo": "Protocolos de Capa de Aplicación y Servicios Distribuidos",
-  "descripcion": "Construye servicios y aplicaciones de red distribuidas integrando protocolos estándar de nivel de aplicación, seguridad criptográfica y arquitecturas cliente-servidor modernas.",
-  "lema": "Integra protocolos web, microservicios seguros y estándares de la industria.",
-  "duracion_horas": 27,
+  "titulo": "Protocolos de Aplicación, Invocación Remota (RMI) y P2P",
+  "descripcion": "Construye aplicaciones distribuidas con base en especificaciones de protocolos de aplicación, interfaces de invocación a métodos remotos y modelos Peer-to-Peer.",
+  "lema": "Desarrolla servicios de red basados en estándares de aplicación, RMI y redes descentralizadas.",
+  "duracion_horas": 28,
 
   "introduccion": [
-    "[Primer párrafo de la introducción: contexto del tema, por qué importa en el ejercicio profesional y qué preguntas guía resolverá el estudiante.]",
-    "[Segundo párrafo: cómo se relaciona con la unidad anterior y qué conocimientos previos conviene repasar.]"
+    "La capa de aplicación representa la interfaz directa entre el usuario y la infraestructura de red. Comprender el funcionamiento interno de sus protocolos, así como los paradigmas de computación distribuida avanzada, permite construir sistemas robustos, interoperables y desacoplados.",
+    "En esta unidad estudiarás los protocolos esenciales de Internet (DNS, DHCP, HTTP, FTP, SMTP), implementarás esquemas de invocación a métodos remotos utilizando Java RMI y explorarás las arquitecturas descentralizadas Peer-to-Peer (P2P) para la compartición y enrutamiento distribuido de información."
   ],
 
-  "recorrido": "[Descripción del recorrido: en qué orden conviene leer los temas y qué actividad los cierra.]",
+  "recorrido": "Comienza analizando la implementación de protocolos estándar de nivel de aplicación, continúa con la invocación remota mediante Java RMI y finaliza diseñando soluciones peer-to-peer descentralizadas.",
 
   "temas": [
     {
       "numero": "3.1",
-      "nombre": "Árboles binarios",
-      "sintesis": "[Síntesis del tema en una línea: qué se explica y con qué recurso se apoya.]",
+      "nombre": "Protocolos de la Capa de Aplicación",
+      "sintesis": "Protocolos orientados y no orientados a conexión: FTP, DNS, DHCP, HTTP, SMTP y SNMP.",
       "url": "unidades/unidad-03/temas/tema-03-01.html",
       "actividad": {
         "nombre": "Actividad de aprendizaje 3.1",
@@ -26,28 +26,38 @@
     },
     {
       "numero": "3.2",
-      "nombre": "Tema provisional",
-      "sintesis": "[Síntesis del tema en una línea: qué se explica y con qué recurso se apoya.]",
+      "nombre": "Invocación a Métodos Remotos (Java RMI)",
+      "sintesis": "Arquitectura RMI, implementación de Stubs y Skeletons, registro de objetos remotos y RMIRegistry.",
       "url": "",
       "actividad": {
         "nombre": "Actividad de aprendizaje 3.2",
         "url": "unidades/unidad-03/actividades/actividad-3-2.html"
       }
+    },
+    {
+      "numero": "3.3",
+      "nombre": "Arquitecturas y Aplicaciones P2P",
+      "sintesis": "Conectividad, enrutamiento descentralizado, seguridad, intercambio distribuido de archivos y telefonía P2P.",
+      "url": "",
+      "actividad": {
+        "nombre": "Actividad de aprendizaje 3.3",
+        "url": "unidades/unidad-03/actividades/actividad-final.html"
+      }
     }
   ],
 
   "actividad_final": {
-    "nombre": "Actividad final de la Unidad III",
-    "descripcion": "Cierra la unidad integrando todos sus temas en un solo producto.",
+    "nombre": "Actividad Integradora de la Unidad 3",
+    "descripcion": "Cierra la unidad integrando protocolos de aplicación, servicios remotos RMI y esquemas P2P.",
     "url": "unidades/unidad-03/actividades/actividad-final.html"
   },
 
-  "objetivo": "[Verbo en infinitivo + objeto de conocimiento + condición y finalidad del aprendizaje.]",
+  "objetivo": "Construir aplicaciones distribuidas con base en especificaciones de protocolos de la capa de aplicación, invocación a métodos remotos y modelos P2P de alta usabilidad con optimización de recursos.",
 
   "competencias": [
-    "[Competencia 1 redactada en términos observables.]",
-    "[Competencia 2 redactada en términos observables.]",
-    "[Competencia 3 redactada en términos observables.]"
+    "Programa clientes y servidores implementando especificaciones de protocolos estándar de la capa de aplicación.",
+    "Construye sistemas distribuidos mediante interfaces de invocación a métodos remotos (Java RMI).",
+    "Diseña aplicaciones descentralizadas utilizando arquitecturas Peer-to-Peer para la gestión compartida de recursos."
   ],
 
   "video": {

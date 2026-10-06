@@ -5,16 +5,16 @@
     {
       "id": "unidad-01",
       "pestana": "Unidad 1",
-      "titulo": "Unidad 1: Fundamentos y Modelos en Capas",
-      "descripcion": "Actividades interactivas de consolidación conceptual y evaluación integradora de la unidad.",
-      "nota": "Estas actividades refuerzan tu aprendizaje de manera formativa e interactiva.",
+      "titulo": "Unidad 1: Sockets Bloqueantes y Transporte",
+      "descripcion": "Actividades interactivas sobre servicios de transporte, sockets TCP/UDP bloqueantes y serialización.",
+      "nota": "Estas actividades refuerzan tu comprensión formativa y práctica de la programación de sockets.",
       "items": [
         {
           "tag": "Tema 1.1",
           "reactivos": "5 reactivos",
           "tiempo": "15 min",
-          "titulo": "Actividad 1.1: Fundamentos y Modelos en Capas",
-          "descripcion": "Ejercicios interactivos sobre capas de abstracción, protocolos y encapsulamiento de datos.",
+          "titulo": "Actividad 1.1: Servicios de Transporte y Modelo Cliente-Servidor",
+          "descripcion": "Ejercicios interactivos sobre comunicación entre procesos y arquitectura cliente-servidor.",
           "url": "unidades/unidad-01/actividades/actividad-1-1.html",
           "icono": "fa-gamepad",
           "destacada": false
@@ -23,8 +23,8 @@
           "tag": "Tema 1.2",
           "reactivos": "5 reactivos",
           "tiempo": "15 min",
-          "titulo": "Actividad 1.2: El problema de la organización",
-          "descripcion": "Prácticas de análisis para la ordenación y clasificación de datos en flujos de comunicación.",
+          "titulo": "Actividad 1.2: Conexiones en el Dominio de Internet (TCP y UDP)",
+          "descripcion": "Prácticas de análisis comparativo entre protocolos orientados a conexión y datagramas sin conexión.",
           "url": "unidades/unidad-01/actividades/actividad-1-2.html",
           "icono": "fa-gamepad",
           "destacada": false
@@ -33,8 +33,8 @@
           "tag": "Tema 1.3",
           "reactivos": "5 reactivos",
           "tiempo": "15 min",
-          "titulo": "Actividad 1.3: Búsqueda",
-          "descripcion": "Resolución de problemas de búsqueda y recuperación en transmisiones y tablas de red.",
+          "titulo": "Actividad 1.3: Sockets Orientados a Conexión Bloqueantes",
+          "descripcion": "Resolución de problemas sobre el ciclo de vida de sockets TCP y transmisión bidireccional.",
           "url": "unidades/unidad-01/actividades/actividad-1-3.html",
           "icono": "fa-gamepad",
           "destacada": false
@@ -43,9 +43,19 @@
           "tag": "Tema 1.4",
           "reactivos": "5 reactivos",
           "tiempo": "20 min",
-          "titulo": "Actividad 1.4: Exploración exhaustiva y vuelta atrás",
-          "descripcion": "Aplicación de técnicas de retroceso (backtracking) y validación lógica en redes.",
+          "titulo": "Actividad 1.4: Serialización de Datos",
+          "descripcion": "Aplicación de técnicas de serialización, formateo y ordenamiento de bytes en canales de red.",
           "url": "unidades/unidad-01/actividades/actividad-1-4.html",
+          "icono": "fa-gamepad",
+          "destacada": false
+        },
+        {
+          "tag": "Tema 1.5",
+          "reactivos": "5 reactivos",
+          "tiempo": "15 min",
+          "titulo": "Actividad 1.5: Sockets No Orientados a Conexión Bloqueantes",
+          "descripcion": "Ejercicios sobre el uso de sockets de datagrama UDP bloqueantes y delimitación de mensajes.",
+          "url": "unidades/unidad-01/actividades/actividad-1-5.html",
           "icono": "fa-gamepad",
           "destacada": false
         },
@@ -54,7 +64,7 @@
           "reactivos": "Reto integrador",
           "tiempo": "30 min",
           "titulo": "Actividad Integradora: El Archivista Caótico",
-          "descripcion": "Reto final interactivo de la Unidad 1 que integra todos los temas en un escenario práctico.",
+          "descripcion": "Reto final interactivo de la Unidad 1 que integra sockets bloqueantes y transferencia de archivos.",
           "url": "unidades/unidad-01/actividades/actividad-final.html",
           "icono": "fa-trophy",
           "destacada": true
@@ -64,16 +74,16 @@
     {
       "id": "unidad-02",
       "pestana": "Unidad 2",
-      "titulo": "Unidad 2: Programación con Sockets y Concurrencia",
-      "descripcion": "Actividades prácticas con sockets cliente-servidor y modelos concurrentes.",
-      "nota": "Pon a prueba tus habilidades de programación distribuida y comunicación entre procesos.",
+      "titulo": "Unidad 2: Arquitectura Multihilos y Sockets No Bloqueantes",
+      "descripcion": "Actividades prácticas con servidores concurrentes, sincronización, sockets no bloqueantes y multicast.",
+      "nota": "Pon a prueba tus habilidades de programación distribuida y optimización de canales de entrada/salida.",
       "items": [
         {
           "tag": "Tema 2.1",
           "reactivos": "5 reactivos",
           "tiempo": "15 min",
-          "titulo": "Actividad 2.1: Sockets y Comunicación Básica",
-          "descripcion": "Práctica de configuración y flujo de mensajes con sockets de red en esquemas cliente-servidor.",
+          "titulo": "Actividad 2.1: Sincronía de Hilos y Concurrencia",
+          "descripcion": "Práctica de mecanismos de exclusión mutua, semáforos, candados y pools de hilos en servidores.",
           "url": "unidades/unidad-02/actividades/actividad-2-1.html",
           "icono": "fa-gamepad",
           "destacada": false
@@ -82,8 +92,8 @@
           "tag": "Tema 2.2",
           "reactivos": "5 reactivos",
           "tiempo": "15 min",
-          "titulo": "Actividad 2.2: Sockets TCP y Modelos de Flujo",
-          "descripcion": "Modelos de conexión cliente-servidor orientados a conexión y concurrencia mediante hilos.",
+          "titulo": "Actividad 2.2: Servidores Multihilos y Formatos de Datos",
+          "descripcion": "Diseño de servidores concurrentes y estructuración de mensajes en formatos estándar.",
           "url": "unidades/unidad-02/actividades/actividad-2-2.html",
           "icono": "fa-gamepad",
           "destacada": false
@@ -92,8 +102,8 @@
           "tag": "Tema 2.3",
           "reactivos": "5 reactivos",
           "tiempo": "15 min",
-          "titulo": "Actividad 2.3: Datagramas UDP",
-          "descripcion": "Análisis de transmisión de paquetes no orientados a conexión y consideraciones de entrega.",
+          "titulo": "Actividad 2.3: Sockets Orientados a Conexión No Bloqueantes",
+          "descripcion": "Análisis y configuración de canales de red no bloqueantes y multiplexación E/S.",
           "url": "unidades/unidad-02/actividades/actividad-2-3.html",
           "icono": "fa-gamepad",
           "destacada": false
@@ -102,8 +112,8 @@
           "tag": "Tema 2.4",
           "reactivos": "5 reactivos",
           "tiempo": "20 min",
-          "titulo": "Actividad 2.4: Multiplexación de E/S y Canales No Bloqueantes",
-          "descripcion": "Multiplexación I/O y diseño de servidores de alto rendimiento con canales no bloqueantes.",
+          "titulo": "Actividad 2.4: Sockets de Multidifusión y Protocolo IGMP",
+          "descripcion": "Transmisión a grupos multicast, resolución de direcciones y control de membresía con IGMP.",
           "url": "unidades/unidad-02/actividades/actividad-2-4.html",
           "icono": "fa-gamepad",
           "destacada": false
@@ -113,7 +123,7 @@
           "reactivos": "Reto integrador",
           "tiempo": "30 min",
           "titulo": "Actividad Integradora de la Unidad 2",
-          "descripcion": "Desafío integrador de programación de sockets y concurrencia en tiempo real.",
+          "descripcion": "Desafío integrador de programación de sockets concurrentes y transmisión masiva en tiempo real.",
           "url": "unidades/unidad-02/actividades/actividad-final.html",
           "icono": "fa-trophy",
           "destacada": true
@@ -123,17 +133,27 @@
     {
       "id": "unidad-03",
       "pestana": "Unidad 3",
-      "titulo": "Unidad 3: Protocolos de Aplicación y Servicios Distribuidos",
-      "descripcion": "Actividades prácticas con protocolos de aplicación web y arquitecturas distribuidas.",
-      "nota": "Consolida las competencias de desarrollo de servicios y protocolos de alto nivel.",
+      "titulo": "Unidad 3: Protocolos de Aplicación, Java RMI y P2P",
+      "descripcion": "Actividades prácticas con protocolos estándar de aplicación, objetos remotos y redes descentralizadas.",
+      "nota": "Consolida las competencias de desarrollo de servicios distribuidos de alto nivel y arquitecturas P2P.",
       "items": [
         {
           "tag": "Tema 3.1",
           "reactivos": "5 reactivos",
           "tiempo": "15 min",
-          "titulo": "Actividad 3.1: Protocolos de Aplicación y Servicios",
-          "descripcion": "Evaluación formativa de protocolos estándar de capa de aplicación, transferencias e interoperabilidad.",
+          "titulo": "Actividad 3.1: Protocolos de la Capa de Aplicación",
+          "descripcion": "Evaluación formativa de protocolos estándar: DNS, DHCP, HTTP, FTP, SMTP y SNMP.",
           "url": "unidades/unidad-03/actividades/actividad-3-1.html",
+          "icono": "fa-gamepad",
+          "destacada": false
+        },
+        {
+          "tag": "Tema 3.2",
+          "reactivos": "5 reactivos",
+          "tiempo": "20 min",
+          "titulo": "Actividad 3.2: Invocación a Métodos Remotos (Java RMI)",
+          "descripcion": "Ejercicios sobre arquitectura RMI, generación de stubs, skeletons y publicación en RMIRegistry.",
+          "url": "unidades/unidad-03/actividades/actividad-3-2.html",
           "icono": "fa-gamepad",
           "destacada": false
         },
@@ -142,7 +162,7 @@
           "reactivos": "Reto integrador",
           "tiempo": "30 min",
           "titulo": "Actividad Integradora de la Unidad 3",
-          "descripcion": "Reto integrador de protocolos de aplicación y servicios en red.",
+          "descripcion": "Reto integrador de protocolos de aplicación, servicios remotos RMI y redes Peer-to-Peer.",
           "url": "unidades/unidad-03/actividades/actividad-final.html",
           "icono": "fa-trophy",
           "destacada": true

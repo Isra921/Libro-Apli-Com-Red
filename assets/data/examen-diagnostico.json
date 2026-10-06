@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "modoPrueba": true,
+  "titulo": "Examen diagnóstico",
+  "descripcion": "Evaluación diagnóstica de conocimientos previos para la unidad de aprendizaje Aplicaciones para Comunicaciones en Red (Sistemas Operativos, Programación y Redes de Computadoras).",
+  "configuracion": {
+    "mostrarResultado": true,
+    "cantidadPreguntas": 12,
+    "mezclarPreguntas": false,
+    "mezclarOpciones": false,
+    "endpointEnvio": ""
+  },
+  "preguntas": [
+    {
+      "id": "diag-net-01",
+      "numero": 1,
+      "tipo": "opcion-multiple",
+      "enunciado": "¿Cuál es la capa de los modelos de red (OSI / TCP-IP) encargada de proveer comunicación lógica extremo a extremo entre procesos de aplicación y ofrecer servicios de control de flujo y confiabilidad?",
+      "obligatoria": true,
+      "opciones": [
+        { "id": "a", "texto": "Capa de Enlace de Datos" },
+        { "id": "b", "texto": "Capa de Red (Internet)" },
+        { "id": "c", "texto": "Capa de Transporte" },
+        { "id": "d", "texto": "Capa Física" }
+      ],
+      "respuestaCorrecta": "c"
+    },
+    {
+      "id": "diag-net-02",
+      "numero": 2,
+      "tipo": "opcion-multiple",
+      "enunciado": "¿Qué diferencia fundamental distingue a TCP (Transmission Control Protocol) frente a UDP (User Datagram Protocol)?",
+      "obligatoria": true,
+      "opciones": [
+        { "id": "a", "texto": "TCP está orientado a conexión y garantiza la entrega confiable y ordenada; UDP es no orientado a conexión y envía datagramas sin garantías de entrega." },
+        { "id": "b", "texto": "UDP solo transmite texto plano mientras que TCP comprime y cifra obligatoriamente todos los paquetes." },
+        { "id": "c", "texto": "TCP opera a nivel de enlace de datos físico y UDP opera exclusivamente en la capa de aplicación." },
+        { "id": "d", "texto": "UDP establece previamente un apretón de manos de tres vías (3-way handshake) y TCP no requiere sincronización inicial." }
+      ],
+      "respuestaCorrecta": "a"
+    },
+    {
+      "id": "diag-net-03",
+      "numero": 3,
+      "tipo": "opcion-multiple",
+      "enunciado": "En la programación de comunicaciones en red, ¿qué combinación de elementos identifica de manera unívoca a un punto final de comunicación o socket en el host?",
+      "obligatoria": true,
+      "opciones": [
+        { "id": "a", "texto": "Dirección MAC y nombre de dominio del host" },
+        { "id": "b", "texto": "Dirección IP y Número de Puerto de transporte" },
+        { "id": "c", "texto": "Máscara de subred y dirección de broadcast" },
+        { "id": "d", "texto": "Identificador de proceso (PID) y dirección URL" }
+      ],
+      "respuestaCorrecta": "b"
+    },
+    {
+      "id": "diag-net-04",
+      "numero": 4,
+      "tipo": "opcion-multiple",
+      "enunciado": "¿Cuál es el rango numérico estandarizado por la IANA para los puertos bien conocidos (Well-Known Ports) asignados a servicios de red convencionales como HTTP (80) o DNS (53)?",
+      "obligatoria": true,
+      "opciones": [
+        { "id": "a", "texto": "0 a 1023" },
+        { "id": "b", "texto": "1024 a 49151" },
+        { "id": "c", "texto": "49152 a 65535" },
+        { "id": "d", "texto": "1 a 255" }
+      ],
+      "respuestaCorrecta": "a"
+    },
+    {
+      "id": "diag-net-05",
+      "numero": 5,
+      "tipo": "opcion-multiple",
+      "enunciado": "¿Qué dirección IPv4 especial representa la interfaz de bucle local (loopback / localhost), empleada comúnmente para probar servicios cliente-servidor en el mismo equipo?",
+      "obligatoria": true,
+      "opciones": [
+        { "id": "a", "texto": "0.0.0.0" },
+        { "id": "b", "texto": "192.168.1.1" },
+        { "id": "c", "texto": "127.0.0.1" },
+        { "id": "d", "texto": "255.255.255.255" }
+      ],
+      "respuestaCorrecta": "c"
+    },
+    {
+      "id": "diag-net-06",
+      "numero": 6,
+      "tipo": "opcion-multiple",
+      "enunciado": "En sistemas operativos y arquitecturas concurrentes, ¿cuál es la principal diferencia entre un proceso y un hilo (thread)?",
+      "obligatoria": true,
+      "opciones": [
+        { "id": "a", "texto": "Los hilos de un mismo proceso comparten el mismo espacio de memoria y recursos, mientras que los procesos poseen espacios de memoria independientes y aislados." },
+        { "id": "b", "texto": "Los procesos solo pueden ejecutarse en un procesador mononúcleo y los hilos requieren clústeres remotos." },
+        { "id": "c", "texto": "Un hilo consume más tiempo de conmutación de contexto que un proceso completo." },
+        { "id": "d", "texto": "Los hilos no pueden realizar operaciones de entrada/salida sobre sockets de red." }
+      ],
+      "respuestaCorrecta": "a"
+    },
+    {
+      "id": "diag-net-07",
+      "numero": 7,
+      "tipo": "opcion-multiple",
+      "enunciado": "Al desarrollar un servidor multihilo que atiende clientes simultáneos, ¿qué mecanismo se emplea para prevenir condiciones de carrera (race conditions) al modificar variables o recursos compartidos?",
+      "obligatoria": true,
+      "opciones": [
+        { "id": "a", "texto": "Serialización de datos JSON únicamente" },
+        { "id": "b", "texto": "Exclusión mutua mediante primitivas de sincronización (Mutex, bloques sincronizados o semáforos)" },
+        { "id": "c", "texto": "Aumentar el número de puertos del socket receptor" },
+        { "id": "d", "texto": "Desactivar la memoria caché del navegador cliente" }
+      ],
+      "respuestaCorrecta": "b"
+    },
+    {
+      "id": "diag-net-08",
+      "numero": 8,
+      "tipo": "opcion-multiple",
+      "enunciado": "En el modelo Cliente-Servidor con sockets de flujo TCP, ¿cuál es el rol de las operaciones listen() y accept() en el servidor?",
+      "obligatoria": true,
+      "opciones": [
+        { "id": "a", "texto": "listen() pone al socket en modo de escucha pasiva y accept() bloquea hasta recibir y aceptar una conexión entrante, retornando un nuevo socket dedicado al cliente." },
+        { "id": "b", "texto": "listen() envía una petición al router y accept() cierra inmediatamente la conexión." },
+        { "id": "c", "texto": "listen() cifra la trama en capa física y accept() la desencripta." },
+        { "id": "d", "texto": "Ambas funciones son exclusivas del cliente para conectarse al servidor remoto." }
+      ],
+      "respuestaCorrecta": "a"
+    },
+    {
+      "id": "diag-net-09",
+      "numero": 9,
+      "tipo": "opcion-multiple",
+      "enunciado": "¿Qué comportamiento caracteriza por defecto a una operación de lectura (read / receive) en un socket bloqueante (blocking socket)?",
+      "obligatoria": true,
+      "opciones": [
+        { "id": "a", "texto": "Retorna inmediatamente un código de error si el búfer de recepción no tiene datos." },
+        { "id": "b", "texto": "Suspende la ejecución del hilo invocador hasta que lleguen datos por la red o expire el temporizador (timeout)." },
+        { "id": "c", "texto": "Cierra automáticamente el canal de comunicación del socket." },
+        { "id": "d", "texto": "Convierte la llamada en un canal multicast de difusión general." }
+      ],
+      "respuestaCorrecta": "b"
+    },
+    {
+      "id": "diag-net-10",
+      "numero": 10,
+      "tipo": "opcion-multiple",
+      "enunciado": "¿En qué orden de bytes (Endianness) deben serializarse y transmitirse los campos numéricos binarios de cabecera a través de la red según los estándares de Internet (Network Byte Order)?",
+      "obligatoria": true,
+      "opciones": [
+        { "id": "a", "texto": "Big-Endian (el byte más significativo primero)" },
+        { "id": "b", "texto": "Little-Endian (el byte menos significativo primero)" },
+        { "id": "c", "texto": "Middle-Endian alternado" },
+        { "id": "d", "texto": "El orden nativo de la CPU sin importar su arquitectura" }
+      ],
+      "respuestaCorrecta": "a"
+    },
+    {
+      "id": "diag-net-11",
+      "numero": 11,
+      "tipo": "opcion-multiple",
+      "enunciado": "En lenguajes de programación como Java o Python, ¿qué mecanismo permite convertir el estado de un objeto en memoria en un flujo estructurado de bytes para transmitirlo a través de un socket?",
+      "obligatoria": true,
+      "opciones": [
+        { "id": "a", "texto": "Multiplexación por división de tiempo" },
+        { "id": "b", "texto": "Serialización de objetos (Marshalling / Object Serialization)" },
+        { "id": "c", "texto": "Conmutación de circuitos" },
+        { "id": "d", "texto": "Enrutamiento vector distancia" }
+      ],
+      "respuestaCorrecta": "b"
+    },
+    {
+      "id": "diag-net-12",
+      "numero": 12,
+      "tipo": "opcion-multiple",
+      "enunciado": "¿Cuál es la función principal del servicio DNS (Domain Name System) en las arquitecturas de aplicaciones en red?",
+      "obligatoria": true,
+      "opciones": [
+        { "id": "a", "texto": "Asignar dinámicamente contraseñas de red a los clientes" },
+        { "id": "b", "texto": "Traducir nombres de dominio legibles para humanos a direcciones IP numéricas requeridas para el enrutamiento" },
+        { "id": "c", "texto": "Cifrar la capa de enlace para evitar colisiones en la red local" },
+        { "id": "d", "texto": "Monitorear el consumo de energía en los enrutadores de transporte" }
+      ],
+      "respuestaCorrecta": "b"
+    }
+  ]
+}

@@ -91,16 +91,74 @@
         secUnidades.append(listUnidades);
         contenedor.append(secUnidades);
 
-        // 6. Evaluación y Acreditación
+        // 6. Prácticas de Laboratorio
+        if (datos.practicas && datos.practicas.length) {
+            const secPracticas = el('div', 'pe-section-card');
+            const h4Practicas = el('h4', '');
+            h4Practicas.append(icono('fa-flask'), el('span', '', ' Relación de Prácticas de Laboratorio'));
+            secPracticas.append(h4Practicas);
+
+            const gridPracticas = el('div', 'pe-practicas-grid');
+            datos.practicas.forEach(p => {
+                const pCard = el('div', 'pe-practica-card');
+                const pHead = el('div', 'pe-practica-head');
+                pHead.append(
+                    el('span', 'pe-practica-badge', `Práctica ${p.numero}`),
+                    el('span', 'pe-practica-hours', p.horas)
+                );
+                const pName = el('p', 'pe-practica-name', p.nombre);
+                pCard.append(pHead, pName);
+                gridPracticas.append(pCard);
+            });
+            secPracticas.append(gridPracticas);
+            contenedor.append(secPracticas);
+        }
+
+        // 7. Evaluación y Acreditación
         const cardEval = el('div', 'pe-section-card');
         const h4Eval = el('h4', '');
         h4Eval.append(icono('fa-check-double'), el('span', '', ' Evaluación y Acreditación'));
         const ulEval = el('ul', 'pe-eval-list');
-        datos.evaluacion.forEach(ev => {
+        (datos.evaluacion || []).forEach(ev => {
             ulEval.append(el('li', '', ev));
         });
         cardEval.append(h4Eval, ulEval);
         contenedor.append(cardEval);
+
+        // 8. Bibliografía y Recursos Digitales
+        if (datos.bibliografia && datos.bibliografia.length) {
+            const secBiblio = el('div', 'pe-section-card');
+            const h4Biblio = el('h4', '');
+            h4Biblio.append(icono('fa-book-bookmark'), el('span', '', ' Bibliografía Oficial y Recursos Digitales'));
+            secBiblio.append(h4Biblio);
+
+            const ulBiblio = el('ul', 'pe-biblio-list');
+            datos.bibliografia.forEach(b => {
+                const li = el('li', 'pe-biblio-item');
+                const badge = el('span', `pe-chip-biblio pe-chip-biblio--${b.tipo.toLowerCase()}`, b.tipo);
+                const desc = el('span', '', ` ${b.autor} (${b.anio}). `);
+                const tit = el('em', '', b.titulo);
+                const pub = el('span', '', `. ${b.editorial}.`);
+                li.append(badge, desc, tit, pub);
+                ulBiblio.append(li);
+            });
+
+            if (datos.recursos_digitales && datos.recursos_digitales.length) {
+                datos.recursos_digitales.forEach(r => {
+                    const li = el('li', 'pe-biblio-item');
+                    const badge = el('span', 'pe-chip-biblio pe-chip-biblio--digital', 'Digital');
+                    const enlace = el('a', 'pe-biblio-link', `${r.autor ? `${r.autor} - ` : ''}${r.titulo}`);
+                    enlace.href = r.url;
+                    enlace.target = '_blank';
+                    enlace.rel = 'noopener noreferrer';
+                    li.append(badge, document.createTextNode(' '), enlace);
+                    ulBiblio.append(li);
+                });
+            }
+
+            secBiblio.append(ulBiblio);
+            contenedor.append(secBiblio);
+        }
 
         return contenedor;
     }

@@ -5,65 +5,268 @@
   "datos_generales": {
     "institucion": "Instituto Politécnico Nacional",
     "secretaria": "Secretaría Académica · Dirección de Educación Superior",
-    "unidad_academica": "Escuela Superior de Cómputo (ESCOM)",
+    "unidad_academica": "Escuela Superior de Cómputo (ESCOM) / UPIIZ Campus Zacatecas",
     "programa_academico": "Ingeniería en Sistemas Computacionales",
     "unidad_aprendizaje": "Aplicaciones para Comunicaciones en Red",
-    "semestre": "V Semestre",
-    "plan_estudios": "2020",
+    "semestre": "VI Semestre",
+    "area_formacion": "Profesional",
     "modalidad": "Escolarizada",
-    "tipo": "Teórica-práctica / Obligatoria",
-    "vigencia": "Enero 2026",
+    "tipo": "Teórica-Práctica / Obligatoria",
+    "vigencia": "Enero 2022",
     "creditos_tepic": "7.5",
-    "creditos_satca": "6.0",
+    "creditos_satca": "6.3",
     "horas_teoria_semana": "3.0 h",
     "horas_practica_semana": "1.5 h",
-    "horas_autonomo_semana": "24.0 h / semestre",
+    "horas_teoria_semestre": "54.0 h",
+    "horas_practica_semestre": "27.0 h",
+    "horas_autonomo_semestre": "24.0 h",
     "horas_totales": "81.0 h"
   },
-  "proposito": "Desarrolla aplicaciones de comunicación en red eficientes, concurrentes y seguras mediante el uso de sockets, protocolos de la capa de transporte y arquitecturas de servicios distribuidos en plataformas heterogéneas.",
-  "intencion_educativa": "La unidad de aprendizaje contribuye al perfil de egreso del Ingeniero en Sistemas Computacionales dotándolo de las competencias teóricas y metodológicas para diseñar, programar y evaluar servicios de red. Se relaciona de manera antecedente con Estructuras de Datos, Redes de Computadoras y Sistemas Operativos; de manera lateral con Programación Web y de forma consecuente con Criptografía y Seguridad en Redes y Cómputo Distribuido.",
+  "proposito": "Desarrolla aplicaciones de red, con base en interfaces de programación y arquitectura de comunicaciones, con alto nivel de calidad y eficiencia.",
+  "intencion_educativa": "Esta unidad de aprendizaje contribuye al perfil de egreso de la Ingeniería en Sistemas Computacionales, al desarrollar las habilidades para diseñar e implementar aplicaciones que se comunican en red a través del API de sockets mediante los modelos de comunicación cliente-servidor y P2P. Asimismo, desarrolla habilidades transversales como el pensamiento estratégico, el pensamiento creativo, el trabajo colaborativo y participativo, así como la comunicación asertiva.\n\nLa unidad de aprendizaje se relaciona de manera antecedente con Algoritmos y estructuras de datos, Paradigmas de programación, Sistemas operativos y Redes de computadoras; de manera consecuente con Sistemas distribuidos, sin relaciones laterales.",
+  "orientacion_didactica": {
+    "metodos_ensenanza": "Heurístico",
+    "estrategias_aprendizaje": "Aprendizaje Orientado a Proyectos (AOP)"
+  },
   "unidades_tematicas": [
     {
       "numero": "I",
-      "titulo": "Fundamentos y Modelos en Capas de Comunicación",
-      "competencia": "Analiza los modelos de capas de protocolos (OSI y TCP/IP) y el proceso de encapsulamiento con base en los requerimientos de la comunicación entre procesos.",
-      "horas_docente": "27.0 h (18.0 T / 9.0 P)",
-      "horas_autonomo": "8.0 h",
+      "titulo": "Sockets bloqueantes",
+      "competencia": "Programa aplicaciones en red con base en el modelo cliente-servidor, usando sockets bloqueantes.",
+      "horas_docente": "20.5 h (13.5 h Teoría / 7.0 h Práctica)",
+      "horas_autonomo": "5.5 h",
       "temas": [
-        "1.1 Fundamentos de Arquitectura de Red y Modelos en Capas (OSI vs. TCP/IP).",
-        "1.2 Principios de encapsulamiento, tramas, paquetes y segmentos (PDU).",
-        "1.3 Protocolos de transporte: Orientado a conexión (TCP) vs. No orientado a conexión (UDP).",
-        "1.4 Direccionamiento, puertos bien conocidos y puertos efímeros.",
-        "1.5 Captura y análisis de tráfico con herramientas de inspección (Wireshark)."
+        "1.1 Servicios definidos en la capa de transporte",
+        "1.2 Modelo cliente-servidor",
+        "1.3 Conexiones en el dominio de internet (1.3.1 TCP, 1.3.2 UDP)",
+        "1.4 Sockets orientados a conexión bloqueantes",
+        "1.5 Serialización",
+        "1.6 Sockets no orientados a conexión bloqueantes"
       ]
     },
     {
       "numero": "II",
-      "titulo": "Programación con Sockets y Modelos Concurrentes",
-      "competencia": "Implementa soluciones cliente-servidor concurrentes empleando la API de Sockets, hilos y técnicas de multiplexación de entrada/salida.",
-      "horas_docente": "27.0 h (18.0 T / 9.0 P)",
-      "horas_autonomo": "8.0 h",
+      "titulo": "Arquitectura multihilos para servidores",
+      "competencia": "Programa aplicaciones cliente-servidor con base en el uso de hilos, y mecanismos de sincronización.",
+      "horas_docente": "13.5 h (9.0 h Teoría / 4.5 h Práctica)",
+      "horas_autonomo": "3.5 h",
       "temas": [
-        "2.1 La API de Sockets de Berkeley: Ciclo de vida de sockets TCP y UDP.",
-        "2.2 Servidores iterativos frente a servidores concurrentes multi-hilo.",
-        "2.3 Uso de Pools de hilos y serialización de objetos en la red.",
-        "2.4 Entrada/Salida no bloqueante y multiplexación con Select/Poll.",
-        "2.5 Manejo de flujo, buffers de recepción y control de congestión a nivel de socket."
+        "2.1 Sincronía de hilos (2.1.1 Instrucciones atómicas, 2.1.2 Sección crítica, 2.1.3 Candados, 2.1.4 Exclusión mutua, 2.1.5 Semáforos, 2.1.6 Pools de hilos)",
+        "2.2 Multihilos",
+        "2.3 Formatos de intercambio de datos"
       ]
     },
     {
       "numero": "III",
-      "titulo": "Protocolos de Capa de Aplicación y Servicios Distribuidos",
-      "competencia": "Construye servicios y aplicaciones de red distribuidas integrando protocolos estándar de nivel de aplicación, seguridad criptográfica y arquitecturas cliente-servidor modernas.",
-      "horas_docente": "27.0 h (18.0 T / 9.0 P)",
-      "horas_autonomo": "8.0 h",
+      "titulo": "Sockets no bloqueantes",
+      "competencia": "Programa aplicaciones cliente-servidor, con base en el uso de sockets no bloqueantes y multidifusión.",
+      "horas_docente": "13.5 h (9.0 h Teoría / 4.5 h Práctica)",
+      "horas_autonomo": "4.5 h",
       "temas": [
-        "3.1 Protocolos estándar de aplicación: HTTP/1.1, HTTP/2, DNS, FTP y SMTP.",
-        "3.2 Arquitectura REST y desarrollo de APIs en red.",
-        "3.3 Seguridad en la capa de transporte: SSL/TLS, certificados y HTTPS.",
-        "3.4 Invocación Remota de Métodos (RMI) y llamadas a procedimientos remotos (RPC).",
-        "3.5 Despliegue de servicios en contenedores y balanceo de carga básico."
+        "3.1 Sockets orientados a conexión no bloqueantes",
+        "3.2 Sockets no orientados a conexión bloqueantes",
+        "3.3 Multidifusión (3.3.1 Datagramas de multidifusión, 3.3.2 Resolución de direcciones de multidifusión lógicas a físicas, 3.3.3 Protocolo IGMP)",
+        "3.4 Sockets de multidifusión"
       ]
+    },
+    {
+      "numero": "IV",
+      "titulo": "Protocolos de la capa de aplicación",
+      "competencia": "Programa aplicaciones de red con base en especificaciones de protocolos de aplicaciones orientadas y no orientadas a conexión.",
+      "horas_docente": "18.0 h (12.0 h Teoría / 6.0 h Práctica)",
+      "horas_autonomo": "4.0 h",
+      "temas": [
+        "4.1 Aplicaciones no orientadas a conexión (4.1.1 Protocolo FTP, 4.1.2 Protocolo DNS, 4.1.3 Protocolo DHCP, 4.1.4 Protocolo NFS)",
+        "4.2 Aplicaciones orientadas a conexión (4.2.1 Protocolo FTP, 4.2.2 Protocolo telnet, 4.2.3 Protocolo HTTP, 4.2.4 Protocolo SMTP, 4.2.5 Protocolo SNMP)"
+      ]
+    },
+    {
+      "numero": "V",
+      "titulo": "Invocación a métodos remotos",
+      "competencia": "Programa aplicaciones distribuidas con base en el modelo cliente-servidor e interfaces de programación de comunicación entre procesos remotos de alta usabilidad con optimización de recursos.",
+      "horas_docente": "4.5 h (3.0 h Teoría / 1.5 h Práctica)",
+      "horas_autonomo": "2.0 h",
+      "temas": [
+        "5.1 Java RMI (Remote Method Invocation)",
+        "5.2 Implementación de Skeleton",
+        "5.3 Implementación de Stub",
+        "5.4 RMIRegistry"
+      ]
+    },
+    {
+      "numero": "VI",
+      "titulo": "Aplicaciones P2P",
+      "competencia": "Programa aplicaciones distribuidas con base en el modelo P2P de alta usabilidad con optimización de recursos.",
+      "horas_docente": "11.0 h (7.5 h Teoría / 3.5 h Práctica)",
+      "horas_autonomo": "4.5 h",
+      "temas": [
+        "6.1 Arquitectura P2P (Peer to Peer) (6.1.1 Conectividad, 6.1.2 Enrutamiento de mensajes, 6.1.3 Búsquedas, 6.1.4 Seguridad)",
+        "6.2 Aplicaciones P2P (6.2.1 Intercambio y búsqueda de archivos, 6.2.2 Sistemas de archivos distribuidos)",
+        "6.3 Sistema de telefonía a través de P2P"
+      ]
+    }
+  ],
+  "practicas": [
+    {
+      "numero": 1,
+      "nombre": "Servicio de transferencia de archivos con sockets orientados a conexión bloqueantes",
+      "horas": "1.5 h",
+      "lugar": "Laboratorio de Redes de Computadoras"
+    },
+    {
+      "numero": 2,
+      "nombre": "Servicio de envío de audio con sockets no orientados a conexión",
+      "horas": "1.5 h",
+      "lugar": "Laboratorio de Redes de Computadoras"
+    },
+    {
+      "numero": 3,
+      "nombre": "Servicio de mensajería con hilos",
+      "horas": "3.0 h",
+      "lugar": "Laboratorio de Redes de Computadoras"
+    },
+    {
+      "numero": 4,
+      "nombre": "Servicio de transferencia de archivos con sockets orientados a conexión no bloqueantes",
+      "horas": "1.5 h",
+      "lugar": "Laboratorio de Redes de Computadoras"
+    },
+    {
+      "numero": 5,
+      "nombre": "Servicio de envío de audio con sockets multicast",
+      "horas": "1.5 h",
+      "lugar": "Laboratorio de Redes de Computadoras"
+    },
+    {
+      "numero": 6,
+      "nombre": "Chat multicast",
+      "horas": "3.0 h",
+      "lugar": "Laboratorio de Redes de Computadoras"
+    },
+    {
+      "numero": 7,
+      "nombre": "Servidor HTTP",
+      "horas": "3.0 h",
+      "lugar": "Laboratorio de Redes de Computadoras"
+    },
+    {
+      "numero": 8,
+      "nombre": "Servicio DNS",
+      "horas": "3.0 h",
+      "lugar": "Laboratorio de Redes de Computadoras"
+    },
+    {
+      "numero": 9,
+      "nombre": "Servicio de búsqueda de archivos RMI",
+      "horas": "3.0 h",
+      "lugar": "Laboratorio de Redes de Computadoras"
+    },
+    {
+      "numero": 10,
+      "nombre": "Calculadora distribuida RMI",
+      "horas": "1.5 h",
+      "lugar": "Laboratorio de Redes de Computadoras"
+    },
+    {
+      "numero": 11,
+      "nombre": "Aplicación P2P",
+      "horas": "4.5 h",
+      "lugar": "Laboratorio de Redes de Computadoras"
+    }
+  ],
+  "evaluacion": [
+    "Evaluación diagnóstica (Saberes previamente adquiridos).",
+    "Reporte de proyectos bajo la estrategia de Aprendizaje Orientado a Proyectos (AOP).",
+    "Reportes de prácticas en Laboratorio de Redes de Computadoras.",
+    "Exposiciones y temas complementarios.",
+    "Portafolio de evidencias: Rúbricas de evaluación, fichas de trabajo y rúbricas de autoevaluación."
+  ],
+  "bibliografia": [
+    {
+      "tipo": "Básica",
+      "autor": "Dallal, A. H., Derbala, A. S., & Taher, M. F.",
+      "anio": "2020",
+      "titulo": "Beej’s Guide to Network Programming. Using Internet Sockets",
+      "editorial": "Independently Published",
+      "isbn": "1705309909"
+    },
+    {
+      "tipo": "Básica",
+      "autor": "Van Winkle, L.",
+      "anio": "2019",
+      "titulo": "Hands-On Network Programming with C: Learn socket programming in C and write secure and optimized network code",
+      "editorial": "Packt Publishing",
+      "isbn": "1789349869"
+    },
+    {
+      "tipo": "Básica",
+      "autor": "Harold, E. R.",
+      "anio": "2013",
+      "titulo": "Java Network Programming: Developing Networked Applications",
+      "editorial": "O'Reilly Media",
+      "isbn": "1449357679"
+    },
+    {
+      "tipo": "Básica",
+      "autor": "Joyce, P.",
+      "anio": "2021",
+      "titulo": "C and Python Applications: Embedding Python Code in C Programs, SQL Methods, and Python Sockets",
+      "editorial": "Apress",
+      "isbn": "1484277732"
+    },
+    {
+      "tipo": "Básica",
+      "autor": "Ratan, A., Chou, E., Kathiravelu, P., & Sarker, M. F.",
+      "anio": "2019",
+      "titulo": "Python Network Programming: Conquer all your networking challenges with the powerful Python language",
+      "editorial": "Packt Publishing",
+      "isbn": "1788835468"
+    },
+    {
+      "tipo": "Complementaria",
+      "autor": "Kernighan, B. W., & Ritchie, D. M.",
+      "anio": "1988",
+      "titulo": "The C programming language",
+      "editorial": "Pearson Educación",
+      "isbn": "0131103628"
+    },
+    {
+      "tipo": "Complementaria",
+      "autor": "Schildt, H.",
+      "anio": "2021",
+      "titulo": "Java: The complete reference, twelfth edition",
+      "editorial": "McGraw-Hill",
+      "isbn": "1260463419"
+    },
+    {
+      "tipo": "Complementaria",
+      "autor": "Lubanovic, B.",
+      "anio": "2019",
+      "titulo": "Introducing Python: Modern computing in Simple Packages",
+      "editorial": "O’Reilly Media",
+      "isbn": "1492051365"
+    }
+  ],
+  "recursos_digitales": [
+    {
+      "autor": "Dijkstra, E. (1971)",
+      "titulo": "The Little book of semaphore",
+      "url": "http://greenteapress.com/semaphores/LittleBookOfSemaphores.pdf"
+    },
+    {
+      "autor": "Internet Society (2021)",
+      "titulo": "RFC Editor",
+      "url": "https://www.rfc-editor.org/"
+    },
+    {
+      "autor": "Oracle (2021)",
+      "titulo": "Java documentations",
+      "url": "https://docs.oracle.com/en/java/"
+    },
+    {
+      "autor": "Downet, A. y Mayfield C. (2020)",
+      "titulo": "Think Java",
+      "url": "https://greenteapress.com/thinkjava7/html/"
     }
   ]
 }
