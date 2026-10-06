@@ -1,9 +1,9 @@
 {
   "id": "unidad-02",
   "numero": 2,
-  "titulo": "Recursos Digitales Lineales",
-  "descripcion": "Analizar y programar diferentes tipos de recursos digitales lineales a partir de especificaciones genéricas, comprendiendo la forma en que se organizan los datos de manera secuencial.",
-  "lema": "[Línea que sitúa la unidad dentro del curso y anticipa el producto de aprendizaje.]",
+  "titulo": "Programación con Sockets y Modelos Concurrentes",
+  "descripcion": "Implementa soluciones cliente-servidor concurrentes empleando la API de Sockets, hilos y técnicas de multiplexación de entrada/salida.",
+  "lema": "Desarrolla aplicaciones distribuidas escalables y de alto rendimiento.",
   "duracion_horas": 27,
 
   "introduccion": [

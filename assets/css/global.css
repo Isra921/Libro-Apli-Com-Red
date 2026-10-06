@@ -115,24 +115,67 @@ a:hover {
   pointer-events: auto;
 }
 
-.site-nav .brand {
-  display: block;
-  color: var(--text-light);
-  text-decoration: none;
-  font-size: .78rem;
-  font-weight: 700;
-  letter-spacing: .03em;
-  line-height: 1.3;
+:root {
+  --nav-logo-escom: 26px;
+  --nav-logo-ipn: calc(var(--nav-logo-escom) * 1.5);
 }
 
-.site-nav .brand small {
+.site-nav .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-light);
+  text-decoration: none;
+  line-height: 1.25;
+}
+
+.site-nav .brand .brand-logo {
+  object-fit: contain;
   display: block;
-  color: #FFFFFF !important;
+  flex-shrink: 0;
+}
+
+.site-nav .brand .brand-logo--ipn {
+  height: var(--nav-logo-ipn);
+  width: auto;
+}
+
+.site-nav .brand .brand-logo--escom {
+  height: var(--nav-logo-escom);
+  width: auto;
+}
+
+/* Ocultar logos institucionales cuando se está en portada */
+.site-nav.nav--en-inicio .brand-logo,
+body.pagina-inicio .site-nav .brand-logo {
+  display: none !important;
+}
+
+.site-nav .brand .brand-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.site-nav .brand .brand-title {
+  color: var(--text-light);
+  font-size: .84rem;
+  font-weight: 700;
+  letter-spacing: .03em;
+  text-align: center;
+}
+
+.site-nav .brand small,
+.site-nav .brand .brand-sub {
+  display: block;
+  color: var(--text-light) !important;
   opacity: 0.95;
   font-size: .62rem;
   font-weight: 500;
   letter-spacing: .02em;
-  margin-top: 2px;
+  margin-top: 1px;
+  text-align: center;
 }
 
 .site-nav nav {

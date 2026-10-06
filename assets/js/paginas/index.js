@@ -40,10 +40,19 @@ function closeModal() {
     modalTrigger = null;
 }
 
+const MODALES_GLOBALES = new Set(['glosario', 'autores', 'actividades', 'plan-estudios']);
+
 document.querySelectorAll('[data-modal]').forEach(button => {
     button.addEventListener('click', event => {
+        const id = button.dataset.modal;
+        if (MODALES_GLOBALES.has(id)) {
+            // Dejar que ventana-modal.js maneje la apertura
+            return;
+        }
+        const target = document.getElementById(`modal-${id}`);
+        if (!target) return;
         event.preventDefault();
-        openModal(button.dataset.modal);
+        openModal(id);
     });
 });
 

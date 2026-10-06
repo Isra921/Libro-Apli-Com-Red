@@ -1,0 +1,14 @@
+/* ==========================================================================
+   ESTILOS COMUNES · Punto de entrada para componentes globales
+   Polilibro: Aplicaciones para Comunicaciones en Red (ESCOM-IPN)
+   --------------------------------------------------------------------------
+   Importa en orden la paleta global, estilos base y los modales dinámicos.
+   ========================================================================== */
+
+@import url("variables.css");
+@import url("global.css");
+@import url("ventana-modal.css");
+@import url("autores-modal.css");
+@import url("glosario-modal.css");
+@import url("actividades-modal.css");
+@import url("plan-estudios-modal.css");

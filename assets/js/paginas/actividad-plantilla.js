@@ -451,7 +451,7 @@
             const tema = UI.lista(unidad.temas).find(t => t.numero === numeroTema);
             if (!tema) throw new Error(`El tema ${numeroTema} no aparece en la lista "temas" de ${idUnidad}.json.`);
 
-            document.title = `${(tema.actividad && tema.actividad.nombre) || `Actividad ${numeroTema}`} | Unidad ${UI.romano(unidad.numero)} | Aplicaciones para Comunicaciones en Red`;
+            document.title = `${(tema.actividad && tema.actividad.nombre) || `Actividad ${numeroTema}`} | Unidad ${UI.romano(unidad.numero)} | Marketing`;
 
             if (tema.url) {
                 estado.repaso = { url: DataManager.ruta(tema.url), texto: `el tema ${tema.numero}` };

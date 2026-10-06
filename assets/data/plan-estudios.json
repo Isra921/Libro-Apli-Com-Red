@@ -1,0 +1,69 @@
+{
+  "titulo": "Plan de Estudios",
+  "boton_cerrar": "Cerrar ventana",
+  "archivo_pdf": "",
+  "datos_generales": {
+    "institucion": "Instituto Politécnico Nacional",
+    "secretaria": "Secretaría Académica · Dirección de Educación Superior",
+    "unidad_academica": "Escuela Superior de Cómputo (ESCOM)",
+    "programa_academico": "Ingeniería en Sistemas Computacionales",
+    "unidad_aprendizaje": "Aplicaciones para Comunicaciones en Red",
+    "semestre": "V Semestre",
+    "plan_estudios": "2020",
+    "modalidad": "Escolarizada",
+    "tipo": "Teórica-práctica / Obligatoria",
+    "vigencia": "Enero 2026",
+    "creditos_tepic": "7.5",
+    "creditos_satca": "6.0",
+    "horas_teoria_semana": "3.0 h",
+    "horas_practica_semana": "1.5 h",
+    "horas_autonomo_semana": "24.0 h / semestre",
+    "horas_totales": "81.0 h"
+  },
+  "proposito": "Desarrolla aplicaciones de comunicación en red eficientes, concurrentes y seguras mediante el uso de sockets, protocolos de la capa de transporte y arquitecturas de servicios distribuidos en plataformas heterogéneas.",
+  "intencion_educativa": "La unidad de aprendizaje contribuye al perfil de egreso del Ingeniero en Sistemas Computacionales dotándolo de las competencias teóricas y metodológicas para diseñar, programar y evaluar servicios de red. Se relaciona de manera antecedente con Estructuras de Datos, Redes de Computadoras y Sistemas Operativos; de manera lateral con Programación Web y de forma consecuente con Criptografía y Seguridad en Redes y Cómputo Distribuido.",
+  "unidades_tematicas": [
+    {
+      "numero": "I",
+      "titulo": "Fundamentos y Modelos en Capas de Comunicación",
+      "competencia": "Analiza los modelos de capas de protocolos (OSI y TCP/IP) y el proceso de encapsulamiento con base en los requerimientos de la comunicación entre procesos.",
+      "horas_docente": "27.0 h (18.0 T / 9.0 P)",
+      "horas_autonomo": "8.0 h",
+      "temas": [
+        "1.1 Fundamentos de Arquitectura de Red y Modelos en Capas (OSI vs. TCP/IP).",
+        "1.2 Principios de encapsulamiento, tramas, paquetes y segmentos (PDU).",
+        "1.3 Protocolos de transporte: Orientado a conexión (TCP) vs. No orientado a conexión (UDP).",
+        "1.4 Direccionamiento, puertos bien conocidos y puertos efímeros.",
+        "1.5 Captura y análisis de tráfico con herramientas de inspección (Wireshark)."
+      ]
+    },
+    {
+      "numero": "II",
+      "titulo": "Programación con Sockets y Modelos Concurrentes",
+      "competencia": "Implementa soluciones cliente-servidor concurrentes empleando la API de Sockets, hilos y técnicas de multiplexación de entrada/salida.",
+      "horas_docente": "27.0 h (18.0 T / 9.0 P)",
+      "horas_autonomo": "8.0 h",
+      "temas": [
+        "2.1 La API de Sockets de Berkeley: Ciclo de vida de sockets TCP y UDP.",
+        "2.2 Servidores iterativos frente a servidores concurrentes multi-hilo.",
+        "2.3 Uso de Pools de hilos y serialización de objetos en la red.",
+        "2.4 Entrada/Salida no bloqueante y multiplexación con Select/Poll.",
+        "2.5 Manejo de flujo, buffers de recepción y control de congestión a nivel de socket."
+      ]
+    },
+    {
+      "numero": "III",
+      "titulo": "Protocolos de Capa de Aplicación y Servicios Distribuidos",
+      "competencia": "Construye servicios y aplicaciones de red distribuidas integrando protocolos estándar de nivel de aplicación, seguridad criptográfica y arquitecturas cliente-servidor modernas.",
+      "horas_docente": "27.0 h (18.0 T / 9.0 P)",
+      "horas_autonomo": "8.0 h",
+      "temas": [
+        "3.1 Protocolos estándar de aplicación: HTTP/1.1, HTTP/2, DNS, FTP y SMTP.",
+        "3.2 Arquitectura REST y desarrollo de APIs en red.",
+        "3.3 Seguridad en la capa de transporte: SSL/TLS, certificados y HTTPS.",
+        "3.4 Invocación Remota de Métodos (RMI) y llamadas a procedimientos remotos (RPC).",
+        "3.5 Despliegue de servicios en contenedores y balanceo de carga básico."
+      ]
+    }
+  ]
+}

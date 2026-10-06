@@ -1,9 +1,9 @@
 {
   "id": "unidad-01",
   "numero": 1,
-  "titulo": "Contenidos y Organización",
-  "descripcion": "Identificar contenidos fundamentales de la computación con base en sus órdenes de organización, analizando su comportamiento, eficiencia y aplicación en la solución de problemas.",
-  "lema": "[Línea que sitúa la unidad dentro del curso y anticipa el producto de aprendizaje.]",
+  "titulo": "Fundamentos y Modelos en Capas de Comunicación",
+  "descripcion": "Analiza los modelos de capas de protocolos (OSI y TCP/IP) y el proceso de encapsulamiento con base en los requerimientos de la comunicación entre procesos.",
+  "lema": "Comprende la arquitectura modular que hace posible la interoperabilidad en Internet.",
   "duracion_horas": 27,
 
   "introduccion": [
@@ -16,8 +16,8 @@
   "temas": [
     {
       "numero": "1.1",
-      "nombre": "Tema de ejemplo",
-      "sintesis": "[Síntesis del tema en una línea: qué se explica y con qué recurso se apoya.]",
+      "nombre": "Fundamentos de Arquitectura de Red y Modelos en Capas",
+      "sintesis": "Principios de diseño modular en capas, encapsulamiento de datos, PDU y comparativa del Modelo OSI frente a la pila TCP/IP.",
       "url": "unidades/unidad-01/temas/tema-01-01.html",
       "actividad": {
         "nombre": "Actividad de aprendizaje 1.1",

@@ -10,42 +10,28 @@
         name="description" />
     <link href="assets/css/variables.css" rel="stylesheet" />
     <link href="assets/css/global.css" rel="stylesheet" />
+    <link href="assets/css/comun.css" rel="stylesheet" />
     <link href="assets/css/inicio.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
     <link href="assets/img/ESCOMB.png" rel="icon" type="image/png" />
     <link href="assets/img/ESCOMB.png" rel="shortcut icon" type="image/png" />
 </head>
 
-<body>
-    <header class="site-nav">
-        <a class="brand" href="index.html">ESCOM · Polilibro académico<small>Aplicaciones para Comunicaciones en
-                Red</small></a>
-        <button aria-controls="main-navigation" aria-expanded="false" class="nav-toggle"
-            onclick="const nav=document.getElementById('main-navigation'); nav.classList.toggle('is-open'); this.setAttribute('aria-expanded', nav.classList.contains('is-open'));"
-            type="button">
-            <span class="sr-only">Abrir navegación</span><i aria-hidden="true" class="fas fa-bars"></i>
-        </button>
-        <nav aria-label="Navegación principal" id="main-navigation">
-            <a class="active" href="index.html"><i aria-hidden="true" class="fas fa-home"></i> Inicio</a>
-            <a href="unidades.html"><i aria-hidden="true" class="fas fa-book-open"></i> Unidades</a>
-            <a href="unidades/unidad-01/referencias.html"><i aria-hidden="true" class="fas fa-bookmark"></i>
-                Referencias</a>
-        </nav>
-    </header>
+<body data-root="">
+    <header class="site-nav" data-componente="navegacion"></header>
     <main class="container">
         <section class="hero-section">
             <img alt="Instituto Politécnico Nacional" class="hero-emblem hero-emblem-ipn" src="assets/img/IPNb.png" />
             <img alt="ESCOM" class="hero-emblem hero-emblem-escom" src="assets/img/ESCOMB.png" />
             <div aria-label="Identidad institucional" class="hero-institutional">
                 <div class="hero-title-lockup">
-                    <span class="institutional-line">INSTITUTO POLITÉCNICO NACIONAL · ESCOM</span>
-                    <h1>Aplicaciones para<br /><span class="hero-subject">Comunicaciones en Red</span></h1>
+                    <span class="hero-title-ipn">Instituto Politécnico Nacional</span>
+                    <span class="hero-title-escom">Escuela Superior de Cómputo</span>
+                    <h1 class="hero-title-materia" style="font-size: calc(var(--hero-title-base) * 1.5)">Aplicaciones para Comunicaciones en Red</h1>
                 </div>
             </div>
             <div class="hero-content">
                 <div class="hero-copy">
-                    <p class="hero-description">Unidad de aprendizaje para comprender cómo se conectan, organizan y
-                        protegen los recursos en red.</p>
                     <div class="hero-actions">
                         <a class="cta-button" href="unidades.html">Ver unidades <i class="fas fa-arrow-right"></i></a>
                         <a class="secondary-button" href="unidades/unidad-01/index.html">Empezar en la Unidad 1</a>
@@ -120,7 +106,7 @@
                         <i aria-hidden="true" class="fas fa-book"></i>
                         <span>Glosario de términos<small>Consulta los conceptos principales.</small></span>
                     </button>
-                    <button class="quick-link" data-modal="creadores" type="button">
+                    <button class="quick-link" data-modal="autores" type="button">
                         <i aria-hidden="true" class="fas fa-users"></i>
                         <span>Autores y colaboradores<small>Conoce al equipo del polilibro.</small></span>
                     </button>
@@ -424,258 +410,6 @@
                         </section>
                     </div>
                 </div>
-                <div class="modal-section" id="modal-actividades">
-                    <h3>Actividades</h3>
-                    <div aria-label="Categorías de actividades" class="activity-subsections"><button
-                            aria-controls="activities-topics" aria-pressed="true" class="modal-subsection active"
-                            data-activity-panel="activities-topics" type="button">Actividades de temas</button><button
-                            aria-controls="activities-finals" aria-pressed="false" class="modal-subsection"
-                            data-activity-panel="activities-finals" type="button">Actividades finales</button></div>
-                    <div id="activities-topics">
-                        <h4>Unidad 1</h4>
-                        <ul class="video-list">
-                            <li><a href="unidades/unidad-01/actividades/actividad-1-1.html"><i aria-hidden="true"
-                                        class="fas fa-gamepad"></i> Actividad 1.1</a></li>
-                            <li><a href="unidades/unidad-01/actividades/actividad-1-2.html"><i aria-hidden="true"
-                                        class="fas fa-gamepad"></i> Actividad 1.2</a></li>
-                            <li><a href="unidades/unidad-01/actividades/actividad-1-3.html"><i aria-hidden="true"
-                                        class="fas fa-gamepad"></i> Actividad 1.3</a></li>
-                            <li><a href="unidades/unidad-01/actividades/actividad-1-4.html"><i aria-hidden="true"
-                                        class="fas fa-gamepad"></i> Actividad 1.4</a></li>
-                        </ul>
-                        <h4>Unidad 2</h4>
-                        <ul class="video-list">
-                            <li><a href="unidades/unidad-02/actividades/actividad-2-1.html"><i aria-hidden="true"
-                                        class="fas fa-gamepad"></i> Actividad 2.1</a></li>
-                            <li><a href="unidades/unidad-02/actividades/actividad-2-2.html"><i aria-hidden="true"
-                                        class="fas fa-gamepad"></i> Actividad 2.2</a></li>
-                            <li><a href="unidades/unidad-02/actividades/actividad-2-3.html"><i aria-hidden="true"
-                                        class="fas fa-gamepad"></i> Actividad 2.3</a></li>
-                            <li><a href="unidades/unidad-02/actividades/actividad-2-4.html"><i aria-hidden="true"
-                                        class="fas fa-gamepad"></i> Actividad 2.4</a></li>
-                        </ul>
-                        <h4>Unidad 3</h4>
-                        <ul class="video-list">
-                            <li><a href="unidades/unidad-03/actividades/actividad-3-1.html"><i aria-hidden="true"
-                                        class="fas fa-gamepad"></i> Actividad 3.1</a></li>
-                        </ul>
-                    </div>
-                    <div hidden="" id="activities-finals">
-                        <h4>Unidad 1</h4>
-                        <ul class="video-list">
-                            <li><a href="unidades/unidad-01/actividades/actividad-final.html"><i aria-hidden="true"
-                                        class="fas fa-trophy"></i> Actividad final de la Unidad 1</a></li>
-                        </ul>
-                        <h4>Unidad 2</h4>
-                        <ul class="video-list">
-                            <li><a href="unidades/unidad-02/actividades/actividad-final.html"><i aria-hidden="true"
-                                        class="fas fa-trophy"></i> Actividad final de la Unidad 2</a></li>
-                        </ul>
-                        <h4>Unidad 3</h4>
-                        <ul class="video-list">
-                            <li><a href="unidades/unidad-03/actividades/actividad-final.html"><i aria-hidden="true"
-                                        class="fas fa-trophy"></i> Actividad final de la Unidad 3</a></li>
-                        </ul>
-                    </div>
-                    <p>Estas actividades no son parte de la evaluación, funcionan únicamente como una manera de reforzar
-                        tu aprendizaje.</p>
-                </div>
-                <div class="modal-section" id="modal-glosario">
-                    <div class="modal-tabs" style="display: flex; gap: 10px; margin-bottom: 20px;">
-                        <button class="tab-btn active" onclick="switchUnit('u1', this)"
-                            style="padding: 8px 18px; border-radius: 999px; border: 1px solid var(--border-color); background: var(--secondary); color: white; cursor: pointer;"
-                            type="button">Unidad 1</button>
-                        <button class="tab-btn" onclick="switchUnit('u2', this)"
-                            style="padding: 8px 18px; border-radius: 999px; border: 1px solid var(--border-color); background: color-mix(in srgb, var(--surface) 80%, transparent); color: var(--text-muted-light); cursor: pointer;"
-                            type="button">Unidad 2</button>
-                        <button class="tab-btn" onclick="switchUnit('u3', this)"
-                            style="padding: 8px 18px; border-radius: 999px; border: 1px solid var(--border-color); background: color-mix(in srgb, var(--surface) 80%, transparent); color: var(--text-muted-light); cursor: pointer;"
-                            type="button">Unidad 3</button>
-                    </div>
-                    <div class="glosario-body prose">
-                        <!-- UNIDAD 1 -->
-                        <div class="unit-content active" id="u1">
-                            <p><strong>Abstracción:</strong> Proceso de simplificar la representación de un problema o
-                                sistema, considerando solo aspectos relevantes.</p>
-                            <p><strong>Algoritmo:</strong> Conjunto finito, ordenado y bien definido de instrucciones
-                                para resolver un problema.</p>
-                            <p><strong>Algoritmo de búsqueda:</strong> Establece un procedimiento lógico paso a paso
-                                para ubicar un dato concreto.</p>
-                            <p><strong>Algoritmo de organización de información:</strong> Reorganiza los elementos de un
-                                listado en un orden específico.</p>
-                            <p><strong>Algoritmo voraz (greedy):</strong> Toma la mejor decisión disponible en el
-                                momento presente sin considerar consecuencias futuras.</p>
-                            <p><strong>Búsqueda binaria:</strong> Localiza un elemento dentro de una colección ordenada
-                                dividiendo repetidamente el conjunto a la mitad.</p>
-                            <p><strong>Búsqueda indexada:</strong> Utiliza una estructura auxiliar llamada índice para
-                                localizar información más rápido.</p>
-                            <p><strong>Búsqueda secuencial:</strong> Recorre uno a uno los elementos de una lista hasta
-                                encontrar el dato.</p>
-                            <p><strong>Determinístico:</strong> Con los mismos datos de entrada, siempre obtiene los
-                                mismos resultados.</p>
-                            <p><strong>Notación Big-O:</strong> Métrica utilizada para medir la eficiencia de un
-                                algoritmo conforme crecen los datos.</p>
-                            <p><strong>Organización de información de burbuja:</strong> Compara pares consecutivos e
-                                intercambia posiciones si están en orden incorrecto.</p>
-                            <p><strong>Organización de información por inserción:</strong> Toma el primer elemento como
-                                referencia y desplaza cada elemento a su posición.</p>
-                            <p><strong>Organización de información por mezcla (Merge Sort):</strong> Divide la lista,
-                                ordena cada parte y las mezcla en orden correcto.</p>
-                            <p><strong>Programación por vuelta atrás (Backtracking):</strong> Explora soluciones paso a
-                                paso, retrocediendo cuando no conduce a una solución válida.</p>
-                            <p><strong>Pseudocódigo:</strong> Representación abstracta y simplificada de las etapas de
-                                un algoritmo.</p>
-                            <p><strong>Tipo de Dato Abstracto (TDA):</strong> Define un conjunto de datos y sus
-                                operaciones sin mostrar la implementación interna.</p>
-                        </div>
-                        <!-- UNIDAD 2 -->
-                        <div class="unit-content" id="u2">
-                            <p><strong>Abstracción de datos:</strong> Forma de modelar información almacenada y
-                                procesada sin depender de detalles internos.</p>
-                            <p><strong>Cima:</strong> Extremo de la pila donde se insertan y eliminan los elementos.</p>
-                            <p><strong>Tema provisional (Queue):</strong> Estructura de datos lineal basada en el
-                                principio FIFO.</p>
-                            <p><strong>Colisión:</strong> Situación donde dos claves diferentes generan el mismo índice
-                                en una tabla hash.</p>
-                            <p><strong>Desbordamiento (Overflow):</strong> Error al intentar insertar un elemento en una
-                                estructura llena.</p>
-                            <p><strong>Estructura de datos lineal:</strong> Organización donde los elementos se disponen
-                                secuencialmente.</p>
-                            <p><strong>FIFO (First In, First Out):</strong> El primer elemento en entrar es el primero
-                                en salir.</p>
-                            <p><strong>LIFO (Last In, First Out):</strong> El último elemento en entrar es el primero en
-                                salir.</p>
-                            <p><strong>Lista enlazada:</strong> Estructura formada por nodos unidos mediante punteros o
-                                enlaces.</p>
-                            <p><strong>Tema provisional (Stack):</strong> Estructura de datos lineal basada en el
-                                principio LIFO.</p>
-                            <p><strong>Subdesbordamiento (Underflow):</strong> Error al intentar eliminar un elemento de
-                                una estructura vacía.</p>
-                            <p><strong>Tabla Hash:</strong> Estructura que almacena pares (clave, valor) para un acceso
-                                rápido a la información.</p>
-                        </div>
-                        <!-- UNIDAD 3 -->
-                        <div class="unit-content" id="u3">
-                            <p><strong>Altura de un nodo:</strong> En un árbol, es el camino que se recorre desde un
-                                nodo hasta un nodo hoja</p>
-                            <p><strong>Árbol:</strong> Estructura no lineal que organiza jerárquicamente información
-                                mediante nodos y vértices.</p>
-                            <p><strong>Árbol Binario:</strong> Estructura en la que cada nodo puede poseer como máximo
-                                dos hijos.</p>
-                            <p><strong>Árbol Binario de Búsqueda:</strong> Árbol estructurado donde las claves con
-                                valores menores se colocan en el subárbol izquierdo y las mayores en el subárbol derecho
-                                de un nodo de referencia.</p>
-                            <p><strong>Búsqueda en Amplitud (BEA):</strong> Recorrido de un grafo o árbol utilizando una
-                                cola explorándolo progresivamente por niveles.</p>
-                            <p><strong>Búsqueda en Profundidad (BEP):</strong> Recorrido de un grafo o árbol utilizando
-                                una pila descendiendo al máximo nivel antes de retroceder y dirigirse a otras ramas.</p>
-                            <p><strong>Dijkstra:</strong> Algoritmo para calcular los caminos más cortos en un grafo
-                                ponderado.</p>
-                            <p><strong>Grafo:</strong> Estructura no lineal conformada por vértices conectados mediante
-                                arcos o aristas.</p>
-                            <p><strong>Lista de adyacencia:</strong> Representación dinámica que almacena las conexiones
-                                de los nodos de un grafo usando listas enlazadas.</p>
-                            <p><strong>Matriz de adyacencia:</strong> Arreglo bidimensional para representar las
-                                conexiones entre pares de vértices de un grafo.</p>
-                            <p><strong>Nodo raíz:</strong> El primer nodo o el nodo de mayor jerarquía de un árbol
-                                ubicado en el nivel cero.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-section" id="modal-creadores">
-                    <div class="modal-subsection-nav" style="display: flex; gap: 10px; margin-bottom: 20px;">
-                        <button class="modal-subsection active" id="tab-autores"
-                            onclick="toggleCreadoresView('autores')" type="button">Autores principales</button>
-                        <button class="modal-subsection" id="tab-colaboradores"
-                            onclick="toggleCreadoresView('colaboradores')" type="button">Equipo de desarrollo</button>
-                    </div>
-                    <div class="prose" id="seccion-autores">
-                        <h3>Autores</h3>
-                        <div class="creator-block">
-                            <img alt="Yaxin Flores Mendoza" src="assets/img/Yaxkin.png" />
-                            <div class="creator-info">
-                                <h4>Yaxkin Flores Mendoza</h4>
-                                <p class="email">yfloresme@ipn.mx</p>
-                                <p style="text-align: justify;"><strong>Semblanza:</strong> Yaxkin Flores Mendoza.
-                                    Ingeniero en sistemas computacionales, maestro en ciencias de la computación y
-                                    doctor en educación. Docente de tiempo completo del departamento de Ciencias e
-                                    Ingeniería de la Computación de la Escom.</p>
-                                <p style="text-align: justify;"><strong>Áreas de interés:</strong> Neurociencia de la
-                                    Educación y Redes Neuronales, Metodología de la Investigación, Educación en Línea
-                                    con plataformas virtuales.</p>
-                            </div>
-                        </div>
-                        <div class="creator-block">
-                            <img alt="Israel Salas Ramírez" src="assets/img/isr.png" />
-                            <div class="creator-info">
-                                <h4>Israel Salas Ramírez</h4>
-                                <p class="email">isalasr@ipn.mx</p>
-                                <p style="text-align: justify;"><strong>Semblanza:</strong> docente en la Escuela
-                                    Superior de Cómputo del Instituto Politécnico Nacional, es doctor y maestro en
-                                    ciencias de la educación, ingeniero en comunicaciones y electrónica de la ESIME
-                                    Zacatenco, ha trabajado como responsable de unidades de Informática y generación de
-                                    proyectos de Inversión Tecnológica.</p>
-                                <p style="text-align: justify;"><strong>Áreas de interés:</strong> Sistemas Operativos,
-                                    Administración de Redes, Neurociencia en la Educación, Redes Neuronales, Generación
-                                    de Simuladores Médicos y Plataformas Virtuales Aplicados a la Educación.</p>
-                            </div>
-                        </div>
-                        <hr />
-                        <div class="creator-block">
-                            <img alt="Daniel Cruz García" src="assets/img/Daniel_Cruz_Garcia.png" />
-                            <div class="creator-info">
-                                <h4>Daniel Cruz García</h4>
-                                <p class="email">dcruzg@ipn.mx</p>
-                                <p style="text-align: justify;"><strong>Semblanza:</strong> Profesor de tiempo completo
-                                    en la Escuela Superior de Cómputo, Ingeniería en Sistemas Computacionales, maestro
-                                    en ciencias en la especialidad de Ingeniería Eléctrica, opción Computación.</p>
-                                <p style="text-align: justify;"><strong>Áreas de interés:</strong> Sistemas
-                                    Distribuidos, Redes, Seguridad e Inteligencia Artificial.</p>
-                            </div>
-                        </div>
-                        <hr />
-                    </div>
-                    <div class="prose" id="seccion-colaboradores" style="display:none;">
-                        <h3>Equipo de desarrollo</h3>
-                        <p style="text-align:center; margin-bottom: 2rem;">Estudiantes que contribuyeron a la creación y
-                            desarrollo de este recurso digital.</p>
-                        <div class="collaborator-grid">
-                            <div class="collaborator-card">
-                                <div class="avatar-ring">
-                                    <div class="avatar-circle">
-                                        <i class="fas fa-user"></i>
-                                    </div>
-                                </div>
-                                <div class="collaborator-info">
-                                    <h4>Flores Madrigal Diego</h4>
-                                    <p class="email">dfloresm1300@alumno.ipn.mx</p>
-                                </div>
-                            </div>
-                            <div class="collaborator-card">
-                                <div class="avatar-ring">
-                                    <div class="avatar-circle">
-                                        <i class="fas fa-user"></i>
-                                    </div>
-                                </div>
-                                <div class="collaborator-info">
-                                    <h4>Aranza Alondra Muñoz Chávez</h4>
-                                    <p class="email">amunozc2002@alumno.ipn.mx</p>
-                                </div>
-                            </div>
-                            <div class="collaborator-card">
-                                <div class="avatar-ring">
-                                    <div class="avatar-circle">
-                                        <i class="fas fa-user"></i>
-                                    </div>
-                                </div>
-                                <div class="collaborator-info">
-                                    <h4>Israel Soto Peña</h4>
-                                    <p class="email">isotop2000@alumno.ipn.mx</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="modal-section" id="modal-licencia">
                     <h3>Licencia Creative Commons</h3>
                     <p style="text-align: center;">
@@ -707,7 +441,8 @@
                 style="width: 100%; height: 100%; border: none;"></iframe>
         </div>
     </div>
-    <script src="assets/js/nav-global.js"></script>
+    <script src="assets/js/data-manager.js"></script>
+    <script src="assets/js/componentes.js"></script>
     <script src="assets/js/paginas/index.js"></script>
     <script src="assets/js/examen-diagnostico-contenidos-estructuras-datos.js"></script>
 </body>

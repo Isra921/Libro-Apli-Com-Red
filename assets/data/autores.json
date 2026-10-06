@@ -1,0 +1,85 @@
+{
+  "titulo": "Autores y Colaboradores",
+  "boton_cerrar": "Cerrar ventana",
+  "etiquetas": {
+    "semblanza": "Semblanza",
+    "areas": "Áreas de especialidad",
+    "sin_foto": "Sin fotografía"
+  },
+  "secciones": [
+    {
+      "id": "docentes",
+      "pestana": "Autores",
+      "titulo": "Autores de Contenido",
+      "descripcion": "Profesores de la Escuela Superior de Cómputo del Instituto Politécnico Nacional.",
+      "tipo": "docente",
+      "personas": [
+        {
+          "grado": "Dr.",
+          "nombre": "Yaxkin Flores Mendoza",
+          "correo": "yfloresme@ipn.mx",
+          "foto": "assets/img/Yaxkin.png",
+          "semblanza": [
+            "Ingeniero en sistemas computacionales, maestro en ciencias de la computación y doctor en educación. Docente de tiempo completo del departamento de Ciencias e Ingeniería de la Computación de la Escuela Superior de Cómputo (ESCOM - IPN)."
+          ],
+          "areas": [
+            "Neurociencia de la Educación y Redes Neuronales",
+            "Metodología de la Investigación",
+            "Educación en Línea con Plataformas Virtuales"
+          ]
+        },
+        {
+          "grado": "D. en E.",
+          "nombre": "Israel Salas Ramírez",
+          "correo": "isalasr@ipn.mx",
+          "foto": "assets/img/Israel_Salas_Ramirez.png",
+          "semblanza": [
+            "Doctor y maestro en ciencias de la educación, e ingeniero en comunicaciones y electrónica por la ESIME Zacatenco del IPN. Docente de la Escuela Superior de Cómputo del Instituto Politécnico Nacional con amplia trayectoria en las asignaturas de Sistemas Operativos, Aplicaciones para Comunicaciones en Red y Arquitectura de Computadoras. Ha trabajado como responsable de unidades de Informática y generación de proyectos de Inversión Tecnológica."
+          ],
+          "areas": [
+            "Sistemas Operativos",
+            "Administración de Redes",
+            "Protocolos de Comunicación y Sockets",
+            "Neurociencia en la Educación",
+            "Generación de Simuladores Médicos y Plataformas Virtuales"
+          ]
+        },
+        {
+          "grado": "M. en C.",
+          "nombre": "Daniel Cruz García",
+          "correo": "dcruzg@ipn.mx",
+          "foto": "assets/img/Daniel_Cruz_Garcia.png",
+          "semblanza": [
+            "Profesor de tiempo completo en la Escuela Superior de Cómputo del Instituto Politécnico Nacional. Ingeniero en sistemas computacionales y maestro en ciencias en la especialidad de Ingeniería Eléctrica, opción Computación."
+          ],
+          "areas": [
+            "Sistemas Distribuidos",
+            "Redes",
+            "Seguridad e Inteligencia Artificial"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "colaboradores",
+      "pestana": "Desarrollo",
+      "titulo": "Equipo de Desarrollo y Maquetación",
+      "descripcion": "Estudiantes y prestadores de servicio social de la Escuela Superior de Cómputo (ESCOM - IPN).",
+      "tipo": "colaborador",
+      "personas": [
+        {
+          "nombre": "Flores Madrigal Diego",
+          "correo": "dfloresm1300@alumno.ipn.mx"
+        },
+        {
+          "nombre": "Aranza Alondra Muñoz Chávez",
+          "correo": "amunozc2002@alumno.ipn.mx"
+        },
+        {
+          "nombre": "Israel Soto Peña",
+          "correo": "isotop2000@alumno.ipn.mx"
+        }
+      ]
+    }
+  ]
+}

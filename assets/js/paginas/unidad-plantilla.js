@@ -44,17 +44,6 @@
 
     // ---------- Secciones ----------
 
-    function migas(numeral) {
-        return `
-            <nav class="u-breadcrumb" aria-label="Ruta de navegación">
-                <a href="${UI.esc(DataManager.ruta('index.html'))}">Inicio</a>
-                <span aria-hidden="true">/</span>
-                <a href="${UI.esc(DataManager.ruta('unidades.html'))}">Unidades</a>
-                <span aria-hidden="true">/</span>
-                <span aria-current="page">Unidad ${numeral}</span>
-            </nav>`;
-    }
-
     function hero(unidad, numeral, primerTema) {
         const temas = UI.lista(unidad.temas);
         const actividades = UI.actividades(unidad);
@@ -342,7 +331,6 @@
             document.title = `Unidad ${numeral}: ${unidad.titulo} | Aplicaciones para Comunicaciones en Red`;
 
             app.innerHTML = `
-                ${migas(numeral)}
                 ${hero(unidad, numeral, primerTema)}
                 <div class="u-layout">
                     <div class="u-main">

@@ -1,0 +1,50 @@
+{
+  "marca": {
+    "titulo": "ESCOM · Polilibro académico",
+    "subtitulo": "Aplicaciones para Comunicaciones en Red",
+    "url": "index.html",
+    "logo_izq": {
+      "src": "assets/img/IPNb.png",
+      "alt": "Instituto Politécnico Nacional",
+      "clase": "brand-logo--ipn"
+    },
+    "logo_der": {
+      "src": "assets/img/ESCOMB.png",
+      "alt": "Escuela Superior de Cómputo",
+      "clase": "brand-logo--escom"
+    }
+  },
+  "boton_menu": "Abrir navegación",
+  "enlaces": [
+    {
+      "texto": "Inicio",
+      "icono": "fa-home",
+      "url": "index.html"
+    },
+    {
+      "texto": "Plan de Estudios",
+      "icono": "fa-file-lines",
+      "modal": "plan-estudios"
+    },
+    {
+      "texto": "Unidades",
+      "icono": "fa-book-open",
+      "url": "unidades.html"
+    },
+    {
+      "texto": "Referencias",
+      "icono": "fa-bookmark",
+      "url": "unidades/unidad-01/referencias.html"
+    },
+    {
+      "texto": "Glosario",
+      "icono": "fa-book",
+      "modal": "glosario"
+    },
+    {
+      "texto": "Autores",
+      "icono": "fa-users",
+      "modal": "autores"
+    }
+  ]
+}

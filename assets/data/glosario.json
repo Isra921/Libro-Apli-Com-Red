@@ -1,0 +1,114 @@
+{
+  "titulo": "Glosario de términos",
+  "boton_cerrar": "Cerrar ventana",
+  "textos": {
+    "buscador_etiqueta": "Buscar en el glosario",
+    "buscador_placeholder": "Escribe un término o una palabra de su definición…",
+    "contador_total": "{total} términos",
+    "contador_filtrado": "{visibles} de {total} términos",
+    "sin_resultados": "No hay términos que coincidan con «{busqueda}»."
+  },
+  "unidades": [
+    {
+      "id": "unidad-01",
+      "pestana": "Unidad 1",
+      "titulo": "Unidad 1: Fundamentos y Modelos en Capas",
+      "terminos": [
+        {
+          "termino": "Arquitectura en Capas",
+          "definicion": "Diseño jerárquico y modular donde cada nivel ofrece servicios al superior abstrayendo la complejidad de los inferiores."
+        },
+        {
+          "termino": "Encapsulamiento",
+          "definicion": "Proceso mediante el cual los datos de una capa superior se envuelven con encabezados y/o colas de control en la capa inferior."
+        },
+        {
+          "termino": "Modelo OSI",
+          "definicion": "Modelo de referencia estándar de 7 capas formulado por la ISO para conceptualizar la interoperabilidad de red."
+        },
+        {
+          "termino": "Modelo TCP/IP",
+          "definicion": "Arquitectura práctica y abierta de 4 o 5 capas sobre la que opera la Internet global."
+        },
+        {
+          "termino": "PDU (Protocol Data Unit)",
+          "definicion": "Unidad de datos de protocolo específica de cada capa: Datos (Aplicación), Segmento (Transporte), Paquete (Red), Trama (Enlace) y Bits (Física)."
+        },
+        {
+          "termino": "Puerto de Red",
+          "definicion": "Identificador numérico de 16 bits (0 a 65535) que permite direccionar mensajes a procesos específicos dentro de un host."
+        },
+        {
+          "termino": "Puerto Efímero",
+          "definicion": "Puerto temporal de rango dinámico (generalmente > 1024) asignado por el sistema operativo a los clientes de red."
+        },
+        {
+          "termino": "MTU (Maximum Transmission Unit)",
+          "definicion": "Tamaño máximo en bytes que puede tener una trama sin requerir fragmentación en el nivel de red (habitualmente 1500 bytes en Ethernet)."
+        }
+      ]
+    },
+    {
+      "id": "unidad-02",
+      "pestana": "Unidad 2",
+      "titulo": "Unidad 2: Programación con Sockets y Concurrencia",
+      "terminos": [
+        {
+          "termino": "Socket de Berkeley",
+          "definicion": "Abstracción de software de extremo a extremo que representa un punto terminal de comunicación bidireccional entre procesos."
+        },
+        {
+          "termino": "TCP (Transmission Control Protocol)",
+          "definicion": "Protocolo de transporte orientado a conexión, confiable, con control de congestión, flujo y entrega ordenada mediante acuses de recibo."
+        },
+        {
+          "termino": "UDP (User Datagram Protocol)",
+          "definicion": "Protocolo de transporte sin conexión, no confiable y de baja latencia que envía datagramas independientes."
+        },
+        {
+          "termino": "Three-Way Handshake",
+          "definicion": "Negociación inicial de 3 vías (SYN, SYN-ACK, ACK) empleada por TCP para sincronizar números de secuencia y establecer la sesión."
+        },
+        {
+          "termino": "Servidor Concurrente",
+          "definicion": "Arquitectura de servidor capaz de atender múltiples clientes de forma simultánea mediante hilos, procesos o selectores asíncronos."
+        },
+        {
+          "termino": "Thread Pool",
+          "definicion": "Conjunto preasignado de hilos reutilizables que procesa tareas en cola evitando el costo computacional de crear hilos continuos."
+        },
+        {
+          "termino": "Non-blocking I/O (NIO)",
+          "definicion": "Modelo de entrada/salida que permite a una llamada al sistema retornar inmediatamente si no hay datos listos, evitando bloquear el hilo ejecutor."
+        }
+      ]
+    },
+    {
+      "id": "unidad-03",
+      "pestana": "Unidad 3",
+      "titulo": "Unidad 3: Servicios Distribuidos y Protocolos de Aplicación",
+      "terminos": [
+        {
+          "termino": "DNS (Domain Name System)",
+          "definicion": "Base de datos jerárquica y distribuida que resuelve nombres de dominio inteligibles en direcciones IP numéricas."
+        },
+        {
+          "termino": "HTTP / HTTPS",
+          "definicion": "Protocolo de transferencia de hipertexto de nivel de aplicación; HTTPS cifra la comunicación mediante TLS/SSL."
+        },
+        {
+          "termino": "REST (Representational State Transfer)",
+          "definicion": "Estilo de arquitectura de software para sistemas hipermedia distribuidos basado en operaciones CRUD sobre URIs usando métodos HTTP."
+        },
+        {
+          "termino": "TLS (Transport Layer Security)",
+          "definicion": "Protocolo criptográfico que provee confidencialidad, integridad y autenticación entre aplicaciones comunicadas por red."
+        },
+        {
+          "termino": "RPC (Remote Procedure Call)",
+          "definicion": "Mecanismo que permite a un programa ejecutar procedimientos o métodos en una computadora remota como si fueran locales."
+        }
+      ]
+    }
+  ]
+}

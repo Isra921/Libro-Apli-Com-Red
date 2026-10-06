@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -8,8 +8,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <link rel="stylesheet" href="../../../assets/css/variables.css">
-  <link rel="stylesheet" href="../../../assets/css/global.css">
+  <link rel="stylesheet" href="../../../assets/css/comun.css">
   <link rel="stylesheet" href="../../../assets/css/unidades-base.css?v=20260930">
   <link rel="stylesheet" href="../../../assets/css/actividad.css">
 
@@ -26,28 +25,9 @@
 <body class="u-body" data-root="../../../" data-unidad="unidad-03" data-tema="3.1"
   data-preguntas="assets/data/unidad-3/preguntas_3_1.json" data-cantidad="10">
 
-  <header class="site-nav">
-    <a class="brand" href="../../../index.html">ESCOM · Polilibro académico<small>Aplicaciones para Comunicaciones en Red</small></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
-      <span class="u-sr-only">Abrir navegación</span><i class="fas fa-bars" aria-hidden="true"></i>
-    </button>
-    <nav id="main-navigation" aria-label="Navegación principal">
-      <a href="../../../index.html"><i class="fas fa-home" aria-hidden="true"></i> Inicio</a>
-      <a class="active" href="../../../unidades.html"><i class="fas fa-book-open" aria-hidden="true"></i> Unidades</a>
-      <a href="../referencias.html"><i class="fas fa-bookmark" aria-hidden="true"></i> Referencias</a>
-    </nav>
-  </header>
+  <header class="site-nav" data-componente="navegacion"></header>
 
   <main class="u-page">
-    <nav class="u-breadcrumb" aria-label="Ruta de navegación">
-      <a href="../../../index.html">Inicio</a>
-      <span aria-hidden="true">/</span>
-      <a href="../../../unidades.html">Unidades</a>
-      <span aria-hidden="true">/</span>
-      <a href="../index.html">Unidad III</a>
-      <span aria-hidden="true">/</span>
-      <span aria-current="page">Actividad de aprendizaje 3.1</span>
-    </nav>
 
     <div class="a-layout">
       <div class="a-main">
@@ -119,7 +99,7 @@
     </div>
   </footer>
 
-  <script src="../../../assets/js/nav-global.js"></script>
+  <script src="../../../assets/js/componentes.js"></script>
   <script src="../../../assets/js/data-manager.js?v=20260930"></script>
   <script src="../../../assets/js/unidades-ui.js?v=20260930"></script>
   <script src="../../../assets/js/paginas/actividad-plantilla.js"></script>

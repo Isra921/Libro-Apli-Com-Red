@@ -5,59 +5,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Actividad de aprendizaje 1.1 | Aplicaciones para Comunicaciones en Red</title>
+  <meta name="description" content="Actividad interactiva de aprendizaje del tema 1.1: Fundamentos de Arquitectura de Red y Modelos en Capas.">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <link rel="stylesheet" href="../../../assets/css/variables.css">
-  <link rel="stylesheet" href="../../../assets/css/global.css">
-  <link rel="stylesheet" href="../../../assets/css/unidades-base.css?v=20260930">
+  <link rel="stylesheet" href="../../../assets/css/comun.css">
+  <link rel="stylesheet" href="../../../assets/css/unidades-base.css">
   <link rel="stylesheet" href="../../../assets/css/actividad.css">
 
   <link rel="icon" type="image/png" href="../../../assets/img/ESCOMB.png">
 </head>
 
-<!--
-  PLANTILLA DE ACTIVIDAD DE APRENDIZAJE
-  - data-unidad: JSON de la unidad (sin .json) · data-tema: "numero" del tema al que pertenece la actividad
-  - data-preguntas: banco de preguntas (ruta desde la raíz) · data-cantidad: preguntas por intento (al azar)
-  - El ejercicio, "Otras actividades" y la navegación inferior se generan solos.
-  Ver assets/data/unidades/LEEME.md
--->
 <body class="u-body" data-root="../../../" data-unidad="unidad-01" data-tema="1.1"
   data-preguntas="assets/data/unidad-1/preguntas_1.1.json" data-cantidad="10">
 
-  <header class="site-nav">
-    <a class="brand" href="../../../index.html">ESCOM · Polilibro académico<small>Aplicaciones para Comunicaciones en Red</small></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
-      <span class="u-sr-only">Abrir navegación</span><i class="fas fa-bars" aria-hidden="true"></i>
-    </button>
-    <nav id="main-navigation" aria-label="Navegación principal">
-      <a href="../../../index.html"><i class="fas fa-home" aria-hidden="true"></i> Inicio</a>
-      <a class="active" href="../../../unidades.html"><i class="fas fa-book-open" aria-hidden="true"></i> Unidades</a>
-      <a href="../referencias.html"><i class="fas fa-bookmark" aria-hidden="true"></i> Referencias</a>
-    </nav>
-  </header>
+  <!-- Barra de navegación global unificada mediante componente dinámico -->
+  <header class="site-nav" data-componente="navegacion"></header>
 
   <main class="u-page">
-    <nav class="u-breadcrumb" aria-label="Ruta de navegación">
-      <a href="../../../index.html">Inicio</a>
-      <span aria-hidden="true">/</span>
-      <a href="../../../unidades.html">Unidades</a>
-      <span aria-hidden="true">/</span>
-      <a href="../index.html">Unidad I</a>
-      <span aria-hidden="true">/</span>
-      <span aria-current="page">Actividad de aprendizaje 1.1</span>
-    </nav>
 
     <div class="a-layout">
       <div class="a-main">
+        <!-- Encabezado de la actividad -->
         <header class="a-card a-head">
           <div class="a-head__top">
             <span class="a-badge">Actividad de aprendizaje</span>
             <span class="a-head__where">Unidad I · 1.1</span>
           </div>
           <h1 class="a-title">Actividad de aprendizaje 1.1</h1>
-          <p class="a-purpose">Refuerza los conceptos del tema 1.1 <strong>Tema de ejemplo</strong> con preguntas de opción múltiple. Cada respuesta recibe retroalimentación inmediata.</p>
+          <p class="a-purpose">
+            Refuerza los conceptos clave del tema 1.1 <strong>Fundamentos de Arquitectura de Red y Modelos en Capas</strong> con preguntas interactivas sobre encapsulamiento, unidades PDU, diferencias entre el modelo OSI y TCP/IP, y puertos de transporte.
+          </p>
           <ul class="a-chips" aria-label="Datos de la actividad">
             <li class="u-chip u-chip--soft"><i class="fas fa-shapes" aria-hidden="true"></i> Tipo: interactiva</li>
             <li class="u-chip u-chip--soft"><i class="fas fa-list-ol" aria-hidden="true"></i> Preguntas: <strong id="totalPreguntas">10</strong></li>
@@ -68,15 +45,17 @@
           </ul>
         </header>
 
+        <!-- Instrucciones -->
         <section class="a-card" aria-labelledby="instruccionesTitulo">
           <h2 class="a-card__title" id="instruccionesTitulo">Instrucciones</h2>
           <ol class="a-steps">
-            <li>Repasa el tema 1.1 antes de responder; cada intento toma 10 preguntas al azar del banco del tema.</li>
-            <li>Lee cada pregunta, elige tu respuesta y pulsa <strong>Comprobar respuesta</strong>. Con <strong>Reiniciar</strong> comienzas un intento nuevo.</li>
-            <li>Lee la retroalimentación: si fallas, verás la respuesta correcta y dónde repasar el concepto. Al final obtendrás tu resultado.</li>
+            <li>Repasa el tema 1.1 antes de responder; cada intento toma 10 preguntas pedagógicas del banco de reactivos.</li>
+            <li>Lee atentamente cada enunciado, selecciona o coloca tu respuesta y pulsa <strong>Comprobar respuesta</strong>. Con <strong>Reiniciar</strong> comienzas un intento nuevo.</li>
+            <li>Revisa la retroalimentación técnica: si fallas, se explicará el concepto correcto para reforzar tu aprendizaje.</li>
           </ol>
         </section>
 
+        <!-- Contenedor del ejercicio interactivo -->
         <section class="a-card a-exercise" aria-labelledby="ejercicioTitulo">
           <div class="a-exercise__bar">
             <h2 class="a-exercise__label" id="ejercicioTitulo">Ejercicio</h2>
@@ -87,19 +66,21 @@
           </div>
         </section>
 
+        <!-- Caja de retroalimentación -->
         <div id="retroalimentacion" aria-live="polite"></div>
 
-        <!-- Se genera desde el JSON; este enlace es solo de respaldo -->
+        <!-- Navegación inferior -->
         <nav class="a-pager" id="actividadNavegacion" aria-label="Navegación de la actividad">
-          <a class="a-pager__prev" href="../index.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Volver a la unidad</a>
+          <a class="a-pager__prev" href="../temas/tema-01-01.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Volver al tema 1.1</a>
         </nav>
       </div>
 
+      <!-- Barra lateral -->
       <aside class="a-sidebar" aria-label="Información de la actividad">
         <section class="a-side-card a-side-card--dark" aria-labelledby="antesTitulo">
           <p class="a-side-title" id="antesTitulo">Antes de empezar</p>
-          <p class="a-side-text">Esta actividad refuerza el aprendizaje; no requiere entrega de evidencia.</p>
-          <a class="a-side-link" id="enlaceRepaso" href="../index.html"><i class="fas fa-book-open" aria-hidden="true"></i> <span>Repasar la unidad</span></a>
+          <p class="a-side-text">Esta actividad es formativa y te ayuda a evaluar tu comprensión de la arquitectura en capas.</p>
+          <a class="a-side-link" id="enlaceRepaso" href="../temas/tema-01-01.html"><i class="fas fa-book-open" aria-hidden="true"></i> <span>Repasar el tema 1.1</span></a>
         </section>
 
         <nav class="a-side-card" aria-labelledby="otrasTitulo">
@@ -119,9 +100,10 @@
     </div>
   </footer>
 
-  <script src="../../../assets/js/nav-global.js"></script>
-  <script src="../../../assets/js/data-manager.js?v=20260930"></script>
-  <script src="../../../assets/js/unidades-ui.js?v=20260930"></script>
+  <!-- Scripts modulares -->
+  <script src="../../../assets/js/data-manager.js"></script>
+  <script src="../../../assets/js/componentes.js"></script>
+  <script src="../../../assets/js/unidades-ui.js"></script>
   <script src="../../../assets/js/paginas/actividad-plantilla.js"></script>
 </body>
 

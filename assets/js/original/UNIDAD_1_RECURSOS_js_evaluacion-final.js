@@ -602,13 +602,14 @@
     if (event.key !== 'Escape') return;
     if (!$('pendingDialog').classList.contains('is-hidden')) closePendingDialog();
     else if (!$('caseDrawerOverlay').classList.contains('is-hidden')) closeCaseDrawer();
-    else if ($('sidebarNav').classList.contains('open')) closeSidebar();
+    else if ($('sidebarNav')?.classList.contains('open')) closeSidebar();
   }
 
   function setSidebarState(isOpen, restoreFocus = false) {
     const menuToggle = $('menuToggle');
     const sidebar = $('sidebarNav');
     const overlay = $('sidebarOverlay');
+    if (!menuToggle || !sidebar || !overlay) return;
     sidebar.classList.toggle('open', isOpen);
     overlay.classList.toggle('active', isOpen);
     document.body.classList.toggle('sidebar-open', isOpen);
@@ -818,20 +819,26 @@ function descargarResultadosFinalPDF() {
   $('continueEvaluationBtn').addEventListener('click', closePendingDialog);
   $('confirmSubmitBtn').addEventListener('click', () => submitEvaluation(false));
   $('retryLoadBtn').addEventListener('click', loadEvaluation);
-  $('menuToggle').addEventListener('click', () => {
-    setSidebarState(!$('sidebarNav').classList.contains('open'));
+  $('menuToggle')?.addEventListener('click', () => {
+    setSidebarState(!$('sidebarNav')?.classList.contains('open'));
   });
-  $('sidebarOverlay').addEventListener('click', () => closeSidebar());
-  $('sidebarNav').addEventListener('click', event => {
+  $('sidebarOverlay')?.addEventListener('click', () => closeSidebar());
+  $('sidebarNav')?.addEventListener('click', event => {
     if (event.target.closest('a')) closeSidebar(false);
   });
   $('scrollToTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   window.addEventListener('scroll', updatePageControls, { passive: true });
   window.addEventListener('resize', updatePageControls);
   document.addEventListener('keydown', handleGlobalKeydown);
-  document.addEventListener('DOMContentLoaded', () => {
+  function init() {
     updatePageControls();
     loadEvaluation();
-  });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 })();
 

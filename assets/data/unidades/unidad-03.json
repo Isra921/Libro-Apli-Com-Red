@@ -1,9 +1,9 @@
 {
   "id": "unidad-03",
   "numero": 3,
-  "titulo": "Recursos Digitales No Lineales",
-  "descripcion": "Analizar y programar recursos digitales no lineales a partir de sus aplicaciones, organización y representaciones, permitiendo diseñar soluciones para problemas más complejos.",
-  "lema": "[Línea que sitúa la unidad dentro del curso y anticipa el producto de aprendizaje.]",
+  "titulo": "Protocolos de Capa de Aplicación y Servicios Distribuidos",
+  "descripcion": "Construye servicios y aplicaciones de red distribuidas integrando protocolos estándar de nivel de aplicación, seguridad criptográfica y arquitecturas cliente-servidor modernas.",
+  "lema": "Integra protocolos web, microservicios seguros y estándares de la industria.",
   "duracion_horas": 27,
 
   "introduccion": [

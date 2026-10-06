@@ -4,53 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1.1 Tema de ejemplo | Aplicaciones para Comunicaciones en Red</title>
+  <title>1.1 Fundamentos de Arquitectura de Red y Modelos en Capas | Aplicaciones para Comunicaciones en Red</title>
+  <meta name="description" content="Fundamentos de arquitectura de red, principios de diseño en capas, encapsulamiento de datos y comparativa del Modelo OSI frente a la pila TCP/IP.">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <link rel="stylesheet" href="../../../assets/css/variables.css">
-  <link rel="stylesheet" href="../../../assets/css/global.css">
-  <link rel="stylesheet" href="../../../assets/css/unidades-base.css?v=20260930">
+  <link rel="stylesheet" href="../../../assets/css/comun.css">
+  <link rel="stylesheet" href="../../../assets/css/unidades-base.css">
   <link rel="stylesheet" href="../../../assets/css/tema.css">
 
   <link rel="icon" type="image/png" href="../../../assets/img/ESCOMB.png">
 </head>
 
-<!--
-  PLANTILLA DE TEMA
-  - data-unidad: nombre del JSON de la unidad (sin .json) · data-tema: "numero" del tema en ese JSON
-  - El índice lateral y los botones "Tema anterior" / "Ir a la actividad" se generan desde el JSON.
-  - El contenido se escribe dentro de <div class="t-prose">. Todo elemento con id + data-toc
-    aparece en "En esta página".
-  Ver assets/data/unidades/LEEME.md
--->
 <body class="u-body" data-root="../../../" data-unidad="unidad-01" data-tema="1.1">
 
-  <header class="site-nav">
-    <a class="brand" href="../../../index.html">ESCOM · Polilibro académico<small>Aplicaciones para Comunicaciones en Red</small></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
-      <span class="u-sr-only">Abrir navegación</span><i class="fas fa-bars" aria-hidden="true"></i>
-    </button>
-    <nav id="main-navigation" aria-label="Navegación principal">
-      <a href="../../../index.html"><i class="fas fa-home" aria-hidden="true"></i> Inicio</a>
-      <a class="active" href="../../../unidades.html"><i class="fas fa-book-open" aria-hidden="true"></i> Unidades</a>
-      <a href="../referencias.html"><i class="fas fa-bookmark" aria-hidden="true"></i> Referencias</a>
-    </nav>
-  </header>
+  <!-- Barra de navegación global unificada mediante componente dinámico -->
+  <header class="site-nav" data-componente="navegacion"></header>
 
   <main class="u-page">
-    <nav class="u-breadcrumb" aria-label="Ruta de navegación">
-      <a href="../../../index.html">Inicio</a>
-      <span aria-hidden="true">/</span>
-      <a href="../../../unidades.html">Unidades</a>
-      <span aria-hidden="true">/</span>
-      <a href="../index.html">Unidad I</a>
-      <span aria-hidden="true">/</span>
-      <span aria-current="page">Tema 1.1</span>
-    </nav>
 
     <div class="t-layout">
-      <!-- Índice de la unidad: se genera desde el JSON; este contenido es solo de respaldo -->
+      <!-- Índice de la unidad: generado dinámicamente desde el JSON -->
       <aside class="t-index" aria-label="Contenido de la unidad">
         <div class="t-index__card">
           <div id="temaIndice">
@@ -68,84 +41,170 @@
         </div>
       </aside>
 
+      <!-- Artículo de lectura principal -->
       <article class="t-article">
         <p class="u-eyebrow">Unidad I · Tema 1.1</p>
-        <h1 class="t-title">Tema de ejemplo</h1>
+        <h1 class="t-title">Fundamentos de Arquitectura de Red y Modelos en Capas</h1>
 
-        <p class="t-lead" id="idea-central" data-toc="Idea central">Aqu&iacute; se podr&aacute; destacar una idea importante o una cita relacionada con el tema.</p>
+        <p class="t-lead" id="idea-central" data-toc="Idea central">
+          La comunicación entre sistemas heterogéneos y dispersos geográficamente solo es viable gracias a una arquitectura modular basada en capas jerárquicas, donde cada nivel resuelve un reto específico de transmisión abstrayendo la complejidad a los niveles superiores.
+        </p>
 
         <div class="t-prose">
-          <p>Este texto es un ejemplo temporal para mostrar c&oacute;mo se presentar&aacute; la informaci&oacute;n de la materia Aplicaciones para Comunicaciones en Red.</p>
-          <p>Cuando se reciba el contenido aprobado, este bloque ser&aacute; reemplazado sin modificar la estructura visual del tema.</p>
 
-          <section id="seccion-1-1-1" data-toc="1.1.1 Ejemplo de sección">
-            <h2><span class="t-section__num">1.1.1</span>Ejemplo de secci&oacute;n</h2>
-            <p>Este apartado demuestra la jerarqu&iacute;a de t&iacute;tulos, p&aacute;rrafos y listas que tendr&aacute; cada tema.</p>
+          <!-- Subtema 1.1.1 -->
+          <section id="por-que-capas" data-toc="1.1.1 ¿Por qué diseñar redes mediante capas?">
+            <h2><span class="t-section__num">1.1.1</span>¿Por qué diseñar redes mediante capas jerárquicas?</h2>
+            <p>
+              Una red informática moderna debe resolver simultáneamente problemas de naturaleza radicalmente distinta: desde modular ondas electromagnéticas en una fibra óptica o canal inalámbrico, hasta sincronizar peticiones web seguras mediante TLS y serializar objetos JSON en memoria de aplicación.
+            </p>
+            <p>
+              Si intentáramos programar una aplicación de chat o streaming mediante una única rutina monolítica que controlara directamente los pulsos eléctricos del cable y la retransmisión de bytes perdidos, cualquier cambio en la tarjeta de red obligaría a reescribir toda la aplicación. Por esta razón, la ingeniería de software y telecomunicaciones adopta el <strong>diseño en capas</strong>, cuyos beneficios fundamentales son:
+            </p>
             <ul>
-              <li>Elemento de ejemplo para contenido aprobado.</li>
-              <li>Elemento de ejemplo para una explicaci&oacute;n breve.</li>
+              <li><strong>Modularidad e interoperabilidad:</strong> Los desarrolladores de aplicaciones pueden programar sobre sockets de transporte sin preocuparse si el enlace físico subyacente es fibra óptica, Wi-Fi 6 o una conexión satelital.</li>
+              <li><strong>Facilidad de mantenimiento y evolución:</strong> Si se actualiza el estándar de cifrado en la capa de aplicación, los routers intermedios que conmutan paquetes a nivel de red no requieren ninguna modificación.</li>
+              <li><strong>Estandarización abierta:</strong> Fabricantes distintos pueden construir hardware y sistemas operativos diversos que dialogan fluidamente al compartir protocolos normalizados por organismos como la IETF y la IEEE.</li>
             </ul>
 
-            <figure class="t-figure" id="figura-1-1" data-toc="Figura 1.1">
-              <div class="t-figure__media">
-                <!-- Reemplazar por <img src="../../../assets/img/..." alt="..."> o un simulador interactivo -->
-                <div class="t-figure__placeholder">
-                  <i class="far fa-image" aria-hidden="true"></i>
-                  <span>Espacio reservado para una figura, diagrama o simulador interactivo.</span>
-                </div>
+            <aside class="t-callout t-callout--note">
+              <i class="fas fa-network-wired t-callout__icon" aria-hidden="true"></i>
+              <div>
+                <p class="t-callout__label">Punto clave</p>
+                <p>Cada capa ofrece un conjunto definido de <strong>servicios</strong> a la capa inmediatamente superior, ocultando los detalles de implementación interna y comunicándose con su capa homóloga remota mediante un <strong>protocolo</strong>.</p>
               </div>
-              <figcaption><strong>Figura 1.1.</strong> Pie de figura con la fuente o la nota de elaboraci&oacute;n propia.</figcaption>
-            </figure>
+            </aside>
+          </section>
+
+          <!-- Subtema 1.1.2 -->
+          <section id="encapsulamiento" data-toc="1.1.2 Encapsulamiento y Unidades de Datos (PDU)">
+            <h2><span class="t-section__num">1.1.2</span>El proceso de encapsulamiento y las Unidades de Datos (PDU)</h2>
+            <p>
+              Cuando un proceso emisor genera un mensaje, los datos atraviesan la pila de protocolos de arriba hacia abajo. En cada nivel, el protocolo local añade información de control denominada <strong>encabezado (header)</strong> y, en algunos casos, una cola de verificación de errores (trailer). Este fenómeno se conoce como <strong>encapsulamiento</strong>.
+            </p>
+            <p>
+              A cada bloque de datos resultante en un estrato específico se le denomina <strong>Unidad de Datos de Protocolo (PDU, por sus siglas en inglés)</strong>:
+            </p>
+            <ol>
+              <li><strong>Capa de Aplicación:</strong> Genera los <em>Datos</em> o <em>Mensajes</em> brutos del usuario (ej. una solicitud HTTP GET).</li>
+              <li><strong>Capa de Transporte:</strong> Fragmenta el mensaje si es necesario y añade encabezado TCP o UDP, formando un <strong>Segmento</strong> o <em>Datagrama</em>.</li>
+              <li><strong>Capa de Red (Internet):</strong> Incorpora direcciones IP de origen y destino, conformando el <strong>Paquete</strong> (o Datagrama IP).</li>
+              <li><strong>Capa de Enlace de Datos:</strong> Añade direcciones físicas MAC y suma de verificación CRC, produciendo la <strong>Trama (Frame)</strong>.</li>
+              <li><strong>Capa Física:</strong> Transforma la trama en una secuencia de <strong>Bits</strong> modulados sobre el medio físico.</li>
+            </ol>
+          </section>
+
+          <!-- Subtema 1.1.3 -->
+          <section id="comparativa-osi-tcpip" data-toc="1.1.3 Comparativa: Modelo OSI frente a Pila TCP/IP">
+            <h2><span class="t-section__num">1.1.3</span>Comparativa arquitectónica: Modelo OSI vs. Modelo TCP/IP</h2>
+            <p>
+              En la literatura académica conviven dos modelos de referencia primordiales: el <strong>Modelo OSI de 7 capas</strong> (concebido por la ISO como marco formal teórico) y la <strong>Pila TCP/IP de 5/4 capas</strong> (el estándar de facto que gobierna la Internet operativa):
+            </p>
+
+            <div class="t-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Nivel</th>
+                    <th>Modelo OSI (7 Capas)</th>
+                    <th>Pila TCP/IP de Internet</th>
+                    <th>Protocolos de Ejemplo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>7</td>
+                    <td>Capa de Aplicación</td>
+                    <td rowspan="3"><strong>Capa de Aplicación</strong><br>(Agrupa funciones de presentación y sesión)</td>
+                    <td>HTTP/2, DNS, SSH, FTP, SMTP</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Capa de Presentación</td>
+                    <td>TLS, JSON, ASN.1, MIME</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Capa de Sesión</td>
+                    <td>RPC, Sockets de sincronización</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Capa de Transporte</td>
+                    <td><strong>Capa de Transporte</strong></td>
+                    <td>TCP (confiable), UDP (datagramas)</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Capa de Red</td>
+                    <td><strong>Capa de Red (Internet)</strong></td>
+                    <td>IPv4, IPv6, ICMP, OSPF, BGP</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Capa de Enlace</td>
+                    <td><strong>Capa de Enlace de Datos</strong></td>
+                    <td>Ethernet (802.3), Wi-Fi (802.11), PPP</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Capa Física</td>
+                    <td><strong>Capa Física</strong></td>
+                    <td>Cobre UTP, Fibra óptica, Ondas RF</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
             <aside class="t-callout t-callout--note">
-              <i class="fas fa-circle-exclamation t-callout__icon" aria-hidden="true"></i>
+              <i class="fas fa-layer-group t-callout__icon" aria-hidden="true"></i>
               <div>
-                <p class="t-callout__label">Nota</p>
-                <p>Aclaraci&oacute;n, advertencia o dato que conviene destacar sin romper el hilo de la lectura.</p>
+                <p class="t-callout__label">Conclusión de diseño</p>
+                <p>En el desarrollo de software distribuido para Internet, la capa de aplicación asume directamente la serialización de datos (presentación) y la gestión de sesiones de usuario (sesión), simplificando la arquitectura a una pila de 5 capas lógicas.</p>
               </div>
             </aside>
           </section>
 
-          <section id="seccion-1-1-2" data-toc="1.1.2 Aplicación de ejemplo">
-            <h2><span class="t-section__num">1.1.2</span>Aplicaci&oacute;n de ejemplo</h2>
-            <p>Este espacio queda preparado para incorporar una actividad, recurso visual o explicaci&oacute;n complementaria.</p>
+          <!-- Subtema 1.1.4 -->
+          <section id="puertos-transporte" data-toc="1.1.4 Puertos y direccionamiento de transporte">
+            <h2><span class="t-section__num">1.1.4</span>Direccionamiento por puertos y multiplexación</h2>
+            <p>
+              Una computadora conectada a la red posee una dirección IP que identifica unívocamente al equipo host. Sin embargo, en un mismo instante una máquina puede estar ejecutando un navegador web, un cliente de correo y un servidor de base de datos.
+            </p>
+            <p>
+              ¿Cómo sabe la tarjeta de red a qué programa entregar cada paquete entrante? La respuesta es el <strong>puerto de red</strong>. El puerto es un número entero sin signo de 16 bits (0 al 65535) gestionado en la cabecera de transporte:
+            </p>
+            <ul>
+              <li><strong>Puertos bien conocidos (0 a 1023):</strong> Reservados para servicios estándar del sistema (ej. 80 para HTTP, 443 para HTTPS, 53 para DNS, 22 para SSH).</li>
+              <li><strong>Puertos registrados (1024 a 49151):</strong> Utilizados por aplicaciones de proveedores específicos (ej. 3306 para MySQL, 8080 para Tomcat).</li>
+              <li><strong>Puertos dinámicos o efímeros (49152 a 65535):</strong> Asignados automáticamente por el sistema operativo a los clientes para una conexión temporal.</li>
+            </ul>
 
-            <aside class="t-callout t-callout--example">
-              <i class="fas fa-lightbulb t-callout__icon" aria-hidden="true"></i>
-              <div>
-                <p class="t-callout__label">Ejemplo</p>
-                <p>Caso aplicado que aterriza el concepto del subtema.</p>
-              </div>
-            </aside>
+            <p>
+              La combinación de una <strong>Dirección IP</strong> y un <strong>Puerto de Transporte</strong> define un <strong>Socket</strong> (ej. <code>192.168.1.15:443</code>), permitiendo la <em>multiplexación</em> y <em>demultiplexación</em> de múltiples canales de datos sobre una única interfaz física.
+            </p>
+
+            <pre><code>// Creación de socket de flujo TCP en Java
+ServerSocket serverSocket = new ServerSocket(8080);
+System.out.println("Servidor a la escucha en el puerto 8080...");
+Socket clientSocket = serverSocket.accept(); // Bloquea hasta recibir una conexión</code></pre>
           </section>
+
         </div>
 
-        <!-- data-video: URL "embed" de YouTube. Si se deja vacío, el botón aparece como "Próximamente". -->
-        <section class="t-video" id="video" data-toc="Video" aria-labelledby="videoTitulo">
-          <span class="t-video__icon"><i class="fas fa-play" aria-hidden="true"></i></span>
-          <div class="t-video__text">
-            <h2 class="t-video__title" id="videoTitulo">Video de introducci&oacute;n a la Unidad I</h2>
-            <p class="t-video__meta">Material audiovisual de la unidad</p>
-          </div>
-          <button class="t-video__btn" type="button"
-            data-video="https://www.youtube.com/embed/iXw0JVL6rTc"
-            data-video-titulo="Video de introducción a la Unidad I">
-            <i class="fas fa-circle-play" aria-hidden="true"></i> Reproducir
-          </button>
-        </section>
-
-        <!-- Se genera desde el JSON; este enlace es solo de respaldo -->
+        <!-- Navegación entre temas -->
         <nav class="t-pager" id="temaNavegacion" aria-label="Navegación entre temas">
           <a class="t-pager__prev" href="../index.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Volver a la unidad</a>
         </nav>
       </article>
 
+      <!-- Menú lateral: "En esta página" con scroll-spy -->
       <aside class="t-toc" aria-labelledby="tocTitulo">
-        <p class="t-toc__title" id="tocTitulo">En esta p&aacute;gina</p>
+        <p class="t-toc__title" id="tocTitulo">En esta página</p>
         <ol class="t-toc__list" id="temaTabla"></ol>
         <div class="t-refs">
           <p class="t-refs__title">Referencias del tema</p>
-          <a href="../referencias.html">Ver lista completa <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <a href="../referencias.html" data-enlace-referencias>Ver lista completa <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </aside>
     </div>
@@ -158,10 +217,12 @@
     </div>
   </footer>
 
-  <script src="../../../assets/js/nav-global.js"></script>
-  <script src="../../../assets/js/data-manager.js?v=20260930"></script>
-  <script src="../../../assets/js/unidades-ui.js?v=20260930"></script>
+  <!-- Scripts modulares de soporte -->
+  <script src="../../../assets/js/data-manager.js"></script>
+  <script src="../../../assets/js/componentes.js"></script>
+  <script src="../../../assets/js/unidades-ui.js"></script>
   <script src="../../../assets/js/paginas/tema-plantilla.js"></script>
+  <script src="../../../assets/js/visor-figuras.js"></script>
 </body>
 
 </html>

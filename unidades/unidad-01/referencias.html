@@ -1,254 +1,334 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="../../assets/css/variables.css">
-  <link rel="stylesheet" href="../../assets/css/global.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Referencias Bibliográficas y Recursos | Aplicaciones para Comunicaciones en Red</title>
+  <meta name="description" content="Referencias bibliográficas, RFCs y material de apoyo didáctico del polilibro Aplicaciones para Comunicaciones en Red (ESCOM-IPN).">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/comun.css">
+  <link rel="stylesheet" href="../../assets/css/unidades-base.css">
   <link rel="stylesheet" href="../../assets/css/referencias.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Referencias Bibliográficas y Recursos - Unidad 1</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
   <link rel="icon" type="image/png" href="../../assets/img/ESCOMB.png">
-  <link rel="shortcut icon" type="image/png" href="../../assets/img/ESCOMB.png">
 </head>
-<body>
-    <header class="site-nav">
-        <a class="brand" href="../../index.html">ESCOM · Polilibro académico<small>Aplicaciones para Comunicaciones en Red</small></a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" onclick="const nav=document.getElementById('main-navigation'); nav.classList.toggle('is-open'); this.setAttribute('aria-expanded', nav.classList.contains('is-open'));">
-            <span class="sr-only">Abrir navegación</span><i class="fas fa-bars" aria-hidden="true"></i>
+
+<body class="u-body" data-root="../../" data-unidad="unidad-01">
+
+  <header class="site-nav" data-componente="navegacion"></header>
+
+  <main class="u-page">
+    <!-- Encabezado Principal / Hero -->
+    <section class="r-hero">
+      <div class="r-hero__header">
+        <span class="u-eyebrow"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Acervo y Fuentes Académicas</span>
+        <span class="u-chip u-chip--accent"><i class="fas fa-layer-group" aria-hidden="true"></i> Recursos Globales y por Unidad</span>
+      </div>
+      <h1 class="r-hero__title">Referencias Bibliográficas y Recursos</h1>
+      <p class="r-hero__lead">
+        Fuentes de consulta seleccionadas para fundamentar teórica y prácticamente los contenidos del curso de 
+        <strong>Aplicaciones para Comunicaciones en Red</strong>: literatura clásica de redes, normativas RFC oficiales, esquemas de arquitectura de red y laboratorios prácticos.
+      </p>
+    </section>
+
+    <!-- Barra de Herramientas: Filtros por Categoría y Búsqueda -->
+    <section class="r-toolbar" aria-label="Herramientas de filtrado de referencias">
+      <div class="r-filters" role="group" aria-label="Filtro de recursos">
+        <button type="button" class="r-filter-btn is-active" data-filter="todos">
+          <i class="fas fa-border-all" aria-hidden="true"></i> Todos <span class="r-count">0</span>
         </button>
-        <nav id="main-navigation" aria-label="Navegación principal">
-            <a href="../../index.html"><i class="fas fa-home" aria-hidden="true"></i> Inicio</a>
-            <a href="../../unidades.html"><i class="fas fa-book-open" aria-hidden="true"></i> Unidades</a>
-            <a class="active" href="referencias.html"><i class="fas fa-bookmark" aria-hidden="true"></i> Referencias</a>
-        </nav>
-    </header>
-    <div class="container">
-        <header>
-            <div class="breadcrumb">
-                <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
-                <span>/</span>
-                <span>Referencias y Recursos</span>
-            </div>
-            <h1>Referencias Bibliográficas y Recursos</h1>
-            <div class="subtitle">Unidad 1: Contenidos fundamentales</div>
-        </header>
-        
-        <div class="intro">
-            <p>La presente sección compila las fuentes bibliográficas, figuras y material audiovisual utilizados en la Unidad 1. Estos recursos han sido seleccionados y elaborados para fundamentar teórica y prácticamente los conceptos de la asignatura relacionados con el diseño y análisis de contenidos, organizaci?n de informaci?n y búsqueda.</p>
+        <button type="button" class="r-filter-btn" data-filter="libro">
+          <i class="fas fa-book" aria-hidden="true"></i> Bibliografía <span class="r-count">0</span>
+        </button>
+        <button type="button" class="r-filter-btn" data-filter="rfc">
+          <i class="fas fa-globe" aria-hidden="true"></i> Estándares y RFCs <span class="r-count">0</span>
+        </button>
+        <button type="button" class="r-filter-btn" data-filter="figura">
+          <i class="fas fa-diagram-project" aria-hidden="true"></i> Diagramas <span class="r-count">0</span>
+        </button>
+        <button type="button" class="r-filter-btn" data-filter="multimedia">
+          <i class="fas fa-video" aria-hidden="true"></i> Multimedia <span class="r-count">0</span>
+        </button>
+      </div>
+
+      <div class="r-search-box">
+        <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="searchRef" placeholder="Buscar por autor, tema o estándar..." aria-label="Buscar referencias">
+      </div>
+    </section>
+
+    <!-- Catálogo de Tarjetas de Referencia -->
+    <section class="r-grid" id="gridReferencias" aria-label="Listado de referencias">
+
+      <!-- Referencia 1: Kurose & Ross -->
+      <article class="r-card" data-category="libro">
+        <div class="r-card__top">
+          <span class="r-badge r-badge--libro"><i class="fas fa-book" aria-hidden="true"></i> Libro de Texto</span>
+          <span class="r-card__unit-tag">Unidades 1, 2 y 3</span>
         </div>
-
-        <div class="stats-section">
-            <h2 style="color: var(--secondary); margin-bottom: 20px;">Resumen de Recursos</h2>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number">7</span>
-                    <div class="stat-label">Fuentes Bibliográficas</div>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">17</span>
-                    <div class="stat-label">Figuras Didácticas</div>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">4</span>
-                    <div class="stat-label">Videos Educativos</div>
-                </div>
-            </div>
+        <div class="r-card__body">
+          <p class="r-card__citation">
+            Kurose, J. F., &amp; Ross, K. W. (2021). <em>Computer Networking: A Top-Down Approach</em> (8.ª ed.). Pearson.
+          </p>
+          <p class="r-card__desc">
+            Texto guía para la comprensión del modelo de capas con orientación descendente, programación con sockets en la capa de aplicación y mecanismos de transporte TCP/UDP.
+          </p>
+          <div class="r-card__meta">
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> Capa de Transporte</span>
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> Sockets API</span>
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> Arquitectura TCP/IP</span>
+          </div>
         </div>
-        
-        <h2 class="section-title"><i class="fas fa-book"></i> Bibliografía Consultada</h2>
-        <div class="references-container">
-            <div class="reference-item">
-                <div class="reference-type">Tema de ejemplo y Exploración</div>
-                <div class="reference-citation">
-                    Aho, A. V., Hopcroft, J. E., y Ullman, J. D. (2006). <em>Recursos digitales y contenidos</em>. Pearson Educación.
-                </div>
-                <div class="reference-description">Referencia fundamental citada para el diseño de contenidos y exploración exhaustiva.</div>
-            </div>
-
-            <div class="reference-item">
-                <div class="reference-type">Estructuras de Datos</div>
-                <div class="reference-citation">
-                    Goodrich, M. T., Tamassia, R., y Goldwasser, M. H. (2014). <em>Data Structures and Algorithms in Java</em> (6.ª ed.). Wiley.
-                </div>
-                <div class="reference-description">Texto de apoyo utilizado para explicar la abstracción, Tipos de Datos Abstractos (TDA) y técnicas de evaluación sistemática de soluciones.</div>
-            </div>
-
-            <div class="reference-item">
-                <div class="reference-type">Organizaci?n de informaci?n</div>
-                <div class="reference-citation">
-                    Knuth, D. E. (1998). <em>The Art of Computer Programming, Volume 3: Sorting and Searching</em> (2.ª ed.). Addison-Wesley Professional.
-                </div>
-                <div class="reference-description">La obra cumbre de la algoritmia, utilizada para conceptualizar el problema del organizaci?n de informaci?n de datos bajo criterios específicos.</div>
-            </div>
-
-            <div class="reference-item">
-                <div class="reference-type">Búsqueda y Organizaci?n</div>
-                <div class="reference-citation">
-                    Sahni, S., Horowitz, E., y Anderson-Freed, S. (2008). <em>Fundamentals of Data Structures in C</em> (2.ª ed.). Silicon Press.
-                </div>
-                <div class="reference-description">Fuente utilizada para sustentar los conceptos de búsqueda indexada y la comparación de órdenes de organizaci?n algorítmica.</div>
-            </div>
-            
-            <div class="reference-item">
-                <div class="reference-type">Backtracking</div>
-                <div class="reference-citation">
-                    Sedgewick, R., y Wayne, K. (2011). <em>Algorithms</em> (4.ª ed.). Addison-Wesley Professional.
-                </div>
-                <div class="reference-description">Libro base para explicar la programación por vuelta atrás (backtracking) y su aplicación para evitar el recorrido de soluciones no válidas.</div>
-            </div>
-
-            <div class="reference-item">
-                <div class="reference-type">Diseño de Contenidos</div>
-                <div class="reference-citation">
-                    Skiena, S. S. (2008). <em>The Algorithm Design Manual</em> (2.ª ed.). Springer.
-                </div>
-                <div class="reference-description">Referencia esencial en nociones de organizaci?n temporal aplicadas a la búsqueda de soluciones a través de árboles de decisión y backtracking.</div>
-            </div>
-
-            <div class="reference-item">
-                <div class="reference-type">Análisis de Eficiencia</div>
-                <div class="reference-citation">
-                    Weiss, M. A. (2014). <em>Data Structures and Algorithm Analysis in Java</em> (3.ª ed.). Pearson.
-                </div>
-                <div class="reference-description">Texto usado reiteradamente para analizar el uso de memoria, tiempo de ejecución, contenidos de búsqueda secuencial y notación Big-O.</div>
-            </div>
+        <div class="r-card__actions">
+          <button type="button" class="r-btn-copy" aria-label="Copiar cita en formato APA"><i class="fas fa-copy" aria-hidden="true"></i> Cita APA</button>
+          <a href="https://www.pearson.com/en-us/subject-catalog/p/computer-networking-a-top-down-approach/P200000003333" target="_blank" rel="noopener noreferrer" class="r-btn-link">Ficha técnica <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
         </div>
+      </article>
 
-        <h2 class="section-title"><i class="fas fa-image"></i> Índice de Figuras</h2>
-        <div class="references-container">
-            <div class="reference-item">
-                <div class="reference-type type-figura">Figura 1</div>
-                <div class="reference-citation">Tema de ejemplo</div>
-                <div class="reference-description"><strong>Ubicación:</strong> Tema 1.1<br><strong>Nota:</strong> Elaboración propia.</div>
-            </div>
-            <div class="reference-item">
-                <div class="reference-type type-figura">Figura 2</div>
-                <div class="reference-citation">Código procedimiento lógico y secuencial</div>
-                <div class="reference-description"><strong>Ubicación:</strong> Tema 1.1<br><strong>Nota:</strong> Elaboración propia.</div>
-            </div>
-            <div class="reference-item">
-                <div class="reference-type type-figura">Figura 3</div>
-                <div class="reference-citation">Representación de contenidos en pseudocódigo</div>
-                <div class="reference-description"><strong>Ubicación:</strong> Tema 1.1<br><strong>Nota:</strong> Elaboración propia.</div>
-            </div>
-            <div class="reference-item">
-                <div class="reference-type type-figura">Figura 4</div>
-                <div class="reference-citation">Abstracción y tipo de dato abstracto</div>
-                <div class="reference-description"><strong>Ubicación:</strong> Tema 1.1<br><strong>Nota:</strong> Elaboración propia.</div>
-            </div>
-            <div class="reference-item">
-                <div class="reference-type type-figura">Figura 5</div>
-                <div class="reference-citation">Orden de organizaci?n () de un algoritmo</div>
-                <div class="reference-description"><strong>Ubicación:</strong> Tema 1.1<br><strong>Nota:</strong> Elaboración propia.</div>
-            </div>
-            <div class="reference-item">
-                <div class="reference-type type-figura">Figura 6</div>
-                <div class="reference-citation">Organizaci?n de informaci?n por inserción</div>
-                <div class="reference-description"><strong>Ubicación:</strong> Tema 1.2<br><strong>Nota:</strong> Elaboración propia.</div>
-            </div>
-            <div class="reference-item">
-                <div class="reference-type type-figura">Figura 7</div>
-                <div class="reference-citation">Organizaci?n de informaci?n por selección</div>
-                <div class="reference-description"><strong>Ubicación:</strong> Tema 1.2<br><strong>Nota:</strong> Elaboración propia.</div>
-            </div>
-            <div class="reference-item">
-                <div class="reference-type type-figura">Figura 8</div>
-                <div class="reference-citation">Organizaci?n de informaci?n por burbuja</div>
-                <div class="reference-description"><strong>Ubicación:</strong> Tema 1.2<br><strong>Nota:</strong> Elaboración propia.</div>
-            </div>
-            <div class="reference-item">
-                <div class="reference-type type-figura">Figura 9</div>
-                <div class="reference-citation">Organizaci?n de informaci?n por mezcla</div>
-                <div class="reference-description"><strong>Ubicación:</strong> Tema 1.2<br><strong>Nota:</strong> Elaboración propia.</div>
-            </div>
-            <div class="reference-item">
-                <div class="reference-type type-figura">Figura 10</div>
-                <div class="reference-citation">Comparación de órdenes de organizaci?n</div>
-                <div class="reference-description"><strong>Ubicación:</strong> Tema 1.2<br><strong>Nota:</strong> Elaboración propia.</div>
-            </div>
-            <div class="reference-item">
-                <div class="reference-type type-figura">Figura 11</div>
-                <div class="reference-citation">El problema de la búsqueda</div>
-                <div class="reference-description"><strong>Ubicación:</strong> Tema 1.3<br><strong>Nota:</strong> Elaboración propia.</div>
-            </div>
-            <div class="reference-item">
-                <div class="reference-type type-figura">Figura 12</div>
-                <div class="reference-citation">Búsqueda binaria</div>
-                <div class="reference-description"><strong>Ubicación:</strong> Tema 1.3<br><strong>Nota:</strong> Elaboración propia.</div>
-            </div>
-            <div class="reference-item">
-                <div class="reference-type type-figura">Figura 13</div>
-                <div class="reference-citation">Búsqueda indexada</div>
-                <div class="reference-description"><strong>Ubicación:</strong> Tema 1.3<br><strong>Nota:</strong> Elaboración propia.</div>
-            </div>
-            <div class="reference-item">
-                <div class="reference-type type-figura">Figura 14</div>
-                <div class="reference-citation">Comparación de órdenes de organizaci?n</div>
-                <div class="reference-description"><strong>Ubicación:</strong> Tema 1.3<br><strong>Nota:</strong> Elaboración propia.</div>
-            </div>
-            <div class="reference-item">
-                <div class="reference-type type-figura">Figura 14 (bis)</div>
-                <div class="reference-citation">Exploración exhaustiva y vuelta atrás</div>
-                <div class="reference-description"><strong>Ubicación:</strong> Tema 1.4<br><strong>Nota:</strong> Elaboración propia.</div>
-            </div>
-            <div class="reference-item">
-                <div class="reference-type type-figura">Figura 15</div>
-                <div class="reference-citation">Programación por vuelta atrás</div>
-                <div class="reference-description"><strong>Ubicación:</strong> Tema 1.4<br><strong>Nota:</strong> Elaboración propia.</div>
-            </div>
-            <div class="reference-item">
-                <div class="reference-type type-figura">Figura 16</div>
-                <div class="reference-citation">Nociones de organizaci?n de la exploración exhaustiva y vuelta atrás</div>
-                <div class="reference-description"><strong>Ubicación:</strong> Tema 1.4<br><strong>Nota:</strong> Elaboración propia.</div>
-            </div>
+      <!-- Referencia 2: Tanenbaum -->
+      <article class="r-card" data-category="libro">
+        <div class="r-card__top">
+          <span class="r-badge r-badge--libro"><i class="fas fa-book" aria-hidden="true"></i> Libro de Texto</span>
+          <span class="r-card__unit-tag">Unidades 1 y 2</span>
         </div>
+        <div class="r-card__body">
+          <p class="r-card__citation">
+            Tanenbaum, A. S., &amp; Wetherall, D. J. (2019). <em>Redes de Computadoras</em> (5.ª ed.). Pearson Educación.
+          </p>
+          <p class="r-card__desc">
+            Referencia fundamental para el análisis de retardos de transmisión, enrutamiento, conmutación de paquetes y comparativa arquitectónica entre el modelo de referencia OSI y la suite de Internet.
+          </p>
+          <div class="r-card__meta">
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> Topologías</span>
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> Enrutamiento</span>
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> Modelo OSI</span>
+          </div>
+        </div>
+        <div class="r-card__actions">
+          <button type="button" class="r-btn-copy" aria-label="Copiar cita en formato APA"><i class="fas fa-copy" aria-hidden="true"></i> Cita APA</button>
+          <a href="https://www.pearson.com" target="_blank" rel="noopener noreferrer" class="r-btn-link">Ficha técnica <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        </div>
+      </article>
 
-        <h2 class="section-title"><i class="fas fa-play-circle"></i> Índice de Recursos Audiovisuales</h2>
-        <div class="references-container">
-            <div class="reference-item">
-                <div class="reference-type type-video">Tema de ejemplo</div>
-                <div class="reference-citation">
-                    Salas, I. (2025, 26 de noviembre). <em>Tema de ejemplo en la estructura de datos</em> [Video]. YouTube. https://www.youtube.com/watch?v=wecXEPGMjM4
-                </div>
-                <div class="reference-description"><strong>Ubicación:</strong> Tema 1.1</div>
-            </div>
-            <div class="reference-item">
-                <div class="reference-type type-video">Organizaci?n de informaci?n</div>
-                <div class="reference-citation">
-                    Salas, I. (s.f.). <em>Problema de organizaci?n de informaci?n</em> [Video]. YouTube. https://www.youtube.com/watch?v=7RqdyQUnbzw
-                </div>
-                <div class="reference-description"><strong>Ubicación:</strong> Tema 1.2</div>
-            </div>
-            <div class="reference-item">
-                <div class="reference-type type-video">Búsqueda</div>
-                <div class="reference-citation">
-                    Salas, I. (s.f.). <em>El problema de la búsqueda</em> [Video]. YouTube. https://www.youtube.com/watch?v=RX8jsfJwQlc
-                </div>
-                <div class="reference-description"><strong>Ubicación:</strong> Tema 1.3</div>
-            </div>
-            <div class="reference-item">
-                <div class="reference-type type-video">Exploración y Backtracking</div>
-                <div class="reference-citation">
-                   Salas, I. (s.f.). <em>Exploración exhaustiva y vuelta atrás</em> [Video]. YouTube. https://www.youtube.com/watch?v=cADalJvhuw4
-                </div>
-                <div class="reference-description"><strong>Ubicación:</strong> Tema 1.4</div>
-            </div>
+      <!-- Referencia 3: Stevens (UNIX Network Programming) -->
+      <article class="r-card" data-category="libro">
+        <div class="r-card__top">
+          <span class="r-badge r-badge--libro"><i class="fas fa-book" aria-hidden="true"></i> Guía Avanzada</span>
+          <span class="r-card__unit-tag">Unidad 2: Programación</span>
         </div>
-                
-        <div class="nav-buttons">
-            <a href="index.html" class="nav-btn">
-                <i class="fas fa-home"></i> Volver al Índice Principal
-            </a>
+        <div class="r-card__body">
+          <p class="r-card__citation">
+            Stevens, W. R., Fenner, B., &amp; Rudoff, A. M. (2018). <em>UNIX Network Programming: The Sockets Networking API</em> (Vol. 1, 3.ª ed.). Addison-Wesley Professional.
+          </p>
+          <p class="r-card__desc">
+            Tratado de referencia para la implementación de servidores concurrentes, multiplexación de E/S con select/epoll y gestión de sockets de bajo nivel.
+          </p>
+          <div class="r-card__meta">
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> Sockets POSIX</span>
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> Servidores Concurrentes</span>
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> I/O Multiplexing</span>
+          </div>
         </div>
-        
-        <footer>
-            <p>Aplicaciones para comunicacin en red - Referencias Bibliográficas y Recursos</p>
-            <p>Desarrollado para fines educativos - © 2026</p>
-        </footer>
+        <div class="r-card__actions">
+          <button type="button" class="r-btn-copy" aria-label="Copiar cita en formato APA"><i class="fas fa-copy" aria-hidden="true"></i> Cita APA</button>
+          <a href="https://www.informit.com" target="_blank" rel="noopener noreferrer" class="r-btn-link">Ficha técnica <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        </div>
+      </article>
+
+      <!-- Referencia 4: Stallings -->
+      <article class="r-card" data-category="libro">
+        <div class="r-card__top">
+          <span class="r-badge r-badge--libro"><i class="fas fa-book" aria-hidden="true"></i> Consulta</span>
+          <span class="r-card__unit-tag">Unidad 1</span>
+        </div>
+        <div class="r-card__body">
+          <p class="r-card__citation">
+            Stallings, W. (2020). <em>Data and Computer Communications</em> (10.ª ed.). Pearson.
+          </p>
+          <p class="r-card__desc">
+            Base teórica para medios guiados/no guiados, técnicas de codificación de señales, detección de errores (CRC) y control de flujo en el enlace.
+          </p>
+          <div class="r-card__meta">
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> Codificación</span>
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> Control de Flujo</span>
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> Medios Físicos</span>
+          </div>
+        </div>
+        <div class="r-card__actions">
+          <button type="button" class="r-btn-copy" aria-label="Copiar cita en formato APA"><i class="fas fa-copy" aria-hidden="true"></i> Cita APA</button>
+          <a href="https://www.pearson.com" target="_blank" rel="noopener noreferrer" class="r-btn-link">Ficha técnica <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        </div>
+      </article>
+
+      <!-- Referencia 5: RFC 9293 (TCP) -->
+      <article class="r-card" data-category="rfc">
+        <div class="r-card__top">
+          <span class="r-badge r-badge--rfc"><i class="fas fa-globe" aria-hidden="true"></i> RFC Oficial</span>
+          <span class="r-card__unit-tag">Unidad 2</span>
+        </div>
+        <div class="r-card__body">
+          <p class="r-card__citation">
+            Eddy, W. (2022). <em>RFC 9293: Transmission Control Protocol (TCP) Specification</em>. Internet Engineering Task Force (IETF).
+          </p>
+          <p class="r-card__desc">
+            Especificación oficial consolidada del protocolo TCP. Describe el formato del encabezado, el intercambio de 3 vías (SYN, SYN-ACK, ACK), estados del autómata finito y retransmisión adaptativa.
+          </p>
+          <div class="r-card__meta">
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> RFC 9293</span>
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> Handshake 3-Vías</span>
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> IETF Standard</span>
+          </div>
+        </div>
+        <div class="r-card__actions">
+          <button type="button" class="r-btn-copy" aria-label="Copiar cita en formato APA"><i class="fas fa-copy" aria-hidden="true"></i> Cita APA</button>
+          <a href="https://www.rfc-editor.org/rfc/rfc9293.html" target="_blank" rel="noopener noreferrer" class="r-btn-link">Ver RFC <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        </div>
+      </article>
+
+      <!-- Referencia 6: RFC 9110 (HTTP) -->
+      <article class="r-card" data-category="rfc">
+        <div class="r-card__top">
+          <span class="r-badge r-badge--rfc"><i class="fas fa-globe" aria-hidden="true"></i> RFC Oficial</span>
+          <span class="r-card__unit-tag">Unidad 3: Aplicaciones</span>
+        </div>
+        <div class="r-card__body">
+          <p class="r-card__citation">
+            Fielding, R., Nottingham, M., &amp; Reschke, J. (2022). <em>RFC 9110: HTTP Semantics</em>. Internet Engineering Task Force (IETF).
+          </p>
+          <p class="r-card__desc">
+            Estándar fundamental para el desarrollo de servicios web y APIs REST. Detalla métodos idempotentes (GET, PUT, DELETE), códigos de estado y cabeceras de control de caché.
+          </p>
+          <div class="r-card__meta">
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> RFC 9110</span>
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> HTTP / REST</span>
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> Métodos y Códigos</span>
+          </div>
+        </div>
+        <div class="r-card__actions">
+          <button type="button" class="r-btn-copy" aria-label="Copiar cita en formato APA"><i class="fas fa-copy" aria-hidden="true"></i> Cita APA</button>
+          <a href="https://www.rfc-editor.org/rfc/rfc9110.html" target="_blank" rel="noopener noreferrer" class="r-btn-link">Ver RFC <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        </div>
+      </article>
+
+      <!-- Referencia 7: Diagrama Modelo de Capas -->
+      <article class="r-card" data-category="figura">
+        <div class="r-card__top">
+          <span class="r-badge r-badge--figura"><i class="fas fa-diagram-project" aria-hidden="true"></i> Diagrama Didáctico</span>
+          <span class="r-card__unit-tag">Tema 1.1</span>
+        </div>
+        <div class="r-card__body">
+          <p class="r-card__citation">
+            Academia de Redes ESCOM. (2026). <em>Diagrama 1.1: Mapeo Funcional entre el Modelo OSI (7 capas) y la Pila TCP/IP de Internet (5 capas)</em>. Polilibro Digital.
+          </p>
+          <p class="r-card__desc">
+            Infografía vectorial que correlaciona Unidades de Datos de Protocolo (PDU) con sus capas respectivas: Tramas (Enlace), Paquetes (Red), Segmentos (Transporte) y Datos (Aplicación).
+          </p>
+          <div class="r-card__meta">
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> Infografía Vectorial</span>
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> PDU y Encapsulamiento</span>
+          </div>
+        </div>
+        <div class="r-card__actions">
+          <button type="button" class="r-btn-copy" aria-label="Copiar cita en formato APA"><i class="fas fa-copy" aria-hidden="true"></i> Cita APA</button>
+          <a href="../../assets/img/ESCOMB.png" target="_blank" class="r-btn-link">Ver esquema <i class="fas fa-eye" aria-hidden="true"></i></a>
+        </div>
+      </article>
+
+      <!-- Referencia 8: Diagrama Flujo de Sockets -->
+      <article class="r-card" data-category="figura">
+        <div class="r-card__top">
+          <span class="r-badge r-badge--figura"><i class="fas fa-diagram-project" aria-hidden="true"></i> Diagrama de Flujo</span>
+          <span class="r-card__unit-tag">Tema 2.2</span>
+        </div>
+        <div class="r-card__body">
+          <p class="r-card__citation">
+            Academia de Redes ESCOM. (2026). <em>Diagrama 2.2: Secuencia de Llamadas al Sistema para Comunicación Orientada a Conexión (Socket, Bind, Listen, Accept, Connect)</em>. Polilibro Digital.
+          </p>
+          <p class="r-card__desc">
+            Diagrama de secuencia interactivo que ilustra la coordinación temporal y el bloqueo de hilos en servidores multicliente concurrentes.
+          </p>
+          <div class="r-card__meta">
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> Ciclo de Vida de Sockets</span>
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> Servidor Concurrente</span>
+          </div>
+        </div>
+        <div class="r-card__actions">
+          <button type="button" class="r-btn-copy" aria-label="Copiar cita en formato APA"><i class="fas fa-copy" aria-hidden="true"></i> Cita APA</button>
+          <a href="../../assets/img/ESCOMB.png" target="_blank" class="r-btn-link">Ver esquema <i class="fas fa-eye" aria-hidden="true"></i></a>
+        </div>
+      </article>
+
+      <!-- Referencia 9: Laboratorio Wireshark -->
+      <article class="r-card" data-category="multimedia">
+        <div class="r-card__top">
+          <span class="r-badge r-badge--multimedia"><i class="fas fa-video" aria-hidden="true"></i> Laboratorio Audiovisual</span>
+          <span class="r-card__unit-tag">Tema 1.3</span>
+        </div>
+        <div class="r-card__body">
+          <p class="r-card__citation">
+            Laboratorio de Comunicaciones en Red. (2026). <em>Inspección de Tráfico y Análisis del Handshake TCP en Tiempo Real con Wireshark</em> [Video demostrativo]. ESCOM-IPN.
+          </p>
+          <p class="r-card__desc">
+            Grabación con anotaciones técnicas paso a paso de la captura de tramas, filtrado por puertos y disección de las banderas SYN, ACK y FIN en conexiones reales.
+          </p>
+          <div class="r-card__meta">
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> Wireshark</span>
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> Captura de Paquetes</span>
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> Banderas TCP</span>
+          </div>
+        </div>
+        <div class="r-card__actions">
+          <button type="button" class="r-btn-copy" aria-label="Copiar cita en formato APA"><i class="fas fa-copy" aria-hidden="true"></i> Cita APA</button>
+          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="r-btn-link">Ver recurso <i class="fas fa-play" aria-hidden="true"></i></a>
+        </div>
+      </article>
+
+      <!-- Referencia 10: Simulador Go-Back-N -->
+      <article class="r-card" data-category="multimedia">
+        <div class="r-card__top">
+          <span class="r-badge r-badge--multimedia"><i class="fas fa-laptop-code" aria-hidden="true"></i> Simulación Interactiva</span>
+          <span class="r-card__unit-tag">Tema 2.4</span>
+        </div>
+        <div class="r-card__body">
+          <p class="r-card__citation">
+            García, M., &amp; López, A. (2025). <em>Simulador Interactivo de Ventana Deslizante y Control de Errores Go-Back-N vs. Repetición Selectiva</em>. Plataforma Virtual ESCOM.
+          </p>
+          <p class="r-card__desc">
+            Módulo web interactivo que permite inyectar pérdidas aleatorias de paquetes y visualizar el avance de la ventana, temporizadores y confirmaciones acumulativas.
+          </p>
+          <div class="r-card__meta">
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> Ventana Deslizante</span>
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> Simulación Web</span>
+            <span class="r-meta-tag"><i class="fas fa-tag"></i> Control de Flujo</span>
+          </div>
+        </div>
+        <div class="r-card__actions">
+          <button type="button" class="r-btn-copy" aria-label="Copiar cita en formato APA"><i class="fas fa-copy" aria-hidden="true"></i> Cita APA</button>
+          <a href="../../unidades.html" class="r-btn-link">Probar demo <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Estado vacío si el buscador no coincide -->
+    <div id="rEmpty" class="r-empty" style="display: none;">
+      <i class="fas fa-book-open-reader" aria-hidden="true"></i>
+      <p>No se encontraron referencias que coincidan con tu búsqueda o filtro seleccionado.</p>
     </div>
-  <script src="../../assets/js/nav-global.js"></script>
-</body>
-</html>
+  </main>
 
+  <footer class="u-footer">
+    <div class="u-footer__inner">
+      <p>Aplicaciones para Comunicaciones en Red · Polilibro académico · ESCOM-IPN</p>
+      <p>Desarrollado con fines educativos · © 2026</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/data-manager.js"></script>
+  <script src="../../assets/js/componentes.js"></script>
+  <script src="../../assets/js/paginas/referencias.js"></script>
+</body>
+
+</html>

@@ -2,8 +2,7 @@
 <html lang="es">
   <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="../../../assets/css/variables.css">
-  <link rel="stylesheet" href="../../../assets/css/global.css">
+  <link rel="stylesheet" href="../../../assets/css/comun.css">
   <link rel="stylesheet" href="../../../assets/css/actividad-final.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,90 +17,17 @@
 </head>
   <body
     class="final-evaluation-page"
+    data-root="../../../"
+    data-unidad="unidad-03"
     data-case-url="../../../assets/data/unidad-3/caso_unidad3.json"
     data-questions-url="../../../assets/data/unidad-3/preguntas_evaluacion_unidad3.json"
     data-time-minutes="45"
   >
-    <header class="site-nav">
-        <a class="brand" href="../../../index.html">ESCOM · Polilibro académico<small>Aplicaciones para Comunicaciones en Red</small></a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" onclick="const nav=document.getElementById('main-navigation'); nav.classList.toggle('is-open'); this.setAttribute('aria-expanded', nav.classList.contains('is-open'));">
-            <span class="sr-only">Abrir navegación</span><i class="fas fa-bars" aria-hidden="true"></i>
-        </button>
-        <nav id="main-navigation" aria-label="Navegación principal">
-            <a href="../../../index.html"><i class="fas fa-home" aria-hidden="true"></i> Inicio</a>
-            <a class="active" href="../../../unidades.html"><i class="fas fa-book-open" aria-hidden="true"></i> Unidades</a>
-            <a href="../referencias.html"><i class="fas fa-bookmark" aria-hidden="true"></i> Referencias</a>
-        </nav>
-    </header>
+    <header class="site-nav" data-componente="navegacion"></header>
     <div class="reading-progress" aria-hidden="true">
       <div class="reading-progress-bar" id="readingProgressBar"></div>
     </div>
 
-    <button
-      class="menu-toggle"
-      id="menuToggle"
-      type="button"
-      aria-label="Abrir menú de navegación"
-      aria-controls="sidebarNav"
-      aria-expanded="false"
-    >
-      <i class="fas fa-bars" aria-hidden="true"></i>
-    </button>
-    <a
-      href="../../../index.html"
-      class="floating-home-btn"
-      title="Ir a Unidad 3"
-      aria-label="Ir a Unidad 3"
-    >
-      <i class="fas fa-book-open" aria-hidden="true"></i>
-    </a>
-    <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
-    <nav
-      class="sidebar-nav"
-      id="sidebarNav"
-      aria-label="Navegación lateral"
-      aria-hidden="true"
-    >
-      <div class="sidebar-header">
-        <div class="sidebar-title">Actividad final</div>
-        <div class="sidebar-subtitle">Unidad 3</div>
-      </div>
-      <div class="nav-sections">
-        <div class="nav-section">
-          <div class="nav-section-title">Libro virtual</div>
-          <a href="../../../index.html" class="nav-item"
-            ><i class="fas fa-home" aria-hidden="true"></i> Inicio</a
-          >
-          <a href="../../../Unidades.html" class="nav-item"
-            ><i class="fas fa-layer-group" aria-hidden="true"></i> Unidades</a
-          >
-          <a href="../../../index.html" class="nav-item"
-            ><i class="fas fa-book-open" aria-hidden="true"></i> Unidad 3</a
-          >
-        </div>
-        <div class="nav-section">
-          <div class="nav-section-title">Contenido de la unidad</div>
-          <a href="../temas/tema-03-01.html" class="nav-item"
-            ><i class="fas fa-sitemap" aria-hidden="true"></i> 3.1 Árboles
-            binarios</a
-          >
-          <a href="../temas/tema-03-01.html" class="nav-item"
-            ><i class="fas fa-code-branch" aria-hidden="true"></i> 3.1
-            Tema provisional</a
-          >
-          <a
-            href="actividad-final.html"
-            class="nav-item active"
-            aria-current="page"
-            ><i class="fas fa-clipboard-check" aria-hidden="true"></i> Actividad
-            final de la Unidad 3</a
-          >
-          <a href="../referencias.html" class="nav-item"
-            ><i class="fas fa-bookmark" aria-hidden="true"></i> Referencias</a
-          >
-        </div>
-      </div>
-    </nav>
     <button
       class="scroll-to-top"
       id="scrollToTop"
@@ -113,17 +39,7 @@
 
     <div class="evaluation-shell">
       <header class="evaluation-header" id="inicio">
-        <nav class="breadcrumb" aria-label="Ruta de navegación">
-          <a href="../../../index.html"
-            ><i class="fas fa-home" aria-hidden="true"></i> Inicio</a
-          >
-          <span aria-hidden="true">/</span>
-          <a href="../../../Unidades.html">Unidades</a>
-          <span aria-hidden="true">/</span>
-          <a href="../../../index.html">Unidad 3</a>
-          <span aria-hidden="true">/</span>
-          <span>Actividad final</span>
-        </nav>
+
         <div class="header-title-content">
           <p class="eyebrow">Actividad final · Unidad 3</p>
           <h1>Operación Enlace</h1>
@@ -529,7 +445,8 @@
     <script src="../../../assets/js/original/UNIDAD_3_js_evaluacion-final.js"></script>
     <script src="../../../assets/js/original/UNIDAD_3_generar-pdf-resultados.js"></script>
     <script src="../../../assets/js/original/UNIDAD_3_js_copiar-texto-plano.js"></script>
-  <script src="../../../assets/js/nav-global.js"></script>
+    <script src="../../../assets/js/data-manager.js"></script>
+    <script src="../../../assets/js/componentes.js"></script>
 </body>
 </html>
 

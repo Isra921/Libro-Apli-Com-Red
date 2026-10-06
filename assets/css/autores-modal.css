@@ -1,0 +1,199 @@
+/* ==========================================================================
+   VENTANA EMERGENTE · AUTORES (.au-*)
+   Solo el contenido: tarjetas de docentes y del equipo de desarrollo.
+   La ventana (fondo, caja, pestañas) está en ventana-modal.css.
+   Textos en blanco; los verdes solo se usan en bordes y fondos suaves.
+   ========================================================================== */
+
+:root {
+  --au-foto-docente: 150px;
+  --au-foto-colaborador: 96px;
+}
+
+.au-panel__titulo {
+  margin: 0 0 12px;
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+.au-panel__descripcion {
+  margin: 0 0 20px;
+  color: var(--text-muted-light);
+}
+
+.au-nombre {
+  margin: 0 0 4px;
+  color: var(--text-light);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.au-correo {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--text-muted-light);
+  font-size: .9rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.au-correo:hover {
+  color: var(--text-light);
+}
+
+.au-texto {
+  margin: 0 0 12px;
+  color: var(--text-soft);
+  line-height: 1.65;
+  text-align: justify;
+}
+
+.au-texto strong,
+.au-areas__titulo {
+  color: var(--text-light);
+}
+
+/* ---------- Docentes ---------- */
+.au-lista-docentes {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.au-docente {
+  display: grid;
+  grid-template-columns: var(--au-foto-docente) 1fr;
+  gap: 24px;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+.au-docente__foto {
+  width: var(--au-foto-docente);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--border-soft);
+}
+
+.au-areas__lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.au-chip {
+  padding: 4px 12px;
+  background: var(--primary-soft);
+  color: var(--text-light);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-pill);
+  font-size: .82rem;
+}
+
+/* ---------- Equipo de desarrollo ---------- */
+.collaborator-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 850px) {
+  .collaborator-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+.collaborator-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.75rem 1.25rem;
+  background: var(--bg-section);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.collaborator-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--accent) 15%, transparent);
+}
+
+.avatar-ring {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 2px dashed var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  background: color-mix(in srgb, var(--surface) 60%, transparent);
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.avatar-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--surface-hover) 85%, var(--bg-deep));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.avatar-circle i {
+  font-size: 2.2rem;
+  color: var(--accent);
+}
+
+.collaborator-info h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin: 0 0 0.35rem;
+}
+
+.collaborator-info .email {
+  font-size: 0.85rem;
+  color: var(--text-muted-light);
+  margin: 0;
+  word-break: break-all;
+}
+
+/* Marcador cuando no hay fotografía */
+.au-foto--vacia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-section);
+  color: var(--text-muted-light);
+  font-size: 2rem;
+}
+
+.au-docente__foto.au-foto--vacia {
+  height: auto;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 640px) {
+  .au-docente {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .au-texto {
+    text-align: left;
+  }
+}

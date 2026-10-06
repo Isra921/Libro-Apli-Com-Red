@@ -2020,7 +2020,63 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 .hero-institutional { display: block; grid-column: 2; grid-row: 1; width: 100%; margin-bottom: 12px; }
 .hero-content { grid-column: 2; grid-row: 2; min-width: 0; }
 .hero-copy { width: 100%; }
-.hero-title-lockup h1 { font-size: clamp(1rem, 7.8cqi, 3.4rem); }
+.hero-title-lockup {
+    --hero-title-base: clamp(0.72rem, 1.22vw, 1.12rem);
+    min-width: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.hero-institution-line {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    white-space: nowrap;
+    gap: 12px;
+    width: 100%;
+}
+.hero-title-ipn {
+    font-size: calc(var(--hero-title-base) * 3);
+    font-weight: 800;
+    color: var(--text-light);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    white-space: nowrap;
+}
+.hero-title-sep {
+    font-size: calc(var(--hero-title-base) * 1.5);
+    color: var(--text-muted-light);
+    opacity: 0.6;
+    user-select: none;
+}
+.hero-title-escom {
+    font-size: calc(var(--hero-title-base) * 2.5);
+    font-weight: 700;
+    color: var(--text-light);
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+    white-space: nowrap;
+}
+.hero-title-materia,
+.hero-title-lockup h1 {
+    margin: 0;
+    font-size: calc(var(--hero-title-base) * 1);
+    font-weight: 600;
+    color: var(--text-soft);
+    line-height: 1.35;
+    letter-spacing: 0.01em;
+}
+@media (max-width: 760px) {
+    .hero-title-lockup { --hero-title-base: clamp(0.65rem, 2.1vw, 0.95rem); }
+}
+@media (max-width: 540px) {
+    .hero-institution-line { flex-wrap: wrap; white-space: normal; gap: 6px; }
+    .hero-title-ipn, .hero-title-escom { white-space: normal; }
+    .hero-title-sep { display: none; }
+}
 .welcome-section { align-items: center; }
 .welcome-content p { text-align: justify; hyphens: auto; }
 .material-panel { align-self: center; min-width: 0; }
