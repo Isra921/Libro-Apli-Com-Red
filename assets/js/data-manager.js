@@ -84,6 +84,11 @@ const DataManager = {
         return Promise.all(catalogo.unidades.map(id => this.getUnidad(id)));
     },
 
+    /** Cualquier otro JSON del sitio (ej. bancos de preguntas de las actividades). */
+    async getArchivo(rutaDesdeRaiz) {
+        return this._cargarJSON(rutaDesdeRaiz);
+    },
+
     /** Ruta (ya ajustada a la página actual) hacia la página de una unidad. */
     urlUnidad(idUnidad) {
         return this.ruta(this.PATRON_PAGINA_UNIDAD(idUnidad));
