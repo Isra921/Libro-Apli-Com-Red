@@ -73,8 +73,8 @@
           "tag": "Evaluación Integradora",
           "reactivos": "Reto integrador",
           "tiempo": "30 min",
-          "titulo": "Actividad Integradora: El Archivista Caótico",
-          "descripcion": "Reto final interactivo de la Unidad 1 que integra sockets bloqueantes y transferencia de archivos.",
+          "titulo": "Actividad Integradora: Diagnóstico de Arquitecturas en Red y Simulación de Sockets",
+          "descripcion": "Simulador interactivo de sockets TCP/UDP con misiones de red y retos de diagnóstico calificados.",
           "url": "unidades/unidad-01/actividades/actividad-final.html",
           "icono": "fa-trophy",
           "destacada": true

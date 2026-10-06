@@ -18,20 +18,20 @@
       "numero": "3.1",
       "nombre": "Sockets orientados a conexión no bloqueantes",
       "sintesis": "Entrada/salida no bloqueante con SocketChannel, ServerSocketChannel, buffers de memoria y multiplexores (Selector).",
-      "url": "unidades/unidad-03/temas/tema-03-01.html",
+      "url": "",
       "actividad": {
         "nombre": "Actividad de aprendizaje 3.1",
-        "url": "unidades/unidad-03/actividades/actividad-3-1.html"
+        "url": ""
       }
     },
     {
       "numero": "3.2",
       "nombre": "Sockets no orientados a conexión bloqueantes",
       "sintesis": "Operaciones con DatagramChannel, envío y recepción no bloqueante de datagramas sobre canales UDP.",
-      "url": "unidades/unidad-03/temas/tema-03-02.html",
+      "url": "",
       "actividad": {
         "nombre": "Actividad de aprendizaje 3.2",
-        "url": "unidades/unidad-03/actividades/actividad-3-2.html"
+        "url": ""
       }
     },
     {
@@ -41,7 +41,7 @@
       "url": "",
       "actividad": {
         "nombre": "Actividad de aprendizaje 3.3",
-        "url": "unidades/unidad-03/actividades/actividad-final.html"
+        "url": ""
       }
     },
     {
@@ -51,7 +51,7 @@
       "url": "",
       "actividad": {
         "nombre": "Actividad de aprendizaje 3.4",
-        "url": "unidades/unidad-03/actividades/actividad-final.html"
+        "url": ""
       }
     }
   ],
