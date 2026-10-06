@@ -28,7 +28,7 @@
       "numero": "1.2",
       "nombre": "Modelo cliente-servidor",
       "sintesis": "Arquitectura y ciclo de vida de la interacción cliente-servidor, llamadas al sistema (socket, bind, listen, accept, connect) y roles asimétricos.",
-      "url": "",
+      "url": "unidades/unidad-01/temas/tema-01-02.html",
       "actividad": {
         "nombre": "Actividad de aprendizaje 1.2",
         "url": "unidades/unidad-01/actividades/actividad-1-2.html"
@@ -38,7 +38,7 @@
       "numero": "1.3",
       "nombre": "Conexiones en el dominio de internet (TCP y UDP)",
       "sintesis": "Dominios de sockets AF_INET / AF_INET6, tipos SOCK_STREAM frente a SOCK_DGRAM, protocolo TCP de 3 vías y protocolo UDP.",
-      "url": "",
+      "url": "unidades/unidad-01/temas/tema-01-03.html",
       "actividad": {
         "nombre": "Actividad de aprendizaje 1.3",
         "url": "unidades/unidad-01/actividades/actividad-1-3.html"
@@ -48,7 +48,7 @@
       "numero": "1.4",
       "nombre": "Sockets orientados a conexión bloqueantes",
       "sintesis": "Programación con ServerSocket y Socket en modo bloqueante, lectura/escritura de streams y transferencia de archivos.",
-      "url": "",
+      "url": "unidades/unidad-01/temas/tema-01-04.html",
       "actividad": {
         "nombre": "Actividad de aprendizaje 1.4",
         "url": "unidades/unidad-01/actividades/actividad-1-4.html"
@@ -58,7 +58,7 @@
       "numero": "1.5",
       "nombre": "Serialización",
       "sintesis": "Empaquetado de tipos de datos, ordenamiento de bytes (Endianness / Network Byte Order) y serialización de objetos estructurados en red.",
-      "url": "",
+      "url": "unidades/unidad-01/temas/tema-01-05.html",
       "actividad": {
         "nombre": "Actividad de aprendizaje 1.5",
         "url": "unidades/unidad-01/actividades/actividad-1-5.html"

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1.5 Serialización | Aplicaciones para Comunicaciones en Red</title>
+  <meta name="description" content="Tema 1.5: Serialización de datos en red, ordenamiento de bytes (Endianness), serialización de objetos y formatos estructurados.">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../assets/css/comun.css">
+  <link rel="stylesheet" href="../../../assets/css/unidades-base.css">
+  <link rel="stylesheet" href="../../../assets/css/tema.css">
+
+  <link rel="icon" type="image/png" href="../../../assets/img/ESCOMB.png">
+</head>
+
+<body class="u-body" data-root="../../../" data-unidad="unidad-01" data-tema="1.5">
+
+  <header class="site-nav" data-componente="navegacion"></header>
+
+  <main class="u-page">
+
+    <div class="t-layout">
+      <aside class="t-index" aria-label="Contenido de la unidad">
+        <div class="t-index__card">
+          <div id="temaIndice">
+            <div class="t-index__fallback">
+              <span class="t-index__eyebrow">Unidad I</span>
+              <a href="../index.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Volver a la unidad</a>
+            </div>
+          </div>
+          <div class="t-progress">
+            <p class="t-progress__label" id="progresoEtiqueta">Progreso de lectura <span class="t-progress__value" id="progresoValor">0 %</span></p>
+            <div class="t-progress__track" role="progressbar" aria-labelledby="progresoEtiqueta" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <span class="t-progress__bar" id="progresoBarra"></span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <article class="t-article">
+        <p class="u-eyebrow">Unidad I · Tema 1.5</p>
+        <h1 class="t-title">Serialización</h1>
+
+        <p class="t-lead" id="idea-central" data-toc="Idea central">
+          La serialización transforma el estado de estructuras de datos y objetos en memoria en una secuencia lineal de bytes homogénea, apta para ser transmitida a través del socket y reconstruida fielmente en el receptor remoto.
+        </p>
+
+        <div class="t-prose">
+
+          <section id="concepto-serializacion" data-toc="1.5.1 Concepto de serialización y marshaling">
+            <h2><span class="t-section__num">1.5.1</span>Concepto de serialización y marshaling</h2>
+            <p>
+              En la memoria de una aplicación, un objeto complejo reside como una colección de punteros, referencias dispersas y bloques de datos en el montículo (heap). Como un socket de red solo puede transmitir una secuencia unidimensional continua de bytes, se requiere el proceso de <strong>serialización (marshalling)</strong> para empaquetarlo y su contraparte, la <strong>deserialización (unmarshalling)</strong>, para reconstruirlo en el destino.
+            </p>
+          </section>
+
+          <section id="endianness-red" data-toc="1.5.2 Ordenamiento de bytes (Endianness)">
+            <h2><span class="t-section__num">1.5.2</span>Orden de bytes: Network Byte Order (Big-Endian)</h2>
+            <p>
+              Diferentes arquitecturas de procesador almacenan números enteros de múltiples bytes en órdenes opuestos:
+            </p>
+            <ul>
+              <li><strong>Little-Endian (x86 / ARM):</strong> Almacena el byte menos significativo en la dirección de memoria más baja.</li>
+              <li><strong>Big-Endian (Network Byte Order):</strong> Almacena el byte más significativo primero. Este es el estándar obligatorio en los protocolos de Internet (IETF RFCs).</li>
+            </ul>
+            <p>
+              En lenguajes como C, se emplean funciones de conversión como <code>htons()</code> (Host to Network Short) y <code>ntohl()</code> (Network to Host Long). En Java, los streams de red serializan por defecto en formato Big-Endian.
+            </p>
+          </section>
+
+          <section id="serializacion-java" data-toc="1.5.3 Serialización de objetos en Java">
+            <h2><span class="t-section__num">1.5.3</span>Transmisión de objetos con ObjectOutputStream</h2>
+            <p>
+              Java provee el mecanismo nativo mediante la interfaz marcadora <code>Serializable</code>:
+            </p>
+
+            <pre><code>// Envío de un objeto estructurado por socket
+try (ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream())) {
+    MensajeRed mensaje = new MensajeRed("CHAT_MSG", "Hola mundo desde ESCOM");
+    oos.writeObject(mensaje);
+    oos.flush();
+}</code></pre>
+          </section>
+
+        </div>
+
+        <nav class="t-pager" id="temaNavegacion" aria-label="Navegación entre temas">
+          <a class="t-pager__prev" href="tema-01-04.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Tema anterior</a>
+        </nav>
+      </article>
+
+      <aside class="t-toc" aria-labelledby="tocTitulo">
+        <p class="t-toc__title" id="tocTitulo">En esta página</p>
+        <ol class="t-toc__list" id="temaTabla"></ol>
+        <div class="t-refs">
+          <p class="t-refs__title">Referencias del tema</p>
+          <a href="../referencias.html" data-enlace-referencias>Ver lista completa <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="u-footer">
+    <div class="u-footer__inner">
+      <p>Aplicaciones para Comunicaciones en Red · Polilibro académico · ESCOM-IPN</p>
+      <p>Desarrollado con fines educativos · © 2026</p>
+    </div>
+  </footer>
+
+  <script src="../../../assets/js/data-manager.js"></script>
+  <script src="../../../assets/js/componentes.js"></script>
+  <script src="../../../assets/js/unidades-ui.js"></script>
+  <script src="../../../assets/js/paginas/tema-plantilla.js"></script>
+  <script src="../../../assets/js/visor-figuras.js"></script>
+</body>
+
+</html>

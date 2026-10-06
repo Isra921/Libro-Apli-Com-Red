@@ -28,7 +28,7 @@
       "numero": "3.2",
       "nombre": "Sockets no orientados a conexión bloqueantes",
       "sintesis": "Operaciones con DatagramChannel, envío y recepción no bloqueante de datagramas sobre canales UDP.",
-      "url": "",
+      "url": "unidades/unidad-03/temas/tema-03-02.html",
       "actividad": {
         "nombre": "Actividad de aprendizaje 3.2",
         "url": "unidades/unidad-03/actividades/actividad-3-2.html"

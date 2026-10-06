@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3.2 Sockets no orientados a conexión bloqueantes | Aplicaciones para Comunicaciones en Red</title>
+  <meta name="description" content="Tema 3.2: Sockets no orientados a conexión bloqueantes, canales DatagramChannel, envío y recepción asíncrona de datagramas UDP.">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../assets/css/comun.css">
+  <link rel="stylesheet" href="../../../assets/css/unidades-base.css">
+  <link rel="stylesheet" href="../../../assets/css/tema.css">
+
+  <link rel="icon" type="image/png" href="../../../assets/img/ESCOMB.png">
+</head>
+
+<body class="u-body" data-root="../../../" data-unidad="unidad-03" data-tema="3.2">
+
+  <header class="site-nav" data-componente="navegacion"></header>
+
+  <main class="u-page">
+
+    <div class="t-layout">
+      <aside class="t-index" aria-label="Contenido de la unidad">
+        <div class="t-index__card">
+          <div id="temaIndice">
+            <div class="t-index__fallback">
+              <span class="t-index__eyebrow">Unidad III</span>
+              <a href="../index.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Volver a la unidad</a>
+            </div>
+          </div>
+          <div class="t-progress">
+            <p class="t-progress__label" id="progresoEtiqueta">Progreso de lectura <span class="t-progress__value" id="progresoValor">0 %</span></p>
+            <div class="t-progress__track" role="progressbar" aria-labelledby="progresoEtiqueta" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <span class="t-progress__bar" id="progresoBarra"></span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <article class="t-article">
+        <p class="u-eyebrow">Unidad III · Tema 3.2</p>
+        <h1 class="t-title">Sockets no orientados a conexión bloqueantes</h1>
+
+        <p class="t-lead" id="idea-central" data-toc="Idea central">
+          Los canales de datagramas en la arquitectura NIO permiten enviar y recibir paquetes UDP de forma no bloqueante o con canales multiplexados, optimizando aplicaciones de alta tasa de transferencia y baja latencia.
+        </p>
+
+        <div class="t-prose">
+
+          <section id="datagramchannel-nio" data-toc="3.2.1 El canal DatagramChannel">
+            <h2><span class="t-section__num">3.2.1</span>La abstracción DatagramChannel</h2>
+            <p>
+              En la biblioteca Java NIO, la clase <code>DatagramChannel</code> representa un canal capaz de transmitir y recibir datagramas UDP. A diferencia de <code>DatagramSocket</code> tradicional, este canal puede configurarse explícitamente en modo no bloqueante:
+            </p>
+
+            <pre><code>DatagramChannel canal = DatagramChannel.open();
+canal.configureBlocking(false); // Operación no bloqueante
+canal.bind(new InetSocketAddress(9876));</code></pre>
+          </section>
+
+          <section id="recepcion-envio-datagramas" data-toc="3.2.2 Envío y recepción sin suspensión">
+            <h2><span class="t-section__num">3.2.2</span>Operaciones receive() y send() no bloqueantes</h2>
+            <p>
+              Cuando el canal opera en modo no bloqueante:
+            </p>
+            <ul>
+              <li><code>receive(ByteBuffer dst)</code>: Si hay un datagrama disponible en el buffer del socket, lo vuelca en el <code>ByteBuffer</code> y retorna la <code>SocketAddress</code> del emisor. Si no hay datos, retorna <strong>inmediatamente null</strong> en lugar de suspender al hilo.</li>
+              <li><code>send(ByteBuffer src, SocketAddress target)</code>: Transmite el contenido del búfer a la dirección destino especificada sin retención ni espera de confirmación.</li>
+            </ul>
+          </section>
+
+          <section id="casos-aplicacion-udp-nio" data-toc="3.2.3 Aplicaciones prácticas">
+            <h2><span class="t-section__num">3.2.3</span>Escenarios de uso en sistemas de red</h2>
+            <p>
+              La combinación de UDP con canales no bloqueantes resulta idónea para:
+            </p>
+            <ul>
+              <li>Sensores de telemetría IoT con lecturas periódicas de alta frecuencia.</li>
+              <li>Servidores DNS que resuelven miles de peticiones cortas por segundo.</li>
+              <li>Transmisión y recepción de audio y video en tiempo real donde un paquete retrasado carece de utilidad.</li>
+            </ul>
+          </section>
+
+        </div>
+
+        <nav class="t-pager" id="temaNavegacion" aria-label="Navegación entre temas">
+          <a class="t-pager__prev" href="tema-03-01.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Tema anterior</a>
+        </nav>
+      </article>
+
+      <aside class="t-toc" aria-labelledby="tocTitulo">
+        <p class="t-toc__title" id="tocTitulo">En esta página</p>
+        <ol class="t-toc__list" id="temaTabla"></ol>
+        <div class="t-refs">
+          <p class="t-refs__title">Referencias del tema</p>
+          <a href="../referencias.html" data-enlace-referencias>Ver lista completa <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="u-footer">
+    <div class="u-footer__inner">
+      <p>Aplicaciones para Comunicaciones en Red · Polilibro académico · ESCOM-IPN</p>
+      <p>Desarrollado con fines educativos · © 2026</p>
+    </div>
+  </footer>
+
+  <script src="../../../assets/js/data-manager.js"></script>
+  <script src="../../../assets/js/componentes.js"></script>
+  <script src="../../../assets/js/unidades-ui.js"></script>
+  <script src="../../../assets/js/paginas/tema-plantilla.js"></script>
+  <script src="../../../assets/js/visor-figuras.js"></script>
+</body>
+
+</html>

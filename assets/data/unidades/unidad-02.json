@@ -28,7 +28,7 @@
       "numero": "2.2",
       "nombre": "Multihilos",
       "sintesis": "Modelos de diseño para servidores multihilo: hilo por conexión, ciclo de vida de hilos trabajadores, escalabilidad y gestión de recursos.",
-      "url": "",
+      "url": "unidades/unidad-02/temas/tema-02-02.html",
       "actividad": {
         "nombre": "Actividad de aprendizaje 2.2",
         "url": "unidades/unidad-02/actividades/actividad-2-2.html"
@@ -38,7 +38,7 @@
       "numero": "2.3",
       "nombre": "Formatos de intercambio de datos",
       "sintesis": "Estructuración de datos en red: delimitación de tramas, codificación de texto (JSON, XML) frente a formatos binarios eficientes.",
-      "url": "",
+      "url": "unidades/unidad-02/temas/tema-02-03.html",
       "actividad": {
         "nombre": "Actividad de aprendizaje 2.3",
         "url": "unidades/unidad-02/actividades/actividad-2-3.html"

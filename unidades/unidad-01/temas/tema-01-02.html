@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1.2 Modelo cliente-servidor | Aplicaciones para Comunicaciones en Red</title>
+  <meta name="description" content="Tema 1.2: Modelo cliente-servidor, arquitectura asimétrica, llamadas al sistema (socket, bind, listen, accept, connect) y ciclo de vida.">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../assets/css/comun.css">
+  <link rel="stylesheet" href="../../../assets/css/unidades-base.css">
+  <link rel="stylesheet" href="../../../assets/css/tema.css">
+
+  <link rel="icon" type="image/png" href="../../../assets/img/ESCOMB.png">
+</head>
+
+<body class="u-body" data-root="../../../" data-unidad="unidad-01" data-tema="1.2">
+
+  <header class="site-nav" data-componente="navegacion"></header>
+
+  <main class="u-page">
+
+    <div class="t-layout">
+      <!-- Índice de la unidad -->
+      <aside class="t-index" aria-label="Contenido de la unidad">
+        <div class="t-index__card">
+          <div id="temaIndice">
+            <div class="t-index__fallback">
+              <span class="t-index__eyebrow">Unidad I</span>
+              <a href="../index.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Volver a la unidad</a>
+            </div>
+          </div>
+          <div class="t-progress">
+            <p class="t-progress__label" id="progresoEtiqueta">Progreso de lectura <span class="t-progress__value" id="progresoValor">0 %</span></p>
+            <div class="t-progress__track" role="progressbar" aria-labelledby="progresoEtiqueta" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <span class="t-progress__bar" id="progresoBarra"></span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Artículo de lectura principal -->
+      <article class="t-article">
+        <p class="u-eyebrow">Unidad I · Tema 1.2</p>
+        <h1 class="t-title">Modelo cliente-servidor</h1>
+
+        <p class="t-lead" id="idea-central" data-toc="Idea central">
+          El modelo cliente-servidor es el paradigma arquitectónico distribuido más extendido en Internet, caracterizado por una clara asimetría funcional donde un host pasivo ofrece servicios centralizados a múltiples clientes activos que inician las solicitudes.
+        </p>
+
+        <div class="t-prose">
+
+          <!-- Subtema 1.2.1 -->
+          <section id="roles-asimetricos" data-toc="1.2.1 Roles y asimetría funcional">
+            <h2><span class="t-section__num">1.2.1</span>Asimetría de roles en la arquitectura de red</h2>
+            <p>
+              A diferencia de las arquitecturas entre pares (P2P) donde los nodos son simétricos, el modelo cliente-servidor se fundamenta en una separación estricta de responsabilidades:
+            </p>
+            <ul>
+              <li><strong>Servidor (Host pasivo):</strong> Es un proceso que se ejecuta de forma continua sobre una máquina con dirección IP conocida (o accesible mediante nombre de dominio) y se coloca en un estado de espera pasiva para escuchar peticiones de conexión en un puerto determinado.</li>
+              <li><strong>Cliente (Host activo):</strong> Es un proceso que inicia activamente la comunicación hacia el servidor en el momento en que requiere consumir un recurso, empleando un puerto efímero asignado dinámicamente por su sistema operativo.</li>
+            </ul>
+
+            <aside class="t-callout t-callout--note">
+              <i class="fas fa-server t-callout__icon" aria-hidden="true"></i>
+              <div>
+                <p class="t-callout__label">Característica fundamental</p>
+                <p>Los clientes nunca se comunican directamente entre sí bajo este modelo; toda interacción, autenticación y despacho de datos es coordinada centralmente por el servidor.</p>
+              </div>
+            </aside>
+          </section>
+
+          <!-- Subtema 1.2.2 -->
+          <section id="llamadas-sistema" data-toc="1.2.2 Llamadas al sistema y ciclo de vida">
+            <h2><span class="t-section__num">1.2.2</span>Ciclo de vida de sockets y llamadas al sistema</h2>
+            <p>
+              El establecimiento de una sesión orientada a conexión requiere una secuencia orquestada de llamadas al sistema en ambos extremos:
+            </p>
+            <ol>
+              <li><code>socket()</code>: Crea un nuevo punto final de comunicación retornando un descriptor.</li>
+              <li><code>bind()</code>: Asocia el socket a una dirección IP local y a un número de puerto específico (obligatorio en el servidor).</li>
+              <li><code>listen()</code>: Pone al socket en modo pasivo y define el tamaño de la cola de espera de conexiones pendientes (<em>backlog</em>).</li>
+              <li><code>accept()</code>: Suspende la ejecución del servidor hasta que arribe una solicitud de conexión entrante, retornando un <strong>nuevo socket dedicado</strong> para dialogar exclusivamente con dicho cliente.</li>
+              <li><code>connect()</code>: Ejecutada por el cliente para iniciar el apretón de manos (handshake) con la dirección y puerto del servidor.</li>
+              <li><code>read() / write()</code>: Intercambio bidireccional de flujos de datos.</li>
+              <li><code>close()</code>: Cierre ordenado de los descriptores y liberación de los buffers asociados.</li>
+            </ol>
+          </section>
+
+          <!-- Subtema 1.2.3 -->
+          <section id="ejemplo-cliente-servidor" data-toc="1.2.3 Implementación práctica">
+            <h2><span class="t-section__num">1.2.3</span>Estructura prototipo en Java</h2>
+            <p>
+              A continuación se ilustra la correspondencia entre los roles de servidor y cliente mediante la API estándar de sockets:
+            </p>
+
+            <pre><code>// SERVIDOR: Escucha pasiva y atención
+ServerSocket server = new ServerSocket(5000);
+System.out.println("Servidor a la escucha...");
+Socket cliente = server.accept(); // Bloquea hasta conexión
+
+// CLIENTE: Conexión activa
+Socket socket = new Socket("127.0.0.1", 5000);
+System.out.println("Conexión establecida con éxito.");</code></pre>
+          </section>
+
+        </div>
+
+        <nav class="t-pager" id="temaNavegacion" aria-label="Navegación entre temas">
+          <a class="t-pager__prev" href="tema-01-01.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Tema anterior</a>
+        </nav>
+      </article>
+
+      <aside class="t-toc" aria-labelledby="tocTitulo">
+        <p class="t-toc__title" id="tocTitulo">En esta página</p>
+        <ol class="t-toc__list" id="temaTabla"></ol>
+        <div class="t-refs">
+          <p class="t-refs__title">Referencias del tema</p>
+          <a href="../referencias.html" data-enlace-referencias>Ver lista completa <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="u-footer">
+    <div class="u-footer__inner">
+      <p>Aplicaciones para Comunicaciones en Red · Polilibro académico · ESCOM-IPN</p>
+      <p>Desarrollado con fines educativos · © 2026</p>
+    </div>
+  </footer>
+
+  <script src="../../../assets/js/data-manager.js"></script>
+  <script src="../../../assets/js/componentes.js"></script>
+  <script src="../../../assets/js/unidades-ui.js"></script>
+  <script src="../../../assets/js/paginas/tema-plantilla.js"></script>
+  <script src="../../../assets/js/visor-figuras.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.2 Multihilos | Aplicaciones para Comunicaciones en Red</title>
+  <meta name="description" content="Tema 2.2: Multihilos en servidores de red, modelos de atención concurrente, ciclo de vida de hilos trabajadores y escalabilidad.">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../assets/css/comun.css">
+  <link rel="stylesheet" href="../../../assets/css/unidades-base.css">
+  <link rel="stylesheet" href="../../../assets/css/tema.css">
+
+  <link rel="icon" type="image/png" href="../../../assets/img/ESCOMB.png">
+</head>
+
+<body class="u-body" data-root="../../../" data-unidad="unidad-02" data-tema="2.2">
+
+  <header class="site-nav" data-componente="navegacion"></header>
+
+  <main class="u-page">
+
+    <div class="t-layout">
+      <aside class="t-index" aria-label="Contenido de la unidad">
+        <div class="t-index__card">
+          <div id="temaIndice">
+            <div class="t-index__fallback">
+              <span class="t-index__eyebrow">Unidad II</span>
+              <a href="../index.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Volver a la unidad</a>
+            </div>
+          </div>
+          <div class="t-progress">
+            <p class="t-progress__label" id="progresoEtiqueta">Progreso de lectura <span class="t-progress__value" id="progresoValor">0 %</span></p>
+            <div class="t-progress__track" role="progressbar" aria-labelledby="progresoEtiqueta" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <span class="t-progress__bar" id="progresoBarra"></span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <article class="t-article">
+        <p class="u-eyebrow">Unidad II · Tema 2.2</p>
+        <h1 class="t-title">Multihilos</h1>
+
+        <p class="t-lead" id="idea-central" data-toc="Idea central">
+          La programación multihilo en servidores de red permite desacoplar la escucha de nuevas conexiones respecto a la atención y transferencia de datos de los clientes ya conectados, alcanzando una alta concurrencia.
+        </p>
+
+        <div class="t-prose">
+
+          <section id="modelos-atencion" data-toc="2.2.1 Modelos de concurrencia en servidores">
+            <h2><span class="t-section__num">2.2.1</span>Modelos de atención a clientes en red</h2>
+            <p>
+              Existen diversas alternativas para estructurar servidores que atienden múltiples conexiones simultáneas:
+            </p>
+            <ul>
+              <li><strong>Servidor iterativo (Monohilo):</strong> Procesa una sola conexión a la vez. Mientras atiende a un cliente, cualquier otro intento de conexión queda en cola o es rechazado. Resulta inaceptable para aplicaciones en producción.</li>
+              <li><strong>Servidor con hilo por conexión (Thread-per-connection):</strong> Cada vez que el socket principal ejecuta <code>accept()</code>, lanza un nuevo hilo hijo dedicado a procesar esa sesión. Ofrece una implementación intuitiva pero escala deficientemente ante miles de clientes.</li>
+              <li><strong>Servidor con arquitectura Producer-Consumer y Workers:</strong> Un hilo productor acepta las conexiones y las deposita en una cola bloqueante compartida; un pool preasignado de hilos consumidores (trabajadores) extrae las tareas y atiende las peticiones sin incurrir en costos de instanciación continua.</li>
+            </ul>
+          </section>
+
+          <section id="hilos-trabajadores" data-toc="2.2.2 Ciclo de vida y separación de tareas">
+            <h2><span class="t-section__num">2.2.2</span>Ciclo de vida del hilo de atención</h2>
+            <p>
+              Un hilo de atención cliente ejecuta de forma autónoma su ciclo de lectura y respuesta:
+            </p>
+
+            <pre><code>public class ManejadorCliente implements Runnable {
+    private final Socket socket;
+
+    public ManejadorCliente(Socket socket) {
+        this.socket = socket;
+    }
+
+    @Override
+    public void run() {
+        try (BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+             PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {
+            String linea;
+            while ((linea = in.readLine()) != null) {
+                out.println("ECO: " + linea);
+            }
+        } catch (IOException e) {
+            System.err.println("Conexión finalizada: " + e.getMessage());
+        }
+    }
+}</code></pre>
+          </section>
+
+        </div>
+
+        <nav class="t-pager" id="temaNavegacion" aria-label="Navegación entre temas">
+          <a class="t-pager__prev" href="tema-02-01.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Tema anterior</a>
+        </nav>
+      </article>
+
+      <aside class="t-toc" aria-labelledby="tocTitulo">
+        <p class="t-toc__title" id="tocTitulo">En esta página</p>
+        <ol class="t-toc__list" id="temaTabla"></ol>
+        <div class="t-refs">
+          <p class="t-refs__title">Referencias del tema</p>
+          <a href="../referencias.html" data-enlace-referencias>Ver lista completa <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="u-footer">
+    <div class="u-footer__inner">
+      <p>Aplicaciones para Comunicaciones en Red · Polilibro académico · ESCOM-IPN</p>
+      <p>Desarrollado con fines educativos · © 2026</p>
+    </div>
+  </footer>
+
+  <script src="../../../assets/js/data-manager.js"></script>
+  <script src="../../../assets/js/componentes.js"></script>
+  <script src="../../../assets/js/unidades-ui.js"></script>
+  <script src="../../../assets/js/paginas/tema-plantilla.js"></script>
+  <script src="../../../assets/js/visor-figuras.js"></script>
+</body>
+
+</html>

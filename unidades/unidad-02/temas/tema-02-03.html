@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.3 Formatos de intercambio de datos | Aplicaciones para Comunicaciones en Red</title>
+  <meta name="description" content="Tema 2.3: Formatos de intercambio de datos, delimitación de tramas (framing), formatos basados en texto (JSON, XML) y binarios.">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../assets/css/comun.css">
+  <link rel="stylesheet" href="../../../assets/css/unidades-base.css">
+  <link rel="stylesheet" href="../../../assets/css/tema.css">
+
+  <link rel="icon" type="image/png" href="../../../assets/img/ESCOMB.png">
+</head>
+
+<body class="u-body" data-root="../../../" data-unidad="unidad-02" data-tema="2.3">
+
+  <header class="site-nav" data-componente="navegacion"></header>
+
+  <main class="u-page">
+
+    <div class="t-layout">
+      <aside class="t-index" aria-label="Contenido de la unidad">
+        <div class="t-index__card">
+          <div id="temaIndice">
+            <div class="t-index__fallback">
+              <span class="t-index__eyebrow">Unidad II</span>
+              <a href="../index.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Volver a la unidad</a>
+            </div>
+          </div>
+          <div class="t-progress">
+            <p class="t-progress__label" id="progresoEtiqueta">Progreso de lectura <span class="t-progress__value" id="progresoValor">0 %</span></p>
+            <div class="t-progress__track" role="progressbar" aria-labelledby="progresoEtiqueta" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <span class="t-progress__bar" id="progresoBarra"></span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <article class="t-article">
+        <p class="u-eyebrow">Unidad II · Tema 2.3</p>
+        <h1 class="t-title">Formatos de intercambio de datos</h1>
+
+        <p class="t-lead" id="idea-central" data-toc="Idea central">
+          En los protocolos de comunicación en red, la correcta definición del formato de los mensajes y su delimitación de tramas (framing) garantiza la interoperabilidad entre clientes y servidores construidos sobre distintas plataformas.
+        </p>
+
+        <div class="t-prose">
+
+          <section id="problema-framing" data-toc="2.3.1 Delimitación de tramas (Framing)">
+            <h2><span class="t-section__num">2.3.1</span>El problema de delimitación de mensajes (Framing)</h2>
+            <p>
+              Dado que TCP es un protocolo de flujo de bytes continuo sin delimitación intrínseca de mensajes, si el cliente ejecuta dos llamadas consecutivas <code>write("HOLA")</code> y <code>write("MUNDO")</code>, el receptor podría recibir <code>"HOLAMUNDO"</code> en una sola lectura o fragmentado arbitrariamente como <code>"HOL"</code> y luego <code>"AMUNDO"</code>.
+            </p>
+            <p>
+              Para resolver esto a nivel de aplicación se emplean tres técnicas estandarizadas de encuadre (<em>framing</em>):
+            </p>
+            <ol>
+              <li><strong>Mensajes de longitud fija:</strong> Cada mensaje mide exactamente un número predefinido de bytes (ej. 128 bytes).</li>
+              <li><strong>Delimitadores especiales:</strong> Cada mensaje concluye con un carácter de terminación único no imprimible o secuencia de escape (ej. salto de línea <code>\r\n</code> como en HTTP/1.1 y SMTP).</li>
+              <li><strong>Prefijo con longitud explícita (Length-prefixed):</strong> El mensaje incluye una cabecera binaria fija de 2 o 4 bytes que indica cuántos bytes de carga útil (payload) le siguen a continuación.</li>
+            </ol>
+          </section>
+
+          <section id="formatos-texto-binarios" data-toc="2.3.2 Formatos de texto frente a binarios">
+            <h2><span class="t-section__num">2.3.2</span>Formatos de texto (JSON / XML) frente a formatos binarios</h2>
+            <p>
+              La elección del formato de serialización impacta directamente el rendimiento y la facilidad de depuración:
+            </p>
+            <ul>
+              <li><strong>Formatos basados en texto (JSON, XML):</strong> Son altamente legibles para seres humanos, fáciles de depurar con analizadores de paquetes como Wireshark y ampliamente soportados en la web, a costa de mayor sobrecarga de ancho de banda y tiempo de parseo.</li>
+              <li><strong>Formatos binarios (Protocol Buffers, MessagePack, CBOR):</strong> Codifican datos de forma compacta y fuertemente tipada, reduciendo drásticamente el tamaño del paquete y la utilización de CPU en sistemas de alto rendimiento y telecomunicaciones.</li>
+            </ul>
+          </section>
+
+        </div>
+
+        <nav class="t-pager" id="temaNavegacion" aria-label="Navegación entre temas">
+          <a class="t-pager__prev" href="tema-02-02.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Tema anterior</a>
+        </nav>
+      </article>
+
+      <aside class="t-toc" aria-labelledby="tocTitulo">
+        <p class="t-toc__title" id="tocTitulo">En esta página</p>
+        <ol class="t-toc__list" id="temaTabla"></ol>
+        <div class="t-refs">
+          <p class="t-refs__title">Referencias del tema</p>
+          <a href="../referencias.html" data-enlace-referencias>Ver lista completa <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="u-footer">
+    <div class="u-footer__inner">
+      <p>Aplicaciones para Comunicaciones en Red · Polilibro académico · ESCOM-IPN</p>
+      <p>Desarrollado con fines educativos · © 2026</p>
+    </div>
+  </footer>
+
+  <script src="../../../assets/js/data-manager.js"></script>
+  <script src="../../../assets/js/componentes.js"></script>
+  <script src="../../../assets/js/unidades-ui.js"></script>
+  <script src="../../../assets/js/paginas/tema-plantilla.js"></script>
+  <script src="../../../assets/js/visor-figuras.js"></script>
+</body>
+
+</html>

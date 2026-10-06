@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1.4 Sockets orientados a conexión bloqueantes | Aplicaciones para Comunicaciones en Red</title>
+  <meta name="description" content="Tema 1.4: Sockets orientados a conexión bloqueantes, ServerSocket, Socket, streams de entrada/salida y transferencia de archivos.">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../assets/css/comun.css">
+  <link rel="stylesheet" href="../../../assets/css/unidades-base.css">
+  <link rel="stylesheet" href="../../../assets/css/tema.css">
+
+  <link rel="icon" type="image/png" href="../../../assets/img/ESCOMB.png">
+</head>
+
+<body class="u-body" data-root="../../../" data-unidad="unidad-01" data-tema="1.4">
+
+  <header class="site-nav" data-componente="navegacion"></header>
+
+  <main class="u-page">
+
+    <div class="t-layout">
+      <aside class="t-index" aria-label="Contenido de la unidad">
+        <div class="t-index__card">
+          <div id="temaIndice">
+            <div class="t-index__fallback">
+              <span class="t-index__eyebrow">Unidad I</span>
+              <a href="../index.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Volver a la unidad</a>
+            </div>
+          </div>
+          <div class="t-progress">
+            <p class="t-progress__label" id="progresoEtiqueta">Progreso de lectura <span class="t-progress__value" id="progresoValor">0 %</span></p>
+            <div class="t-progress__track" role="progressbar" aria-labelledby="progresoEtiqueta" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <span class="t-progress__bar" id="progresoBarra"></span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <article class="t-article">
+        <p class="u-eyebrow">Unidad I · Tema 1.4</p>
+        <h1 class="t-title">Sockets orientados a conexión bloqueantes</h1>
+
+        <p class="t-lead" id="idea-central" data-toc="Idea central">
+          En los sockets bloqueantes orientados a conexión (TCP), las operaciones de lectura, escritura y aceptación suspenden la ejecución del hilo hasta que la condición requerida se satisface o se agota el temporizador de espera.
+        </p>
+
+        <div class="t-prose">
+
+          <section id="semantica-bloqueante" data-toc="1.4.1 Semántica de bloqueo">
+            <h2><span class="t-section__num">1.4.1</span>Comportamiento y semántica del modo bloqueante</h2>
+            <p>
+              El modo de operación por defecto al crear un socket en la mayoría de los sistemas operativos es el <strong>bloqueante (blocking mode)</strong>:
+            </p>
+            <ul>
+              <li><code>accept()</code>: Suspende al hilo en el kernel hasta que un cliente remoto complete el handshake TCP.</li>
+              <li><code>read() / InputStream.read()</code>: Si el buffer de recepción TCP de la tarjeta de red está vacío, el hilo pasa a estado de espera (WAITING / BLOCKED) hasta que lleguen nuevos bytes o se cierre el canal remoto.</li>
+              <li><code>write() / OutputStream.write()</code>: Si la ventana de congestión o el buffer de transmisión local está lleno, el hilo se bloquea hasta que el receptor confirme la recepción de datos previos liberando espacio.</li>
+            </ul>
+          </section>
+
+          <section id="transferencia-archivos" data-toc="1.4.2 Transferencia de flujos y archivos">
+            <h2><span class="t-section__num">1.4.2</span>Transferencia de flujos y archivos en red</h2>
+            <p>
+              Para transmitir archivos a través de un socket bloqueante, se utilizan búferes intermedios de lectura/escritura (típicamente de 4 KB u 8 KB) para maximizar el throughput sin sobrecargar la memoria RAM:
+            </p>
+
+            <pre><code>// Envío de archivo con socket bloqueante en Java
+try (FileInputStream fis = new FileInputStream("reporte.pdf");
+     OutputStream os = socket.getOutputStream()) {
+    byte[] buffer = new byte[8192];
+    int leidos;
+    while ((leidos = fis.read(buffer)) != -1) {
+        os.write(buffer, 0, leidos);
+    }
+    os.flush();
+}</code></pre>
+          </section>
+
+          <section id="control-timeouts" data-toc="1.4.3 Control de timeouts y excepciones">
+            <h2><span class="t-section__num">1.4.3</span>Gestión de temporizadores y cierre ordenado</h2>
+            <p>
+              Para evitar que un hilo quede bloqueado indefinidamente ante una desconexión abrupta o partición de red, se configura el temporizador de lectura:
+            </p>
+            <pre><code>socket.setSoTimeout(5000); // Lanza SocketTimeoutException tras 5 segundos de inactividad</code></pre>
+          </section>
+
+        </div>
+
+        <nav class="t-pager" id="temaNavegacion" aria-label="Navegación entre temas">
+          <a class="t-pager__prev" href="tema-01-03.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Tema anterior</a>
+        </nav>
+      </article>
+
+      <aside class="t-toc" aria-labelledby="tocTitulo">
+        <p class="t-toc__title" id="tocTitulo">En esta página</p>
+        <ol class="t-toc__list" id="temaTabla"></ol>
+        <div class="t-refs">
+          <p class="t-refs__title">Referencias del tema</p>
+          <a href="../referencias.html" data-enlace-referencias>Ver lista completa <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="u-footer">
+    <div class="u-footer__inner">
+      <p>Aplicaciones para Comunicaciones en Red · Polilibro académico · ESCOM-IPN</p>
+      <p>Desarrollado con fines educativos · © 2026</p>
+    </div>
+  </footer>
+
+  <script src="../../../assets/js/data-manager.js"></script>
+  <script src="../../../assets/js/componentes.js"></script>
+  <script src="../../../assets/js/unidades-ui.js"></script>
+  <script src="../../../assets/js/paginas/tema-plantilla.js"></script>
+  <script src="../../../assets/js/visor-figuras.js"></script>
+</body>
+
+</html>
